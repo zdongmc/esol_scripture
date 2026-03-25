@@ -1,0 +1,256 @@
+{
+  "_meta": {
+    "languages": ["en", "es", "zh-tw", "pt", "it", "fr", "am"],
+    "note": "Italian (NR) and Amharic pending. All others verified from official sources."
+  },
+  "A": {
+    "reference": "Matthew 7:7",
+    "en": { "version": "GNT", "text": "Ask, and you will receive; seek, and you will find; knock, and the door will be opened to you." },
+    "es": { "version": "NVI", "text": "Pedid, y se os dará; buscad, y encontraréis; llamad, y se os abrirá." },
+    "zh-tw": { "version": "CUV", "text": "你們祈求，就給你們；尋找，就尋見；叩門，就給你們開門。" },
+    "pt": { "version": "NVI", "text": "Peçam, e será dado a vocês; busquem e vocês encontrarão; batam, e a porta será aberta a vocês." },
+    "it": { "version": "NR",  "text": "" },
+    "fr": { "version": "LSG", "text": "Demandez, et l'on vous donnera; cherchez, et vous trouverez; frappez, et l'on vous ouvrira." },
+    "am": { "version": "—",   "text": "" }
+  },
+  "B": {
+    "reference": "Ephesians 4:32",
+    "en": { "version": "GNT", "text": "Be kind and tenderhearted to one another, and forgive one another, as God has forgiven you through Christ." },
+    "es": { "version": "NVI", "text": "Más bien, sed bondadosos y compasivos unos con otros, y perdonaos mutuamente, así como Dios os perdonó en Cristo." },
+    "zh-tw": { "version": "CUV", "text": "並要以恩慈相待，存憐憫的心，彼此饒恕，正如神在基督裏饒恕了你們一樣。" },
+    "pt": { "version": "NVI", "text": "Sejam bondosos e compassivos uns para com os outros, perdoando‑se mutuamente, como Deus os perdoou em Cristo." },
+    "it": { "version": "NR",  "text": "" },
+    "fr": { "version": "LSG", "text": "Soyez bons les uns envers les autres, compatissants, vous pardonnant réciproquement, comme Dieu vous a pardonné en Christ." },
+    "am": { "version": "—",   "text": "" }
+  },
+  "C": {
+    "reference": "Matthew 11:28",
+    "en": { "version": "GNT", "text": "Come to me, all of you who are tired from carrying heavy loads, and I will give you rest." },
+    "es": { "version": "NVI", "text": "Venid a mí todos vosotros que estáis cansados y agobiados, y yo os daré descanso." },
+    "zh-tw": { "version": "CUV", "text": "凡勞苦擔重擔的人可以到我這裏來，我就使你們得安息。" },
+    "pt": { "version": "NVI", "text": "Venham a mim todos os que estão cansados e sobrecarregados, e eu darei descanso a vocês." },
+    "it": { "version": "NR",  "text": "" },
+    "fr": { "version": "LSG", "text": "Venez à moi, vous tous qui êtes fatigués et chargés, et je vous donnerai du repos." },
+    "am": { "version": "—",   "text": "" }
+  },
+  "D": {
+    "reference": "Matthew 7:12",
+    "en": { "version": "GNT", "text": "Do for others what you want them to do for you: this is the meaning of the Law of Moses and of the teachings of the prophets." },
+    "es": { "version": "NVI", "text": "Así que en todo tratad a los demás tal y como queréis que ellos os traten a vosotros. De hecho, esto es la ley y los profetas." },
+    "zh-tw": { "version": "CUV", "text": "所以，無論何事，你們願意人怎樣待你們，你們也要怎樣待人，因為這就是律法和先知的道理。" },
+    "pt": { "version": "NVI", "text": "Assim, em tudo, façam às pessoas o que querem que elas façam a vocês, pois esta é a Lei e os Profetas." },
+    "it": { "version": "NR",  "text": "" },
+    "fr": { "version": "LSG", "text": "Tout ce que vous voulez que les hommes fassent pour vous, faites-le de même pour eux, car c'est la loi et les prophètes." },
+    "am": { "version": "—",   "text": "" }
+  },
+  "E": {
+    "reference": "James 1:17",
+    "en": { "version": "GNT", "text": "Every good gift and every perfect present comes from heaven; it comes down from God, the Creator of the heavenly lights, who does not change or cause darkness by turning." },
+    "es": { "version": "NVI", "text": "Toda buena dádiva y todo don perfecto descienden de lo alto, donde está el Padre que creó las lumbreras celestes, y que no cambia como los astros ni se mueve como las sombras." },
+    "zh-tw": { "version": "CUV", "text": "各樣美善的恩賜和各樣全備的賞賜都是從上頭來的，從眾光之父那裏降下來的；在他並沒有改變，也沒有轉動的影兒。" },
+    "pt": { "version": "NVI", "text": "Toda boa dádiva e todo dom perfeito vêm do alto e descem do Pai das luzes, que não muda como sombras inconstantes." },
+    "it": { "version": "NR",  "text": "" },
+    "fr": { "version": "LSG", "text": "toute grâce excellente et tout don parfait descendent d'en haut, du Père des lumières, chez lequel il n'y a ni changement ni ombre de variation." },
+    "am": { "version": "—",   "text": "" }
+  },
+  "F": {
+    "reference": "Luke 11:4",
+    "en": { "version": "GNT", "text": "Forgive us our sins, for we forgive everyone who does us wrong. And do not bring us to hard testing." },
+    "es": { "version": "NVI", "text": "Perdónanos nuestros pecados, porque también nosotros perdonamos a todos los que nos ofenden. Y no nos metas en tentación" },
+    "zh-tw": { "version": "CUV", "text": "赦免我們的罪，因為我們也赦免凡虧欠我們的人。不叫我們遇見試探；救我們脫離凶惡。" },
+    "pt": { "version": "NVI", "text": "Perdoa os nossos pecados, pois também perdoamos todos os que nos ofendem. E não nos deixes cair em tentação." },
+    "it": { "version": "NR",  "text": "" },
+    "fr": { "version": "LSG", "text": "pardonne-nous nos péchés, car nous aussi nous pardonnons à quiconque nous offense; et ne nous induis pas en tentation." },
+    "am": { "version": "—",   "text": "" }
+  },
+  "G": {
+    "reference": "1 John 4:8",
+    "en": { "version": "GNT", "text": "Whoever does not love does not know God, for God is love." },
+    "es": { "version": "NVI", "text": "El que no ama no conoce a Dios, porque Dios es amor." },
+    "zh-tw": { "version": "CUV", "text": "沒有愛心的，就不認識神，因為神就是愛。" },
+    "pt": { "version": "NVI", "text": "Quem não ama não conhece a Deus, porque Deus é amor." },
+    "it": { "version": "NR",  "text": "" },
+    "fr": { "version": "LSG", "text": "Celui qui n'aime pas n'a pas connu Dieu, car Dieu est amour." },
+    "am": { "version": "—",   "text": "" }
+  },
+  "H": {
+    "reference": "Revelation 1:3",
+    "en": { "version": "GNT", "text": "Happy is the one who reads this book, and happy are those who listen to the words of this prophetic message and obey what is written in this book!" },
+    "es": { "version": "NVI", "text": "Dichoso el que lee y dichosos los que escuchan las palabras de este mensaje profético y hacen caso de lo que aquí está escrito, porque el tiempo de su cumplimiento está cerca." },
+    "zh-tw": { "version": "CUV", "text": "念這書上預言的和那些聽見又遵守其中所記載的，都是有福的，因為日期近了。" },
+    "pt": { "version": "NVI", "text": "Bem-aventurado aquele que lê em voz alta as palavras desta profecia, e bem-aventurados aqueles que ouvem e guardam as coisas nela escritas, pois o tempo está próximo." },
+    "it": { "version": "NR",  "text": "" },
+    "fr": { "version": "LSG", "text": "Heureux celui qui lit et ceux qui entendent les paroles de la prophétie, et qui gardent les choses qui y sont écrites! Car le temps est proche." },
+    "am": { "version": "—",   "text": "" }
+  },
+  "I": {
+    "reference": "1 John 1:9",
+    "en": { "version": "GNT", "text": "But if we confess our sins to God, he will keep his promise and do what is right: he will forgive us our sins and purify us from all our wrongdoing." },
+    "es": { "version": "NVI", "text": "Si confesamos nuestros pecados, Dios, que es fiel y justo, nos los perdonará y nos limpiará de toda maldad." },
+    "zh-tw": { "version": "CUV", "text": "我們若認自己的罪，神是信實的，是公義的，必要赦免我們的罪，洗淨我們一切的不義。" },
+    "pt": { "version": "NVI", "text": "Se confessarmos os nossos pecados, ele é fiel e justo para perdoar os nossos pecados e nos purificar de toda injustiça." },
+    "it": { "version": "NR",  "text": "" },
+    "fr": { "version": "LSG", "text": "Si nous confessons nos péchés, il est fidèle et juste pour nous les pardonner, et pour nous purifier de toute iniquité." },
+    "am": { "version": "—",   "text": "" }
+  },
+  "J": {
+    "reference": "Hebrews 13:8",
+    "en": { "version": "GNT", "text": "Jesus Christ is the same yesterday, today, and forever." },
+    "es": { "version": "NVI", "text": "Jesucristo es el mismo ayer y hoy y por los siglos." },
+    "zh-tw": { "version": "CUV", "text": "耶穌基督昨日、今日、一直到永遠，是一樣的。" },
+    "pt": { "version": "NVI", "text": "Jesus Cristo é o mesmo ontem, hoje e para sempre." },
+    "it": { "version": "NR",  "text": "" },
+    "fr": { "version": "LSG", "text": "Jésus-Christ est le même hier, aujourd'hui, et éternellement." },
+    "am": { "version": "—",   "text": "" }
+  },
+  "K": {
+    "reference": "1 Corinthians 7:19",
+    "en": { "version": "NIV", "text": "Keeping God's commands is what counts." },
+    "es": { "version": "NVI", "text": "Para nada cuenta estar o no estar circuncidado; lo que importa es cumplir los mandatos de Dios." },
+    "zh-tw": { "version": "CUV", "text": "受割禮算不得甚麼，不受割禮也算不得甚麼，只要守神的誡命就是了。" },
+    "pt": { "version": "NVI", "text": "A circuncisão nada é, tampouco a incircuncisão; o que importa é obedecer aos mandamentos de Deus." },
+    "it": { "version": "NR",  "text": "" },
+    "fr": { "version": "LSG", "text": "La circoncision n'est rien, et l'incirconcision n'est rien, mais l'observation des commandements de Dieu est tout." },
+    "am": { "version": "—",   "text": "" }
+  },
+  "L": {
+    "reference": "Mark 12:31",
+    "en": { "version": "GNT", "text": "Love your neighbor as you love yourself. There is no other commandment more important than these two." },
+    "es": { "version": "NVI", "text": "El segundo es: 'Ama a tu prójimo como a ti mismo'. No hay otro mandamiento más importante que estos." },
+    "zh-tw": { "version": "CUV", "text": "其次就是說：『要愛人如己。』再沒有比這兩條誡命更大的了。" },
+    "pt": { "version": "NVI", "text": "O segundo é este: 'Ame ao seu próximo como a você mesmo'. Não existe mandamento maior do que estes." },
+    "it": { "version": "NR",  "text": "" },
+    "fr": { "version": "LSG", "text": "Voici le second: Tu aimeras ton prochain comme toi-même. Il n'y a pas d'autre commandement plus grand que ceux-là." },
+    "am": { "version": "—",   "text": "" }
+  },
+  "M": {
+    "reference": "Psalm 121:2",
+    "en": { "version": "GNT", "text": "My help will come from the Lord, who made heaven and earth." },
+    "es": { "version": "NVI", "text": "Mi ayuda proviene del SEÑOR, creador del cielo y de la tierra." },
+    "zh-tw": { "version": "CUV", "text": "我的幫助從造天地的耶和華而來。" },
+    "pt": { "version": "NVI", "text": "O meu socorro vem do SENHOR, que fez os céus e a terra." },
+    "it": { "version": "NR",  "text": "" },
+    "fr": { "version": "LSG", "text": "Le secours me vient de l'Eternel, Qui a fait les cieux et la terre." },
+    "am": { "version": "—",   "text": "" }
+  },
+  "N": {
+    "reference": "Luke 22:42",
+    "en": { "version": "GNT", "text": "Father, if you will, take this cup of suffering away from me. Not my will, however, but your will be done." },
+    "es": { "version": "NVI", "text": "Padre, si quieres, no me hagas beber este trago amargo; pero no se cumpla mi voluntad, sino la tuya" },
+    "zh-tw": { "version": "CUV", "text": "父啊！你若願意，就把這杯撤去；然而，不要成就我的意思，只要成就你的意思。" },
+    "pt": { "version": "NVI", "text": "Pai, se queres, afasta de mim este cálice; contudo, não seja feita a minha vontade, mas a tua." },
+    "it": { "version": "NR",  "text": "" },
+    "fr": { "version": "LSG", "text": "disant: Père, si tu voulais éloigner de moi cette coupe! Toutefois, que ma volonté ne se fasse pas, mais la tienne." },
+    "am": { "version": "—",   "text": "" }
+  },
+  "O": {
+    "reference": "Hebrews 13:17",
+    "en": { "version": "GNT", "text": "Obey your leaders and follow their orders. They watch over your souls without resting, since they must give to God an account of their service." },
+    "es": { "version": "NVI", "text": "Obedeced a vuestros dirigentes y someteos a ellos, pues cuidan de vosotros como quienes tienen que rendir cuentas. Obedecedlos a fin de que ellos cumplan su tarea con alegría y sin quejarse, pues el quejarse no les trae ningún provecho." },
+    "zh-tw": { "version": "CUV", "text": "你們要依從那些引導你們的，且要順服；因他們為你們的靈魂時刻警醒，好像那將來交帳的人。你們要使他們交的時候有快樂，不致憂愁；若憂愁就與你們無益了。" },
+    "pt": { "version": "NVI", "text": "Obedeçam aos seus líderes e sejam submissos a eles, pois cuidam de vocês como quem deve prestar contas. Obedeçam‑lhes para que eles cuidem de vocês com alegria, não com descontentamento; caso contrário, isso não será proveitoso para vocês." },
+    "it": { "version": "NR",  "text": "" },
+    "fr": { "version": "LSG", "text": "Obéissez à vos conducteurs et ayez pour eux de la déférence, car ils veillent sur vos âmes comme devant en rendre compte; qu'il en soit ainsi, afin qu'ils le fassent avec joie, et non en gémissant, ce qui ne vous serait d'aucun avantage." },
+    "am": { "version": "—",   "text": "" }
+  },
+  "P": {
+    "reference": "James 5:16",
+    "en": { "version": "GNT", "text": "So then, confess your sins to one another and pray for one another, so that you will be healed. The prayer of a good person has a powerful effect." },
+    "es": { "version": "NVI", "text": "Por eso, confesaos unos a otros vuestros pecados, y orad unos por otros, para que seáis sanados. La oración del justo es poderosa y eficaz." },
+    "zh-tw": { "version": "CUV", "text": "所以你們要彼此認罪，互相代求，使你們可以得醫治。義人祈禱所發的力量是大有功效的。" },
+    "pt": { "version": "NVI", "text": "Portanto, confessem os seus pecados uns aos outros e orem uns pelos outros para serem curados. A oração de um justo é poderosa e eficaz." },
+    "it": { "version": "NR",  "text": "" },
+    "fr": { "version": "LSG", "text": "Confessez donc vos péchés les uns aux autres, et priez les uns pour les autres, afin que vous soyez guéris. La prière fervente du juste a une grande efficace." },
+    "am": { "version": "—",   "text": "" }
+  },
+  "Q": {
+    "reference": "Isaiah 30:15",
+    "en": { "version": "GNT", "text": "Come back and quietly trust in me. Then you will be strong and secure." },
+    "es": { "version": "NVI", "text": "Porque así dice el SEÑOR omnipotente, el Santo de Israel: «En el arrepentimiento y la calma está su salvación, en la serenidad y la confianza está su fuerza, ¡pero ustedes no lo quieren reconocer!" },
+    "zh-tw": { "version": "CUV", "text": "主耶和華－以色列的聖者曾如此說：你們得救在乎歸回安息；你們得力在乎平靜安穩；你們竟自不肯。" },
+    "pt": { "version": "NVI", "text": "Diz o Soberano SENHOR, o Santo de Israel: 'No arrependimento e no descanso está a salvação de vocês, na quietude e na confiança está o seu vigor, mas vocês não quiseram.'" },
+    "it": { "version": "NR",  "text": "" },
+    "fr": { "version": "LSG", "text": "Car ainsi a parlé le Seigneur, l'Eternel, le Saint d'Israël: C'est dans la tranquillité et le repos que sera votre salut, C'est dans le calme et la confiance que sera votre force. Mais vous ne l'avez pas voulu!" },
+    "am": { "version": "—",   "text": "" }
+  },
+  "R": {
+    "reference": "Ecclesiastes 12:1",
+    "en": { "version": "GNT", "text": "So remember your Creator while you are still young, before those dismal days and years come when you will say, \"I don't enjoy life.\"" },
+    "es": { "version": "NVI", "text": "Acuérdate de tu creador en los días de tu juventud, antes que lleguen los días malos y vengan los años en que digas: «No encuentro en ellos placer alguno»" },
+    "zh-tw": { "version": "CUV", "text": "你趁着年幼、衰敗的日子尚未來到，就是你所說，我毫無喜樂的那些年日未曾臨近之先，當記念造你的主。" },
+    "pt": { "version": "NVI", "text": "Lembre‑se do seu Criador nos dias da sua juventude, antes que venham os dias difíceis e se aproximem os anos em que você dirá: 'Não tenho satisfação neles'" },
+    "it": { "version": "NR",  "text": "" },
+    "fr": { "version": "LSG", "text": "Mais souviens-toi de ton créateur pendant les jours de ta jeunesse, avant que les jours mauvais arrivent et que les années s'approchent où tu diras: Je n'y prends point de plaisir;" },
+    "am": { "version": "—",   "text": "" }
+  },
+  "S": {
+    "reference": "1 Samuel 3:9",
+    "en": { "version": "GNT", "text": "So Eli told Samuel, \"Go back to bed; and if he calls again, say, 'Speak, Lord, your servant is listening.'\"" },
+    "es": { "version": "NVI", "text": "Ve y acuéstate ―le dijo Elí―. Si alguien vuelve a llamarte, dile: 'Habla, SEÑOR, que tu siervo escucha'. Así que Samuel se fue y se acostó en su cama." },
+    "zh-tw": { "version": "CUV", "text": "你仍去睡吧；若再呼喚你，你就說：『耶和華啊，請說，僕人敬聽！』撒母耳就去，仍睡在原處。" },
+    "pt": { "version": "NVI", "text": "e lhe disse: Vá e deite‑se; se ele o chamar, diga: 'Fala, SENHOR, pois o teu servo ouve'. Então, Samuel foi deitar‑se no seu lugar." },
+    "it": { "version": "NR",  "text": "" },
+    "fr": { "version": "LSG", "text": "et il dit à Samuel: Va, couche-toi; et si l'on t'appelle, tu diras: Parle, Eternel, car ton serviteur écoute. Et Samuel alla se coucher à sa place." },
+    "am": { "version": "—",   "text": "" }
+  },
+  "T": {
+    "reference": "Proverbs 22:6",
+    "en": { "version": "GNT", "text": "Teach children how they should live, and they will remember it all their life." },
+    "es": { "version": "NVI", "text": "Instruye al niño en el camino correcto, y aun en su vejez no lo abandonará." },
+    "zh-tw": { "version": "CUV", "text": "教養孩童，使他走當行的道，就是到老他也不偏離。" },
+    "pt": { "version": "NVI", "text": "Instrua a criança no caminho em que deve andar, e, mesmo com o passar dos anos, não se desviará dele." },
+    "it": { "version": "NR",  "text": "" },
+    "fr": { "version": "LSG", "text": "Instruis l'enfant selon la voie qu'il doit suivre; Et quand il sera vieux, il ne s'en détournera pas." },
+    "am": { "version": "—",   "text": "" }
+  },
+  "U": {
+    "reference": "John 3:3",
+    "en": { "version": "NIV", "text": "Jesus replied, \"Very truly I tell you, no one can see the kingdom of God unless they are born again.\"" },
+    "es": { "version": "NVI", "text": "De veras te aseguro que quien no nazca de nuevo no puede ver el reino de Dios —dijo Jesús." },
+    "zh-tw": { "version": "CUV", "text": "耶穌回答說：「我實實在在地告訴你，人若不重生，就不能見神的國。」" },
+    "pt": { "version": "NVI", "text": "Em resposta, Jesus declarou: Em verdade lhe digo que ninguém pode ver o reino de Deus se não nascer de novo." },
+    "it": { "version": "NR",  "text": "" },
+    "fr": { "version": "LSG", "text": "Jésus lui répondit: En vérité, en vérité, je te le dis, si un homme ne naît de nouveau, il ne peut voir le royaume de Dieu." },
+    "am": { "version": "—",   "text": "" }
+  },
+  "W": {
+    "reference": "Exodus 20:3",
+    "en": { "version": "GNT", "text": "Worship no god but me." },
+    "es": { "version": "NVI", "text": "No tengas otros dioses además de mí." },
+    "zh-tw": { "version": "CUV", "text": "除了我以外，你不可有別的神。" },
+    "pt": { "version": "NVI", "text": "Não tenha outros deuses além de mim." },
+    "it": { "version": "NR",  "text": "" },
+    "fr": { "version": "LSG", "text": "Tu n'auras pas d'autres dieux devant ma face." },
+    "am": { "version": "—",   "text": "" }
+  },
+  "X": {
+    "reference": "Psalm 26:2",
+    "en": { "version": "GNT", "text": "Examine me and test me, Lord; judge my desires and thoughts." },
+    "es": { "version": "NVI", "text": "Examíname, SEÑOR; ¡ponme a prueba! purifica mis entrañas y mi corazón." },
+    "zh-tw": { "version": "CUV", "text": "耶和華啊，求你察看我，試驗我，熬煉我的肺腑心腸。" },
+    "pt": { "version": "NVI", "text": "Sonda‑me, SENHOR, e prova‑me; examina o meu coração e a minha mente" },
+    "it": { "version": "NR",  "text": "" },
+    "fr": { "version": "LSG", "text": "Sonde-moi, Eternel! éprouve-moi, Fais passer au creuset mes reins et mon coeur;" },
+    "am": { "version": "—",   "text": "" }
+  },
+  "Y": {
+    "reference": "Matthew 5:13",
+    "en": { "version": "GNT", "text": "You are like salt for the whole human race. But if salt loses its saltiness, there is no way to make it salty again. It has become worthless, so it is thrown out and people trample on it." },
+    "es": { "version": "NVI", "text": "Vosotros sois la sal de la tierra. Pero, si la sal se vuelve insípida, ¿cómo recobrará su sabor? Ya no sirve para nada, sino para que la gente la deseche y la pisotee." },
+    "zh-tw": { "version": "CUV", "text": "你們是世上的鹽。鹽若失了味，怎能叫它再鹹呢？以後無用，不過丟在外面，被人踐踏了。" },
+    "pt": { "version": "NVI", "text": "Vocês são o sal da terra. Mas, se o sal perder o seu sabor, como restaurá‑lo? Não servirá para nada, exceto para ser jogado fora e pisado pelos homens." },
+    "it": { "version": "NR",  "text": "" },
+    "fr": { "version": "LSG", "text": "Vous êtes le sel de la terre. Mais si le sel perd sa saveur, avec quoi la lui rendra-t-on? Il ne sert plus qu'à être jeté dehors, et foulé aux pieds par les hommes." },
+    "am": { "version": "—",   "text": "" }
+  },
+  "Z": {
+    "reference": "Luke 19:6",
+    "en": { "version": "GNT", "text": "Zacchaeus hurried down and welcomed him with great joy." },
+    "es": { "version": "NVI", "text": "Así que se apresuró a bajar y, muy contento, recibió a Jesús en su casa." },
+    "zh-tw": { "version": "CUV", "text": "他就急忙下來，歡歡喜喜地接待耶穌。" },
+    "pt": { "version": "NVI", "text": "Então, ele desceu rapidamente e o recebeu com alegria." },
+    "it": { "version": "NR",  "text": "" },
+    "fr": { "version": "LSG", "text": "Zachée se hâta de descendre, et le reçut avec joie." },
+    "am": { "version": "—",   "text": "" }
+  }
+}

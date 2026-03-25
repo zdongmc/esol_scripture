@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESOL Scripture Handout Generator</title>
+  <style>
+    /* ── Base ─────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: #f5f4f0;
+      color: #222;
+      min-height: 100vh;
+    }
+
+    /* ── App Shell (hidden on print) ─────────────────────── */
+    @media screen {
+      #app {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 2rem 1.5rem 4rem;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+        font-weight: normal;
+        letter-spacing: 0.02em;
+        margin-bottom: 0.25rem;
+        color: #3a3530;
+      }
+
+      .subtitle {
+        font-size: 0.85rem;
+        color: #888;
+        margin-bottom: 2rem;
+        font-style: italic;
+        font-family: system-ui, sans-serif;
+      }
+
+      /* Scripture picker */
+      .section-label {
+        font-family: system-ui, sans-serif;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #999;
+        margin-bottom: 0.6rem;
+      }
+
+      .scripture-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-bottom: 1.8rem;
+      }
+
+      .scripture-btn {
+        font-family: Georgia, serif;
+        font-size: 0.95rem;
+        width: 2.4rem;
+        height: 2.4rem;
+        border: 1px solid #ccc;
+        background: #fff;
+        border-radius: 4px;
+        cursor: pointer;
+        color: #444;
+        transition: background 0.12s, border-color 0.12s, color 0.12s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .scripture-btn:hover { background: #f0ece4; border-color: #aaa; }
+
+      .scripture-btn.active {
+        background: #5a3e2b;
+        border-color: #5a3e2b;
+        color: #fff;
+      }
+
+      .scripture-btn:disabled {
+        opacity: 0.3;
+        cursor: default;
+      }
+
+      /* Language checkboxes */
+      .language-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1.2rem;
+        margin-bottom: 1.8rem;
+      }
+
+      .lang-label {
+        font-family: system-ui, sans-serif;
+        font-size: 0.85rem;
+        color: #444;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .lang-label input[type="checkbox"] {
+        width: 1rem;
+        height: 1rem;
+        cursor: pointer;
+        accent-color: #5a3e2b;
+      }
+
+      /* Action bar */
+      .action-bar {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .btn-print {
+        font-family: system-ui, sans-serif;
+        font-size: 0.85rem;
+        font-weight: 600;
+        padding: 0.55rem 1.4rem;
+        background: #5a3e2b;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        letter-spacing: 0.03em;
+        transition: background 0.12s;
+      }
+
+      .btn-print:hover { background: #7a5840; }
+      .btn-print:disabled { background: #bbb; cursor: default; }
+
+      .hint {
+        font-family: system-ui, sans-serif;
+        font-size: 0.78rem;
+        color: #aaa;
+        font-style: italic;
+      }
+
+      /* Preview box */
+      #preview-wrapper {
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        background: #fff;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      .preview-label {
+        font-family: system-ui, sans-serif;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #bbb;
+        padding: 0.6rem 1rem;
+        border-bottom: 1px solid #f0ede8;
+        background: #faf9f7;
+      }
+
+      #preview {
+        padding: 2rem 2.5rem;
+      }
+
+      .empty-state {
+        font-family: system-ui, sans-serif;
+        font-size: 0.9rem;
+        color: #bbb;
+        font-style: italic;
+        padding: 3rem 0;
+        text-align: center;
+      }
+    }
+
+    /* ── Handout Content (shared screen + print) ──────────── */
+    .handout-header {
+      margin-bottom: 1.4rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 2px solid #3a3530;
+    }
+
+    .handout-letter {
+      font-size: 3rem;
+      font-weight: bold;
+      line-height: 1;
+      color: #5a3e2b;
+      float: left;
+      margin-right: 0.6rem;
+      margin-top: 0.1rem;
+    }
+
+    .handout-ref {
+      font-size: 0.8rem;
+      font-family: system-ui, sans-serif;
+      color: #888;
+      margin-bottom: 0.15rem;
+      letter-spacing: 0.04em;
+    }
+
+    .handout-key {
+      font-size: 1.05rem;
+      font-style: italic;
+      color: #555;
+      clear: none;
+    }
+
+    .handout-header::after { content: ""; display: table; clear: both; }
+
+    /* Translation blocks */
+    .translation-block {
+      display: grid;
+      grid-template-columns: 8rem 1fr;
+      gap: 0.2rem 0.8rem;
+      align-items: baseline;
+      padding: 0.55rem 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .translation-block:last-child { border-bottom: none; }
+
+    .lang-name {
+      font-family: system-ui, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #888;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding-top: 0.1rem;
+    }
+
+    .lang-version {
+      font-family: system-ui, sans-serif;
+      font-size: 0.68rem;
+      color: #bbb;
+      letter-spacing: 0.03em;
+    }
+
+    .lang-meta {
+      grid-column: 1;
+    }
+
+    .verse-text {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      color: #222;
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      align-self: center;
+    }
+
+    .verse-missing {
+      color: #ccc;
+      font-style: italic;
+      font-size: 0.82rem;
+    }
+
+    /* ── Print styles ─────────────────────────────────────── */
+    @media print {
+      #app > *:not(#preview-wrapper) { display: none !important; }
+      .preview-label { display: none !important; }
+
+      #preview-wrapper {
+        border: none;
+        padding: 0;
+      }
+
+      #preview {
+        padding: 0;
+      }
+
+      body {
+        background: #fff;
+        font-size: 10pt;
+      }
+
+      .handout-letter { font-size: 2.4rem; }
+      .handout-key    { font-size: 0.95rem; }
+
+      .translation-block {
+        padding: 0.4rem 0;
+        break-inside: avoid;
+      }
+
+      .verse-text { font-size: 0.88rem; line-height: 1.5; }
+
+      @page {
+        margin: 1.8cm 2cm;
+        size: letter portrait;
+      }
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <h1>Scripture Alphabet — Handout Generator</h1>
+  <p class="subtitle">ESOL Ministry · multilingual scripture handouts</p>
+
+  <div class="section-label">Select a Scripture</div>
+  <div class="scripture-grid" id="scripture-grid"></div>
+
+  <div class="section-label">Languages</div>
+  <div class="language-grid" id="language-grid"></div>
+
+  <div class="action-bar">
+    <button class="btn-print" id="btn-print" disabled onclick="window.print()">Print / Save as PDF</button>
+    <span class="hint" id="hint">Choose a scripture above to preview</span>
+  </div>
+
+  <div id="preview-wrapper">
+    <div class="preview-label">Preview</div>
+    <div id="preview">
+      <div class="empty-state">Select a letter to preview the handout.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+const LANGUAGES = [
+  { code: "en",    name: "English",     version: "GNT" },
+  { code: "es",    name: "Español",     version: "NVI" },
+  { code: "zh-tw", name: "繁體中文",    version: "CUV" },
+  { code: "pt",    name: "Português",   version: "NVI" },
+  { code: "it",    name: "Italiano",    version: "NR"  },
+  { code: "fr",    name: "Français",    version: "LSG" },
+  { code: "am",    name: "አማርኛ",       version: "—"   },
+];
+
+let DATA = {};
+let selectedLetter = null;
+let checkedLangs = new Set(LANGUAGES.map(l => l.code));
+
+async function loadData() {
+  const res = await fetch("translations.json");
+  DATA = await res.json();
+  buildUI();
+}
+
+function buildUI() {
+  // Scripture buttons
+  const grid = document.getElementById("scripture-grid");
+  const letters = Object.keys(DATA).filter(k => k !== "_meta").sort();
+  letters.forEach(letter => {
+    const btn = document.createElement("button");
+    btn.className = "scripture-btn";
+    btn.textContent = letter;
+    btn.title = DATA[letter].reference;
+    btn.onclick = () => selectLetter(letter);
+    grid.appendChild(btn);
+  });
+
+  // Language checkboxes (all checked by default)
+  const langGrid = document.getElementById("language-grid");
+  LANGUAGES.forEach(lang => {
+    const label = document.createElement("label");
+    label.className = "lang-label";
+    const cb = document.createElement("input");
+    cb.type = "checkbox";
+    cb.value = lang.code;
+    cb.checked = true;
+    cb.onchange = () => {
+      if (cb.checked) checkedLangs.add(lang.code);
+      else checkedLangs.delete(lang.code);
+      render();
+    };
+    label.appendChild(cb);
+    label.appendChild(document.createTextNode(lang.name));
+    langGrid.appendChild(label);
+  });
+}
+
+function selectLetter(letter) {
+  selectedLetter = letter;
+  document.querySelectorAll(".scripture-btn").forEach(btn => {
+    btn.classList.toggle("active", btn.textContent === letter);
+  });
+  render();
+}
+
+function render() {
+  const preview = document.getElementById("preview");
+  const btn = document.getElementById("btn-print");
+  const hint = document.getElementById("hint");
+
+  if (!selectedLetter) {
+    preview.innerHTML = '<div class="empty-state">Select a letter to preview the handout.</div>';
+    btn.disabled = true;
+    hint.textContent = "Choose a scripture above to preview";
+    return;
+  }
+
+  const entry = DATA[selectedLetter];
+  const langs = LANGUAGES.filter(l => checkedLangs.has(l.code));
+
+  if (langs.length === 0) {
+    preview.innerHTML = '<div class="empty-state">Select at least one language.</div>';
+    btn.disabled = true;
+    hint.textContent = "Select at least one language";
+    return;
+  }
+
+  // Find English key text for header
+  const enText = entry["en"]?.text || "";
+  // Derive key phrase (first ~6 words)
+  const keyPhrase = enText.split(" ").slice(0, 7).join(" ") + (enText.split(" ").length > 7 ? "…" : "");
+
+  let html = `
+    <div class="handout-header">
+      <span class="handout-letter">${selectedLetter}</span>
+      <div class="handout-ref">${entry.reference}</div>
+      <div class="handout-key">${keyPhrase}</div>
+    </div>`;
+
+  langs.forEach(lang => {
+    const t = entry[lang.code];
+    const text = t?.text?.trim();
+    html += `
+      <div class="translation-block">
+        <div class="lang-meta">
+          <div class="lang-name">${lang.name}</div>
+          <div class="lang-version">${lang.version}</div>
+        </div>
+        <div class="verse-text ${text ? "" : "verse-missing"}">
+          ${text || "Translation not yet available"}
+        </div>
+      </div>`;
+  });
+
+  preview.innerHTML = html;
+  btn.disabled = false;
+  hint.textContent = `${langs.length} language${langs.length > 1 ? "s" : ""} · Print or use browser "Save as PDF"`;
+}
+
+loadData();
+</script>
+</body>
+</html>
