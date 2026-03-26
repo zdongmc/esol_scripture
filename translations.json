@@ -1,256 +1,1799 @@
 {
   "_meta": {
-    "languages": ["en", "es", "zh-tw", "pt", "it", "fr", "am"],
-    "note": "All translations from official Bible versions. Italian (Nuova Riveduta), Amharic (Amharic Bible, Bible Society of Ethiopia)."
+    "languages": [
+      "en",
+      "es",
+      "zh-tw",
+      "pt",
+      "it",
+      "fr",
+      "am",
+      "hi",
+      "uk",
+      "te",
+      "fa",
+      "zh-cn",
+      "ko",
+      "vi",
+      "ar",
+      "ta",
+      "be"
+    ],
+    "note": "All translations from official Bible versions. Sources include ebible.org for Hindi (IRV), Ukrainian (ONPU), Telugu (IRV), Farsi (OPV), Simplified Chinese (CCB), Korean (KOR), Vietnamese (VIE), Arabic (AVD), Tamil (IRV), and Belarusian (BEL)."
   },
   "A": {
     "reference": "Matthew 7:7",
-    "en": { "version": "GNT", "text": "Ask, and you will receive; seek, and you will find; knock, and the door will be opened to you." },
-    "es": { "version": "NVI", "text": "Pedid, y se os dará; buscad, y encontraréis; llamad, y se os abrirá." },
-    "zh-tw": { "version": "CUV", "text": "你們祈求，就給你們；尋找，就尋見；叩門，就給你們開門。" },
-    "pt": { "version": "NVI", "text": "Peçam, e será dado a vocês; busquem e vocês encontrarão; batam, e a porta será aberta a vocês." },
-    "it": { "version": "NR",  "text": "Chiedete e vi sarà dato; cercate e troverete; bussate e vi sarà aperto." },
-    "fr": { "version": "LSG", "text": "Demandez, et l'on vous donnera; cherchez, et vous trouverez; frappez, et l'on vous ouvrira." },
-    "am": { "version": "ABB", "text": "ለምኑ፥ ይሰጣችሁማል፤ ፈልጉ፥ ታገኙማላችሁ፤ መዝጊያን አንኳኩ፥ ይከፈትላችሁማል።" }
+    "en": {
+      "version": "GNT",
+      "text": "Ask, and you will receive; seek, and you will find; knock, and the door will be opened to you."
+    },
+    "es": {
+      "version": "NVI",
+      "text": "Pedid, y se os dará; buscad, y encontraréis; llamad, y se os abrirá."
+    },
+    "zh-tw": {
+      "version": "CUV",
+      "text": "你們祈求，就給你們；尋找，就尋見；叩門，就給你們開門。"
+    },
+    "pt": {
+      "version": "NVI",
+      "text": "Peçam, e será dado a vocês; busquem e vocês encontrarão; batam, e a porta será aberta a vocês."
+    },
+    "it": {
+      "version": "NR",
+      "text": "Chiedete e vi sarà dato; cercate e troverete; bussate e vi sarà aperto."
+    },
+    "fr": {
+      "version": "LSG",
+      "text": "Demandez, et l'on vous donnera; cherchez, et vous trouverez; frappez, et l'on vous ouvrira."
+    },
+    "am": {
+      "version": "ABB",
+      "text": "ለምኑ፥ ይሰጣችሁማል፤ ፈልጉ፥ ታገኙማላችሁ፤ መዝጊያን አንኳኩ፥ ይከፈትላችሁማል።"
+    },
+    "hi": {
+      "version": "IRV",
+      "text": "“माँगो, तो तुम्हें दिया जाएगा; ढूँढ़ो, तो तुम पाओगे; खटखटाओ, तो तुम्हारे लिये खोला जाएगा।"
+    },
+    "te": {
+      "version": "IRV",
+      "text": "“అడగండి, మీకు ఇవ్వబడుతుంది. వెదకండి, మీకు దొరుకుతుంది. తట్టండి, మీకు తలుపు తీయబడుతుంది."
+    },
+    "uk": {
+      "version": "ONPU",
+      "text": "Просіть – і буде дано вам, шукайте – і знайдете, стукайте – і відчинять вам."
+    },
+    "be": {
+      "version": "BEL",
+      "text": "Прасіце, і будзе вам дадзена; шукайце, і знойдзеце; стукайцеся, і адчыняць вам."
+    },
+    "fa": {
+      "version": "OPV",
+      "text": "«سوال کنید که به شما داده خواهد شد؛ بطلبید که خواهید یافت؛ بکوبید که برای شما بازکرده خواهد شد."
+    },
+    "ar": {
+      "version": "AVD",
+      "text": "«اِسْأَلُوا تُعْطَوْا. اُطْلُبُوا تَجِدُوا. اِقْرَعُوا يُفْتَحْ لَكُمْ."
+    },
+    "zh-cn": {
+      "version": "CCB",
+      "text": "“祈求，就会给你们；寻找，就会寻见；叩门，就会给你们开门。"
+    },
+    "ko": {
+      "version": "KOR",
+      "text": "구하라 ! 그러면 너희에게 주실 것이요 찾으라 ! 그러면 찾을 것이요 문을 두드리라 ! 그러면 너희에게 열릴 것이니"
+    },
+    "vi": {
+      "version": "VIE",
+      "text": "Hãy xin, sẽ được; hãy tìm, sẽ gặp; hãy gõ cửa, sẽ mở cho."
+    },
+    "ta": {
+      "version": "IRV",
+      "text": "கேளுங்கள், அப்பொழுது உங்களுக்குக் கொடுக்கப்படும்; தேடுங்கள், அப்பொழுது கண்டடைவீர்கள்; தட்டுங்கள், அப்பொழுது உங்களுக்குத் திறக்கப்படும்;"
+    }
   },
   "B": {
     "reference": "Ephesians 4:32",
-    "en": { "version": "GNT", "text": "Be kind and tenderhearted to one another, and forgive one another, as God has forgiven you through Christ." },
-    "es": { "version": "NVI", "text": "Más bien, sed bondadosos y compasivos unos con otros, y perdonaos mutuamente, así como Dios os perdonó en Cristo." },
-    "zh-tw": { "version": "CUV", "text": "並要以恩慈相待，存憐憫的心，彼此饒恕，正如神在基督裏饒恕了你們一樣。" },
-    "pt": { "version": "NVI", "text": "Sejam bondosos e compassivos uns para com os outros, perdoando‑se mutuamente, como Deus os perdoou em Cristo." },
-    "it": { "version": "NR",  "text": "Siate invece benevoli e misericordiosi gli uni verso gli altri, perdonandovi a vicenda come anche Dio vi ha perdonati in Cristo." },
-    "fr": { "version": "LSG", "text": "Soyez bons les uns envers les autres, compatissants, vous pardonnant réciproquement, comme Dieu vous a pardonné en Christ." },
-    "am": { "version": "ABB", "text": "እርስ በርሳችሁም ቸሮችና ርኅሩኆች ሁኑ፥ እግዚአብሔርም ደግሞ በክርስቶስ ይቅር እንዳላችሁ ይቅር ተባባሉ።" }
+    "en": {
+      "version": "GNT",
+      "text": "Be kind and tenderhearted to one another, and forgive one another, as God has forgiven you through Christ."
+    },
+    "es": {
+      "version": "NVI",
+      "text": "Más bien, sed bondadosos y compasivos unos con otros, y perdonaos mutuamente, así como Dios os perdonó en Cristo."
+    },
+    "zh-tw": {
+      "version": "CUV",
+      "text": "並要以恩慈相待，存憐憫的心，彼此饒恕，正如神在基督裏饒恕了你們一樣。"
+    },
+    "pt": {
+      "version": "NVI",
+      "text": "Sejam bondosos e compassivos uns para com os outros, perdoando‑se mutuamente, como Deus os perdoou em Cristo."
+    },
+    "it": {
+      "version": "NR",
+      "text": "Siate invece benevoli e misericordiosi gli uni verso gli altri, perdonandovi a vicenda come anche Dio vi ha perdonati in Cristo."
+    },
+    "fr": {
+      "version": "LSG",
+      "text": "Soyez bons les uns envers les autres, compatissants, vous pardonnant réciproquement, comme Dieu vous a pardonné en Christ."
+    },
+    "am": {
+      "version": "ABB",
+      "text": "እርስ በርሳችሁም ቸሮችና ርኅሩኆች ሁኑ፥ እግዚአብሔርም ደግሞ በክርስቶስ ይቅር እንዳላችሁ ይቅር ተባባሉ።"
+    },
+    "hi": {
+      "version": "IRV",
+      "text": "एक दूसरे पर कृपालु, और करुणामय हो, और जैसे परमेश्वर ने मसीह में तुम्हारे अपराध क्षमा किए, वैसे ही तुम भी एक दूसरे के अपराध क्षमा करो।"
+    },
+    "te": {
+      "version": "IRV",
+      "text": "హృదయంలో కరుణ కలిగి ఒకడిపై మరొకడు దయ చూపించండి. దేవుడు మిమ్మల్ని ఏ విధంగా క్రీస్తులో క్షమించాడో ఆ విధంగానే మీరు కూడా ఇతరులను క్షమించండి."
+    },
+    "uk": {
+      "version": "ONPU",
+      "text": "Будьте ж одне до одного доброзичливими, м’якосердними, прощаючи одне одного так, як і Бог простив вам у Христі."
+    },
+    "be": {
+      "version": "BEL",
+      "text": "Будзьце ж адзін да аднаго добрымі, спагадлівымі, прабачаючы адзін аднаму, як і Бог у Хрысьце прабачыў вам."
+    },
+    "fa": {
+      "version": "OPV",
+      "text": "و با یگدیگر مهربان باشید ورحیم و همدیگر را عفو نمایید چنانکه خدا درمسیح شما را هم آمرزیده است."
+    },
+    "ar": {
+      "version": "AVD",
+      "text": "وَكُونُوا لُطَفَاءَ بَعْضُكُمْ نَحْوَ بَعْضٍ، شَفُوقِينَ، مُتَسَامِحِينَ كَمَا سَامَحَكُمُ ٱللهُ أَيْضًا فِي ٱلْمَسِيحِ."
+    },
+    "zh-cn": {
+      "version": "CCB",
+      "text": "总要以恩慈、怜悯的心彼此相待，要互相饶恕，正如上帝在基督里饶恕了你们一样。"
+    },
+    "ko": {
+      "version": "KOR",
+      "text": "서로 인자하게 하며 불쌍히 여기며 서로 용서하기를 하나님이 그리스도 안에서 너희를 용서하심과 같이 하라"
+    },
+    "vi": {
+      "version": "VIE",
+      "text": "Hãy ở với nhau cách nhân từ, đầy dẫy lòng thương xót, tha thứ nhau như Đức Chúa Trời đã tha thứ anh em trong Đấng Christ vậy."
+    },
+    "ta": {
+      "version": "IRV",
+      "text": "ஒருவருக்கொருவர் தயவாகவும் மனஉருக்கமாகவும் இருந்து, கிறிஸ்துவிற்குள் தேவன் உங்களுக்கு மன்னித்ததுபோல, நீங்களும் ஒருவருக்கொருவர் மன்னியுங்கள்."
+    }
   },
   "C": {
     "reference": "Matthew 11:28",
-    "en": { "version": "GNT", "text": "Come to me, all of you who are tired from carrying heavy loads, and I will give you rest." },
-    "es": { "version": "NVI", "text": "Venid a mí todos vosotros que estáis cansados y agobiados, y yo os daré descanso." },
-    "zh-tw": { "version": "CUV", "text": "凡勞苦擔重擔的人可以到我這裏來，我就使你們得安息。" },
-    "pt": { "version": "NVI", "text": "Venham a mim todos os que estão cansados e sobrecarregados, e eu darei descanso a vocês." },
-    "it": { "version": "NR",  "text": "Venite a me, voi tutti che siete affaticati e oppressi, e io vi darò riposo." },
-    "fr": { "version": "LSG", "text": "Venez à moi, vous tous qui êtes fatigués et chargés, et je vous donnerai du repos." },
-    "am": { "version": "ABB", "text": "እናንተ ደካሞች ሸክማችሁ የከበደ ሁሉ፥ ወደ እኔ ኑ፥ እኔም አሳርፋችኋለሁ።" }
+    "en": {
+      "version": "GNT",
+      "text": "Come to me, all of you who are tired from carrying heavy loads, and I will give you rest."
+    },
+    "es": {
+      "version": "NVI",
+      "text": "Venid a mí todos vosotros que estáis cansados y agobiados, y yo os daré descanso."
+    },
+    "zh-tw": {
+      "version": "CUV",
+      "text": "凡勞苦擔重擔的人可以到我這裏來，我就使你們得安息。"
+    },
+    "pt": {
+      "version": "NVI",
+      "text": "Venham a mim todos os que estão cansados e sobrecarregados, e eu darei descanso a vocês."
+    },
+    "it": {
+      "version": "NR",
+      "text": "Venite a me, voi tutti che siete affaticati e oppressi, e io vi darò riposo."
+    },
+    "fr": {
+      "version": "LSG",
+      "text": "Venez à moi, vous tous qui êtes fatigués et chargés, et je vous donnerai du repos."
+    },
+    "am": {
+      "version": "ABB",
+      "text": "እናንተ ደካሞች ሸክማችሁ የከበደ ሁሉ፥ ወደ እኔ ኑ፥ እኔም አሳርፋችኋለሁ።"
+    },
+    "hi": {
+      "version": "IRV",
+      "text": "“हे सब परिश्रम करनेवालों और बोझ से दबे लोगों, मेरे पास आओ; मैं तुम्हें विश्राम दूँगा।”"
+    },
+    "te": {
+      "version": "IRV",
+      "text": "“మోయలేని బరువు మోస్తూ అలిసిపోయిన మీరంతా నా దగ్గరికి రండి. నేను మీకు విశ్రాంతి నిస్తాను."
+    },
+    "uk": {
+      "version": "ONPU",
+      "text": "Прийдіть до Мене всі втомлені та обтяжені, і Я заспокою вас."
+    },
+    "be": {
+      "version": "BEL",
+      "text": "Прыйдзіце да Мяне ўсе спрацаваныя і абцяжараныя, і Я дам вам супачынак."
+    },
+    "fa": {
+      "version": "OPV",
+      "text": "بیاید نزد من‌ای تمام زحمتکشان و گرانباران و من شما را آرامی خواهم بخشید."
+    },
+    "ar": {
+      "version": "AVD",
+      "text": "تَعَالَوْا إِلَيَّ يا جَمِيعَ ٱلْمُتْعَبِينَ وَٱلثَّقِيلِي ٱلْأَحْمَالِ، وَأَنَا أُرِيحُكُمْ."
+    },
+    "zh-cn": {
+      "version": "CCB",
+      "text": "“所有劳苦困乏、背负重担的人啊，到我这里来吧！我要赐给你们安息。"
+    },
+    "ko": {
+      "version": "KOR",
+      "text": "수고하고 무거운 짐진 자들아 ! 다 내게로 오라 내가 너희를 쉬게 하리라"
+    },
+    "vi": {
+      "version": "VIE",
+      "text": "Hỡi những kẻ mệt mỏi và gánh nặng, hãy đến cùng ta, ta sẽ cho các ngươi được yên nghỉ."
+    },
+    "ta": {
+      "version": "IRV",
+      "text": "வருத்தப்பட்டுப் பாரஞ்சுமக்கிறவர்களே! நீங்கள் எல்லோரும் என்னிடத்தில் வாருங்கள்; நான் உங்களுக்கு இளைப்பாறுதல் தருவேன்."
+    }
   },
   "D": {
     "reference": "Matthew 7:12",
-    "en": { "version": "GNT", "text": "Do for others what you want them to do for you: this is the meaning of the Law of Moses and of the teachings of the prophets." },
-    "es": { "version": "NVI", "text": "Así que en todo tratad a los demás tal y como queréis que ellos os traten a vosotros. De hecho, esto es la ley y los profetas." },
-    "zh-tw": { "version": "CUV", "text": "所以，無論何事，你們願意人怎樣待你們，你們也要怎樣待人，因為這就是律法和先知的道理。" },
-    "pt": { "version": "NVI", "text": "Assim, em tudo, façam às pessoas o que querem que elas façam a vocês, pois esta é a Lei e os Profetas." },
-    "it": { "version": "NR",  "text": "Tutte le cose dunque che voi volete che gli uomini vi facciano, fatele anche voi a loro; perché questa è la legge e i profeti." },
-    "fr": { "version": "LSG", "text": "Tout ce que vous voulez que les hommes fassent pour vous, faites-le de même pour eux, car c'est la loi et les prophètes." },
-    "am": { "version": "ABB", "text": "እንግዲህ ሰዎች ሊያደርጉላችሁ የምትወዱትን ሁሉ እናንተ ደግሞ እንዲሁ አድርጉላቸው፤ ሕግም ነቢያትም ይህ ነውና።" }
+    "en": {
+      "version": "GNT",
+      "text": "Do for others what you want them to do for you: this is the meaning of the Law of Moses and of the teachings of the prophets."
+    },
+    "es": {
+      "version": "NVI",
+      "text": "Así que en todo tratad a los demás tal y como queréis que ellos os traten a vosotros. De hecho, esto es la ley y los profetas."
+    },
+    "zh-tw": {
+      "version": "CUV",
+      "text": "所以，無論何事，你們願意人怎樣待你們，你們也要怎樣待人，因為這就是律法和先知的道理。"
+    },
+    "pt": {
+      "version": "NVI",
+      "text": "Assim, em tudo, façam às pessoas o que querem que elas façam a vocês, pois esta é a Lei e os Profetas."
+    },
+    "it": {
+      "version": "NR",
+      "text": "Tutte le cose dunque che voi volete che gli uomini vi facciano, fatele anche voi a loro; perché questa è la legge e i profeti."
+    },
+    "fr": {
+      "version": "LSG",
+      "text": "Tout ce que vous voulez que les hommes fassent pour vous, faites-le de même pour eux, car c'est la loi et les prophètes."
+    },
+    "am": {
+      "version": "ABB",
+      "text": "እንግዲህ ሰዎች ሊያደርጉላችሁ የምትወዱትን ሁሉ እናንተ ደግሞ እንዲሁ አድርጉላቸው፤ ሕግም ነቢያትም ይህ ነውና።"
+    },
+    "hi": {
+      "version": "IRV",
+      "text": "इस कारण जो कुछ तुम चाहते हो, कि मनुष्य तुम्हारे साथ करें, तुम भी उनके साथ वैसा ही करो; क्योंकि व्यवस्था और भविष्यद्वक्ताओं की शिक्षा यही है।"
+    },
+    "te": {
+      "version": "IRV",
+      "text": "“కాబట్టి మనుషులు మీకు ఏమి చేయాలని మీరు కోరుకుంటారో అలాగే మీరూ వారికి చేయండి. ధర్మశాస్త్రమూ ప్రవక్తల ఉపదేశమూ ఇదే."
+    },
+    "uk": {
+      "version": "ONPU",
+      "text": "Отже, усе, чого бажаєте, щоб вам робили люди, так само й ви робіть їм, бо в цьому Закон та Пророки."
+    },
+    "be": {
+      "version": "BEL",
+      "text": "Дык усё, што хочаце, каб вам рабілі людзі, тое і вы ім рабіце; бо ў гэтым Закон і Прарокі."
+    },
+    "fa": {
+      "version": "OPV",
+      "text": "لهذا آنچه خواهید که مردم به شما کنند، شما نیز بدیشان همچنان کنید، زیرا این است تورات و صحف انبیا."
+    },
+    "ar": {
+      "version": "AVD",
+      "text": "فَكُلُّ مَا تُرِيدُونَ أَنْ يَفْعَلَ ٱلنَّاسُ بِكُمُ ٱفْعَلُوا هَكَذَا أَنْتُمْ أَيْضًا بِهِمْ، لِأَنَّ هَذَا هُوَ ٱلنَّامُوسُ وَٱلْأَنْبِيَاءُ."
+    },
+    "zh-cn": {
+      "version": "CCB",
+      "text": "“所以，无论何事，想要别人怎样对待你们，你们就要怎样对待别人，这是律法和先知的教导。"
+    },
+    "ko": {
+      "version": "KOR",
+      "text": "그러므로 무엇이든지 남에게 대접을 받고자 하는대로 너희도 남을 대접하라 이것이 율법이요 선지자니라"
+    },
+    "vi": {
+      "version": "VIE",
+      "text": "Aáy vậy, hễ điều chi mà các ngươi muốn người ta làm cho mình, thì cũng hãy làm điều đó cho họ, vì ấy là luật pháp và lời tiên tri."
+    },
+    "ta": {
+      "version": "IRV",
+      "text": "ஆதலால், மனிதர்கள் உங்களுக்கு எவைகளைச் செய்யவிரும்புகிறீர்களோ, அவைகளை நீங்களும் அவர்களுக்குச் செய்யுங்கள்; இதுவே நியாயப்பிரமாணமும் தீர்க்கதரிசனங்களுமாம்."
+    }
   },
   "E": {
     "reference": "James 1:17",
-    "en": { "version": "GNT", "text": "Every good gift and every perfect present comes from heaven; it comes down from God, the Creator of the heavenly lights, who does not change or cause darkness by turning." },
-    "es": { "version": "NVI", "text": "Toda buena dádiva y todo don perfecto descienden de lo alto, donde está el Padre que creó las lumbreras celestes, y que no cambia como los astros ni se mueve como las sombras." },
-    "zh-tw": { "version": "CUV", "text": "各樣美善的恩賜和各樣全備的賞賜都是從上頭來的，從眾光之父那裏降下來的；在他並沒有改變，也沒有轉動的影兒。" },
-    "pt": { "version": "NVI", "text": "Toda boa dádiva e todo dom perfeito vêm do alto e descem do Pai das luzes, que não muda como sombras inconstantes." },
-    "it": { "version": "NR",  "text": "Ogni cosa buona e ogni dono perfetto vengono dall'alto e discendono dal Padre degli astri luminosi presso il quale non c'è variazione né ombra di mutamento." },
-    "fr": { "version": "LSG", "text": "toute grâce excellente et tout don parfait descendent d'en haut, du Père des lumières, chez lequel il n'y a ni changement ni ombre de variation." },
-    "am": { "version": "ABB", "text": "በጎ ስጦታ ሁሉ ፍጹምም በረከት ሁሉ ከላይ ናቸው፥ መለወጥም በእርሱ ዘንድ ከሌለ በመዞርም የተደረገ ጥላ በእርሱ ዘንድ ከሌለ ከብርሃናት አባት ይወርዳሉ።" }
+    "en": {
+      "version": "GNT",
+      "text": "Every good gift and every perfect present comes from heaven; it comes down from God, the Creator of the heavenly lights, who does not change or cause darkness by turning."
+    },
+    "es": {
+      "version": "NVI",
+      "text": "Toda buena dádiva y todo don perfecto descienden de lo alto, donde está el Padre que creó las lumbreras celestes, y que no cambia como los astros ni se mueve como las sombras."
+    },
+    "zh-tw": {
+      "version": "CUV",
+      "text": "各樣美善的恩賜和各樣全備的賞賜都是從上頭來的，從眾光之父那裏降下來的；在他並沒有改變，也沒有轉動的影兒。"
+    },
+    "pt": {
+      "version": "NVI",
+      "text": "Toda boa dádiva e todo dom perfeito vêm do alto e descem do Pai das luzes, que não muda como sombras inconstantes."
+    },
+    "it": {
+      "version": "NR",
+      "text": "Ogni cosa buona e ogni dono perfetto vengono dall'alto e discendono dal Padre degli astri luminosi presso il quale non c'è variazione né ombra di mutamento."
+    },
+    "fr": {
+      "version": "LSG",
+      "text": "toute grâce excellente et tout don parfait descendent d'en haut, du Père des lumières, chez lequel il n'y a ni changement ni ombre de variation."
+    },
+    "am": {
+      "version": "ABB",
+      "text": "በጎ ስጦታ ሁሉ ፍጹምም በረከት ሁሉ ከላይ ናቸው፥ መለወጥም በእርሱ ዘንድ ከሌለ በመዞርም የተደረገ ጥላ በእርሱ ዘንድ ከሌለ ከብርሃናት አባት ይወርዳሉ።"
+    },
+    "hi": {
+      "version": "IRV",
+      "text": "क्योंकि हर एक अच्छा वरदान और हर एक उत्तम दान ऊपर ही से है, और ज्योतियों के पिता की ओर से मिलता है, जिसमें न तो कोई परिवर्तन हो सकता है, और न ही वह परछाई के समान बदलता है।"
+    },
+    "te": {
+      "version": "IRV",
+      "text": "ప్రతి మంచి బహుమానం, పరిపూర్ణమైన ప్రతి వరం పైనుంచి వస్తాయి. వెలుగుకు కర్త అయిన తండ్రి నుంచి వస్తాయి. ఆయన కదిలే నీడలా ఉండడు. ఆయన మార్పు లేనివాడు."
+    },
+    "uk": {
+      "version": "ONPU",
+      "text": "Кожен добрий дарунок і кожен досконалий дар походить згори, спускаючись від Отця світла, в Якому немає ні зміни, ні тіні переміни."
+    },
+    "be": {
+      "version": "BEL",
+      "text": "усякі дар добры і ўсякі дарунак дасканалы зыходзяць з вышыні, ад Айца сьвятла, у Якога няма рознасьці, ані ценю зьменлівасьці."
+    },
+    "fa": {
+      "version": "OPV",
+      "text": "هر بخشندگی نیکو و هر بخشش کامل از بالا است و نازل می‌شود از پدر نورها که نزد او هیچ تبدیل و سایه گردش نیست."
+    },
+    "ar": {
+      "version": "AVD",
+      "text": "كُلُّ عَطِيَّةٍ صَالِحَةٍ وَكُلُّ مَوْهِبَةٍ تَامَّةٍ هِيَ مِنْ فَوْقُ، نَازِلَةٌ مِنْ عِنْدِ أَبِي ٱلْأَنْوَارِ، ٱلَّذِي لَيْسَ عِنْدَهُ تَغْيِيرٌ وَلَا ظِلُّ دَوَرَانٍ."
+    },
+    "zh-cn": {
+      "version": "CCB",
+      "text": "一切良善的施予和完美的恩赐都是从天上，从众光之父那里来的。祂不像转动的影子变幻无常。"
+    },
+    "ko": {
+      "version": "KOR",
+      "text": "각양 좋은 은사와 온전한 선물이 다 위로부터 빛들의 아버지께로서 내려오나니 그는 변함도 없으시고 회전하는 그림자도 없으시니라"
+    },
+    "vi": {
+      "version": "VIE",
+      "text": "mọi ân điển tốt lành cùng sự ban cho trọn vẹn đều đến từ nơi cao và bởi Cha sáng láng mà xuống, trong Ngài chẳng có một sự thay đổi, cũng chẳng có bóng của sự biến cải nào."
+    },
+    "ta": {
+      "version": "IRV",
+      "text": "நன்மையான எந்த ஈவும் பூரணமான எந்த வரமும் பரலோகத்திலிருந்து உண்டாகி, ஒளிகளின் பிதாவினிடத்திலிருந்து இறங்கி வருகிறது; அவரிடத்தில் எந்தவொரு மாறுதலும், எந்தவொரு வேற்றுமையின் நிழலும் இல்லை."
+    }
   },
   "F": {
     "reference": "Luke 11:4",
-    "en": { "version": "GNT", "text": "Forgive us our sins, for we forgive everyone who does us wrong. And do not bring us to hard testing." },
-    "es": { "version": "NVI", "text": "Perdónanos nuestros pecados, porque también nosotros perdonamos a todos los que nos ofenden. Y no nos metas en tentación" },
-    "zh-tw": { "version": "CUV", "text": "赦免我們的罪，因為我們也赦免凡虧欠我們的人。不叫我們遇見試探；救我們脫離凶惡。" },
-    "pt": { "version": "NVI", "text": "Perdoa os nossos pecados, pois também perdoamos todos os que nos ofendem. E não nos deixes cair em tentação." },
-    "it": { "version": "NR",  "text": "E perdonaci i nostri peccati, perché anche noi perdoniamo a ogni nostro debitore; e non ci esporre alla tentazione." },
-    "fr": { "version": "LSG", "text": "pardonne-nous nos péchés, car nous aussi nous pardonnons à quiconque nous offense; et ne nous induis pas en tentation." },
-    "am": { "version": "ABB", "text": "ኃጢአታችንንም ይቅር በለን፥ እኛ ደግሞ የበደሉንን ሁሉ ይቅር ብለናልና፤ ከክፉ አድነን እንጂ ወደ ፈተና አታግባን።" }
+    "en": {
+      "version": "GNT",
+      "text": "Forgive us our sins, for we forgive everyone who does us wrong. And do not bring us to hard testing."
+    },
+    "es": {
+      "version": "NVI",
+      "text": "Perdónanos nuestros pecados, porque también nosotros perdonamos a todos los que nos ofenden. Y no nos metas en tentación"
+    },
+    "zh-tw": {
+      "version": "CUV",
+      "text": "赦免我們的罪，因為我們也赦免凡虧欠我們的人。不叫我們遇見試探；救我們脫離凶惡。"
+    },
+    "pt": {
+      "version": "NVI",
+      "text": "Perdoa os nossos pecados, pois também perdoamos todos os que nos ofendem. E não nos deixes cair em tentação."
+    },
+    "it": {
+      "version": "NR",
+      "text": "E perdonaci i nostri peccati, perché anche noi perdoniamo a ogni nostro debitore; e non ci esporre alla tentazione."
+    },
+    "fr": {
+      "version": "LSG",
+      "text": "pardonne-nous nos péchés, car nous aussi nous pardonnons à quiconque nous offense; et ne nous induis pas en tentation."
+    },
+    "am": {
+      "version": "ABB",
+      "text": "ኃጢአታችንንም ይቅር በለን፥ እኛ ደግሞ የበደሉንን ሁሉ ይቅር ብለናልና፤ ከክፉ አድነን እንጂ ወደ ፈተና አታግባን።"
+    },
+    "hi": {
+      "version": "IRV",
+      "text": "‘और हमारे पापों को क्षमा कर,"
+    },
+    "te": {
+      "version": "IRV",
+      "text": "మాకు వ్యతిరేకంగా ఎవరైనా చేసిన అపరాధాలు మేము క్షమిస్తూ ఉన్నాం గనక మా పాపాలనూ క్షమించు. మమ్మల్ని పరీక్షలోకి తీసుకు వెళ్ళకు’ అని పలకండి” అని చెప్పాడు."
+    },
+    "uk": {
+      "version": "ONPU",
+      "text": "І прости нам гріхи наші, бо і ми прощаємо всім боржникам нашим. І не введи нас у спокусу, але визволи нас від лукавого»."
+    },
+    "be": {
+      "version": "BEL",
+      "text": "І адпусьці нам грахі нашыя, як і мы адпускаем вінаватым нашым; і ня ўводзь нас у спакусу, але збаў нас ад злога”»."
+    },
+    "fa": {
+      "version": "OPV",
+      "text": "و گناهان ما را ببخش زیرا که ما نیز هر قرضدار خود را می‌بخشیم. و ما را در آزمایش میاور، بلکه ما را از شریر رهایی ده.»"
+    },
+    "ar": {
+      "version": "AVD",
+      "text": "وَٱغْفِرْ لَنَا خَطَايَانَا لِأَنَّنَا نَحْنُ أَيْضًا نَغْفِرُ لِكُلِّ مَنْ يُذْنِبُ إِلَيْنَا، وَلَا تُدْخِلْنَا فِي تَجْرِبَةٍ لَكِنْ نَجِّنَا مِنَ ٱلشِّرِّيرِ»."
+    },
+    "zh-cn": {
+      "version": "CCB",
+      "text": "求你饶恕我们的罪，"
+    },
+    "ko": {
+      "version": "KOR",
+      "text": "우리가 우리에게 죄 지은 모든 사람을 용서하오니 우리 죄도 사하여 주옵시고 우리를 시험에 들게 하지 마옵소서 하라'"
+    },
+    "vi": {
+      "version": "VIE",
+      "text": "xin tha tội chúng tôi, vì chúng tôi cũng tha kẻ mích lòng mình; và xin chớ đem chúng tôi vào sự cám dỗ!"
+    },
+    "ta": {
+      "version": "IRV",
+      "text": "எங்களுடைய பாவங்களை எங்களுக்கு மன்னியும்;"
+    }
   },
   "G": {
     "reference": "1 John 4:8",
-    "en": { "version": "GNT", "text": "Whoever does not love does not know God, for God is love." },
-    "es": { "version": "NVI", "text": "El que no ama no conoce a Dios, porque Dios es amor." },
-    "zh-tw": { "version": "CUV", "text": "沒有愛心的，就不認識神，因為神就是愛。" },
-    "pt": { "version": "NVI", "text": "Quem não ama não conhece a Deus, porque Deus é amor." },
-    "it": { "version": "NR",  "text": "Chi non ama non ha conosciuto Dio, perché Dio è amore." },
-    "fr": { "version": "LSG", "text": "Celui qui n'aime pas n'a pas connu Dieu, car Dieu est amour." },
-    "am": { "version": "ABB", "text": "ፍቅር የሌለው እግዚአብሔርን አያውቅም፥ እግዚአብሔር ፍቅር ነውና።" }
+    "en": {
+      "version": "GNT",
+      "text": "Whoever does not love does not know God, for God is love."
+    },
+    "es": {
+      "version": "NVI",
+      "text": "El que no ama no conoce a Dios, porque Dios es amor."
+    },
+    "zh-tw": {
+      "version": "CUV",
+      "text": "沒有愛心的，就不認識神，因為神就是愛。"
+    },
+    "pt": {
+      "version": "NVI",
+      "text": "Quem não ama não conhece a Deus, porque Deus é amor."
+    },
+    "it": {
+      "version": "NR",
+      "text": "Chi non ama non ha conosciuto Dio, perché Dio è amore."
+    },
+    "fr": {
+      "version": "LSG",
+      "text": "Celui qui n'aime pas n'a pas connu Dieu, car Dieu est amour."
+    },
+    "am": {
+      "version": "ABB",
+      "text": "ፍቅር የሌለው እግዚአብሔርን አያውቅም፥ እግዚአብሔር ፍቅር ነውና።"
+    },
+    "hi": {
+      "version": "IRV",
+      "text": "जो प्रेम नहीं रखता वह परमेश्वर को नहीं जानता है, क्योंकि परमेश्वर प्रेम है।"
+    },
+    "te": {
+      "version": "IRV",
+      "text": "ప్రేమించని వాడికి దేవుడు తెలియదు. ఎందుకంటే దేవుడు ప్రేమ."
+    },
+    "uk": {
+      "version": "ONPU",
+      "text": "А хто не любить, не знає Бога, тому що Бог є любов."
+    },
+    "be": {
+      "version": "BEL",
+      "text": "Хто ня любіць, той не пазнаў Бога, бо Бог ёсьць любоў."
+    },
+    "fa": {
+      "version": "OPV",
+      "text": "وکسی‌که محبت نمی نماید، خدا را نمی شناسدزیرا خدا محبت است."
+    },
+    "ar": {
+      "version": "AVD",
+      "text": "وَمَنْ لَا يُحِبُّ لَمْ يَعْرِفِ ٱللهَ، لِأَنَّ ٱللهَ مَحَبَّةٌ."
+    },
+    "zh-cn": {
+      "version": "CCB",
+      "text": "不爱人者不认识上帝，因为上帝就是爱。"
+    },
+    "ko": {
+      "version": "KOR",
+      "text": "사랑하지 아니하는 자는 하나님을 알지 못하나니 이는 하나님은 사랑이심이라"
+    },
+    "vi": {
+      "version": "VIE",
+      "text": "Ai chẳng yêu, thì không biết Đức Chúa Trời; vì Đức Chúa Trời là sự yêu thương."
+    },
+    "ta": {
+      "version": "IRV",
+      "text": "அன்பில்லாதவன் தேவனை அறியான்; தேவன் அன்பாகவே இருக்கிறார்."
+    }
   },
   "H": {
     "reference": "Revelation 1:3",
-    "en": { "version": "GNT", "text": "Happy is the one who reads this book, and happy are those who listen to the words of this prophetic message and obey what is written in this book!" },
-    "es": { "version": "NVI", "text": "Dichoso el que lee y dichosos los que escuchan las palabras de este mensaje profético y hacen caso de lo que aquí está escrito, porque el tiempo de su cumplimiento está cerca." },
-    "zh-tw": { "version": "CUV", "text": "念這書上預言的和那些聽見又遵守其中所記載的，都是有福的，因為日期近了。" },
-    "pt": { "version": "NVI", "text": "Bem-aventurado aquele que lê em voz alta as palavras desta profecia, e bem-aventurados aqueles que ouvem e guardam as coisas nela escritas, pois o tempo está próximo." },
-    "it": { "version": "NR",  "text": "Beato chi legge e beati quelli che ascoltano le parole di questa profezia e fanno tesoro delle cose che vi sono scritte, perché il tempo è vicino!" },
-    "fr": { "version": "LSG", "text": "Heureux celui qui lit et ceux qui entendent les paroles de la prophétie, et qui gardent les choses qui y sont écrites! Car le temps est proche." },
-    "am": { "version": "ABB", "text": "ዘመኑ ቀርቦአልና የሚያነበው፥ የትንቢቱን ቃል የሚሰሙትና በውስጡ የተጻፈውን የሚጠብቁት ብፁዓን ናቸው።" }
+    "en": {
+      "version": "GNT",
+      "text": "Happy is the one who reads this book, and happy are those who listen to the words of this prophetic message and obey what is written in this book!"
+    },
+    "es": {
+      "version": "NVI",
+      "text": "Dichoso el que lee y dichosos los que escuchan las palabras de este mensaje profético y hacen caso de lo que aquí está escrito, porque el tiempo de su cumplimiento está cerca."
+    },
+    "zh-tw": {
+      "version": "CUV",
+      "text": "念這書上預言的和那些聽見又遵守其中所記載的，都是有福的，因為日期近了。"
+    },
+    "pt": {
+      "version": "NVI",
+      "text": "Bem-aventurado aquele que lê em voz alta as palavras desta profecia, e bem-aventurados aqueles que ouvem e guardam as coisas nela escritas, pois o tempo está próximo."
+    },
+    "it": {
+      "version": "NR",
+      "text": "Beato chi legge e beati quelli che ascoltano le parole di questa profezia e fanno tesoro delle cose che vi sono scritte, perché il tempo è vicino!"
+    },
+    "fr": {
+      "version": "LSG",
+      "text": "Heureux celui qui lit et ceux qui entendent les paroles de la prophétie, et qui gardent les choses qui y sont écrites! Car le temps est proche."
+    },
+    "am": {
+      "version": "ABB",
+      "text": "ዘመኑ ቀርቦአልና የሚያነበው፥ የትንቢቱን ቃል የሚሰሙትና በውስጡ የተጻፈውን የሚጠብቁት ብፁዓን ናቸው።"
+    },
+    "hi": {
+      "version": "IRV",
+      "text": "धन्य है वह जो इस भविष्यद्वाणी के वचन को पढ़ता है, और वे जो सुनते हैं और इसमें लिखी हुई बातों को मानते हैं, क्योंकि समय निकट है।"
+    },
+    "te": {
+      "version": "IRV",
+      "text": "ఈ ప్రవచన వాక్యాలను బిగ్గరగా చదివేవాడూ, వాటిని వినే వారూ, వాటి ప్రకారం నడుచుకునే వారూ ధన్య జీవులు. ఎందుకంటే సమయం దగ్గర పడింది."
+    },
+    "uk": {
+      "version": "ONPU",
+      "text": "Блаженний той, хто читає, і ті, хто слухає слова цього пророцтва та дотримується написаного, бо час уже наблизився. Привітання та славослів’я"
+    },
+    "be": {
+      "version": "BEL",
+      "text": "Шчасьлівы той, які чытае, і тыя, якія слухаюць словы прароцтва і захоўваюць тое, што напісана ў ім, бо час блізкі."
+    },
+    "fa": {
+      "version": "OPV",
+      "text": "خوشابحال کسی‌که می‌خواند و آنانی که می‌شنوند کلام این نبوت را، و آنچه در این مکتوب است نگاه می‌دارند، چونکه وقت نزدیک است."
+    },
+    "ar": {
+      "version": "AVD",
+      "text": "طُوبَى لِلَّذِي يَقْرَأُ وَلِلَّذِينَ يَسْمَعُونَ أَقْوَالَ ٱلنُّبُوَّةِ، وَيَحْفَظُونَ مَا هُوَ مَكْتُوبٌ فِيهَا، لِأَنَّ ٱلْوَقْتَ قَرِيبٌ."
+    },
+    "zh-cn": {
+      "version": "CCB",
+      "text": "宣读这预言的人和那些听见并遵守其中内容的人有福了，因为日期近了。"
+    },
+    "ko": {
+      "version": "KOR",
+      "text": "이 예언의 말씀을 읽는 자와 듣는 자들과 그 가운데 기록한 것을 지키는 자들이 복이 있나니 때가 가까움이라"
+    },
+    "vi": {
+      "version": "VIE",
+      "text": "Phước cho kẻ đọc cùng những kẻ nghe lời tiên tri nầy, và giữ theo điều đã viết ra đây. Vì thì giờ đã gần rồi."
+    },
+    "ta": {
+      "version": "IRV",
+      "text": "இந்தத் தீர்க்கதரிசன வசனங்களைப் படிக்கிறவனும், கேட்கிறவர்களும், இதில் எழுதியிருக்கிறவைகளின்படி நடக்கிறவர்களும் பாக்கியவான்கள், காலம் நெருங்கிவிட்டது."
+    }
   },
   "I": {
     "reference": "1 John 1:9",
-    "en": { "version": "GNT", "text": "But if we confess our sins to God, he will keep his promise and do what is right: he will forgive us our sins and purify us from all our wrongdoing." },
-    "es": { "version": "NVI", "text": "Si confesamos nuestros pecados, Dios, que es fiel y justo, nos los perdonará y nos limpiará de toda maldad." },
-    "zh-tw": { "version": "CUV", "text": "我們若認自己的罪，神是信實的，是公義的，必要赦免我們的罪，洗淨我們一切的不義。" },
-    "pt": { "version": "NVI", "text": "Se confessarmos os nossos pecados, ele é fiel e justo para perdoar os nossos pecados e nos purificar de toda injustiça." },
-    "it": { "version": "NR",  "text": "Se confessiamo i nostri peccati, egli è fedele e giusto da perdonarci i peccati e purificarci da ogni iniquità." },
-    "fr": { "version": "LSG", "text": "Si nous confessons nos péchés, il est fidèle et juste pour nous les pardonner, et pour nous purifier de toute iniquité." },
-    "am": { "version": "ABB", "text": "በኃጢአታችን ብንናዘዝ ኃጢአታችንን ይቅር ሊለን ከዓመፃም ሁሉ ሊያነጻን የታመነና ጻድቅ ነው።" }
+    "en": {
+      "version": "GNT",
+      "text": "But if we confess our sins to God, he will keep his promise and do what is right: he will forgive us our sins and purify us from all our wrongdoing."
+    },
+    "es": {
+      "version": "NVI",
+      "text": "Si confesamos nuestros pecados, Dios, que es fiel y justo, nos los perdonará y nos limpiará de toda maldad."
+    },
+    "zh-tw": {
+      "version": "CUV",
+      "text": "我們若認自己的罪，神是信實的，是公義的，必要赦免我們的罪，洗淨我們一切的不義。"
+    },
+    "pt": {
+      "version": "NVI",
+      "text": "Se confessarmos os nossos pecados, ele é fiel e justo para perdoar os nossos pecados e nos purificar de toda injustiça."
+    },
+    "it": {
+      "version": "NR",
+      "text": "Se confessiamo i nostri peccati, egli è fedele e giusto da perdonarci i peccati e purificarci da ogni iniquità."
+    },
+    "fr": {
+      "version": "LSG",
+      "text": "Si nous confessons nos péchés, il est fidèle et juste pour nous les pardonner, et pour nous purifier de toute iniquité."
+    },
+    "am": {
+      "version": "ABB",
+      "text": "በኃጢአታችን ብንናዘዝ ኃጢአታችንን ይቅር ሊለን ከዓመፃም ሁሉ ሊያነጻን የታመነና ጻድቅ ነው።"
+    },
+    "hi": {
+      "version": "IRV",
+      "text": "यदि हम अपने पापों को मान लें, तो वह हमारे पापों को क्षमा करने, और हमें सब अधर्म से शुद्ध करने में विश्वासयोग्य और धर्मी है।"
+    },
+    "te": {
+      "version": "IRV",
+      "text": "కాని, మన పాపాలు మనం ఒప్పుకుంటే, మన పాపాలు క్షమించడానికీ, సమస్త దుర్నీతి నుండి శుద్ధి చేయడానికీ ఆయన నమ్మదగినవాడు, న్యాయవంతుడు."
+    },
+    "uk": {
+      "version": "ONPU",
+      "text": "Якщо ж ми визнаємо наші гріхи, то Він простить їх та очистить нас від усякої неправедності, бо Він вірний і праведний."
+    },
+    "be": {
+      "version": "BEL",
+      "text": "Калі вызнаем грахі нашыя, Ён верны і праведны, каб дараваць нам грахі і ачысьціць нас ад усякае няправеднасьці."
+    },
+    "fa": {
+      "version": "OPV",
+      "text": "اگر به گناهان خود اعتراف کنیم، او امین و عادل است تا گناهان ما را بیامرزد و ما را از هر ناراستی پاک سازد."
+    },
+    "ar": {
+      "version": "AVD",
+      "text": "إِنِ ٱعْتَرَفْنَا بِخَطَايَانَا فَهُوَ أَمِينٌ وَعَادِلٌ، حَتَّى يَغْفِرَ لَنَا خَطَايَانَا وَيُطَهِّرَنَا مِنْ كُلِّ إِثْمٍ."
+    },
+    "zh-cn": {
+      "version": "CCB",
+      "text": "如果我们承认自己的罪，上帝是信实和公义的，必赦免我们的罪，洗净我们一切的不义。"
+    },
+    "ko": {
+      "version": "KOR",
+      "text": "만일 우리가 우리 죄를 자백하면 저는 미쁘시고 의로우사 우리 죄를 사하시며 모든 불의에서 우리를 깨끗케 하실 것이요"
+    },
+    "vi": {
+      "version": "VIE",
+      "text": "Còn nếu chúng ta xưng tội mình, thì Ngài là thành tín công bình để tha tội cho chúng ta, và làm cho chúng ta sạch mọi điều gian ác."
+    },
+    "ta": {
+      "version": "IRV",
+      "text": "நம்முடைய பாவங்களை நாம் அறிக்கையிட்டால், பாவங்களை நமக்கு மன்னித்து எல்லா அநியாயத்தையும் நீக்கி நம்மைச் சுத்திகரிப்பதற்கு அவர் உண்மையும் நீதியும் உள்ளவராக இருக்கிறார்."
+    }
   },
   "J": {
     "reference": "Hebrews 13:8",
-    "en": { "version": "GNT", "text": "Jesus Christ is the same yesterday, today, and forever." },
-    "es": { "version": "NVI", "text": "Jesucristo es el mismo ayer y hoy y por los siglos." },
-    "zh-tw": { "version": "CUV", "text": "耶穌基督昨日、今日、一直到永遠，是一樣的。" },
-    "pt": { "version": "NVI", "text": "Jesus Cristo é o mesmo ontem, hoje e para sempre." },
-    "it": { "version": "NR",  "text": "Gesù Cristo è lo stesso ieri, oggi e in eterno." },
-    "fr": { "version": "LSG", "text": "Jésus-Christ est le même hier, aujourd'hui, et éternellement." },
-    "am": { "version": "ABB", "text": "ኢየሱስ ክርስቶስ ትናንትና ዛሬ እስከ ለዘላለምም ያው ነው።" }
+    "en": {
+      "version": "GNT",
+      "text": "Jesus Christ is the same yesterday, today, and forever."
+    },
+    "es": {
+      "version": "NVI",
+      "text": "Jesucristo es el mismo ayer y hoy y por los siglos."
+    },
+    "zh-tw": {
+      "version": "CUV",
+      "text": "耶穌基督昨日、今日、一直到永遠，是一樣的。"
+    },
+    "pt": {
+      "version": "NVI",
+      "text": "Jesus Cristo é o mesmo ontem, hoje e para sempre."
+    },
+    "it": {
+      "version": "NR",
+      "text": "Gesù Cristo è lo stesso ieri, oggi e in eterno."
+    },
+    "fr": {
+      "version": "LSG",
+      "text": "Jésus-Christ est le même hier, aujourd'hui, et éternellement."
+    },
+    "am": {
+      "version": "ABB",
+      "text": "ኢየሱስ ክርስቶስ ትናንትና ዛሬ እስከ ለዘላለምም ያው ነው።"
+    },
+    "hi": {
+      "version": "IRV",
+      "text": "यीशु मसीह कल और आज और युगानुयुग एक-सा है।"
+    },
+    "te": {
+      "version": "IRV",
+      "text": "యేసు క్రీస్తు నిన్న, నేడు ఒకే విధంగా ఉన్నాడు. ఎప్పటికీ ఒకేలా ఉంటాడు."
+    },
+    "uk": {
+      "version": "ONPU",
+      "text": "Ісус Христос учора, сьогодні й навіки Той Самий."
+    },
+    "be": {
+      "version": "BEL",
+      "text": "Ісус Хрыстос учора і сёньня Той Самы, і на вякі."
+    },
+    "fa": {
+      "version": "OPV",
+      "text": "عیسی مسیح دیروز و امروز و تا ابدالاباد همان است."
+    },
+    "ar": {
+      "version": "AVD",
+      "text": "يَسُوعُ ٱلْمَسِيحُ هُوَ هُوَ أَمْسًا وَٱلْيَوْمَ وَإِلَى ٱلْأَبَدِ."
+    },
+    "zh-cn": {
+      "version": "CCB",
+      "text": "耶稣基督昨日、今日、直到永远都不改变。"
+    },
+    "ko": {
+      "version": "KOR",
+      "text": "예수 그리스도는 어제나 오늘이나 영원토록 동일하시니라"
+    },
+    "vi": {
+      "version": "VIE",
+      "text": "Đức Chúa Jêsus Christ hôm qua, ngày nay, và cho đến đời đời không hề thay đổi."
+    },
+    "ta": {
+      "version": "IRV",
+      "text": "இயேசுகிறிஸ்து நேற்றும் இன்றும் என்றும் மாறாதவராக இருக்கிறார்."
+    }
   },
   "K": {
     "reference": "1 Corinthians 7:19",
-    "en": { "version": "NIV", "text": "Keeping God's commands is what counts." },
-    "es": { "version": "NVI", "text": "Para nada cuenta estar o no estar circuncidado; lo que importa es cumplir los mandatos de Dios." },
-    "zh-tw": { "version": "CUV", "text": "受割禮算不得甚麼，不受割禮也算不得甚麼，只要守神的誡命就是了。" },
-    "pt": { "version": "NVI", "text": "A circuncisão nada é, tampouco a incircuncisão; o que importa é obedecer aos mandamentos de Deus." },
-    "it": { "version": "NR",  "text": "La circoncisione non conta nulla e l'incirconcisione non conta nulla; ma ciò che conta è l'osservanza dei comandamenti di Dio." },
-    "fr": { "version": "LSG", "text": "La circoncision n'est rien, et l'incirconcision n'est rien, mais l'observation des commandements de Dieu est tout." },
-    "am": { "version": "ABB", "text": "መገረዝ ቢሆን አለመገረዝም ቢሆን ከንቱ ነው፥ የእግዚአብሔርን ትእዛዝ መጠበቅ ነው እንጂ።" }
+    "en": {
+      "version": "NIV",
+      "text": "Keeping God's commands is what counts."
+    },
+    "es": {
+      "version": "NVI",
+      "text": "Para nada cuenta estar o no estar circuncidado; lo que importa es cumplir los mandatos de Dios."
+    },
+    "zh-tw": {
+      "version": "CUV",
+      "text": "受割禮算不得甚麼，不受割禮也算不得甚麼，只要守神的誡命就是了。"
+    },
+    "pt": {
+      "version": "NVI",
+      "text": "A circuncisão nada é, tampouco a incircuncisão; o que importa é obedecer aos mandamentos de Deus."
+    },
+    "it": {
+      "version": "NR",
+      "text": "La circoncisione non conta nulla e l'incirconcisione non conta nulla; ma ciò che conta è l'osservanza dei comandamenti di Dio."
+    },
+    "fr": {
+      "version": "LSG",
+      "text": "La circoncision n'est rien, et l'incirconcision n'est rien, mais l'observation des commandements de Dieu est tout."
+    },
+    "am": {
+      "version": "ABB",
+      "text": "መገረዝ ቢሆን አለመገረዝም ቢሆን ከንቱ ነው፥ የእግዚአብሔርን ትእዛዝ መጠበቅ ነው እንጂ።"
+    },
+    "hi": {
+      "version": "IRV",
+      "text": "न खतना कुछ है, और न खतनारहित परन्तु परमेश्वर की आज्ञाओं को मानना ही सब कुछ है।"
+    },
+    "te": {
+      "version": "IRV",
+      "text": "దేవుని ఆజ్ఞలను పాటించడమే ముఖ్యం గానీ సున్నతి పొందడంలో గానీ, పొందక పోవటంలో గానీ ఏమీ లేదు,"
+    },
+    "uk": {
+      "version": "ONPU",
+      "text": "Обрізання – це ніщо, так само як і необрізання – це ніщо. Головне – це зберігання Божих заповідей."
+    },
+    "be": {
+      "version": "BEL",
+      "text": "Абразаньне ёсьць нішто, і неабразаньне ёсьць нішто, але [важнае] захоўваньне прыказаньняў Божых."
+    },
+    "fa": {
+      "version": "OPV",
+      "text": "ختنه چیزی نیست و نامختونی هیچ، بلکه نگاه داشتن امرهای خدا."
+    },
+    "ar": {
+      "version": "AVD",
+      "text": "لَيْسَ ٱلْخِتَانُ شَيْئًا، وَلَيْسَتِ ٱلْغُرْلَةُ شَيْئًا، بَلْ حِفْظُ وَصَايَا ٱللهِ."
+    },
+    "zh-cn": {
+      "version": "CCB",
+      "text": "受不受割礼都算不得什么，最要紧的是遵行上帝的诫命。"
+    },
+    "ko": {
+      "version": "KOR",
+      "text": "할례 받는 것도 아무 것도 아니요 할례 받지 아니하는 것도 아무것도 아니로되 오직 하나님의 계명을 지킬 따름이니라"
+    },
+    "vi": {
+      "version": "VIE",
+      "text": "Chịu cắt bì chẳng hề gì, không chịu cắt bì cũng chẳng hề gì; sự quan hệ là giữ các điều răn của Đức Chúa Trời."
+    },
+    "ta": {
+      "version": "IRV",
+      "text": "விருத்தசேதனமும் ஒன்றுமில்லை, விருத்தசேதனம் இல்லாமையும் ஒன்றுமில்லை; தேவனுடைய கட்டளைகளைக் கைக்கொள்ளுகிறதே முக்கியமான காரியம்."
+    }
   },
   "L": {
     "reference": "Mark 12:31",
-    "en": { "version": "GNT", "text": "Love your neighbor as you love yourself. There is no other commandment more important than these two." },
-    "es": { "version": "NVI", "text": "El segundo es: 'Ama a tu prójimo como a ti mismo'. No hay otro mandamiento más importante que estos." },
-    "zh-tw": { "version": "CUV", "text": "其次就是說：『要愛人如己。』再沒有比這兩條誡命更大的了。" },
-    "pt": { "version": "NVI", "text": "O segundo é este: 'Ame ao seu próximo como a você mesmo'. Não existe mandamento maior do que estes." },
-    "it": { "version": "NR",  "text": "Il secondo è questo: \"Ama il tuo prossimo come te stesso\". Non c'è nessun altro comandamento maggiore di questi." },
-    "fr": { "version": "LSG", "text": "Voici le second: Tu aimeras ton prochain comme toi-même. Il n'y a pas d'autre commandement plus grand que ceux-là." },
-    "am": { "version": "ABB", "text": "ሁለተኛይቱም። ባልንጀራህን እንደ ራስህ ውደድ የምትል እርስዋን የምትመስል ይህች ናት። ከእነዚህ የምትበልጥ ሌላ ትእዛዝ የለችም።" }
+    "en": {
+      "version": "GNT",
+      "text": "Love your neighbor as you love yourself. There is no other commandment more important than these two."
+    },
+    "es": {
+      "version": "NVI",
+      "text": "El segundo es: 'Ama a tu prójimo como a ti mismo'. No hay otro mandamiento más importante que estos."
+    },
+    "zh-tw": {
+      "version": "CUV",
+      "text": "其次就是說：『要愛人如己。』再沒有比這兩條誡命更大的了。"
+    },
+    "pt": {
+      "version": "NVI",
+      "text": "O segundo é este: 'Ame ao seu próximo como a você mesmo'. Não existe mandamento maior do que estes."
+    },
+    "it": {
+      "version": "NR",
+      "text": "Il secondo è questo: \"Ama il tuo prossimo come te stesso\". Non c'è nessun altro comandamento maggiore di questi."
+    },
+    "fr": {
+      "version": "LSG",
+      "text": "Voici le second: Tu aimeras ton prochain comme toi-même. Il n'y a pas d'autre commandement plus grand que ceux-là."
+    },
+    "am": {
+      "version": "ABB",
+      "text": "ሁለተኛይቱም። ባልንጀራህን እንደ ራስህ ውደድ የምትል እርስዋን የምትመስል ይህች ናት። ከእነዚህ የምትበልጥ ሌላ ትእዛዝ የለችም።"
+    },
+    "hi": {
+      "version": "IRV",
+      "text": "और दूसरी यह है, ‘तू अपने पड़ोसी से अपने समान प्रेम रखना।’ इससे बड़ी और कोई आज्ञा नहीं।”"
+    },
+    "te": {
+      "version": "IRV",
+      "text": "రెండవది, ‘నిన్ను నీవెంతగా ప్రేమించుకుంటావో నీ పొరుగువాణ్ణి అంతగా ప్రేమించాలి.’ వీటికి మించిన ఆజ్ఞ మరొకటి లేదు” అని జవాబిచ్చాడు."
+    },
+    "uk": {
+      "version": "ONPU",
+      "text": "А друга: «Люби ближнього свого, як самого себе». 19:18.Немає заповіді важливішої від цих двох."
+    },
+    "be": {
+      "version": "BEL",
+      "text": "І другое, падобнае да яго: “Любі бліжняга свайго як самога сябе”. Іншага прыказаньня, большага за гэтыя, няма»."
+    },
+    "fa": {
+      "version": "OPV",
+      "text": "و دوم مثل اول است که همسایه خود را چون نفس خود محبت نما. بزرگتر از این دو، حکمی نیست.»"
+    },
+    "ar": {
+      "version": "AVD",
+      "text": "وَثَانِيَةٌ مِثْلُهَا هِيَ: تُحِبُّ قَرِيبَكَ كَنَفْسِكَ. لَيْسَ وَصِيَّةٌ أُخْرَى أَعْظَمَ مِنْ هَاتَيْنِ»."
+    },
+    "zh-cn": {
+      "version": "CCB",
+      "text": "其次就是‘要爱邻如己’。再也没有任何诫命比这两条更重要了。”"
+    },
+    "ko": {
+      "version": "KOR",
+      "text": "둘째는 이것이니 네 이웃을 네몸과 같이 사랑하라 하신 것이라 이에서 더 큰 계명이 없느니라'"
+    },
+    "vi": {
+      "version": "VIE",
+      "text": "Nầy là điều thứ hai: Ngươi phải yêu kẻ lân cận như mình. Chẳng có điều răn nào lớn hơn hai điều đó."
+    },
+    "ta": {
+      "version": "IRV",
+      "text": "இதற்கு ஒப்பாக இருக்கிற இரண்டாம் கட்டளை என்னவென்றால்: உன்னிடத்தில் நீ அன்புசெலுத்துவதுபோல மற்றவனிடத்திலும் அன்புசெலுத்துவாயாக என்பதே; இவைகளைவிட பெரிய கட்டளை வேறொன்றும் இல்லை என்றார்."
+    }
   },
   "M": {
     "reference": "Psalm 121:2",
-    "en": { "version": "GNT", "text": "My help will come from the Lord, who made heaven and earth." },
-    "es": { "version": "NVI", "text": "Mi ayuda proviene del SEÑOR, creador del cielo y de la tierra." },
-    "zh-tw": { "version": "CUV", "text": "我的幫助從造天地的耶和華而來。" },
-    "pt": { "version": "NVI", "text": "O meu socorro vem do SENHOR, que fez os céus e a terra." },
-    "it": { "version": "NR",  "text": "Il mio aiuto viene dal SIGNORE, che ha fatto il cielo e la terra." },
-    "fr": { "version": "LSG", "text": "Le secours me vient de l'Eternel, Qui a fait les cieux et la terre." },
-    "am": { "version": "ABB", "text": "ረዳቴ ሰማይና ምድርን ከሠራ ከእግዚአብሔር ዘንድ ነው።" }
+    "en": {
+      "version": "GNT",
+      "text": "My help will come from the Lord, who made heaven and earth."
+    },
+    "es": {
+      "version": "NVI",
+      "text": "Mi ayuda proviene del SEÑOR, creador del cielo y de la tierra."
+    },
+    "zh-tw": {
+      "version": "CUV",
+      "text": "我的幫助從造天地的耶和華而來。"
+    },
+    "pt": {
+      "version": "NVI",
+      "text": "O meu socorro vem do SENHOR, que fez os céus e a terra."
+    },
+    "it": {
+      "version": "NR",
+      "text": "Il mio aiuto viene dal SIGNORE, che ha fatto il cielo e la terra."
+    },
+    "fr": {
+      "version": "LSG",
+      "text": "Le secours me vient de l'Eternel, Qui a fait les cieux et la terre."
+    },
+    "am": {
+      "version": "ABB",
+      "text": "ረዳቴ ሰማይና ምድርን ከሠራ ከእግዚአብሔር ዘንድ ነው።"
+    },
+    "hi": {
+      "version": "IRV",
+      "text": "मुझे सहायता यहोवा की ओर से मिलती है,"
+    },
+    "te": {
+      "version": "IRV",
+      "text": "యెహోవాయే నాకు సహాయం చేస్తాడు. భూమిని, ఆకాశాలను సృష్టించింది ఆయనే."
+    },
+    "uk": {
+      "version": "ONPU",
+      "text": "Допомога моя від Господа, Творця небес і землі."
+    },
+    "be": {
+      "version": "BEL",
+      "text": "Дапамога мая ад ГОСПАДА, Які стварыў неба і зямлю."
+    },
+    "fa": {
+      "version": "OPV",
+      "text": "اعانت من از جانب خداوند است، که آسمان و زمین را آفرید."
+    },
+    "ar": {
+      "version": "AVD",
+      "text": "مَعُونَتِي مِنْ عِنْدِ ٱلرَّبِّ، صَانِعِ ٱلسَّمَاوَاتِ وَٱلْأَرْضِ."
+    },
+    "zh-cn": {
+      "version": "CCB",
+      "text": "我的帮助来自创造天地的耶和华。"
+    },
+    "ko": {
+      "version": "KOR",
+      "text": "나의 도움이 천지를 지으신 여호와에게서로다"
+    },
+    "vi": {
+      "version": "VIE",
+      "text": "Sự tiếp trợ tôi đến từ Đức Giê-hô-va, Là Đấng đã dựng nên trời và đất."
+    },
+    "ta": {
+      "version": "IRV",
+      "text": "வானத்தையும் பூமியையும் உண்டாக்கின யெகோவாவிடத்திலிருந்து எனக்கு உதவி வரும்."
+    }
   },
   "N": {
     "reference": "Luke 22:42",
-    "en": { "version": "GNT", "text": "Father, if you will, take this cup of suffering away from me. Not my will, however, but your will be done." },
-    "es": { "version": "NVI", "text": "Padre, si quieres, no me hagas beber este trago amargo; pero no se cumpla mi voluntad, sino la tuya" },
-    "zh-tw": { "version": "CUV", "text": "父啊！你若願意，就把這杯撤去；然而，不要成就我的意思，只要成就你的意思。" },
-    "pt": { "version": "NVI", "text": "Pai, se queres, afasta de mim este cálice; contudo, não seja feita a minha vontade, mas a tua." },
-    "it": { "version": "NR",  "text": "Padre, se vuoi, allontana da me questo calice! Però non la mia volontà, ma la tua sia fatta." },
-    "fr": { "version": "LSG", "text": "disant: Père, si tu voulais éloigner de moi cette coupe! Toutefois, que ma volonté ne se fasse pas, mais la tienne." },
-    "am": { "version": "ABB", "text": "ብትፈቅድ ይህችን ጽዋ ከእኔ ውሰድ፤ ነገር ግን የእኔ ፈቃድ አይሁን የአንተ እንጂ እያለ ይጸልይ ነበር።" }
+    "en": {
+      "version": "GNT",
+      "text": "Father, if you will, take this cup of suffering away from me. Not my will, however, but your will be done."
+    },
+    "es": {
+      "version": "NVI",
+      "text": "Padre, si quieres, no me hagas beber este trago amargo; pero no se cumpla mi voluntad, sino la tuya"
+    },
+    "zh-tw": {
+      "version": "CUV",
+      "text": "父啊！你若願意，就把這杯撤去；然而，不要成就我的意思，只要成就你的意思。"
+    },
+    "pt": {
+      "version": "NVI",
+      "text": "Pai, se queres, afasta de mim este cálice; contudo, não seja feita a minha vontade, mas a tua."
+    },
+    "it": {
+      "version": "NR",
+      "text": "Padre, se vuoi, allontana da me questo calice! Però non la mia volontà, ma la tua sia fatta."
+    },
+    "fr": {
+      "version": "LSG",
+      "text": "disant: Père, si tu voulais éloigner de moi cette coupe! Toutefois, que ma volonté ne se fasse pas, mais la tienne."
+    },
+    "am": {
+      "version": "ABB",
+      "text": "ብትፈቅድ ይህችን ጽዋ ከእኔ ውሰድ፤ ነገር ግን የእኔ ፈቃድ አይሁን የአንተ እንጂ እያለ ይጸልይ ነበር።"
+    },
+    "hi": {
+      "version": "IRV",
+      "text": "“हे पिता यदि तू चाहे तो इस कटोरे को मेरे पास से हटा ले, फिर भी मेरी नहीं परन्तु तेरी ही इच्छा पूरी हो।”"
+    },
+    "te": {
+      "version": "IRV",
+      "text": "“తండ్రీ, నీకు ఇష్టమైతే ఈ పాత్రను నా నుంచి తొలగించు. అయినా నా ఇష్టం కాదు. నీ ఇష్టమే జరగాలి.”"
+    },
+    "uk": {
+      "version": "ONPU",
+      "text": "кажучи: «Отче, якщо бажаєш, нехай ця чаша обмине Мене. Однак нехай буде не Моя воля, а Твоя»."
+    },
+    "be": {
+      "version": "BEL",
+      "text": "кажучы: «Ойча, калі хочаш, пранясі келіх гэты міма Мяне. Аднак не Мая воля, але Твая няхай станецца»."
+    },
+    "fa": {
+      "version": "OPV",
+      "text": "«ای پدر اگر بخواهی این پیاله را از من بگردان، لیکن نه به خواهش من بلکه به اراده تو.»"
+    },
+    "ar": {
+      "version": "AVD",
+      "text": "قَائِلًا: «يَا أَبَتَاهُ، إِنْ شِئْتَ أَنْ تُجِيزَ عَنِّي هَذِهِ ٱلْكَأْسَ. وَلَكِنْ لِتَكُنْ لَا إِرَادَتِي بَلْ إِرَادَتُكَ»."
+    },
+    "zh-cn": {
+      "version": "CCB",
+      "text": "“父啊，若你愿意，求你撤去此杯。然而，愿你的旨意成就，而非我的意愿。”"
+    },
+    "ko": {
+      "version": "KOR",
+      "text": "가라사대 `아버지여 만일 아버지의 뜻이어든 이 잔을 내게서 옮기시옵소서 그러나 내 원대로 마옵시고 아버지의 원대로 되기를 원하나이다' 하시니"
+    },
+    "vi": {
+      "version": "VIE",
+      "text": "rằng: Lạy Cha, nếu Cha muốn, xin cất chén nầy khỏi tôi! Dầu vậy, xin ý Cha được nên, chớ không theo ý tôi!"
+    },
+    "ta": {
+      "version": "IRV",
+      "text": "பிதாவே, உமக்கு விருப்பமானால் இந்தப் பாத்திரம் என்னைவிட்டு நீங்கும்படி செய்யும்; ஆனாலும் என்னுடைய விருப்பத்தின்படியல்ல, உம்முடைய விருப்பத்தின்படியே ஆகக்கடவது என்று ஜெபம்செய்தார்."
+    }
   },
   "O": {
     "reference": "Hebrews 13:17",
-    "en": { "version": "GNT", "text": "Obey your leaders and follow their orders. They watch over your souls without resting, since they must give to God an account of their service." },
-    "es": { "version": "NVI", "text": "Obedeced a vuestros dirigentes y someteos a ellos, pues cuidan de vosotros como quienes tienen que rendir cuentas. Obedecedlos a fin de que ellos cumplan su tarea con alegría y sin quejarse, pues el quejarse no les trae ningún provecho." },
-    "zh-tw": { "version": "CUV", "text": "你們要依從那些引導你們的，且要順服；因他們為你們的靈魂時刻警醒，好像那將來交帳的人。你們要使他們交的時候有快樂，不致憂愁；若憂愁就與你們無益了。" },
-    "pt": { "version": "NVI", "text": "Obedeçam aos seus líderes e sejam submissos a eles, pois cuidam de vocês como quem deve prestar contas. Obedeçam‑lhes para que eles cuidem de vocês com alegria, não com descontentamento; caso contrário, isso não será proveitoso para vocês." },
-    "it": { "version": "NR",  "text": "Ubbidite ai vostri conduttori e sottomettetevi a loro, perché essi vegliano per le vostre anime come chi deve renderne conto, affinché facciano questo con gioia e non sospirando; perché ciò non vi sarebbe di alcuna utilità." },
-    "fr": { "version": "LSG", "text": "Obéissez à vos conducteurs et ayez pour eux de la déférence, car ils veillent sur vos âmes comme devant en rendre compte; qu'il en soit ainsi, afin qu'ils le fassent avec joie, et non en gémissant, ce qui ne vous serait d'aucun avantage." },
-    "am": { "version": "ABB", "text": "ለዋኖቻችሁ ታዘዙና ተገዙ፤ እነርሱ ስሌትን እንደሚሰጡ አድርገው፥ ይህንኑ በደስታ እንጂ በኃዘን እንዳያደርጉት፥ ይህ የማይጠቅማችሁ ነበርና፥ ስለ ነፍሳችሁ ይተጋሉ።" }
+    "en": {
+      "version": "GNT",
+      "text": "Obey your leaders and follow their orders. They watch over your souls without resting, since they must give to God an account of their service."
+    },
+    "es": {
+      "version": "NVI",
+      "text": "Obedeced a vuestros dirigentes y someteos a ellos, pues cuidan de vosotros como quienes tienen que rendir cuentas. Obedecedlos a fin de que ellos cumplan su tarea con alegría y sin quejarse, pues el quejarse no les trae ningún provecho."
+    },
+    "zh-tw": {
+      "version": "CUV",
+      "text": "你們要依從那些引導你們的，且要順服；因他們為你們的靈魂時刻警醒，好像那將來交帳的人。你們要使他們交的時候有快樂，不致憂愁；若憂愁就與你們無益了。"
+    },
+    "pt": {
+      "version": "NVI",
+      "text": "Obedeçam aos seus líderes e sejam submissos a eles, pois cuidam de vocês como quem deve prestar contas. Obedeçam‑lhes para que eles cuidem de vocês com alegria, não com descontentamento; caso contrário, isso não será proveitoso para vocês."
+    },
+    "it": {
+      "version": "NR",
+      "text": "Ubbidite ai vostri conduttori e sottomettetevi a loro, perché essi vegliano per le vostre anime come chi deve renderne conto, affinché facciano questo con gioia e non sospirando; perché ciò non vi sarebbe di alcuna utilità."
+    },
+    "fr": {
+      "version": "LSG",
+      "text": "Obéissez à vos conducteurs et ayez pour eux de la déférence, car ils veillent sur vos âmes comme devant en rendre compte; qu'il en soit ainsi, afin qu'ils le fassent avec joie, et non en gémissant, ce qui ne vous serait d'aucun avantage."
+    },
+    "am": {
+      "version": "ABB",
+      "text": "ለዋኖቻችሁ ታዘዙና ተገዙ፤ እነርሱ ስሌትን እንደሚሰጡ አድርገው፥ ይህንኑ በደስታ እንጂ በኃዘን እንዳያደርጉት፥ ይህ የማይጠቅማችሁ ነበርና፥ ስለ ነፍሳችሁ ይተጋሉ።"
+    },
+    "hi": {
+      "version": "IRV",
+      "text": "अपने अगुओं की मानो; और उनके अधीन रहो, क्योंकि वे उनके समान तुम्हारे प्राणों के लिये जागते रहते, जिन्हें लेखा देना पड़ेगा, कि वे यह काम आनन्द से करें, न कि ठंडी साँस ले लेकर, क्योंकि इस दशा में तुम्हें कुछ लाभ नहीं।"
+    },
+    "te": {
+      "version": "IRV",
+      "text": "మీ నాయకులకు విధేయులుగా ఉండండి. వారికి లోబడి ఉండండి. ఎందుకంటే వారు లెక్క అప్పజెప్పే వారిలా మీ ఆత్మల క్షేమం కోసం కావలివారుగా ఉన్నారు. మీ గురించి వారు విచారంతో కాకుండా సంతోషంగా కావలి కాసేవారుగా ఉండడానికి వారికి లోబడండి. వారు విచారంగా ఉండడం మీకు మేలుకరం కాదు."
+    },
+    "uk": {
+      "version": "ONPU",
+      "text": "Слухайтеся своїх наставників і підкоряйтесь їм, бо вони піклуються про ваші душі, як ті, що мають дати звіт за вас перед Богом. Слухайтеся, щоб вони робили це з радістю, а не із зітханням, бо це не корисно для вас."
+    },
+    "be": {
+      "version": "BEL",
+      "text": "Слухайцеся кіраўнікоў вашых і будзьце пакорнымі, бо яны чуваюць над душамі вашымі, як абавязаныя здаць справаздачу [за іх], каб яны рабілі гэта з радасьцю, а не ўздыхаючы, бо гэта для вас некарысна."
+    },
+    "fa": {
+      "version": "OPV",
+      "text": "مرشدان خود را اطاعت و انقیاد نمایید زیراکه ایشان پاسبانی جانهای شما را می‌کنند، چونکه حساب خواهند داد تا آن را به خوشی نه به ناله به‌جا آورند، زیرا که این شما را مفید نیست."
+    },
+    "ar": {
+      "version": "AVD",
+      "text": "أَطِيعُوا مُرْشِدِيكُمْ وَٱخْضَعُوا، لِأَنَّهُمْ يَسْهَرُونَ لِأَجْلِ نُفُوسِكُمْ كَأَنَّهُمْ سَوْفَ يُعْطُونَ حِسَابًا، لِكَيْ يَفْعَلُوا ذَلِكَ بِفَرَحٍ، لَا آنِّينَ، لِأَنَّ هَذَا غَيْرُ نَافِعٍ لَكُمْ."
+    },
+    "zh-cn": {
+      "version": "CCB",
+      "text": "要顺服和听从引导你们的人，因为他们为你们的灵魂时刻警醒，将来要向上帝交账。你们要让他们怀着喜乐尽此职责，而非充满忧愁，那样对你们毫无益处。"
+    },
+    "ko": {
+      "version": "KOR",
+      "text": "너희를 인도하는 자들에게 순종하고 복종하라 저희는 너희 영혼을 위하여 경성하기를 자기가 회계할 자인 것같이 하느니라 저희로 하여금 즐거움으로 이것을 하게 하고 근심으로 하게 말라 그렇지 않으면 너희에게 유익이 없느니라"
+    },
+    "vi": {
+      "version": "VIE",
+      "text": "Hãy vâng lời kẻ dắt dẫn anh em và chịu phục các người ấy, bởi các người ấy tỉnh thức về linh hồn anh em, dường như phải khai trình, hầu cho các người ấy lấy lòng vui mừng mà làm xong chức vụ mình, không phàn nàn chi, vì ấy chẳng ích lợi gì cho anh em."
+    },
+    "ta": {
+      "version": "IRV",
+      "text": "உங்களை நடத்துகிறவர்கள், உங்களுடைய ஆத்துமாக்களுக்காக உத்திரவாதம் பண்ணுகிறவர்களாக விழித்திருக்கிறதினால், அவர்கள் துக்கத்தோடு இல்லை, சந்தோஷத்தோடு அதைச் செய்வதற்காக, அவர்களுக்குக் கீழ்ப்படிந்து அடங்கி இருங்கள்; அவர்கள் துக்கத்தோடு அதைச்செய்தால் அது உங்களுக்குப் பிரயோஜனமாக இருக்காது."
+    }
   },
   "P": {
     "reference": "James 5:16",
-    "en": { "version": "GNT", "text": "So then, confess your sins to one another and pray for one another, so that you will be healed. The prayer of a good person has a powerful effect." },
-    "es": { "version": "NVI", "text": "Por eso, confesaos unos a otros vuestros pecados, y orad unos por otros, para que seáis sanados. La oración del justo es poderosa y eficaz." },
-    "zh-tw": { "version": "CUV", "text": "所以你們要彼此認罪，互相代求，使你們可以得醫治。義人祈禱所發的力量是大有功效的。" },
-    "pt": { "version": "NVI", "text": "Portanto, confessem os seus pecados uns aos outros e orem uns pelos outros para serem curados. A oração de um justo é poderosa e eficaz." },
-    "it": { "version": "NR",  "text": "Confessate dunque i vostri peccati gli uni agli altri, pregate gli uni per gli altri affinché siate guariti; la preghiera del giusto ha una grande efficacia." },
-    "fr": { "version": "LSG", "text": "Confessez donc vos péchés les uns aux autres, et priez les uns pour les autres, afin que vous soyez guéris. La prière fervente du juste a une grande efficace." },
-    "am": { "version": "ABB", "text": "እርስ በርሳችሁ በኃጢአታችሁ ተናዘዙ። ትፈወሱም ዘንድ እያንዳንዱ ስለ ሌላው ይጸልይ፤ የጻድቅ ሰው ጸሎት በሥራዋ እጅግ ኃይል ታደርጋለች።" }
+    "en": {
+      "version": "GNT",
+      "text": "So then, confess your sins to one another and pray for one another, so that you will be healed. The prayer of a good person has a powerful effect."
+    },
+    "es": {
+      "version": "NVI",
+      "text": "Por eso, confesaos unos a otros vuestros pecados, y orad unos por otros, para que seáis sanados. La oración del justo es poderosa y eficaz."
+    },
+    "zh-tw": {
+      "version": "CUV",
+      "text": "所以你們要彼此認罪，互相代求，使你們可以得醫治。義人祈禱所發的力量是大有功效的。"
+    },
+    "pt": {
+      "version": "NVI",
+      "text": "Portanto, confessem os seus pecados uns aos outros e orem uns pelos outros para serem curados. A oração de um justo é poderosa e eficaz."
+    },
+    "it": {
+      "version": "NR",
+      "text": "Confessate dunque i vostri peccati gli uni agli altri, pregate gli uni per gli altri affinché siate guariti; la preghiera del giusto ha una grande efficacia."
+    },
+    "fr": {
+      "version": "LSG",
+      "text": "Confessez donc vos péchés les uns aux autres, et priez les uns pour les autres, afin que vous soyez guéris. La prière fervente du juste a une grande efficace."
+    },
+    "am": {
+      "version": "ABB",
+      "text": "እርስ በርሳችሁ በኃጢአታችሁ ተናዘዙ። ትፈወሱም ዘንድ እያንዳንዱ ስለ ሌላው ይጸልይ፤ የጻድቅ ሰው ጸሎት በሥራዋ እጅግ ኃይል ታደርጋለች።"
+    },
+    "hi": {
+      "version": "IRV",
+      "text": "इसलिए तुम आपस में एक दूसरे के सामने अपने-अपने पापों को मान लो; और एक दूसरे के लिये प्रार्थना करो, जिससे चंगे हो जाओ; धर्मी जन की प्रार्थना के प्रभाव से बहुत कुछ हो सकता है।"
+    },
+    "te": {
+      "version": "IRV",
+      "text": "కాబట్టి మీ పాపాలను ఒకరితో ఒకడు ఒప్పుకోండి. మీకు స్వస్థత కలిగేలా ఒకడి కోసం ఒకడు ప్రార్థన చేయండి. నీతిమంతుని విజ్ఞాపన ఫలభరితమైనది. అది ఎంతో బలవత్తరమైనది."
+    },
+    "uk": {
+      "version": "ONPU",
+      "text": "Отже, визнавайте гріхи один одному й моліться один за одного, щоб ви були зцілені. Ревна молитва праведника сильна у своїй дії."
+    },
+    "be": {
+      "version": "BEL",
+      "text": "Вызнавайце адзін аднаму грахі і маліцеся адзін за аднаго, каб быць аздароўленымі. Шмат можа настойлівая просьба праведніка!"
+    },
+    "fa": {
+      "version": "OPV",
+      "text": "نزد یکدیگربه گناهان خود اعتراف کنید و برای یکدیگر دعاکنید تا شفا یابید، زیرا دعای مرد عادل در عمل، قوت بسیار دارد."
+    },
+    "ar": {
+      "version": "AVD",
+      "text": "اِعْتَرِفُوا بَعْضُكُمْ لِبَعْضٍ بِٱلزَلَّاتِ، وَصَلُّوا بَعْضُكُمْ لِأَجْلِ بَعْضٍ، لِكَيْ تُشْفَوْا. طَلِبَةُ ٱلْبَارِّ تَقْتَدِرُ كَثِيرًا فِي فِعْلِهَا."
+    },
+    "zh-cn": {
+      "version": "CCB",
+      "text": "所以你们要彼此认罪，互相代祷，好得到医治。义人的祷告有极大的力量和功效。"
+    },
+    "ko": {
+      "version": "KOR",
+      "text": "이러므로 너희 죄를 서로 고하며 병 낫기를 위하여 서로 기도하라 의인의 간구는 역사하는 힘이 많으니라"
+    },
+    "vi": {
+      "version": "VIE",
+      "text": "Vậy, hãy xưng tội cùng nhau, và cầu nguyện cho nhau, hầu cho anh em được lành bịnh: người công bình lấy lòng sốt sắng cầu nguyện, thật có linh nghiệm nhiều."
+    },
+    "ta": {
+      "version": "IRV",
+      "text": "நீங்கள் குணமடையும்படிக்கு, உங்களுடைய குற்றங்களை ஒருவருக்கொருவர் அறிக்கையிட்டு, ஒருவருக்காக ஒருவர் ஜெபம்செய்யுங்கள். நீதிமான் செய்யும் ஊக்கமான வேண்டுதல் மிகவும் பெலனுள்ளதாக இருக்கிறது."
+    }
   },
   "Q": {
     "reference": "Isaiah 30:15",
-    "en": { "version": "GNT", "text": "Come back and quietly trust in me. Then you will be strong and secure." },
-    "es": { "version": "NVI", "text": "Porque así dice el SEÑOR omnipotente, el Santo de Israel: «En el arrepentimiento y la calma está su salvación, en la serenidad y la confianza está su fuerza, ¡pero ustedes no lo quieren reconocer!" },
-    "zh-tw": { "version": "CUV", "text": "主耶和華－以色列的聖者曾如此說：你們得救在乎歸回安息；你們得力在乎平靜安穩；你們竟自不肯。" },
-    "pt": { "version": "NVI", "text": "Diz o Soberano SENHOR, o Santo de Israel: 'No arrependimento e no descanso está a salvação de vocês, na quietude e na confiança está o seu vigor, mas vocês não quiseram.'" },
-    "it": { "version": "NR",  "text": "Poiché così aveva detto il Signore, DIO, il Santo d'Israele: «Nel tornare a me e nello stare sereni sarà la vostra salvezza; nella calma e nella fiducia sarà la vostra forza». Ma voi non avete voluto!" },
-    "fr": { "version": "LSG", "text": "Car ainsi a parlé le Seigneur, l'Eternel, le Saint d'Israël: C'est dans la tranquillité et le repos que sera votre salut, C'est dans le calme et la confiance que sera votre force. Mais vous ne l'avez pas voulu!" },
-    "am": { "version": "ABB", "text": "የእስራኤል ቅዱስ፥ ጌታ እግዚአብሔር እንዲህ ይላልና። በመመለስና በማረፍ ትድናላችሁ፤ በጸጥታና በመታመን ኃይል ይሆንላችኋል፤ እናንተም እንቢ አላችሁ፥" }
+    "en": {
+      "version": "GNT",
+      "text": "Come back and quietly trust in me. Then you will be strong and secure."
+    },
+    "es": {
+      "version": "NVI",
+      "text": "Porque así dice el SEÑOR omnipotente, el Santo de Israel: «En el arrepentimiento y la calma está su salvación, en la serenidad y la confianza está su fuerza, ¡pero ustedes no lo quieren reconocer!"
+    },
+    "zh-tw": {
+      "version": "CUV",
+      "text": "主耶和華－以色列的聖者曾如此說：你們得救在乎歸回安息；你們得力在乎平靜安穩；你們竟自不肯。"
+    },
+    "pt": {
+      "version": "NVI",
+      "text": "Diz o Soberano SENHOR, o Santo de Israel: 'No arrependimento e no descanso está a salvação de vocês, na quietude e na confiança está o seu vigor, mas vocês não quiseram.'"
+    },
+    "it": {
+      "version": "NR",
+      "text": "Poiché così aveva detto il Signore, DIO, il Santo d'Israele: «Nel tornare a me e nello stare sereni sarà la vostra salvezza; nella calma e nella fiducia sarà la vostra forza». Ma voi non avete voluto!"
+    },
+    "fr": {
+      "version": "LSG",
+      "text": "Car ainsi a parlé le Seigneur, l'Eternel, le Saint d'Israël: C'est dans la tranquillité et le repos que sera votre salut, C'est dans le calme et la confiance que sera votre force. Mais vous ne l'avez pas voulu!"
+    },
+    "am": {
+      "version": "ABB",
+      "text": "የእስራኤል ቅዱስ፥ ጌታ እግዚአብሔር እንዲህ ይላልና። በመመለስና በማረፍ ትድናላችሁ፤ በጸጥታና በመታመን ኃይል ይሆንላችኋል፤ እናንተም እንቢ አላችሁ፥"
+    },
+    "hi": {
+      "version": "IRV",
+      "text": "प्रभु यहोवा, इस्राएल का पवित्र यह कहता है, “लौट आने और शान्त रहने में तुम्हारा उद्धार है; शान्त रहने और भरोसा रखने में तुम्हारी वीरता है।” परन्तु तुम ने ऐसा नहीं किया,"
+    },
+    "te": {
+      "version": "IRV",
+      "text": "ఇశ్రాయేలు పరిశుద్ధ దేవుడూ ప్రభువూ అయిన యెహోవా ఇలా చెప్తున్నాడు. “మీరు తిరిగి వచ్చి విశ్రాంతిగా నాలో ఉంటేనే రక్షణ పొందుతారు. మౌనంలోనూ, విశ్వాసంలోనూ మాత్రమే మీకు బలం కలుగుతుంది.” కానీ దానికి మీరు ఒప్పుకోలేదు."
+    },
+    "uk": {
+      "version": "ONPU",
+      "text": null
+    },
+    "be": {
+      "version": "BEL",
+      "text": "Бо гэта кажа Госпад ГОСПАД, Сьвяты Ізраіля: «Калі вы навернецеся і будзеце ў супакоі, будзеце збаўленыя, бо ў сьцішанасьці і спадзяваньні будзе сіла вашая». Але вы не захацелі."
+    },
+    "fa": {
+      "version": "OPV",
+      "text": "زیرا خداوند یهوه قدوس اسرائیل چنین می‌گوید: «به انابت و آرامی نجات می‌یافتید وقوت شما از راحت و اعتماد می‌بود، امانخواستید."
+    },
+    "ar": {
+      "version": "AVD",
+      "text": "لِأَنَّهُ هَكَذَا قَالَ ٱلسَّيِّدُ ٱلرَّبُّ قُدُّوسُ إِسْرَائِيلَ: «بِٱلرُّجُوعِ وَٱلسُّكُونِ تَخْلُصُونَ. بِٱلْهُدُوءِ وَٱلطُّمَأْنِينَةِ تَكُونُ قُوَّتُكُمْ». فَلَمْ تَشَاءُوا."
+    },
+    "zh-cn": {
+      "version": "CCB",
+      "text": "主耶和华——以色列的圣者说：“你们回转并安息，就必得拯救；你们安静并信靠，就必得力量。但你们却不肯。"
+    },
+    "ko": {
+      "version": "KOR",
+      "text": "주 여호와 이스라엘의 거룩하신 자가 말씀하시되 너희가 돌이켜 안연히 처하여야 구원을 얻을 것이요 잠잠하고 신뢰하여야 힘을 얻을 것이어늘 너희가 원치 아니하고"
+    },
+    "vi": {
+      "version": "VIE",
+      "text": "Vả, Chúa Giê-hô-va, là Đấng Thánh của Y-sơ-ra-ên, có phán như vầy: Các ngươi sẽ được rỗi, là tại trở lại và yên nghỉ; các ngươi sẽ được sức mạnh, là tại yên lặng và trông cậy. Nhưng các ngươi đã không muốn thế!"
+    },
+    "ta": {
+      "version": "IRV",
+      "text": "நீங்கள் மனந்திரும்பி என்னில் அமர்ந்திருந்தால் காப்பாற்றப்படுவீர்கள்; அமைதியும் நம்பிக்கையுமே உங்கள் பெலனாயிருக்கும் என்று இஸ்ரவேலின் பரிசுத்தராயிருக்கிற கர்த்தராகிய தேவன் சொல்கிறார்; நீங்களோ அப்படிச் செய்ய மனதில்லாமல்;"
+    }
   },
   "R": {
     "reference": "Ecclesiastes 12:1",
-    "en": { "version": "GNT", "text": "So remember your Creator while you are still young, before those dismal days and years come when you will say, \"I don't enjoy life.\"" },
-    "es": { "version": "NVI", "text": "Acuérdate de tu creador en los días de tu juventud, antes que lleguen los días malos y vengan los años en que digas: «No encuentro en ellos placer alguno»" },
-    "zh-tw": { "version": "CUV", "text": "你趁着年幼、衰敗的日子尚未來到，就是你所說，我毫無喜樂的那些年日未曾臨近之先，當記念造你的主。" },
-    "pt": { "version": "NVI", "text": "Lembre‑se do seu Criador nos dias da sua juventude, antes que venham os dias difíceis e se aproximem os anos em que você dirá: 'Não tenho satisfação neles'" },
-    "it": { "version": "NR",  "text": "Ricòrdati del tuo Creatore nei giorni della tua giovinezza, prima che vengano i cattivi giorni e giungano gli anni dei quali dirai: «Io non ci provo nessun piacere»." },
-    "fr": { "version": "LSG", "text": "Mais souviens-toi de ton créateur pendant les jours de ta jeunesse, avant que les jours mauvais arrivent et que les années s'approchent où tu diras: Je n'y prends point de plaisir;" },
-    "am": { "version": "ABB", "text": "የጭንቀት ቀን ሳይመጣ በጕብዝናህ ወራት ፈጣሪህን አስብ፤ ደስ አያሰኙም የምትላቸውም ዓመታት ሳይደርሱ፤" }
+    "en": {
+      "version": "GNT",
+      "text": "So remember your Creator while you are still young, before those dismal days and years come when you will say, \"I don't enjoy life.\""
+    },
+    "es": {
+      "version": "NVI",
+      "text": "Acuérdate de tu creador en los días de tu juventud, antes que lleguen los días malos y vengan los años en que digas: «No encuentro en ellos placer alguno»"
+    },
+    "zh-tw": {
+      "version": "CUV",
+      "text": "你趁着年幼、衰敗的日子尚未來到，就是你所說，我毫無喜樂的那些年日未曾臨近之先，當記念造你的主。"
+    },
+    "pt": {
+      "version": "NVI",
+      "text": "Lembre‑se do seu Criador nos dias da sua juventude, antes que venham os dias difíceis e se aproximem os anos em que você dirá: 'Não tenho satisfação neles'"
+    },
+    "it": {
+      "version": "NR",
+      "text": "Ricòrdati del tuo Creatore nei giorni della tua giovinezza, prima che vengano i cattivi giorni e giungano gli anni dei quali dirai: «Io non ci provo nessun piacere»."
+    },
+    "fr": {
+      "version": "LSG",
+      "text": "Mais souviens-toi de ton créateur pendant les jours de ta jeunesse, avant que les jours mauvais arrivent et que les années s'approchent où tu diras: Je n'y prends point de plaisir;"
+    },
+    "am": {
+      "version": "ABB",
+      "text": "የጭንቀት ቀን ሳይመጣ በጕብዝናህ ወራት ፈጣሪህን አስብ፤ ደስ አያሰኙም የምትላቸውም ዓመታት ሳይደርሱ፤"
+    },
+    "hi": {
+      "version": "IRV",
+      "text": "अपनी जवानी के दिनों में अपने सृजनहार को स्मरण रख, इससे पहले कि विपत्ति के दिन और वे वर्ष आएँ, जिनमें तू कहे कि मेरा मन इनमें नहीं लगता।"
+    },
+    "te": {
+      "version": "IRV",
+      "text": "కష్టకాలం రాకముందే,"
+    },
+    "uk": {
+      "version": "ONPU",
+      "text": null
+    },
+    "be": {
+      "version": "BEL",
+      "text": "І памятай пра Творцу твайго ў дні юнацтва твайго, пакуль ня прыйдуць дні ліхія, і пакуль не сустрэ­нуць цябе гады, пра якія скажаш: “Не падабаюцца мне яны”,"
+    },
+    "fa": {
+      "version": "OPV",
+      "text": "پس آفریننده خود را در روزهای جوانی ات بیاد آور قبل از آنکه روزهای بلا برسد و سالها برسد که بگویی مرا از اینهاخوشی نیست."
+    },
+    "ar": {
+      "version": "AVD",
+      "text": "فَٱذْكُرْ خَالِقَكَ فِي أَيَّامِ شَبَابِكَ، قَبْلَ أَنْ تَأْتِيَ أَيَّامُ ٱلشَّرِّ أَوْ تَجِيءَ ٱلسِّنُونَ إِذْ تَقُولُ: «لَيْسَ لِي فِيهَا سُرُورٌ»."
+    },
+    "zh-cn": {
+      "version": "CCB",
+      "text": "年轻时要记住你的创造主，不要等到衰老的岁月来临时才哀叹：“我的日子毫无乐趣。”"
+    },
+    "ko": {
+      "version": "KOR",
+      "text": "너는 청년의 때 곧 곤고한 날이 이르기 전,나는 아무 낙이 없다고 할 해가 가깝기 전에 너의 창조자를 기억하라"
+    },
+    "vi": {
+      "version": "VIE",
+      "text": "Trong buổi còn thơ ấu hãy tưởng nhớ Đấng Tạo hóa ngươi, trước khi những ngày gian nan chưa đến, trước khi những năm tới mà ngươi nói rằng: Ta không lấy làm vui lòng;"
+    },
+    "ta": {
+      "version": "IRV",
+      "text": "நீ உன்னுடைய வாலிப நாட்களில் உன்னைப் படைத்தவரை நினை; தீங்குநாட்கள் வராததற்குமுன்னும், எனக்குப் பிரியமானவைகளல்ல என்று நீ சொல்லும் வருடங்கள் சேராததற்குமுன்னும்.,"
+    }
   },
   "S": {
     "reference": "1 Samuel 3:9",
-    "en": { "version": "GNT", "text": "So Eli told Samuel, \"Go back to bed; and if he calls again, say, 'Speak, Lord, your servant is listening.'\"" },
-    "es": { "version": "NVI", "text": "Ve y acuéstate ―le dijo Elí―. Si alguien vuelve a llamarte, dile: 'Habla, SEÑOR, que tu siervo escucha'. Así que Samuel se fue y se acostó en su cama." },
-    "zh-tw": { "version": "CUV", "text": "你仍去睡吧；若再呼喚你，你就說：『耶和華啊，請說，僕人敬聽！』撒母耳就去，仍睡在原處。" },
-    "pt": { "version": "NVI", "text": "e lhe disse: Vá e deite‑se; se ele o chamar, diga: 'Fala, SENHOR, pois o teu servo ouve'. Então, Samuel foi deitar‑se no seu lugar." },
-    "it": { "version": "NR",  "text": "Ed Eli disse a Samuele: «Va' a coricarti; e, se sarai chiamato ancora, dirai: \"Parla, SIGNORE, poiché il tuo servo ascolta\"». Samuele andò dunque a coricarsi al suo posto." },
-    "fr": { "version": "LSG", "text": "et il dit à Samuel: Va, couche-toi; et si l'on t'appelle, tu diras: Parle, Eternel, car ton serviteur écoute. Et Samuel alla se coucher à sa place." },
-    "am": { "version": "ABB", "text": "ዔሊም ሳሙኤልን። ሄደህ ተኛ ቢጠራህም። አቤቱ፥ ባሪያህ ይሰማልና ተናገር በለው አለው። ሳሙኤልም ሄዶ በስፍራው ተኛ።" }
+    "en": {
+      "version": "GNT",
+      "text": "So Eli told Samuel, \"Go back to bed; and if he calls again, say, 'Speak, Lord, your servant is listening.'\""
+    },
+    "es": {
+      "version": "NVI",
+      "text": "Ve y acuéstate ―le dijo Elí―. Si alguien vuelve a llamarte, dile: 'Habla, SEÑOR, que tu siervo escucha'. Así que Samuel se fue y se acostó en su cama."
+    },
+    "zh-tw": {
+      "version": "CUV",
+      "text": "你仍去睡吧；若再呼喚你，你就說：『耶和華啊，請說，僕人敬聽！』撒母耳就去，仍睡在原處。"
+    },
+    "pt": {
+      "version": "NVI",
+      "text": "e lhe disse: Vá e deite‑se; se ele o chamar, diga: 'Fala, SENHOR, pois o teu servo ouve'. Então, Samuel foi deitar‑se no seu lugar."
+    },
+    "it": {
+      "version": "NR",
+      "text": "Ed Eli disse a Samuele: «Va' a coricarti; e, se sarai chiamato ancora, dirai: \"Parla, SIGNORE, poiché il tuo servo ascolta\"». Samuele andò dunque a coricarsi al suo posto."
+    },
+    "fr": {
+      "version": "LSG",
+      "text": "et il dit à Samuel: Va, couche-toi; et si l'on t'appelle, tu diras: Parle, Eternel, car ton serviteur écoute. Et Samuel alla se coucher à sa place."
+    },
+    "am": {
+      "version": "ABB",
+      "text": "ዔሊም ሳሙኤልን። ሄደህ ተኛ ቢጠራህም። አቤቱ፥ ባሪያህ ይሰማልና ተናገር በለው አለው። ሳሙኤልም ሄዶ በስፍራው ተኛ።"
+    },
+    "hi": {
+      "version": "IRV",
+      "text": "इसलिए एली ने शमूएल से कहा, “जा लेटा रह; और यदि वह तुझे फिर पुकारे, तो तू कहना, ‘हे यहोवा, कह, क्योंकि तेरा दास सुन रहा है।’ ” तब शमूएल अपने स्थान पर जाकर लेट गया।"
+    },
+    "te": {
+      "version": "IRV",
+      "text": "అతడు “నువ్వు వెళ్ళి పడుకో. ఎవరైనా నిన్ను పిలిస్తే, ‘యెహోవా, నీ దాసుడు వింటున్నాడు, ఏమి చేయాలో చెప్పండి’ అని చెప్పు” అని సమూయేలుతో చెప్పాడు. సమూయేలు వెళ్ళి తన స్థలంలో పండుకున్నాడు."
+    },
+    "uk": {
+      "version": "ONPU",
+      "text": null
+    },
+    "be": {
+      "version": "BEL",
+      "text": "І ён сказаў Самуэлю: «Ідзі і кладзіся спаць, а калі зноў пакліча цябе, скажы: “Гавары, ГОСПАДЗЕ, бо слухае слуга Твой”». І вярнуўся Самуэль, і лёг спаць на месцы сваім."
+    },
+    "fa": {
+      "version": "OPV",
+      "text": "و عیلی به سموئیل گفت: «برو و بخواب و اگر تو را بخواند، بگو‌ای خداوندبفرما زیرا که بنده تو می‌شنود.» پس سموئیل رفته، در جای خود خوابید."
+    },
+    "ar": {
+      "version": "AVD",
+      "text": "فَقَالَ عَالِي لِصَمُوئِيلَ: «ٱذْهَبِ ٱضْطَجِعْ، وَيَكُونُ إِذَا دَعَاكَ تَقُولُ: تَكَلَّمْ يَارَبُّ لِأَنَّ عَبْدَكَ سَامِعٌ». فَذَهَبَ صَمُوئِيلُ وَٱضْطَجَعَ فِي مَكَانِهِ."
+    },
+    "zh-cn": {
+      "version": "CCB",
+      "text": "他就吩咐撒母耳说：“你回去睡吧，要是再呼唤你，你就说，‘耶和华啊，请吩咐，仆人恭听。’ ”于是，撒母耳就回去睡下。"
+    },
+    "ko": {
+      "version": "KOR",
+      "text": "이에 사무엘에게 이르되 `가서 누웠다가 그가 너를 부르시거든 네가 말하기를 여호와여 말씀하옵소서 주의 종이 듣겠나이다 하라' 이에 사무엘이 가서 자기 처소에 누우니라"
+    },
+    "vi": {
+      "version": "VIE",
+      "text": "Người nói cùng Sa-mu-ên rằng: Hãy đi ngủ đi, và nếu có ai gọi con, con hãy nói: Hỡi Đức Giê-hô-va, xin hãy phán, kẻ tôi tớ Ngài đang nghe! Vậy, Sa-mu-ên đi nằm tại chỗ mình."
+    },
+    "ta": {
+      "version": "IRV",
+      "text": "சாமுவேலை நோக்கி: நீ போய்ப் படுத்துக்கொள்; உன்னைக் கூப்பிட்டால், அப்பொழுது நீ: யெகோவாவே சொல்லும்; அடியேன் கேட்கிறேன் என்று சொல் என்றான்; சாமுவேல் போய், தன்னுடைய இடத்திலே படுத்துக்கொண்டான்."
+    }
   },
   "T": {
     "reference": "Proverbs 22:6",
-    "en": { "version": "GNT", "text": "Teach children how they should live, and they will remember it all their life." },
-    "es": { "version": "NVI", "text": "Instruye al niño en el camino correcto, y aun en su vejez no lo abandonará." },
-    "zh-tw": { "version": "CUV", "text": "教養孩童，使他走當行的道，就是到老他也不偏離。" },
-    "pt": { "version": "NVI", "text": "Instrua a criança no caminho em que deve andar, e, mesmo com o passar dos anos, não se desviará dele." },
-    "it": { "version": "NR",  "text": "Insegna al ragazzo la condotta che deve tenere; anche quando sarà vecchio non se ne allontanerà." },
-    "fr": { "version": "LSG", "text": "Instruis l'enfant selon la voie qu'il doit suivre; Et quand il sera vieux, il ne s'en détournera pas." },
-    "am": { "version": "ABB", "text": "ልጅን በሚሄድበት መንገድ ምራው፥ በሸመገለም ጊዜ ከእርሱ ፈቀቅ አይልም።" }
+    "en": {
+      "version": "GNT",
+      "text": "Teach children how they should live, and they will remember it all their life."
+    },
+    "es": {
+      "version": "NVI",
+      "text": "Instruye al niño en el camino correcto, y aun en su vejez no lo abandonará."
+    },
+    "zh-tw": {
+      "version": "CUV",
+      "text": "教養孩童，使他走當行的道，就是到老他也不偏離。"
+    },
+    "pt": {
+      "version": "NVI",
+      "text": "Instrua a criança no caminho em que deve andar, e, mesmo com o passar dos anos, não se desviará dele."
+    },
+    "it": {
+      "version": "NR",
+      "text": "Insegna al ragazzo la condotta che deve tenere; anche quando sarà vecchio non se ne allontanerà."
+    },
+    "fr": {
+      "version": "LSG",
+      "text": "Instruis l'enfant selon la voie qu'il doit suivre; Et quand il sera vieux, il ne s'en détournera pas."
+    },
+    "am": {
+      "version": "ABB",
+      "text": "ልጅን በሚሄድበት መንገድ ምራው፥ በሸመገለም ጊዜ ከእርሱ ፈቀቅ አይልም።"
+    },
+    "hi": {
+      "version": "IRV",
+      "text": "लड़के को उसी मार्ग की शिक्षा दे जिसमें उसको चलना चाहिये,"
+    },
+    "te": {
+      "version": "IRV",
+      "text": "పసివాడు నడవాల్సిన మార్గమేదో వాడికి నేర్పించు. వయసు పైబడినా వాడు అందులోనుండి తొలగడు."
+    },
+    "uk": {
+      "version": "ONPU",
+      "text": null
+    },
+    "be": {
+      "version": "BEL",
+      "text": "Пастаў юнака на слушны шлях, і ён ня збочыць з яго, нават калі састарэе."
+    },
+    "fa": {
+      "version": "OPV",
+      "text": "طفل را در راهی که باید برود تربیت نما، وچون پیر هم شود از آن انحراف نخواهد ورزید."
+    },
+    "ar": {
+      "version": "AVD",
+      "text": "رَبِّ ٱلْوَلَدَ فِي طَرِيقِهِ، فَمَتَى شَاخَ أَيْضًا لَا يَحِيدُ عَنْهُ."
+    },
+    "zh-cn": {
+      "version": "CCB",
+      "text": "教导孩童走正路，"
+    },
+    "ko": {
+      "version": "KOR",
+      "text": "마땅히 행할 길을 아이에게 가르치라 그리하면 늙어도 그것을 떠나지 아니하리라"
+    },
+    "vi": {
+      "version": "VIE",
+      "text": "Hãy dạy cho trẻ thơ con đường nó phải theo; Dầu khi nó trở về già, cũng không hề lìa khỏi đó."
+    },
+    "ta": {
+      "version": "IRV",
+      "text": "பிள்ளையை நடக்கவேண்டிய வழியிலே அவனை நடத்து;"
+    }
   },
   "U": {
     "reference": "John 3:3",
-    "en": { "version": "NIV", "text": "Jesus replied, \"Very truly I tell you, no one can see the kingdom of God unless they are born again.\"" },
-    "es": { "version": "NVI", "text": "De veras te aseguro que quien no nazca de nuevo no puede ver el reino de Dios —dijo Jesús." },
-    "zh-tw": { "version": "CUV", "text": "耶穌回答說：「我實實在在地告訴你，人若不重生，就不能見神的國。」" },
-    "pt": { "version": "NVI", "text": "Em resposta, Jesus declarou: Em verdade lhe digo que ninguém pode ver o reino de Deus se não nascer de novo." },
-    "it": { "version": "NR",  "text": "Gesù gli rispose: «In verità, in verità ti dico che se uno non è nato di nuovo, non può vedere il regno di Dio»." },
-    "fr": { "version": "LSG", "text": "Jésus lui répondit: En vérité, en vérité, je te le dis, si un homme ne naît de nouveau, il ne peut voir le royaume de Dieu." },
-    "am": { "version": "ABB", "text": "ኢየሱስም መልሶ። እውነት እውነት እልሃለሁ፥ ሰው ዳግመኛ ካልተወለደ በቀር የእግዚአብሔርን መንግሥት ሊያይ አይችልም አለው።" }
+    "en": {
+      "version": "NIV",
+      "text": "Jesus replied, \"Very truly I tell you, no one can see the kingdom of God unless they are born again.\""
+    },
+    "es": {
+      "version": "NVI",
+      "text": "De veras te aseguro que quien no nazca de nuevo no puede ver el reino de Dios —dijo Jesús."
+    },
+    "zh-tw": {
+      "version": "CUV",
+      "text": "耶穌回答說：「我實實在在地告訴你，人若不重生，就不能見神的國。」"
+    },
+    "pt": {
+      "version": "NVI",
+      "text": "Em resposta, Jesus declarou: Em verdade lhe digo que ninguém pode ver o reino de Deus se não nascer de novo."
+    },
+    "it": {
+      "version": "NR",
+      "text": "Gesù gli rispose: «In verità, in verità ti dico che se uno non è nato di nuovo, non può vedere il regno di Dio»."
+    },
+    "fr": {
+      "version": "LSG",
+      "text": "Jésus lui répondit: En vérité, en vérité, je te le dis, si un homme ne naît de nouveau, il ne peut voir le royaume de Dieu."
+    },
+    "am": {
+      "version": "ABB",
+      "text": "ኢየሱስም መልሶ። እውነት እውነት እልሃለሁ፥ ሰው ዳግመኛ ካልተወለደ በቀር የእግዚአብሔርን መንግሥት ሊያይ አይችልም አለው።"
+    },
+    "hi": {
+      "version": "IRV",
+      "text": "यीशु ने उसको उत्तर दिया, “मैं तुझ से सच-सच कहता हूँ, यदि कोई नये सिरे से न जन्मे तो परमेश्वर का राज्य देख नहीं सकता।”"
+    },
+    "te": {
+      "version": "IRV",
+      "text": "దానికి జవాబుగా యేసు అతనితో, “ఎవరైనా కొత్తగా జన్మించకపోతే దేవుని రాజ్యాన్ని చూడలేరని కచ్చితంగా చెబుతున్నాను” అన్నాడు."
+    },
+    "uk": {
+      "version": "ONPU",
+      "text": "Ісус відповів: ―Істинно кажу тобі: якщо хтось не народиться знову,не може побачити Царства Божого."
+    },
+    "be": {
+      "version": "BEL",
+      "text": "Адказаў яму Ісус і сказаў: «Сапраўды, сапраўды кажу табе: Калі хто не народзіцца звыш, ня можа ўбачыць Валадарства Божага»."
+    },
+    "fa": {
+      "version": "OPV",
+      "text": "عیسی در جواب اوگفت: «آمین آمین به تو می‌گویم اگر کسی از سر نومولود نشود، ملکوت خدا را نمی تواند دید.»"
+    },
+    "ar": {
+      "version": "AVD",
+      "text": "أَجَابَ يَسُوعُ وَقَالَ لَهُ: «ٱلْحَقَّ ٱلْحَقَّ أَقُولُ لَكَ: إِنْ كَانَ أَحَدٌ لَا يُولَدُ مِنْ فَوْقُ لَا يَقْدِرُ أَنْ يَرَى مَلَكُوتَ ٱللهِ»."
+    },
+    "zh-cn": {
+      "version": "CCB",
+      "text": "耶稣说：“我实实在在地告诉你，人若不重生，就不能看见上帝的国。”"
+    },
+    "ko": {
+      "version": "KOR",
+      "text": "예수께서 대답하여 가라사대 `진실로 진실로 네게 이르노니 사람이 거듭나지 아니하면 하나님 나라를 볼 수 없느니라'"
+    },
+    "vi": {
+      "version": "VIE",
+      "text": "Đức Chúa Jêsus cất tiếng đáp rằng: Quả thật, quả thật, ta nói cùng ngươi, nếu một người chẳng sanh lại, thì không thể thấy được nước Đức Chúa Trời."
+    },
+    "ta": {
+      "version": "IRV",
+      "text": "இயேசு அவனுக்கு மறுமொழியாக: ஒருவன் மறுபடியும் பிறக்காவிட்டால் தேவனுடைய ராஜ்யத்தைப் பார்க்கமாட்டான் என்று உண்மையாகவே உண்மையாகவே உனக்குச் சொல்லுகிறேன் என்றார்."
+    }
   },
   "W": {
     "reference": "Exodus 20:3",
-    "en": { "version": "GNT", "text": "Worship no god but me." },
-    "es": { "version": "NVI", "text": "No tengas otros dioses además de mí." },
-    "zh-tw": { "version": "CUV", "text": "除了我以外，你不可有別的神。" },
-    "pt": { "version": "NVI", "text": "Não tenha outros deuses além de mim." },
-    "it": { "version": "NR",  "text": "Non avere altri dèi oltre a me." },
-    "fr": { "version": "LSG", "text": "Tu n'auras pas d'autres dieux devant ma face." },
-    "am": { "version": "ABB", "text": "ከእኔ በቀር ሌሎች አማልክት አይሁኑልህ።" }
+    "en": {
+      "version": "GNT",
+      "text": "Worship no god but me."
+    },
+    "es": {
+      "version": "NVI",
+      "text": "No tengas otros dioses además de mí."
+    },
+    "zh-tw": {
+      "version": "CUV",
+      "text": "除了我以外，你不可有別的神。"
+    },
+    "pt": {
+      "version": "NVI",
+      "text": "Não tenha outros deuses além de mim."
+    },
+    "it": {
+      "version": "NR",
+      "text": "Non avere altri dèi oltre a me."
+    },
+    "fr": {
+      "version": "LSG",
+      "text": "Tu n'auras pas d'autres dieux devant ma face."
+    },
+    "am": {
+      "version": "ABB",
+      "text": "ከእኔ በቀር ሌሎች አማልክት አይሁኑልህ።"
+    },
+    "hi": {
+      "version": "IRV",
+      "text": "तू मुझे छोड़ दूसरों को परमेश्वर करके न मानना।"
+    },
+    "te": {
+      "version": "IRV",
+      "text": "నేను కాక వేరే దేవుడు మీకు ఉండకూడదు."
+    },
+    "uk": {
+      "version": "ONPU",
+      "text": null
+    },
+    "be": {
+      "version": "BEL",
+      "text": "Ня будзеш мець іншых багоў перад абліччам Маім."
+    },
+    "fa": {
+      "version": "OPV",
+      "text": "تو را خدایان دیگر غیر از من نباشد."
+    },
+    "ar": {
+      "version": "AVD",
+      "text": "لَا يَكُنْ لَكَ آلِهَةٌ أُخْرَى أَمَامِي."
+    },
+    "zh-cn": {
+      "version": "CCB",
+      "text": "“除我以外，你不可有别的神明。"
+    },
+    "ko": {
+      "version": "KOR",
+      "text": "너는 나 외에는 다른 신들을 네게 있게 말지니라 !"
+    },
+    "vi": {
+      "version": "VIE",
+      "text": "Trước mặt ta, ngươi chớ có các thần khác."
+    },
+    "ta": {
+      "version": "IRV",
+      "text": "என்னைத்தவிர உனக்கு வேறே தெய்வங்கள் உண்டாயிருக்கவேண்டாம்."
+    }
   },
   "X": {
     "reference": "Psalm 26:2",
-    "en": { "version": "GNT", "text": "Examine me and test me, Lord; judge my desires and thoughts." },
-    "es": { "version": "NVI", "text": "Examíname, SEÑOR; ¡ponme a prueba! purifica mis entrañas y mi corazón." },
-    "zh-tw": { "version": "CUV", "text": "耶和華啊，求你察看我，試驗我，熬煉我的肺腑心腸。" },
-    "pt": { "version": "NVI", "text": "Sonda‑me, SENHOR, e prova‑me; examina o meu coração e a minha mente" },
-    "it": { "version": "NR",  "text": "Scrutami, o SIGNORE, e mettimi alla prova; purifica le mie reni e il mio cuore." },
-    "fr": { "version": "LSG", "text": "Sonde-moi, Eternel! éprouve-moi, Fais passer au creuset mes reins et mon coeur;" },
-    "am": { "version": "ABB", "text": "አቤቱ፥ ፍተነኝ መርምረኝም፤ ኵላሊቴንና ልቤን ፍተን።" }
+    "en": {
+      "version": "GNT",
+      "text": "Examine me and test me, Lord; judge my desires and thoughts."
+    },
+    "es": {
+      "version": "NVI",
+      "text": "Examíname, SEÑOR; ¡ponme a prueba! purifica mis entrañas y mi corazón."
+    },
+    "zh-tw": {
+      "version": "CUV",
+      "text": "耶和華啊，求你察看我，試驗我，熬煉我的肺腑心腸。"
+    },
+    "pt": {
+      "version": "NVI",
+      "text": "Sonda‑me, SENHOR, e prova‑me; examina o meu coração e a minha mente"
+    },
+    "it": {
+      "version": "NR",
+      "text": "Scrutami, o SIGNORE, e mettimi alla prova; purifica le mie reni e il mio cuore."
+    },
+    "fr": {
+      "version": "LSG",
+      "text": "Sonde-moi, Eternel! éprouve-moi, Fais passer au creuset mes reins et mon coeur;"
+    },
+    "am": {
+      "version": "ABB",
+      "text": "አቤቱ፥ ፍተነኝ መርምረኝም፤ ኵላሊቴንና ልቤን ፍተን።"
+    },
+    "hi": {
+      "version": "IRV",
+      "text": "हे यहोवा, मुझ को जाँच और परख;"
+    },
+    "te": {
+      "version": "IRV",
+      "text": "యెహోవా, నన్ను పరిశీలించు. నన్ను పరీక్షించు. నా అంతరంగంలో, నా హృదయంలో ఉన్న స్వచ్ఛతను పరీక్షించు."
+    },
+    "uk": {
+      "version": "ONPU",
+      "text": "Випробуй мене, Господи, оціни мене, досліди серце моє й моє нутро."
+    },
+    "be": {
+      "version": "BEL",
+      "text": "Выпрабуй мяне, ГОСПАДЗЕ, і дасьведчы; ачысьці ныркі мае і сэрца маё!"
+    },
+    "fa": {
+      "version": "OPV",
+      "text": "‌ای خداوندمرا امتحان کن و مرا بیازما. باطن و قلب مرا مصفی گردان."
+    },
+    "ar": {
+      "version": "AVD",
+      "text": "جَرِّبْنِي يَارَبُّ وَٱمْتَحِنِّي. صَفِّ كُلْيَتَيَّ وَقَلْبِي."
+    },
+    "zh-cn": {
+      "version": "CCB",
+      "text": "耶和华啊，求你察验我，试炼我，鉴察我的心思意念。"
+    },
+    "ko": {
+      "version": "KOR",
+      "text": "여호와여, 나를 살피시고 시험하사 내 뜻과 내 마음을 단련하소서"
+    },
+    "vi": {
+      "version": "VIE",
+      "text": "Đức Giê-hô-va ôi! xin hãy dò xét và thử thách tôi, Rèn luyện lòng dạ tôi,"
+    },
+    "ta": {
+      "version": "IRV",
+      "text": "யெகோவாவே, என்னைப் பரீட்சித்து, என்னைச் சோதித்துப்பாரும்;"
+    }
   },
   "Y": {
     "reference": "Matthew 5:13",
-    "en": { "version": "GNT", "text": "You are like salt for the whole human race. But if salt loses its saltiness, there is no way to make it salty again. It has become worthless, so it is thrown out and people trample on it." },
-    "es": { "version": "NVI", "text": "Vosotros sois la sal de la tierra. Pero, si la sal se vuelve insípida, ¿cómo recobrará su sabor? Ya no sirve para nada, sino para que la gente la deseche y la pisotee." },
-    "zh-tw": { "version": "CUV", "text": "你們是世上的鹽。鹽若失了味，怎能叫它再鹹呢？以後無用，不過丟在外面，被人踐踏了。" },
-    "pt": { "version": "NVI", "text": "Vocês são o sal da terra. Mas, se o sal perder o seu sabor, como restaurá‑lo? Não servirá para nada, exceto para ser jogado fora e pisado pelos homens." },
-    "it": { "version": "NR",  "text": "Voi siete il sale della terra; ma, se il sale diventa insipido, con che lo si salerà? Non è più buono a nulla se non a essere gettato via e calpestato dagli uomini." },
-    "fr": { "version": "LSG", "text": "Vous êtes le sel de la terre. Mais si le sel perd sa saveur, avec quoi la lui rendra-t-on? Il ne sert plus qu'à être jeté dehors, et foulé aux pieds par les hommes." },
-    "am": { "version": "ABB", "text": "እናንተ የምድር ጨው ናችሁ፤ ጨው አልጫ ቢሆን ግን በምን ይጣፍጣል? ወደ ውጭ ተጥሎ በሰው ከመረገጥ በቀር ወደ ፊት ለምንም አይጠቅምም።" }
+    "en": {
+      "version": "GNT",
+      "text": "You are like salt for the whole human race. But if salt loses its saltiness, there is no way to make it salty again. It has become worthless, so it is thrown out and people trample on it."
+    },
+    "es": {
+      "version": "NVI",
+      "text": "Vosotros sois la sal de la tierra. Pero, si la sal se vuelve insípida, ¿cómo recobrará su sabor? Ya no sirve para nada, sino para que la gente la deseche y la pisotee."
+    },
+    "zh-tw": {
+      "version": "CUV",
+      "text": "你們是世上的鹽。鹽若失了味，怎能叫它再鹹呢？以後無用，不過丟在外面，被人踐踏了。"
+    },
+    "pt": {
+      "version": "NVI",
+      "text": "Vocês são o sal da terra. Mas, se o sal perder o seu sabor, como restaurá‑lo? Não servirá para nada, exceto para ser jogado fora e pisado pelos homens."
+    },
+    "it": {
+      "version": "NR",
+      "text": "Voi siete il sale della terra; ma, se il sale diventa insipido, con che lo si salerà? Non è più buono a nulla se non a essere gettato via e calpestato dagli uomini."
+    },
+    "fr": {
+      "version": "LSG",
+      "text": "Vous êtes le sel de la terre. Mais si le sel perd sa saveur, avec quoi la lui rendra-t-on? Il ne sert plus qu'à être jeté dehors, et foulé aux pieds par les hommes."
+    },
+    "am": {
+      "version": "ABB",
+      "text": "እናንተ የምድር ጨው ናችሁ፤ ጨው አልጫ ቢሆን ግን በምን ይጣፍጣል? ወደ ውጭ ተጥሎ በሰው ከመረገጥ በቀር ወደ ፊት ለምንም አይጠቅምም።"
+    },
+    "hi": {
+      "version": "IRV",
+      "text": "“तुम पृथ्वी के नमक हो; परन्तु यदि नमक का स्वाद बिगड़ जाए, तो वह फिर किस वस्तु से नमकीन किया जाएगा? फिर वह किसी काम का नहीं, केवल इसके कि बाहर फेंका जाए और मनुष्यों के पैरों तले रौंदा जाए।"
+    },
+    "te": {
+      "version": "IRV",
+      "text": "“లోకానికి మీరు ఉప్పు. ఉప్పు తన రుచి కోల్పోతే దానికి ఆ రుచి మళ్ళీ ఎలా వస్తుంది? అలాంటి ఉప్పు బయట పారేసి కాళ్ళ కింద తొక్కడానికి తప్ప ఇక దేనికీ పనికిరాదు."
+    },
+    "uk": {
+      "version": "ONPU",
+      "text": "Ви – сіль землі. Але якщо сіль втратить солоність, то чим повернути її смак? Вона вже не придатна ні до чого, хіба що викинути її на вулицю, щоб її топтали люди."
+    },
+    "be": {
+      "version": "BEL",
+      "text": "Вы — соль зямлі. Калі ж соль згубіць сілу, то чым зробіш яе салёнаю? Яна ўжо ні на што не надаецца, хіба толькі выкінуць яе вон на патаптаньне людзям."
+    },
+    "fa": {
+      "version": "OPV",
+      "text": "«شما نمک جهانید! لیکن اگر نمک فاسدگردد، به کدام چیز باز نمکین شود؟ دیگر مصرفی ندارد جز آنکه بیرون افکنده، پایمال مردم شود."
+    },
+    "ar": {
+      "version": "AVD",
+      "text": "«أَنْتُمْ مِلْحُ ٱلْأَرْضِ، وَلَكِنْ إِنْ فَسَدَ ٱلْمِلْحُ فَبِمَاذَا يُمَلَّحُ؟ لَا يَصْلُحُ بَعْدُ لِشَيْءٍ، إِلَّا لِأَنْ يُطْرَحَ خَارِجًا وَيُدَاسَ مِنَ ٱلنَّاسِ."
+    },
+    "zh-cn": {
+      "version": "CCB",
+      "text": "“你们是世上的盐。盐如果失去咸味，怎能使它再变咸呢？它将毫无用处，只会被扔在外面任人践踏。"
+    },
+    "ko": {
+      "version": "KOR",
+      "text": "너희는 세상의 소금이니 소금이 만일 그 맛을 잃으면 무엇으로 짜게 하리요 후에는 아무 쓸데 없어 다만 밖에 버리워 사람에게 밟힐 뿐이니라"
+    },
+    "vi": {
+      "version": "VIE",
+      "text": "Các ngươi là muối của đất; song nếu mất mặn đi, thì sẽ lấy giống chi mà làm cho mặn lại? Muối ấy không dùng chi được nữa, chỉ phải quăng ra ngoài và bị người ta đạp dưới chân."
+    },
+    "ta": {
+      "version": "IRV",
+      "text": "நீங்கள் பூமிக்கு உப்பாக இருக்கிறீர்கள்; உப்பானது சாரமற்றுப்போனால், எதினால் சாரமாக்கப்படும்? வெளியே கொட்டப்படுவதற்கும், மனிதர்களால் மிதிக்கப்படுவதற்குமே ஒழிய வேறொன்றுக்கும் உதவாது."
+    }
   },
   "Z": {
     "reference": "Luke 19:6",
-    "en": { "version": "GNT", "text": "Zacchaeus hurried down and welcomed him with great joy." },
-    "es": { "version": "NVI", "text": "Así que se apresuró a bajar y, muy contento, recibió a Jesús en su casa." },
-    "zh-tw": { "version": "CUV", "text": "他就急忙下來，歡歡喜喜地接待耶穌。" },
-    "pt": { "version": "NVI", "text": "Então, ele desceu rapidamente e o recebeu com alegria." },
-    "it": { "version": "NR",  "text": "Egli si affrettò a scendere e lo accolse con gioia." },
-    "fr": { "version": "LSG", "text": "Zachée se hâta de descendre, et le reçut avec joie." },
-    "am": { "version": "ABB", "text": "ፈጥኖም ወረደ በደስታም ተቀበለው።" }
+    "en": {
+      "version": "GNT",
+      "text": "Zacchaeus hurried down and welcomed him with great joy."
+    },
+    "es": {
+      "version": "NVI",
+      "text": "Así que se apresuró a bajar y, muy contento, recibió a Jesús en su casa."
+    },
+    "zh-tw": {
+      "version": "CUV",
+      "text": "他就急忙下來，歡歡喜喜地接待耶穌。"
+    },
+    "pt": {
+      "version": "NVI",
+      "text": "Então, ele desceu rapidamente e o recebeu com alegria."
+    },
+    "it": {
+      "version": "NR",
+      "text": "Egli si affrettò a scendere e lo accolse con gioia."
+    },
+    "fr": {
+      "version": "LSG",
+      "text": "Zachée se hâta de descendre, et le reçut avec joie."
+    },
+    "am": {
+      "version": "ABB",
+      "text": "ፈጥኖም ወረደ በደስታም ተቀበለው።"
+    },
+    "hi": {
+      "version": "IRV",
+      "text": "वह तुरन्त उतरकर आनन्द से उसे अपने घर को ले गया।"
+    },
+    "te": {
+      "version": "IRV",
+      "text": "అతడు త్వరగా దిగి సంతోషంతో ఆయనను తన ఇంటికి తీసుకువెళ్ళాడు."
+    },
+    "uk": {
+      "version": "ONPU",
+      "text": "Той поспішно зліз і радо прийняв Його."
+    },
+    "be": {
+      "version": "BEL",
+      "text": "І той пасьпешліва зыйшоў, і прыняў Яго з радасьцю."
+    },
+    "fa": {
+      "version": "OPV",
+      "text": "پس به زودی پایین شده او را به خرمی پذیرفت."
+    },
+    "ar": {
+      "version": "AVD",
+      "text": "فَأَسْرَعَ وَنَزَلَ وَقَبِلَهُ فَرِحًا."
+    },
+    "zh-cn": {
+      "version": "CCB",
+      "text": "撒该连忙爬下来，兴高采烈地迎接耶稣。"
+    },
+    "ko": {
+      "version": "KOR",
+      "text": "급히 내려와 즐거워하며 영접하거늘"
+    },
+    "vi": {
+      "version": "VIE",
+      "text": "Xa-chê vội vàng xuống và mừng rước Ngài."
+    },
+    "ta": {
+      "version": "IRV",
+      "text": "அவன் சீக்கிரமாக இறங்கி, சந்தோஷத்தோடு அவரை அழைத்துக்கொண்டுபோனான்."
+    }
   }
 }

@@ -8,9 +8,8 @@ A single-page web app that generates printable multilingual Bible scripture hand
 
 ```
 index.html          Single-file SPA (HTML + CSS + JS, no build step)
-translations.json   All verse data: 25 scriptures x 7 languages
-SCRIPTURES.md       Ground truth for which verses map to which letters
-LANGUAGES.md        Ground truth for supported languages and Bible versions
+translations.json   All verse data: 25 scriptures x 17 languages
+CLAUDE.md           Ground truth for scriptures, languages, and lookup sources
 ```
 
 There is no server. The app is static and deployable on GitHub Pages or any file host.
@@ -26,7 +25,7 @@ There is no server. The app is static and deployable on GitHub Pages or any file
 ### Data flow
 
 ```
-SCRIPTURES.md + LANGUAGES.md   (human-curated source of truth)
+CLAUDE.md                      (human-curated source of truth)
         |
         v
 translations.json              (machine-readable, used by the app)
@@ -37,7 +36,7 @@ index.html                     (renders handouts in the browser)
 
 ## Scripture Alphabet
 
-Each letter A–Z (except V) maps to a Bible verse whose English key phrase starts with that letter. The mapping is defined in `SCRIPTURES.md`. Example:
+Each letter A–Z (except V) maps to a Bible verse whose English key phrase starts with that letter. The mapping is defined in the Scriptures section of `CLAUDE.md`. Example:
 
 | Letter | Reference     | Key Phrase               |
 |--------|---------------|--------------------------|
@@ -54,7 +53,7 @@ V is intentionally absent from the original Scripture Alphabet source material.
 ```json
 {
   "_meta": {
-    "languages": ["en", "es", "zh-tw", "pt", "it", "fr", "am"],
+    "languages": ["en", "es", "zh-tw", "pt", "it", "fr", "am", "hi", "uk", "te", "fa", "zh-cn", "ko", "vi", "ar", "ta", "be"],
     "note": "..."
   },
   "A": {
@@ -75,17 +74,27 @@ Each scripture entry contains:
 
 Every translation in `translations.json` is sourced from an official, published Bible translation — **not** machine-translated or AI-generated. The process:
 
-1. **Identify the canonical Bible version** for each language (defined in `LANGUAGES.md`):
+1. **Identify the canonical Bible version** for each language (defined in the Languages section of `CLAUDE.md`):
 
    | Language   | Code  | Version                          | Abbreviation |
    |------------|-------|----------------------------------|--------------|
    | English    | en    | Good News Translation            | GNT          |
    | Spanish    | es    | Nueva Version Internacional      | NVI          |
-   | Chinese    | zh-tw | Chinese Union Version (Trad.)    | CUV          |
+   | Chinese (Trad.) | zh-tw | Chinese Union Version (Trad.) | CUV         |
    | Portuguese | pt    | Nova Versao Internacional        | NVI          |
    | Italian    | it    | Nuova Riveduta (2006)            | NR           |
    | French     | fr    | Louis Segond                     | LSG          |
    | Amharic    | am    | Amharic Bible (Bible Society)    | ABB          |
+   | Hindi      | hi    | Indian Revised Version (IRV)     | IRV          |
+   | Ukrainian  | uk    | Open New Translation Ukrainian   | ONPU         |
+   | Telugu     | te    | Indian Revised Version (IRV)     | IRV          |
+   | Farsi      | fa    | Old Persian Version              | OPV          |
+   | Chinese (Simp.) | zh-cn | Contemporary Bible Simplified | CCB        |
+   | Korean     | ko    | Korean Bible                     | KOR          |
+   | Vietnamese | vi    | Vietnamese Bible 1934            | VIE          |
+   | Arabic     | ar    | Van Dyke Arabic Bible            | AVD          |
+   | Tamil      | ta    | Indian Revised Version (IRV)     | IRV          |
+   | Belarusian | be    | Biblija (Bokun translation)      | BEL          |
 
 2. **Fetch each verse from an official online source**:
    - **English (GNT), Spanish (NVI), Portuguese (NVI), French (LSG)**: Retrieved from standard Bible study sites (biblestudytools.com, bibleserver.com, saintebible.com).
@@ -105,20 +114,30 @@ Every translation in `translations.json` is sourced from an official, published 
 | Italian    | BibleGateway.com (NR2006)   | `biblegateway.com/passage/?search=...&version=NR2006` |
 | Amharic    | WordProject.org             | `wordproject.org/bibles/am/[book]/[chapter].htm` |
 | Spanish    | BibleStudyTools / BibleServer | various |
-| Chinese    | BibleStudyTools / Bible.com | various |
+| Chinese (Trad.) | BibleStudyTools / Bible.com | various |
 | Portuguese | BibliaTodo / bo.net.br      | various |
 | French     | SainteBible.com / BibleServer | various |
+| Hindi      | ebible.org (hin2017)        | `ebible.org/Scriptures/hin2017_html.zip` |
+| Ukrainian  | ebible.org (ukronpu)        | `ebible.org/Scriptures/ukronpu_html.zip` (NT+Psalms only) |
+| Telugu     | ebible.org (tel2017)        | `ebible.org/Scriptures/tel2017_html.zip` |
+| Farsi      | ebible.org (pesOPV)         | `ebible.org/Scriptures/pesOPV_html.zip` |
+| Chinese (Simp.) | ebible.org (cmncbs)    | `ebible.org/Scriptures/cmncbs_html.zip` |
+| Korean     | ebible.org (kor)            | `ebible.org/Scriptures/kor_html.zip` |
+| Vietnamese | ebible.org (vie1934)        | `ebible.org/Scriptures/vie1934_html.zip` |
+| Arabic     | ebible.org (arb-vd)         | `ebible.org/Scriptures/arb-vd_html.zip` |
+| Tamil      | ebible.org (tam2017)        | `ebible.org/Scriptures/tam2017_html.zip` |
+| Belarusian | ebible.org (bel)            | `ebible.org/Scriptures/bel_html.zip` |
 
 ### Adding a new language
 
-1. Add a row to `LANGUAGES.md` with the language code, display name, Bible version, and abbreviation.
-2. Identify a reliable online source for that version.
+1. Add a row to the Languages table in `CLAUDE.md` with the language code, display name, Bible version, abbreviation, and direction.
+2. Add the source to the Lookup Sources table in `CLAUDE.md`.
 3. For each of the 25 scriptures, fetch the verse text from the source and add the language entry to `translations.json`.
 4. Add the language to the `LANGUAGES` array in `index.html`.
 
 ### Adding a new scripture
 
-1. Add a row to `SCRIPTURES.md` with the letter, reference, version, and key text.
+1. Add a row to the Scriptures table in `CLAUDE.md` with the letter, reference, version, and key text.
 2. Add a new entry to `translations.json` with the reference and all language translations fetched from official sources.
 
 ## UI Design

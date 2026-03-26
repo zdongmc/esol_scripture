@@ -261,6 +261,12 @@
       font-size: 0.82rem;
     }
 
+    .verse-text[dir="rtl"] {
+      text-align: right;
+      direction: rtl;
+      unicode-bidi: isolate;
+    }
+
     /* ── Print styles ─────────────────────────────────────── */
     @media print {
       #app > *:not(#preview-wrapper) { display: none !important; }
@@ -330,6 +336,16 @@ const LANGUAGES = [
   { code: "it",    name: "Italiano",    version: "NR"  },
   { code: "fr",    name: "Français",    version: "LSG" },
   { code: "am",    name: "አማርኛ",       version: "—"   },
+  { code: "hi",    name: "हिन्दी",       version: "IRV" },
+  { code: "uk",    name: "Українська",  version: "ONPU" },
+  { code: "te",    name: "తెలుగు",      version: "IRV" },
+  { code: "fa",    name: "فارسی",       version: "OPV", dir: "rtl" },
+  { code: "zh-cn", name: "简体中文",    version: "CCB" },
+  { code: "ko",    name: "한국어",       version: "KOR" },
+  { code: "vi",    name: "Tiếng Việt",  version: "VIE" },
+  { code: "ar",    name: "العربية",     version: "AVD", dir: "rtl" },
+  { code: "ta",    name: "தமிழ்",       version: "IRV" },
+  { code: "be",    name: "Беларуская",  version: "BEL" },
 ];
 
 let DATA = {};
@@ -420,13 +436,14 @@ function render() {
   langs.forEach(lang => {
     const t = entry[lang.code];
     const text = t?.text?.trim();
+    const isRtl = lang.dir === "rtl";
     html += `
       <div class="translation-block">
         <div class="lang-meta">
           <div class="lang-name">${lang.name}</div>
           <div class="lang-version">${lang.version}</div>
         </div>
-        <div class="verse-text ${text ? "" : "verse-missing"}">
+        <div class="verse-text ${text ? "" : "verse-missing"}"${isRtl ? ' dir="rtl"' : ''}>
           ${text || "Translation not yet available"}
         </div>
       </div>`;
