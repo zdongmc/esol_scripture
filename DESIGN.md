@@ -108,7 +108,7 @@ Every translation in `translations.json` is sourced from an official, published 
    | French     | fr    | Louis Segond                     | LSG          |
    | Amharic    | am    | መጽሐፍ ቅዱስ (Bible Society of Ethiopia) | 1962      |
    | Hindi      | hi    | Indian Revised Version (IRV)     | IRV          |
-   | Ukrainian  | uk    | ONPU (NT+Ps) + UKR (OT)          | ONPU / UKR   |
+   | Ukrainian  | uk    | UKR "Ukrainian Bible"            | UKR          |
    | Telugu     | te    | Indian Revised Version (IRV)     | IRV          |
    | Farsi      | fa    | Old Persian Version              | OPV          |
    | Chinese (Simp.) | zh-cn | Contemporary Bible Simplified | CCB        |
@@ -162,7 +162,7 @@ Summary, with verification status:
 | French (LSG) | SainteBible | ✅ 2026-08-26 |
 | Amharic (1962) | wordproject.org | ✅ 2026-08-26 |
 | Hindi (IRV) | ebible.org (`hin2017`) | ⚠️ not yet |
-| Ukrainian (ONPU + UKR) | ebible.org (`ukronpu`) + BibleGateway (`UKR`) | ✅ 2026-08-27 |
+| Ukrainian (UKR) | BibleGateway (`UKR`) + htmlbible.com | ✅ 2026-08-27 |
 | Telugu (IRV) | ebible.org (`tel2017`) | ⚠️ not yet |
 | Farsi (OPV) | ebible.org (`pesOPV`) | ⚠️ not yet |
 | Chinese Simp. (CCB) | ebible.org (`cmncbs`) | ⚠️ not yet |

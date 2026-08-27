@@ -62,8 +62,7 @@ When verifying the rest, the traps found this time are worth checking for first:
 | it | Riveduta 1927 *(alt)* | BibleStudyTools | `biblestudytools.com/riv/{libro}/{ch}-{v}.html` | ✅ | Public domain (Luzzi, d. 1948) |
 | fr | **Louis Segond 1910** | **SainteBible** | `saintebible.com/{book}/{ch}-{v}.htm` | ✅ | Public domain |
 | fr | LSG *(alt)* | BibleGateway | `biblegateway.com/passage/?search={Livre}+{ch}:{v}&version=LSG` | ⚠️ | has a text error — see below |
-| uk | **ONPU** *(20 verses: NT + Psalms)* | ebible.org `ukronpu` | `ebible.org/Scriptures/ukronpu_html.zip` | ✅ | © 2022 Biblica, CC BY-SA 4.0 |
-| uk | **UKR "Ukrainian Bible"** *(5 OT verses)* | BibleGateway `UKR` | `biblegateway.com/passage/?search={ref}&version=UKR` | ✅ | Public domain |
+| uk | **UKR "Ukrainian Bible"** *(all 25)* | BibleGateway `UKR` | `biblegateway.com/passage/?search={ref}&version=UKR` | ✅ | Public domain |
 | uk | UKR *(cross-check)* | htmlbible.com | `htmlbible.com/sacrednamebiblecom/ukrainian/B{bb}C{ccc}.htm` — **windows-1251**, not UTF-8 | ✅ | Public domain |
 | am | መጽሐፍ ቅዱስ 1962 | **wordproject.org** | `wordproject.org/bibles/am/{NN}/{ch}.htm` (NN zero-padded) | ✅ | © Bible Society of Ethiopia |
 | am | *(rejected)* | `magna25/amharic-bible-json` | — | ❌ | corrupt — see below |
@@ -301,65 +300,43 @@ where the offset was unambiguous. The text itself is correct either way.
 
 ---
 
-### Ukrainian — two translations in one column, by necessity
-**ONPU covers only the New Testament and Psalms.** Five letters are Old Testament —
-Q (Isaiah), R (Ecclesiastes), S (1 Samuel), T (Proverbs), W (Exodus) — so no ONPU
-text exists for them at all. Those five come from the public-domain **UKR "Ukrainian Bible"**, labelled per verse
-via the `version` field — the same mechanism that lets K and U be NIV in an
-otherwise-GNT English column.
+### Ukrainian — one translation, chosen for the audience
+All 25 verses come from the public-domain **UKR "Ukrainian Bible"**. Two earlier
+approaches were tried and dropped:
 
-**Attribution is unconfirmed.** BibleGateway states only that it is public domain and
-that they have "no further information about its publication history"; htmlbible.com
-likewise calls it just "Ukrainian Bible". The text matches what is widely circulated
-as the Ohienko translation, but neither source names a translator, so the repo labels
-it `UKR` rather than asserting one.
+1. **ONPU alone** (`ukronpu`, © 2022 Biblica, CC BY-SA) covers only the New Testament
+   and Psalms, so the five Old Testament letters — Q (Isaiah), R (Ecclesiastes),
+   S (1 Samuel), T (Proverbs), W (Exodus) — had no text at all.
+2. **ONPU + Kulish 1905** filled the gap but mixed a 2022 translation with a
+   pre-reform archaic one (`днї`, `Сьвятий`, `инших`) in the same column.
 
-Two independent sources carry it and **agree on all five verses**, which is the
-verification that matters here:
-- BibleGateway `version=UKR`
-- htmlbible.com — note the pages are **windows-1251 encoded, not UTF-8**; decoding as
-  UTF-8 yields mojibake. Verse markup is `<A NAME='V3'><H4>3</H4></TD><TD><P>text<P>`,
-  and verse 1 may carry a leading `¶`.
+UKR settles it with a single translation throughout. ONPU is the more modern text,
+but the congregation's Ukrainian learners are typically **grandparents**, for whom
+the older wording is the familiar one from church — so newer is not automatically
+more readable here. Let the audience decide this, not the publication date.
 
-An earlier pass used Kulish 1905 (`ukr1871`) here. It was replaced: Kulish is
-pre-reform and archaic (`днї`, `Сьвятий`, `инших`), roughly KJV-era in feel, which
-clashed badly with ONPU's modern register in the same column. UKR reads far closer to
-ONPU.
+**Attribution is deliberately unasserted.** BibleGateway says only that it is public
+domain with "no further information about its publication history"; htmlbible.com
+likewise calls it just "Ukrainian Bible". The text matches what circulates as the
+Ohienko translation, but neither source names a translator, so the repo labels it
+`UKR`.
 
-#### Psalms use Septuagint numbering — offset by one
-ONPU numbers Psalms the Orthodox/Septuagint way, **one behind the Hebrew**:
+#### Verification
+Two independent sources carry it and **agree on all 25 verses** — the strongest
+confirmation available for any language here, since it needs no reader of the script:
+- BibleGateway `version=UKR`, each fetch reference-asserted against the page title
+- htmlbible.com, whose pages are **windows-1251, not UTF-8** (decoding as UTF-8 gives
+  mojibake). Markup is `<A NAME='V3'><H4>3</H4></TD><TD><P>text<P>`; verse 1 may carry
+  a leading `¶`.
 
-| English | ONPU |
-|---------|------|
-| Psalm 121:2 (letter M) | **Псалом 120:2** |
-| Psalm 26:2 (letter X) | **Псалом 25:2** |
+BibleGateway intermittently returns **HTTP 500** on this version; retry with backoff
+rather than treating it as a missing verse.
 
-Requesting `PSA121` returns Hebrew 122 ("Our feet are standing in your gates,
-Jerusalem") — a real psalm, wrong verse. Both letters carry a `ref` override.
-**UKR uses Hebrew numbering**, so the five OT verses taken from it need no override —
-the offset is ONPU's alone.
-
-#### Parsing ebible.org HTML
-Verses are explicitly numbered, which removes the guesswork:
-
-```html
-<span class="verse" id="V3">3&#160;</span>Ісус відповів: ―Істинно кажу тобі: …
-```
-
-- Chapter files are zero-padded to 2 digits, **3 for Psalms** (`JHN03.htm`, `PSA121.htm`).
-- **Strip `<div class='s'>`** — section headings sit *between* verses and otherwise
-  attach to the preceding one.
-- **Strip `<a class="notemark">…<span class="popup">…</span></a>`** — footnotes sit
-  *inside* the verse, mid-sentence.
-- The divine name uses `<span class='nd'>`, which ONPU's stylesheet renders **bold,
-  not small caps** (`.sc` exists separately and is unused). Do **not** uppercase it —
-  unlike BibleGateway's CSS small caps, the visible form really is `Господи`.
-
-#### What the previous data got wrong
-17 of 20 matched. The three that did not were all extraction contamination:
-- **Revelation 1:3** had the next section's heading appended — `Привітання та славослів'я`.
-- **Mark 12:31** had `19:18.` embedded, pulled out of a footnote reading `Див. Лев. 19:18.`
-- **John 3:3** lost a space (`знову,не`) where that footnote sat between clauses.
+#### Psalm numbering
+**UKR uses Hebrew numbering**, so no `ref` overrides are needed. Worth recording in
+case anyone returns to ONPU: *ONPU* numbers Psalms the Septuagint way, one behind the
+Hebrew — its Psalm 121 is Hebrew 122 ("Our feet are standing in your gates,
+Jerusalem"), a real psalm and the wrong verse.
 
 ---
 
