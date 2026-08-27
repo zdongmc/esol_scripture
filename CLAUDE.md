@@ -63,25 +63,26 @@ Each entry defines the language code, display name, Bible version, and text dire
 | Code  | Display Name              | Bible Version                          | Abbreviation | Direction |
 |-------|---------------------------|----------------------------------------|--------------|-----------|
 | en    | English                   | Good News Translation                  | GNT          | LTR       |
-| es    | Español (Spanish)         | Nueva Versión Internacional            | NVI          | LTR       |
-| zh-tw | 繁體中文 (Traditional Chinese) | 中文和合本 (Chinese Union Version)     | CUV          | LTR       |
-| pt    | Português (Portuguese)    | Nova Versão Internacional              | NVI          | LTR       |
-| it    | Italiano (Italian)        | Nuova Riveduta                         | NR           | LTR       |
-| fr    | Français (French)         | Louis Segond                           | LSG          | LTR       |
 | am    | አማርኛ (Amharic)            | መጽሐፍ ቅዱስ (Bible Society of Ethiopia)   | 1962         | LTR       |
-| hi    | हिन्दी (Hindi)             | Indian Revised Version (IRV) Hindi 2019 | IRV         | LTR       |
-| uk    | Українська (Ukrainian)    | Open New Translation Ukrainian         | ONPU         | LTR       |
-| te    | తెలుగు (Telugu)            | Indian Revised Version (IRV) Telugu 2019 | IRV         | LTR       |
-| fa    | فارسی (Farsi)              | Old Persian Version                    | OPV          | RTL       |
-| zh-cn | 简体中文 (Simplified Chinese) | 圣经当代译本 (Contemporary Bible Simplified) | CCB   | LTR       |
-| ko    | 한국어 (Korean)              | 한국어 성경 (Korean Bible)              | KOR          | LTR       |
-| vi    | Tiếng Việt (Vietnamese)   | Vietnamese Bible 1934                  | VIE          | LTR       |
 | ar    | العربية (Arabic)           | Van Dyke Arabic Bible                  | AVD          | RTL       |
-| ta    | தமிழ் (Tamil)              | Indian Revised Version (IRV) Tamil     | IRV          | LTR       |
 | be    | Беларуская (Belarusian)   | Біблія (пераклад А.Бокуна)             | BEL          | LTR       |
+| zh-cn | 简体中文 (Simplified Chinese) | 圣经当代译本 (Contemporary Bible Simplified) | CCB   | LTR       |
+| zh-tw | 繁體中文 (Traditional Chinese) | 中文和合本 (Chinese Union Version)     | CUV          | LTR       |
+| fa    | فارسی (Farsi)              | Old Persian Version                    | OPV          | RTL       |
+| fr    | Français (French)         | Louis Segond                           | LSG          | LTR       |
+| hi    | हिन्दी (Hindi)             | Indian Revised Version (IRV) Hindi 2019 | IRV         | LTR       |
+| it    | Italiano (Italian)        | Nuova Riveduta                         | NR           | LTR       |
+| ko    | 한국어 (Korean)              | 한국어 성경 (Korean Bible)              | KOR          | LTR       |
+| pt    | Português (Portuguese)    | Nova Versão Internacional              | NVI          | LTR       |
+| es    | Español (Spanish)         | Nueva Versión Internacional            | NVI          | LTR       |
+| ta    | தமிழ் (Tamil)              | Indian Revised Version (IRV) Tamil     | IRV          | LTR       |
+| te    | తెలుగు (Telugu)            | Indian Revised Version (IRV) Telugu 2019 | IRV         | LTR       |
+| uk    | Українська (Ukrainian)    | Open New Translation Ukrainian         | ONPU         | LTR       |
+| vi    | Tiếng Việt (Vietnamese)   | Vietnamese Bible 1934                  | VIE          | LTR       |
 
 - `code` is the key used in `translations.json` and in the web app.
 - Arabic (`ar`) and Farsi (`fa`) use RTL layout; all others use LTR.
+- **Ordering:** English first, then alphabetical by English name — except that variants of one language sort under a shared base name so they stay adjacent (both Chinese sort under "Chinese"). The `LANGUAGES` array in `index.html` drives both the picker and the handout row order; keep this table, `_meta.languages`, and that array in the same order.
 - Ukrainian (`uk`) uses a NT+Psalms translation; 5 OT verses (Q, R, S, T, W) are unavailable.
 - To add a language: add a row here, add a verified source to `SOURCES.md`, then populate `translations.json`.
 - **Verification status:** en, es, zh-tw, pt, it, fr, am were verified verse-by-verse on 2026-08-26. The other ten (hi, uk, te, fa, zh-cn, ko, vi, ar, ta, be) have **not** been — see `SOURCES.md`.
