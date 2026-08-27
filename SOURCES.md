@@ -63,7 +63,8 @@ When verifying the rest, the traps found this time are worth checking for first:
 | fr | **Louis Segond 1910** | **SainteBible** | `saintebible.com/{book}/{ch}-{v}.htm` | ✅ | Public domain |
 | fr | LSG *(alt)* | BibleGateway | `biblegateway.com/passage/?search={Livre}+{ch}:{v}&version=LSG` | ⚠️ | has a text error — see below |
 | uk | **ONPU** *(20 verses: NT + Psalms)* | ebible.org `ukronpu` | `ebible.org/Scriptures/ukronpu_html.zip` | ✅ | © 2022 Biblica, CC BY-SA 4.0 |
-| uk | **Куліш 1905** *(5 OT verses)* | ebible.org `ukr1871` | `ebible.org/Scriptures/ukr1871_html.zip` | ✅ | Public domain |
+| uk | **UKR "Ukrainian Bible"** *(5 OT verses)* | BibleGateway `UKR` | `biblegateway.com/passage/?search={ref}&version=UKR` | ✅ | Public domain |
+| uk | UKR *(cross-check)* | htmlbible.com | `htmlbible.com/sacrednamebiblecom/ukrainian/B{bb}C{ccc}.htm` — **windows-1251**, not UTF-8 | ✅ | Public domain |
 | am | መጽሐፍ ቅዱስ 1962 | **wordproject.org** | `wordproject.org/bibles/am/{NN}/{ch}.htm` (NN zero-padded) | ✅ | © Bible Society of Ethiopia |
 | am | *(rejected)* | `magna25/amharic-bible-json` | — | ❌ | corrupt — see below |
 
@@ -303,16 +304,27 @@ where the offset was unambiguous. The text itself is correct either way.
 ### Ukrainian — two translations in one column, by necessity
 **ONPU covers only the New Testament and Psalms.** Five letters are Old Testament —
 Q (Isaiah), R (Ecclesiastes), S (1 Samuel), T (Proverbs), W (Exodus) — so no ONPU
-text exists for them at all. Those five come from **Kulish 1905** (`ukr1871`, public
-domain, complete Bible), labelled per verse via the `version` field, the same
-mechanism that lets K and U be NIV in an otherwise-GNT English column.
+text exists for them at all. Those five come from the public-domain **UKR "Ukrainian Bible"**, labelled per verse
+via the `version` field — the same mechanism that lets K and U be NIV in an
+otherwise-GNT English column.
 
-Be aware of the register mismatch: ONPU is modern Ukrainian; **Kulish 1905 is
-archaic** — pre-reform orthography (`днї`, `Сьвятий`, `инших`), roughly KJV-era in
-feel. It is the only public-domain complete Ukrainian Bible on ebible.org; the only
-modern complete alternative there, `ukr1996`, is © Bob Jones University. If the
-archaic register is a problem in class, the choice is a licensed modern translation
-or leaving those five blank.
+**Attribution is unconfirmed.** BibleGateway states only that it is public domain and
+that they have "no further information about its publication history"; htmlbible.com
+likewise calls it just "Ukrainian Bible". The text matches what is widely circulated
+as the Ohienko translation, but neither source names a translator, so the repo labels
+it `UKR` rather than asserting one.
+
+Two independent sources carry it and **agree on all five verses**, which is the
+verification that matters here:
+- BibleGateway `version=UKR`
+- htmlbible.com — note the pages are **windows-1251 encoded, not UTF-8**; decoding as
+  UTF-8 yields mojibake. Verse markup is `<A NAME='V3'><H4>3</H4></TD><TD><P>text<P>`,
+  and verse 1 may carry a leading `¶`.
+
+An earlier pass used Kulish 1905 (`ukr1871`) here. It was replaced: Kulish is
+pre-reform and archaic (`днї`, `Сьвятий`, `инших`), roughly KJV-era in feel, which
+clashed badly with ONPU's modern register in the same column. UKR reads far closer to
+ONPU.
 
 #### Psalms use Septuagint numbering — offset by one
 ONPU numbers Psalms the Orthodox/Septuagint way, **one behind the Hebrew**:
@@ -324,7 +336,8 @@ ONPU numbers Psalms the Orthodox/Septuagint way, **one behind the Hebrew**:
 
 Requesting `PSA121` returns Hebrew 122 ("Our feet are standing in your gates,
 Jerusalem") — a real psalm, wrong verse. Both letters carry a `ref` override.
-Kulish does *not* share this offset for Ecclesiastes, so no override is needed there.
+**UKR uses Hebrew numbering**, so the five OT verses taken from it need no override —
+the offset is ONPU's alone.
 
 #### Parsing ebible.org HTML
 Verses are explicitly numbered, which removes the guesswork:

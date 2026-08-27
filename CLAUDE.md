@@ -77,13 +77,13 @@ Each entry defines the language code, display name, Bible version, and text dire
 | es    | Español (Spanish)         | Nueva Versión Internacional            | NVI          | LTR       |
 | ta    | தமிழ் (Tamil)              | Indian Revised Version (IRV) Tamil     | IRV          | LTR       |
 | te    | తెలుగు (Telugu)            | Indian Revised Version (IRV) Telugu 2019 | IRV         | LTR       |
-| uk    | Українська (Ukrainian)    | ONPU (NT+Psalms) + Куліш 1905 (OT)     | ONPU / Куліш | LTR       |
+| uk    | Українська (Ukrainian)    | ONPU (NT+Psalms) + UKR Ukrainian Bible (OT) | ONPU / UKR | LTR       |
 | vi    | Tiếng Việt (Vietnamese)   | Vietnamese Bible 1934                  | VIE          | LTR       |
 
 - `code` is the key used in `translations.json` and in the web app.
 - Arabic (`ar`) and Farsi (`fa`) use RTL layout; all others use LTR.
 - **Ordering:** English first, then alphabetical by English name — except that variants of one language sort under a shared base name so they stay adjacent (both Chinese sort under "Chinese"). The `LANGUAGES` array in `index.html` drives both the picker and the handout row order; keep this table, `_meta.languages`, and that array in the same order.
-- Ukrainian (`uk`) mixes two translations: ONPU covers NT+Psalms, and the 5 OT verses (Q, R, S, T, W) come from the public-domain Kulish 1905. The version is labelled per verse. ONPU also numbers Psalms one behind the Hebrew (Septuagint numbering), so M and X carry `ref` overrides.
+- Ukrainian (`uk`) mixes two translations: ONPU covers NT+Psalms, and the 5 OT verses (Q, R, S, T, W) come from the public-domain UKR "Ukrainian Bible". The version is labelled per verse. ONPU also numbers Psalms one behind the Hebrew (Septuagint numbering), so M and X carry `ref` overrides.
 - To add a language: add a row here, add a verified source to `SOURCES.md`, then populate `translations.json`.
 - **Verification status:** en, es, zh-tw, pt, it, fr, am, uk verified verse-by-verse. The other nine (hi, te, fa, zh-cn, ko, vi, ar, ta, be) have **not** been — see `SOURCES.md`.
 
