@@ -242,6 +242,14 @@
       letter-spacing: 0.03em;
     }
 
+    .lang-ref {
+      font-family: system-ui, sans-serif;
+      font-size: 0.68rem;
+      color: #bbb;
+      letter-spacing: 0.03em;
+      font-style: italic;
+    }
+
     .lang-meta {
       grid-column: 1;
     }
@@ -335,7 +343,7 @@ const LANGUAGES = [
   { code: "pt",    name: "Português",   version: "NVI" },
   { code: "it",    name: "Italiano",    version: "NR"  },
   { code: "fr",    name: "Français",    version: "LSG" },
-  { code: "am",    name: "አማርኛ",       version: "—"   },
+  { code: "am",    name: "አማርኛ",       version: "1962" },
   { code: "hi",    name: "हिन्दी",       version: "IRV" },
   { code: "uk",    name: "Українська",  version: "ONPU" },
   { code: "te",    name: "తెలుగు",      version: "IRV" },
@@ -421,10 +429,10 @@ function render() {
     return;
   }
 
-  // Find English key text for header
-  const enText = entry["en"]?.text || "";
-  // Derive key phrase (first ~6 words)
-  const keyPhrase = enText.split(" ").slice(0, 7).join(" ") + (enText.split(" ").length > 7 ? "…" : "");
+  // The heading uses the abbreviated phrase exactly as printed in the source
+  // Scripture Alphabet PDF (ellipses and all) — not a phrase derived from the verse.
+  // The full verse appears in the English row below alongside the other languages.
+  const keyPhrase = entry.key || "";
 
   let html = `
     <div class="handout-header">
@@ -437,11 +445,19 @@ function render() {
     const t = entry[lang.code];
     const text = t?.text?.trim();
     const isRtl = lang.dir === "rtl";
+    // Some translations versify differently (e.g. NR puts Ecclesiastes 12:1 at 12:3),
+    // so a language may carry its own reference. Fall back to the shared one.
+    const localRef = t?.ref;
+    // Letters K and U are NIV while the rest of the English column is GNT, so the
+    // version must come from the verse, not the language. Publishers' church-use
+    // terms require the version to appear alongside each quotation.
+    const version = t?.version || lang.version;
     html += `
       <div class="translation-block">
         <div class="lang-meta">
           <div class="lang-name">${lang.name}</div>
-          <div class="lang-version">${lang.version}</div>
+          <div class="lang-version">${version}</div>
+          ${localRef ? `<div class="lang-ref">${localRef}</div>` : ""}
         </div>
         <div class="verse-text ${text ? "" : "verse-missing"}"${isRtl ? ' dir="rtl"' : ''}>
           ${text || "Translation not yet available"}

@@ -68,7 +68,7 @@ Each entry defines the language code, display name, Bible version, and text dire
 | pt    | Português (Portuguese)    | Nova Versão Internacional              | NVI          | LTR       |
 | it    | Italiano (Italian)        | Nuova Riveduta                         | NR           | LTR       |
 | fr    | Français (French)         | Louis Segond                           | LSG          | LTR       |
-| am    | አማርኛ (Amharic)            | Amharic Bible (Bible Society of Ethiopia) | —         | LTR       |
+| am    | አማርኛ (Amharic)            | መጽሐፍ ቅዱስ (Bible Society of Ethiopia)   | 1962         | LTR       |
 | hi    | हिन्दी (Hindi)             | Indian Revised Version (IRV) Hindi 2019 | IRV         | LTR       |
 | uk    | Українська (Ukrainian)    | Open New Translation Ukrainian         | ONPU         | LTR       |
 | te    | తెలుగు (Telugu)            | Indian Revised Version (IRV) Telugu 2019 | IRV         | LTR       |
@@ -83,28 +83,13 @@ Each entry defines the language code, display name, Bible version, and text dire
 - `code` is the key used in `translations.json` and in the web app.
 - Arabic (`ar`) and Farsi (`fa`) use RTL layout; all others use LTR.
 - Ukrainian (`uk`) uses a NT+Psalms translation; 5 OT verses (Q, R, S, T, W) are unavailable.
-- To add a language: add a row here, add a source URL to the lookup table below, then populate `translations.json`.
+- To add a language: add a row here, add a verified source to `SOURCES.md`, then populate `translations.json`.
+- **Verification status:** en, es, zh-tw, pt, it, fr, am were verified verse-by-verse on 2026-08-26. The other ten (hi, uk, te, fa, zh-cn, ko, vi, ar, ta, be) have **not** been — see `SOURCES.md`.
 
 ### Lookup Sources by Language
 
-All translations in `translations.json` are copied verbatim from official published Bible versions — never AI-generated or machine-translated. See `DESIGN.md` for the exact verification process.
+All translations in `translations.json` are copied verbatim from official published Bible versions — never AI-generated or machine-translated.
 
-| Language   | Reliable Sources                                          |
-|------------|-----------------------------------------------------------|
-| English    | biblestudytools.com                                       |
-| Spanish    | biblestudytools.com, bibleserver.com                      |
-| Chinese (Trad.) | biblestudytools.com (CUV), bible.com                 |
-| Portuguese | bibliatodo.com, bo.net.br                                 |
-| Italian    | bibleserver.com (NR)                                      |
-| French     | saintebible.com (LSG), bibleserver.com                    |
-| Amharic    | wordproject.org, bibleonline.geezexperience.com           |
-| Hindi      | ebible.org (hin2017, IRV)                                 |
-| Ukrainian  | ebible.org (ukronpu, ONPU) — NT+Psalms only              |
-| Telugu     | ebible.org (tel2017, IRV)                                 |
-| Farsi      | ebible.org (pesOPV, OPV)                                  |
-| Chinese (Simp.) | ebible.org (cmncbs, CCB)                             |
-| Korean     | ebible.org (kor, KOR)                                     |
-| Vietnamese | ebible.org (vie1934, VIE)                                 |
-| Arabic     | ebible.org (arb-vd, AVD)                                  |
-| Tamil      | ebible.org (tam2017, IRV)                                 |
-| Belarusian | ebible.org (bel, BEL)                                     |
+**See [`SOURCES.md`](SOURCES.md)** for the verified per-language URL pattern, parsing rules, access terms, and the sources tested and rejected. It also records which languages have been verified verse-by-verse and which still need a pass.
+
+`DESIGN.md` describes the overall verification process.

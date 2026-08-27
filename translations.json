@@ -19,17 +19,18 @@
       "ta",
       "be"
     ],
-    "note": "All translations from official Bible versions. Sources include ebible.org for Hindi (IRV), Ukrainian (ONPU), Telugu (IRV), Farsi (OPV), Simplified Chinese (CCB), Korean (KOR), Vietnamese (VIE), Arabic (AVD), Tamil (IRV), and Belarusian (BEL)."
+    "note": "Seven languages (en, es, zh-tw, pt, it, fr, am) were verified verse-by-verse on 2026-08-26 against the sources recorded in SOURCES.md, asserting each fetched reference matched the one requested. The remaining ten (hi, uk, te, fa, zh-cn, ko, vi, ar, ta, be) have NOT been through that process yet — see the 'Verification status' section of SOURCES.md."
   },
   "A": {
     "reference": "Matthew 7:7",
+    "key": "Ask and you will receive",
     "en": {
       "version": "GNT",
       "text": "Ask, and you will receive; seek, and you will find; knock, and the door will be opened to you."
     },
     "es": {
       "version": "NVI",
-      "text": "Pedid, y se os dará; buscad, y encontraréis; llamad, y se os abrirá."
+      "text": "Pidan y se les dará; busquen y encontrarán; llamen y se les abrirá."
     },
     "zh-tw": {
       "version": "CUV",
@@ -37,18 +38,18 @@
     },
     "pt": {
       "version": "NVI",
-      "text": "Peçam, e será dado a vocês; busquem e vocês encontrarão; batam, e a porta será aberta a vocês."
+      "text": "Peçam, e lhes será dado; busquem, e encontrarão; batam, e a porta lhes será aberta."
     },
     "it": {
       "version": "NR",
-      "text": "Chiedete e vi sarà dato; cercate e troverete; bussate e vi sarà aperto."
+      "text": "Chiedete e vi sarà dato; cercate e troverete; bussate e vi sarà aperto;"
     },
     "fr": {
       "version": "LSG",
       "text": "Demandez, et l'on vous donnera; cherchez, et vous trouverez; frappez, et l'on vous ouvrira."
     },
     "am": {
-      "version": "ABB",
+      "version": "1962",
       "text": "ለምኑ፥ ይሰጣችሁማል፤ ፈልጉ፥ ታገኙማላችሁ፤ መዝጊያን አንኳኩ፥ ይከፈትላችሁማል።"
     },
     "hi": {
@@ -94,21 +95,22 @@
   },
   "B": {
     "reference": "Ephesians 4:32",
+    "key": "Be kind and tenderhearted to one another",
     "en": {
       "version": "GNT",
-      "text": "Be kind and tenderhearted to one another, and forgive one another, as God has forgiven you through Christ."
+      "text": "Instead, be kind and tender-hearted to one another, and forgive one another, as God has forgiven you through Christ."
     },
     "es": {
       "version": "NVI",
-      "text": "Más bien, sed bondadosos y compasivos unos con otros, y perdonaos mutuamente, así como Dios os perdonó en Cristo."
+      "text": "Más bien, sean bondadosos y compasivos unos con otros y perdónense mutuamente, así como Dios los perdonó a ustedes en Cristo."
     },
     "zh-tw": {
       "version": "CUV",
-      "text": "並要以恩慈相待，存憐憫的心，彼此饒恕，正如神在基督裏饒恕了你們一樣。"
+      "text": "並要以恩慈相待，存憐憫的心，彼此饒恕，正如 神在基督裡饒恕了你們一樣。"
     },
     "pt": {
       "version": "NVI",
-      "text": "Sejam bondosos e compassivos uns para com os outros, perdoando‑se mutuamente, como Deus os perdoou em Cristo."
+      "text": "Sejam bondosos e compassivos uns para com os outros, perdoando-se mutuamente, assim como Deus os perdoou em Cristo."
     },
     "it": {
       "version": "NR",
@@ -119,7 +121,7 @@
       "text": "Soyez bons les uns envers les autres, compatissants, vous pardonnant réciproquement, comme Dieu vous a pardonné en Christ."
     },
     "am": {
-      "version": "ABB",
+      "version": "1962",
       "text": "እርስ በርሳችሁም ቸሮችና ርኅሩኆች ሁኑ፥ እግዚአብሔርም ደግሞ በክርስቶስ ይቅር እንዳላችሁ ይቅር ተባባሉ።"
     },
     "hi": {
@@ -165,21 +167,22 @@
   },
   "C": {
     "reference": "Matthew 11:28",
+    "key": "Come to me … and I will give you rest",
     "en": {
       "version": "GNT",
       "text": "Come to me, all of you who are tired from carrying heavy loads, and I will give you rest."
     },
     "es": {
       "version": "NVI",
-      "text": "Venid a mí todos vosotros que estáis cansados y agobiados, y yo os daré descanso."
+      "text": "Vengan a mí todos ustedes que están cansados y agobiados; yo les daré descanso."
     },
     "zh-tw": {
       "version": "CUV",
-      "text": "凡勞苦擔重擔的人可以到我這裏來，我就使你們得安息。"
+      "text": "凡勞苦擔重擔的人可以到我這裡來，我就使你們得安息。"
     },
     "pt": {
       "version": "NVI",
-      "text": "Venham a mim todos os que estão cansados e sobrecarregados, e eu darei descanso a vocês."
+      "text": "Venham a mim, todos os que estão cansados e sobrecarregados, e eu lhes darei descanso."
     },
     "it": {
       "version": "NR",
@@ -190,7 +193,7 @@
       "text": "Venez à moi, vous tous qui êtes fatigués et chargés, et je vous donnerai du repos."
     },
     "am": {
-      "version": "ABB",
+      "version": "1962",
       "text": "እናንተ ደካሞች ሸክማችሁ የከበደ ሁሉ፥ ወደ እኔ ኑ፥ እኔም አሳርፋችኋለሁ።"
     },
     "hi": {
@@ -236,13 +239,14 @@
   },
   "D": {
     "reference": "Matthew 7:12",
+    "key": "Do for others what you want them to do for you",
     "en": {
       "version": "GNT",
       "text": "Do for others what you want them to do for you: this is the meaning of the Law of Moses and of the teachings of the prophets."
     },
     "es": {
       "version": "NVI",
-      "text": "Así que en todo tratad a los demás tal y como queréis que ellos os traten a vosotros. De hecho, esto es la ley y los profetas."
+      "text": "Así que en todo traten ustedes a los demás tal y como quieren que ellos los traten a ustedes. De hecho, esto es la Ley y los Profetas."
     },
     "zh-tw": {
       "version": "CUV",
@@ -250,7 +254,7 @@
     },
     "pt": {
       "version": "NVI",
-      "text": "Assim, em tudo, façam às pessoas o que querem que elas façam a vocês, pois esta é a Lei e os Profetas."
+      "text": "Assim, em tudo, façam aos outros o que vocês querem que eles lhes façam; pois esta é a Lei e os Profetas."
     },
     "it": {
       "version": "NR",
@@ -261,7 +265,7 @@
       "text": "Tout ce que vous voulez que les hommes fassent pour vous, faites-le de même pour eux, car c'est la loi et les prophètes."
     },
     "am": {
-      "version": "ABB",
+      "version": "1962",
       "text": "እንግዲህ ሰዎች ሊያደርጉላችሁ የምትወዱትን ሁሉ እናንተ ደግሞ እንዲሁ አድርጉላቸው፤ ሕግም ነቢያትም ይህ ነውና።"
     },
     "hi": {
@@ -307,32 +311,33 @@
   },
   "E": {
     "reference": "James 1:17",
+    "key": "Every good gift … comes from heaven",
     "en": {
       "version": "GNT",
       "text": "Every good gift and every perfect present comes from heaven; it comes down from God, the Creator of the heavenly lights, who does not change or cause darkness by turning."
     },
     "es": {
       "version": "NVI",
-      "text": "Toda buena dádiva y todo don perfecto descienden de lo alto, donde está el Padre que creó las lumbreras celestes, y que no cambia como los astros ni se mueve como las sombras."
+      "text": "Toda buena dádiva y toda perfecta bendición descienden de lo alto, donde está el Padre que creó las lumbreras celestes, y quien no cambia ni se mueve como las sombras."
     },
     "zh-tw": {
       "version": "CUV",
-      "text": "各樣美善的恩賜和各樣全備的賞賜都是從上頭來的，從眾光之父那裏降下來的；在他並沒有改變，也沒有轉動的影兒。"
+      "text": "各樣美善的恩賜和各樣全備的賞賜都是從上頭來的，從眾光之父那裡降下來的；在他並沒有改變，也沒有轉動的影兒。"
     },
     "pt": {
       "version": "NVI",
-      "text": "Toda boa dádiva e todo dom perfeito vêm do alto e descem do Pai das luzes, que não muda como sombras inconstantes."
+      "text": "Toda boa dádiva e todo dom perfeito vêm do alto, descendo do Pai das luzes, que não muda como sombras inconstantes."
     },
     "it": {
       "version": "NR",
-      "text": "Ogni cosa buona e ogni dono perfetto vengono dall'alto e discendono dal Padre degli astri luminosi presso il quale non c'è variazione né ombra di mutamento."
+      "text": "ogni cosa buona e ogni dono perfetto vengono dall'alto e discendono dal Padre degli astri luminosi presso il quale non c'è variazione né ombra di mutamento."
     },
     "fr": {
       "version": "LSG",
       "text": "toute grâce excellente et tout don parfait descendent d'en haut, du Père des lumières, chez lequel il n'y a ni changement ni ombre de variation."
     },
     "am": {
-      "version": "ABB",
+      "version": "1962",
       "text": "በጎ ስጦታ ሁሉ ፍጹምም በረከት ሁሉ ከላይ ናቸው፥ መለወጥም በእርሱ ዘንድ ከሌለ በመዞርም የተደረገ ጥላ በእርሱ ዘንድ ከሌለ ከብርሃናት አባት ይወርዳሉ።"
     },
     "hi": {
@@ -378,13 +383,14 @@
   },
   "F": {
     "reference": "Luke 11:4",
+    "key": "Forgive us our sins, for we forgive everyone who does us wrong",
     "en": {
       "version": "GNT",
-      "text": "Forgive us our sins, for we forgive everyone who does us wrong. And do not bring us to hard testing."
+      "text": "Forgive us our sins, for we forgive everyone who does us wrong. And do not bring us to hard testing.’"
     },
     "es": {
       "version": "NVI",
-      "text": "Perdónanos nuestros pecados, porque también nosotros perdonamos a todos los que nos ofenden. Y no nos metas en tentación"
+      "text": "Perdónanos nuestros pecados, porque también nosotros perdonamos a todos los que nos ofenden. Y no nos dejes caer en tentación."
     },
     "zh-tw": {
       "version": "CUV",
@@ -392,18 +398,18 @@
     },
     "pt": {
       "version": "NVI",
-      "text": "Perdoa os nossos pecados, pois também perdoamos todos os que nos ofendem. E não nos deixes cair em tentação."
+      "text": "Perdoa-nos os nossos pecados, pois também perdoamos a todos os que nos devem. E não nos deixes cair em tentação."
     },
     "it": {
       "version": "NR",
-      "text": "E perdonaci i nostri peccati, perché anche noi perdoniamo a ogni nostro debitore; e non ci esporre alla tentazione."
+      "text": "e perdonaci i nostri peccati, perché anche noi perdoniamo a ogni nostro debitore; e non ci esporre alla tentazione\"."
     },
     "fr": {
       "version": "LSG",
       "text": "pardonne-nous nos péchés, car nous aussi nous pardonnons à quiconque nous offense; et ne nous induis pas en tentation."
     },
     "am": {
-      "version": "ABB",
+      "version": "1962",
       "text": "ኃጢአታችንንም ይቅር በለን፥ እኛ ደግሞ የበደሉንን ሁሉ ይቅር ብለናልና፤ ከክፉ አድነን እንጂ ወደ ፈተና አታግባን።"
     },
     "hi": {
@@ -449,6 +455,7 @@
   },
   "G": {
     "reference": "1 John 4:8",
+    "key": "God is love",
     "en": {
       "version": "GNT",
       "text": "Whoever does not love does not know God, for God is love."
@@ -459,7 +466,7 @@
     },
     "zh-tw": {
       "version": "CUV",
-      "text": "沒有愛心的，就不認識神，因為神就是愛。"
+      "text": "沒有愛心的，就不認識 神，因為 神就是愛。"
     },
     "pt": {
       "version": "NVI",
@@ -474,7 +481,7 @@
       "text": "Celui qui n'aime pas n'a pas connu Dieu, car Dieu est amour."
     },
     "am": {
-      "version": "ABB",
+      "version": "1962",
       "text": "ፍቅር የሌለው እግዚአብሔርን አያውቅም፥ እግዚአብሔር ፍቅር ነውና።"
     },
     "hi": {
@@ -520,9 +527,10 @@
   },
   "H": {
     "reference": "Revelation 1:3",
+    "key": "Happy is the one who reads this book",
     "en": {
       "version": "GNT",
-      "text": "Happy is the one who reads this book, and happy are those who listen to the words of this prophetic message and obey what is written in this book!"
+      "text": "Happy is the one who reads this book, and happy are those who listen to the words of this prophetic message and obey what is written in this book! For the time is near when all these things will happen."
     },
     "es": {
       "version": "NVI",
@@ -534,7 +542,7 @@
     },
     "pt": {
       "version": "NVI",
-      "text": "Bem-aventurado aquele que lê em voz alta as palavras desta profecia, e bem-aventurados aqueles que ouvem e guardam as coisas nela escritas, pois o tempo está próximo."
+      "text": "Feliz aquele que lê as palavras desta profecia e felizes aqueles que ouvem e guardam o que nela está escrito, porque o tempo está próximo."
     },
     "it": {
       "version": "NR",
@@ -545,7 +553,7 @@
       "text": "Heureux celui qui lit et ceux qui entendent les paroles de la prophétie, et qui gardent les choses qui y sont écrites! Car le temps est proche."
     },
     "am": {
-      "version": "ABB",
+      "version": "1962",
       "text": "ዘመኑ ቀርቦአልና የሚያነበው፥ የትንቢቱን ቃል የሚሰሙትና በውስጡ የተጻፈውን የሚጠብቁት ብፁዓን ናቸው።"
     },
     "hi": {
@@ -591,6 +599,7 @@
   },
   "I": {
     "reference": "1 John 1:9",
+    "key": "If we confess our sins to God … he will forgive us our sins",
     "en": {
       "version": "GNT",
       "text": "But if we confess our sins to God, he will keep his promise and do what is right: he will forgive us our sins and purify us from all our wrongdoing."
@@ -601,7 +610,7 @@
     },
     "zh-tw": {
       "version": "CUV",
-      "text": "我們若認自己的罪，神是信實的，是公義的，必要赦免我們的罪，洗淨我們一切的不義。"
+      "text": "我們若認自己的罪， 神是信實的，是公義的，必要赦免我們的罪，洗淨我們一切的不義。"
     },
     "pt": {
       "version": "NVI",
@@ -616,7 +625,7 @@
       "text": "Si nous confessons nos péchés, il est fidèle et juste pour nous les pardonner, et pour nous purifier de toute iniquité."
     },
     "am": {
-      "version": "ABB",
+      "version": "1962",
       "text": "በኃጢአታችን ብንናዘዝ ኃጢአታችንን ይቅር ሊለን ከዓመፃም ሁሉ ሊያነጻን የታመነና ጻድቅ ነው።"
     },
     "hi": {
@@ -662,13 +671,14 @@
   },
   "J": {
     "reference": "Hebrews 13:8",
+    "key": "Jesus Christ is the same yesterday, today, and forever",
     "en": {
       "version": "GNT",
       "text": "Jesus Christ is the same yesterday, today, and forever."
     },
     "es": {
       "version": "NVI",
-      "text": "Jesucristo es el mismo ayer y hoy y por los siglos."
+      "text": "Jesucristo es el mismo ayer, hoy y por siempre."
     },
     "zh-tw": {
       "version": "CUV",
@@ -676,7 +686,7 @@
     },
     "pt": {
       "version": "NVI",
-      "text": "Jesus Cristo é o mesmo ontem, hoje e para sempre."
+      "text": "Jesus Cristo é o mesmo, ontem, hoje e para sempre."
     },
     "it": {
       "version": "NR",
@@ -687,7 +697,7 @@
       "text": "Jésus-Christ est le même hier, aujourd'hui, et éternellement."
     },
     "am": {
-      "version": "ABB",
+      "version": "1962",
       "text": "ኢየሱስ ክርስቶስ ትናንትና ዛሬ እስከ ለዘላለምም ያው ነው።"
     },
     "hi": {
@@ -733,21 +743,22 @@
   },
   "K": {
     "reference": "1 Corinthians 7:19",
+    "key": "Keeping God’s commands is what counts",
     "en": {
       "version": "NIV",
-      "text": "Keeping God's commands is what counts."
+      "text": "Circumcision is nothing and uncircumcision is nothing. Keeping God’s commands is what counts."
     },
     "es": {
       "version": "NVI",
-      "text": "Para nada cuenta estar o no estar circuncidado; lo que importa es cumplir los mandatos de Dios."
+      "text": "Para nada cuenta estar o no estar circuncidado, lo que importa es cumplir los mandatos de Dios."
     },
     "zh-tw": {
       "version": "CUV",
-      "text": "受割禮算不得甚麼，不受割禮也算不得甚麼，只要守神的誡命就是了。"
+      "text": "受割禮算不得甚麼，不受割禮也算不得甚麼，只要守 神的誡命就是了。"
     },
     "pt": {
       "version": "NVI",
-      "text": "A circuncisão nada é, tampouco a incircuncisão; o que importa é obedecer aos mandamentos de Deus."
+      "text": "A circuncisão não significa nada, e a incircuncisão também nada é; o que importa é obedecer aos mandamentos de Deus."
     },
     "it": {
       "version": "NR",
@@ -758,7 +769,7 @@
       "text": "La circoncision n'est rien, et l'incirconcision n'est rien, mais l'observation des commandements de Dieu est tout."
     },
     "am": {
-      "version": "ABB",
+      "version": "1962",
       "text": "መገረዝ ቢሆን አለመገረዝም ቢሆን ከንቱ ነው፥ የእግዚአብሔርን ትእዛዝ መጠበቅ ነው እንጂ።"
     },
     "hi": {
@@ -804,13 +815,14 @@
   },
   "L": {
     "reference": "Mark 12:31",
+    "key": "Love your neighbor as you love yourself",
     "en": {
       "version": "GNT",
-      "text": "Love your neighbor as you love yourself. There is no other commandment more important than these two."
+      "text": "The second most important commandment is this: ‘Love your neighbor as you love yourself.’ There is no other commandment more important than these two."
     },
     "es": {
       "version": "NVI",
-      "text": "El segundo es: 'Ama a tu prójimo como a ti mismo'. No hay otro mandamiento más importante que estos."
+      "text": "El segundo es: “Ama a tu prójimo como a ti mismo”. No hay otro mandamiento más importante que estos."
     },
     "zh-tw": {
       "version": "CUV",
@@ -818,7 +830,7 @@
     },
     "pt": {
       "version": "NVI",
-      "text": "O segundo é este: 'Ame ao seu próximo como a você mesmo'. Não existe mandamento maior do que estes."
+      "text": "O segundo é este: ‘Ame o seu próximo como a si mesmo’. Não existe mandamento maior do que estes."
     },
     "it": {
       "version": "NR",
@@ -829,7 +841,7 @@
       "text": "Voici le second: Tu aimeras ton prochain comme toi-même. Il n'y a pas d'autre commandement plus grand que ceux-là."
     },
     "am": {
-      "version": "ABB",
+      "version": "1962",
       "text": "ሁለተኛይቱም። ባልንጀራህን እንደ ራስህ ውደድ የምትል እርስዋን የምትመስል ይህች ናት። ከእነዚህ የምትበልጥ ሌላ ትእዛዝ የለችም።"
     },
     "hi": {
@@ -875,13 +887,14 @@
   },
   "M": {
     "reference": "Psalm 121:2",
+    "key": "My help will come from the Lord",
     "en": {
       "version": "GNT",
-      "text": "My help will come from the Lord, who made heaven and earth."
+      "text": "My help will come from the LORD, who made heaven and earth."
     },
     "es": {
       "version": "NVI",
-      "text": "Mi ayuda proviene del SEÑOR, creador del cielo y de la tierra."
+      "text": "Mi ayuda proviene del SEÑOR, que hizo el cielo y la tierra."
     },
     "zh-tw": {
       "version": "CUV",
@@ -900,7 +913,7 @@
       "text": "Le secours me vient de l'Eternel, Qui a fait les cieux et la terre."
     },
     "am": {
-      "version": "ABB",
+      "version": "1962",
       "text": "ረዳቴ ሰማይና ምድርን ከሠራ ከእግዚአብሔር ዘንድ ነው።"
     },
     "hi": {
@@ -946,32 +959,33 @@
   },
   "N": {
     "reference": "Luke 22:42",
+    "key": "Not my will … but your will be done",
     "en": {
       "version": "GNT",
-      "text": "Father, if you will, take this cup of suffering away from me. Not my will, however, but your will be done."
+      "text": "“Father,” he said, “if you will, take this cup of suffering away from me. Not my will, however, but your will be done.”"
     },
     "es": {
       "version": "NVI",
-      "text": "Padre, si quieres, no me hagas beber este trago amargo; pero no se cumpla mi voluntad, sino la tuya"
+      "text": "«Padre, si quieres, no me hagas beber este trago amargo; pero no se cumpla mi voluntad, sino la tuya»."
     },
     "zh-tw": {
       "version": "CUV",
-      "text": "父啊！你若願意，就把這杯撤去；然而，不要成就我的意思，只要成就你的意思。"
+      "text": "說：「父啊！你若願意，就把這杯撤去；然而，不要成就我的意思，只要成就你的意思。」"
     },
     "pt": {
       "version": "NVI",
-      "text": "Pai, se queres, afasta de mim este cálice; contudo, não seja feita a minha vontade, mas a tua."
+      "text": "“Pai, se queres, afasta de mim este cálice; contudo, não seja feita a minha vontade, mas a tua”."
     },
     "it": {
       "version": "NR",
-      "text": "Padre, se vuoi, allontana da me questo calice! Però non la mia volontà, ma la tua sia fatta."
+      "text": "«Padre, se vuoi, allontana da me questo calice! Però non la mia volontà, ma la tua sia fatta»."
     },
     "fr": {
       "version": "LSG",
       "text": "disant: Père, si tu voulais éloigner de moi cette coupe! Toutefois, que ma volonté ne se fasse pas, mais la tienne."
     },
     "am": {
-      "version": "ABB",
+      "version": "1962",
       "text": "ብትፈቅድ ይህችን ጽዋ ከእኔ ውሰድ፤ ነገር ግን የእኔ ፈቃድ አይሁን የአንተ እንጂ እያለ ይጸልይ ነበር።"
     },
     "hi": {
@@ -1017,13 +1031,14 @@
   },
   "O": {
     "reference": "Hebrews 13:17",
+    "key": "Obey your leaders and follow their orders",
     "en": {
       "version": "GNT",
-      "text": "Obey your leaders and follow their orders. They watch over your souls without resting, since they must give to God an account of their service."
+      "text": "Obey your leaders and follow their orders. They watch over your souls without resting, since they must give to God an account of their service. If you obey them, they will do their work gladly; if not, they will do it with sadness, and that would be of no help to you."
     },
     "es": {
       "version": "NVI",
-      "text": "Obedeced a vuestros dirigentes y someteos a ellos, pues cuidan de vosotros como quienes tienen que rendir cuentas. Obedecedlos a fin de que ellos cumplan su tarea con alegría y sin quejarse, pues el quejarse no les trae ningún provecho."
+      "text": "Obedezcan a sus dirigentes y sométanse a ellos, pues cuidan de ustedes como quienes tienen que rendir cuentas. Obedézcanlos a fin de que ellos cumplan su tarea con alegría y sin quejarse, pues el quejarse no les trae ningún provecho."
     },
     "zh-tw": {
       "version": "CUV",
@@ -1031,7 +1046,7 @@
     },
     "pt": {
       "version": "NVI",
-      "text": "Obedeçam aos seus líderes e sejam submissos a eles, pois cuidam de vocês como quem deve prestar contas. Obedeçam‑lhes para que eles cuidem de vocês com alegria, não com descontentamento; caso contrário, isso não será proveitoso para vocês."
+      "text": "Obedeçam aos seus líderes e submetam-se à autoridade deles. Eles cuidam de vocês como quem deve prestar contas. Obedeçam-lhes, para que o trabalho deles seja uma alegria e não um peso, pois isso não seria proveitoso para vocês."
     },
     "it": {
       "version": "NR",
@@ -1042,7 +1057,7 @@
       "text": "Obéissez à vos conducteurs et ayez pour eux de la déférence, car ils veillent sur vos âmes comme devant en rendre compte; qu'il en soit ainsi, afin qu'ils le fassent avec joie, et non en gémissant, ce qui ne vous serait d'aucun avantage."
     },
     "am": {
-      "version": "ABB",
+      "version": "1962",
       "text": "ለዋኖቻችሁ ታዘዙና ተገዙ፤ እነርሱ ስሌትን እንደሚሰጡ አድርገው፥ ይህንኑ በደስታ እንጂ በኃዘን እንዳያደርጉት፥ ይህ የማይጠቅማችሁ ነበርና፥ ስለ ነፍሳችሁ ይተጋሉ።"
     },
     "hi": {
@@ -1088,13 +1103,14 @@
   },
   "P": {
     "reference": "James 5:16",
+    "key": "Pray for one another",
     "en": {
       "version": "GNT",
       "text": "So then, confess your sins to one another and pray for one another, so that you will be healed. The prayer of a good person has a powerful effect."
     },
     "es": {
       "version": "NVI",
-      "text": "Por eso, confesaos unos a otros vuestros pecados, y orad unos por otros, para que seáis sanados. La oración del justo es poderosa y eficaz."
+      "text": "Por eso, confiésense unos a otros sus pecados y oren unos por otros, para que sean sanados. La oración del justo es poderosa y eficaz."
     },
     "zh-tw": {
       "version": "CUV",
@@ -1113,7 +1129,7 @@
       "text": "Confessez donc vos péchés les uns aux autres, et priez les uns pour les autres, afin que vous soyez guéris. La prière fervente du juste a une grande efficace."
     },
     "am": {
-      "version": "ABB",
+      "version": "1962",
       "text": "እርስ በርሳችሁ በኃጢአታችሁ ተናዘዙ። ትፈወሱም ዘንድ እያንዳንዱ ስለ ሌላው ይጸልይ፤ የጻድቅ ሰው ጸሎት በሥራዋ እጅግ ኃይል ታደርጋለች።"
     },
     "hi": {
@@ -1159,21 +1175,22 @@
   },
   "Q": {
     "reference": "Isaiah 30:15",
+    "key": "Quietly trust in me",
     "en": {
       "version": "GNT",
-      "text": "Come back and quietly trust in me. Then you will be strong and secure."
+      "text": "The Sovereign LORD, the Holy One of Israel, says to the people, “Come back and quietly trust in me. Then you will be strong and secure.” But you refuse to do it."
     },
     "es": {
       "version": "NVI",
-      "text": "Porque así dice el SEÑOR omnipotente, el Santo de Israel: «En el arrepentimiento y la calma está su salvación, en la serenidad y la confianza está su fuerza, ¡pero ustedes no lo quieren reconocer!"
+      "text": "Porque así dice el SEÑOR y Dios, el Santo de Israel: En el arrepentimiento y la calma está su salvación, en la serenidad y la confianza está su fuerza, ¡pero ustedes no lo quieren reconocer!"
     },
     "zh-tw": {
       "version": "CUV",
-      "text": "主耶和華－以色列的聖者曾如此說：你們得救在乎歸回安息；你們得力在乎平靜安穩；你們竟自不肯。"
+      "text": "主耶和華─以色列的聖者曾如此說：你們得救在乎歸回安息；你們得力在乎平靜安穩；你們竟自不肯。"
     },
     "pt": {
       "version": "NVI",
-      "text": "Diz o Soberano SENHOR, o Santo de Israel: 'No arrependimento e no descanso está a salvação de vocês, na quietude e na confiança está o seu vigor, mas vocês não quiseram.'"
+      "text": "Diz o Soberano, o SENHOR, o Santo de Israel: No arrependimento e no descanso está a salvação de vocês, na quietude e na confiança está o seu vigor, mas vocês não quiseram."
     },
     "it": {
       "version": "NR",
@@ -1184,7 +1201,7 @@
       "text": "Car ainsi a parlé le Seigneur, l'Eternel, le Saint d'Israël: C'est dans la tranquillité et le repos que sera votre salut, C'est dans le calme et la confiance que sera votre force. Mais vous ne l'avez pas voulu!"
     },
     "am": {
-      "version": "ABB",
+      "version": "1962",
       "text": "የእስራኤል ቅዱስ፥ ጌታ እግዚአብሔር እንዲህ ይላልና። በመመለስና በማረፍ ትድናላችሁ፤ በጸጥታና በመታመን ኃይል ይሆንላችኋል፤ እናንተም እንቢ አላችሁ፥"
     },
     "hi": {
@@ -1230,32 +1247,34 @@
   },
   "R": {
     "reference": "Ecclesiastes 12:1",
+    "key": "Remember your Creator while you are still young",
     "en": {
       "version": "GNT",
-      "text": "So remember your Creator while you are still young, before those dismal days and years come when you will say, \"I don't enjoy life.\""
+      "text": "So remember your Creator while you are still young, before those dismal days and years come when you will say, “I don't enjoy life.”"
     },
     "es": {
       "version": "NVI",
-      "text": "Acuérdate de tu creador en los días de tu juventud, antes que lleguen los días malos y vengan los años en que digas: «No encuentro en ellos placer alguno»"
+      "text": "Acuérdate de tu Creador en los días de tu juventud, antes de que lleguen los días malos y vengan los años en que digas: «No encuentro en ellos placer alguno»;"
     },
     "zh-tw": {
       "version": "CUV",
-      "text": "你趁着年幼、衰敗的日子尚未來到，就是你所說，我毫無喜樂的那些年日未曾臨近之先，當記念造你的主。"
+      "text": "你趁著年幼、衰敗的日子尚未來到，就是你所說，我毫無喜樂的那些年日未曾臨近之先，當記念造你的主。"
     },
     "pt": {
       "version": "NVI",
-      "text": "Lembre‑se do seu Criador nos dias da sua juventude, antes que venham os dias difíceis e se aproximem os anos em que você dirá: 'Não tenho satisfação neles'"
+      "text": "Lembre-se do seu Criador nos dias da sua juventude, antes que venham os dias difíceis e se aproximem os anos em que você dirá: “Não tenho satisfação neles”;"
     },
     "it": {
       "version": "NR",
-      "text": "Ricòrdati del tuo Creatore nei giorni della tua giovinezza, prima che vengano i cattivi giorni e giungano gli anni dei quali dirai: «Io non ci provo nessun piacere»."
+      "ref": "Ecclesiaste 12:3",
+      "text": "Ma ricòrdati del tuo Creatore nei giorni della tua giovinezza, prima che vengano i cattivi giorni e giungano gli anni dei quali dirai: «Io non ci ho più alcun piacere»;"
     },
     "fr": {
       "version": "LSG",
       "text": "Mais souviens-toi de ton créateur pendant les jours de ta jeunesse, avant que les jours mauvais arrivent et que les années s'approchent où tu diras: Je n'y prends point de plaisir;"
     },
     "am": {
-      "version": "ABB",
+      "version": "1962",
       "text": "የጭንቀት ቀን ሳይመጣ በጕብዝናህ ወራት ፈጣሪህን አስብ፤ ደስ አያሰኙም የምትላቸውም ዓመታት ሳይደርሱ፤"
     },
     "hi": {
@@ -1301,21 +1320,22 @@
   },
   "S": {
     "reference": "1 Samuel 3:9",
+    "key": "Speak, Lord, your servant is listening",
     "en": {
       "version": "GNT",
-      "text": "So Eli told Samuel, \"Go back to bed; and if he calls again, say, 'Speak, Lord, your servant is listening.'\""
+      "text": "so he said to him, “Go back to bed; and if he calls you again, say, ‘Speak, LORD, your servant is listening.’” So Samuel went back to bed."
     },
     "es": {
       "version": "NVI",
-      "text": "Ve y acuéstate ―le dijo Elí―. Si alguien vuelve a llamarte, dile: 'Habla, SEÑOR, que tu siervo escucha'. Así que Samuel se fue y se acostó en su cama."
+      "text": "—Ve y acuéstate —dijo Elí—. Si alguien vuelve a llamarte, dile: “Habla, SEÑOR, que tu siervo escucha”. Así que Samuel se fue y se acostó en su cama."
     },
     "zh-tw": {
       "version": "CUV",
-      "text": "你仍去睡吧；若再呼喚你，你就說：『耶和華啊，請說，僕人敬聽！』撒母耳就去，仍睡在原處。"
+      "text": "因此以利對撒母耳說：「你仍去睡吧；若再呼喚你，你就說：『耶和華啊，請說，僕人敬聽！』」撒母耳就去，仍睡在原處。"
     },
     "pt": {
       "version": "NVI",
-      "text": "e lhe disse: Vá e deite‑se; se ele o chamar, diga: 'Fala, SENHOR, pois o teu servo ouve'. Então, Samuel foi deitar‑se no seu lugar."
+      "text": "e lhe disse: “Vá e deite-se; se ele chamá-lo, diga: ‘Fala, SENHOR, pois o teu servo está ouvindo’”. Então Samuel foi se deitar."
     },
     "it": {
       "version": "NR",
@@ -1326,7 +1346,7 @@
       "text": "et il dit à Samuel: Va, couche-toi; et si l'on t'appelle, tu diras: Parle, Eternel, car ton serviteur écoute. Et Samuel alla se coucher à sa place."
     },
     "am": {
-      "version": "ABB",
+      "version": "1962",
       "text": "ዔሊም ሳሙኤልን። ሄደህ ተኛ ቢጠራህም። አቤቱ፥ ባሪያህ ይሰማልና ተናገር በለው አለው። ሳሙኤልም ሄዶ በስፍራው ተኛ።"
     },
     "hi": {
@@ -1372,13 +1392,14 @@
   },
   "T": {
     "reference": "Proverbs 22:6",
+    "key": "Teach children how they should live, and they will remember it all their life",
     "en": {
       "version": "GNT",
       "text": "Teach children how they should live, and they will remember it all their life."
     },
     "es": {
       "version": "NVI",
-      "text": "Instruye al niño en el camino correcto, y aun en su vejez no lo abandonará."
+      "text": "Instruye al niño en el camino correcto y aun en su vejez no lo abandonará."
     },
     "zh-tw": {
       "version": "CUV",
@@ -1386,7 +1407,7 @@
     },
     "pt": {
       "version": "NVI",
-      "text": "Instrua a criança no caminho em que deve andar, e, mesmo com o passar dos anos, não se desviará dele."
+      "text": "Instrua a criança segundo os objetivos que você tem para ela, e mesmo com o passar dos anos não se desviará deles."
     },
     "it": {
       "version": "NR",
@@ -1397,7 +1418,7 @@
       "text": "Instruis l'enfant selon la voie qu'il doit suivre; Et quand il sera vieux, il ne s'en détournera pas."
     },
     "am": {
-      "version": "ABB",
+      "version": "1962",
       "text": "ልጅን በሚሄድበት መንገድ ምራው፥ በሸመገለም ጊዜ ከእርሱ ፈቀቅ አይልም።"
     },
     "hi": {
@@ -1443,21 +1464,22 @@
   },
   "U": {
     "reference": "John 3:3",
+    "key": "Unless he is born again no one can see the kingdom of God",
     "en": {
       "version": "NIV",
-      "text": "Jesus replied, \"Very truly I tell you, no one can see the kingdom of God unless they are born again.\""
+      "text": "Jesus replied, “Very truly I tell you, no one can see the kingdom of God unless they are born again.”"
     },
     "es": {
       "version": "NVI",
-      "text": "De veras te aseguro que quien no nazca de nuevo no puede ver el reino de Dios —dijo Jesús."
+      "text": "—Te aseguro que quien no nazca de nuevo no puede ver el reino de Dios —dijo Jesús."
     },
     "zh-tw": {
       "version": "CUV",
-      "text": "耶穌回答說：「我實實在在地告訴你，人若不重生，就不能見神的國。」"
+      "text": "耶穌回答說：「我實實在在地告訴你，人若不重生，就不能見 神的國。」"
     },
     "pt": {
       "version": "NVI",
-      "text": "Em resposta, Jesus declarou: Em verdade lhe digo que ninguém pode ver o reino de Deus se não nascer de novo."
+      "text": "Em resposta, Jesus declarou: “Digo-lhe a verdade: Ninguém pode ver o Reino de Deus, se não nascer de novo”."
     },
     "it": {
       "version": "NR",
@@ -1468,7 +1490,7 @@
       "text": "Jésus lui répondit: En vérité, en vérité, je te le dis, si un homme ne naît de nouveau, il ne peut voir le royaume de Dieu."
     },
     "am": {
-      "version": "ABB",
+      "version": "1962",
       "text": "ኢየሱስም መልሶ። እውነት እውነት እልሃለሁ፥ ሰው ዳግመኛ ካልተወለደ በቀር የእግዚአብሔርን መንግሥት ሊያይ አይችልም አለው።"
     },
     "hi": {
@@ -1514,6 +1536,7 @@
   },
   "W": {
     "reference": "Exodus 20:3",
+    "key": "Worship no god but me",
     "en": {
       "version": "GNT",
       "text": "Worship no god but me."
@@ -1528,7 +1551,7 @@
     },
     "pt": {
       "version": "NVI",
-      "text": "Não tenha outros deuses além de mim."
+      "text": "Não terás outros deuses além de mim."
     },
     "it": {
       "version": "NR",
@@ -1539,7 +1562,7 @@
       "text": "Tu n'auras pas d'autres dieux devant ma face."
     },
     "am": {
-      "version": "ABB",
+      "version": "1962",
       "text": "ከእኔ በቀር ሌሎች አማልክት አይሁኑልህ።"
     },
     "hi": {
@@ -1585,13 +1608,14 @@
   },
   "X": {
     "reference": "Psalm 26:2",
+    "key": "Examine me and test me, Lord",
     "en": {
       "version": "GNT",
-      "text": "Examine me and test me, Lord; judge my desires and thoughts."
+      "text": "Examine me and test me, LORD; judge my desires and thoughts."
     },
     "es": {
       "version": "NVI",
-      "text": "Examíname, SEÑOR; ¡ponme a prueba! purifica mis entrañas y mi corazón."
+      "text": "Examíname, SEÑOR, ¡ponme a prueba!, purifica mi corazón y mi mente."
     },
     "zh-tw": {
       "version": "CUV",
@@ -1599,7 +1623,7 @@
     },
     "pt": {
       "version": "NVI",
-      "text": "Sonda‑me, SENHOR, e prova‑me; examina o meu coração e a minha mente"
+      "text": "Sonda-me, SENHOR, e prova-me, examina o meu coração e a minha mente;"
     },
     "it": {
       "version": "NR",
@@ -1610,7 +1634,7 @@
       "text": "Sonde-moi, Eternel! éprouve-moi, Fais passer au creuset mes reins et mon coeur;"
     },
     "am": {
-      "version": "ABB",
+      "version": "1962",
       "text": "አቤቱ፥ ፍተነኝ መርምረኝም፤ ኵላሊቴንና ልቤን ፍተን።"
     },
     "hi": {
@@ -1656,13 +1680,14 @@
   },
   "Y": {
     "reference": "Matthew 5:13",
+    "key": "You are like salt for the whole human race",
     "en": {
       "version": "GNT",
       "text": "You are like salt for the whole human race. But if salt loses its saltiness, there is no way to make it salty again. It has become worthless, so it is thrown out and people trample on it."
     },
     "es": {
       "version": "NVI",
-      "text": "Vosotros sois la sal de la tierra. Pero, si la sal se vuelve insípida, ¿cómo recobrará su sabor? Ya no sirve para nada, sino para que la gente la deseche y la pisotee."
+      "text": "Ustedes son la sal de la tierra. Pero si la sal pierde su sabor, ¿cómo lo recobrará? Ya no sirve para nada, sino para que la gente la deseche y la pisotee."
     },
     "zh-tw": {
       "version": "CUV",
@@ -1670,7 +1695,7 @@
     },
     "pt": {
       "version": "NVI",
-      "text": "Vocês são o sal da terra. Mas, se o sal perder o seu sabor, como restaurá‑lo? Não servirá para nada, exceto para ser jogado fora e pisado pelos homens."
+      "text": "Vocês são o sal da terra. Mas se o sal perder o seu sabor, como restaurá-lo? Não servirá para nada, exceto para ser jogado fora e pisado pelos homens."
     },
     "it": {
       "version": "NR",
@@ -1681,7 +1706,7 @@
       "text": "Vous êtes le sel de la terre. Mais si le sel perd sa saveur, avec quoi la lui rendra-t-on? Il ne sert plus qu'à être jeté dehors, et foulé aux pieds par les hommes."
     },
     "am": {
-      "version": "ABB",
+      "version": "1962",
       "text": "እናንተ የምድር ጨው ናችሁ፤ ጨው አልጫ ቢሆን ግን በምን ይጣፍጣል? ወደ ውጭ ተጥሎ በሰው ከመረገጥ በቀር ወደ ፊት ለምንም አይጠቅምም።"
     },
     "hi": {
@@ -1727,6 +1752,7 @@
   },
   "Z": {
     "reference": "Luke 19:6",
+    "key": "Zacchaeus … welcomed him with great joy",
     "en": {
       "version": "GNT",
       "text": "Zacchaeus hurried down and welcomed him with great joy."
@@ -1741,7 +1767,7 @@
     },
     "pt": {
       "version": "NVI",
-      "text": "Então, ele desceu rapidamente e o recebeu com alegria."
+      "text": "Então ele desceu rapidamente e o recebeu com alegria."
     },
     "it": {
       "version": "NR",
@@ -1752,7 +1778,7 @@
       "text": "Zachée se hâta de descendre, et le reçut avec joie."
     },
     "am": {
-      "version": "ABB",
+      "version": "1962",
       "text": "ፈጥኖም ወረደ በደስታም ተቀበለው።"
     },
     "hi": {
