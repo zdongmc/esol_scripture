@@ -18,13 +18,13 @@ text comes from*.
 
 ## Verification status
 
-The app ships **17 languages**. **12** have been through the verse-by-verse
+The app ships **17 languages**. **13** have been through the verse-by-verse
 verification this file documents.
 
 | | Languages | Status |
 |---|---|---|
-| ✅ Verified | en, es, zh-tw, pt, it, fr, am (2026-08-26); uk, ar, be, zh-cn, fa (2026-08-27) | Each verse fetched individually, asserting the returned reference matched the one requested |
-| ⚠️ **Not yet verified** | hi, te, ko, vi, ta | Added separately; sourced from ebible.org per `_meta.note`, but not checked verse-by-verse |
+| ✅ Verified | en, es, zh-tw, pt, it, fr, am (2026-08-26); uk, ar, be, zh-cn, fa, hi (2026-08-27) | Each verse fetched individually, asserting the returned reference matched the one requested |
+| ⚠️ **Not yet verified** | te, ko, vi, ta | Added separately; sourced from ebible.org per `_meta.note`, but not checked verse-by-verse |
 
 **The ten unverified languages still need a pass.** Every one of the seven that was
 checked turned out to have a defect except French — a versification offset, an
@@ -32,7 +32,7 @@ off-by-one source, a mixed dialect, truncated verses, a mislabelled translation.
 is no reason to assume the other ten are clean, and the failures are the kind that
 read plausibly rather than looking broken.
 
-Known already, without looking: **unmatched quote marks survive in hi and te** — verses carry an opening `«` or `“` they never close, the same
+Known already, without looking: **unmatched quote marks survive in te** — verses carry an opening `«` or `“` they never close, the same
 extraction artefact cleaned up in the verified languages. They were left alone rather
 than cosmetically patched, since the text under them is still unvalidated; fix them
 during each language's verification pass.
@@ -63,6 +63,7 @@ When verifying the rest, the traps found this time are worth checking for first:
 | fr | LSG *(alt)* | BibleGateway | `biblegateway.com/passage/?search={Livre}+{ch}:{v}&version=LSG` | ⚠️ | has a text error — see below |
 | uk | **UKR "Ukrainian Bible"** *(all 25)* | BibleGateway `UKR` | `biblegateway.com/passage/?search={ref}&version=UKR` | ✅ | Public domain |
 | uk | UKR *(cross-check)* | htmlbible.com | `htmlbible.com/sacrednamebiblecom/ukrainian/B{bb}C{ccc}.htm` — **windows-1251**, not UTF-8 | ✅ | Public domain |
+| hi | **IRV हिंदी 2019** | ebible.org `hin2017` | `ebible.org/Scriptures/hin2017_html.zip` | ✅ | © Bridge Connectivity Solutions, **CC BY-SA 4.0** |
 | fa | **ترجمه قدیم (OPV)** | ebible.org `pesOPV` | `ebible.org/Scriptures/pesOPV_html.zip` | ✅ | Public domain |
 | zh-cn | **圣经当代译本 (CCB)** | ebible.org `cmncbs` | `ebible.org/Scriptures/cmncbs_html.zip` | ✅ | © Biblica, **CC BY-SA 4.0** |
 | be | **Біблія, пер. А. Бокуна** | ebible.org `bel` | `ebible.org/Scriptures/bel_html.zip` | ✅ | © 2016–2023, **CC BY-ND 4.0** |
@@ -341,6 +342,42 @@ rather than treating it as a missing verse.
 case anyone returns to ONPU: *ONPU* numbers Psalms the Septuagint way, one behind the
 Hebrew — its Psalm 121 is Hebrew 122 ("Our feet are standing in your gates,
 Jerusalem"), a real psalm and the wrong verse.
+
+---
+
+### Hindi — the worst data found so far: 7 truncated verses
+Only 15 of 25 matched. **Seven verses were truncated** — F, I, J, M, O, T and X — each
+cut short and each still reading as a complete Hindi sentence. Psalm 26:2 had lost an
+entire closing clause. Three more carried quote-mark artefacts (C, W) or stray
+whitespace (U). All 25 were replaced from `hin2017`.
+
+The truncations were **not** a case of the wrong edition: the previous text matched
+neither `hin2017` nor `hin2010`, and was shorter than both. It was damaged in
+extraction, not sourced differently.
+
+Psalm numbering is Hebrew (176-verse psalm at 119). Proper nouns all present.
+
+---
+
+### The cross-translation overlap check is a weak signal — treat it accordingly
+Comparing a verse against the same verse in a second translation has now produced
+**three false alarms and no findings**:
+
+| Language | Flagged | Actually |
+|---|---|---|
+| Farsi | Luke 22:42 zero overlap | correct — editions render "cup" differently, shared words fell under the length threshold |
+| Hindi | Exodus 20:3 zero overlap | correct — editions use wholly different vocabulary (परमेश्वर/दूसरों vs देवता/अन्य) |
+| Hindi | Luke 19:6 zero overlap | correct — different synonyms throughout |
+
+Two translations of one verse may legitimately share almost no words. Use the check
+only to decide *what to look at*, never as evidence of an error, and confirm anything
+it flags by another route. The stronger checks remain: matching a second source of
+the **same** translation byte-for-byte, asserting the returned reference, and
+distinctive proper nouns.
+
+Note also that distinctive-word assertions must be written against **the edition
+actually in use** — the Exodus check above failed because it was written with the
+other edition's vocabulary, and the Belarusian one failed on a name spelling.
 
 ---
 

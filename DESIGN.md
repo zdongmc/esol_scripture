@@ -161,7 +161,7 @@ Summary, with verification status:
 | Italian (NR 2006) | LaParola.net | ✅ 2026-08-26 |
 | French (LSG) | SainteBible | ✅ 2026-08-26 |
 | Amharic (1962) | wordproject.org | ✅ 2026-08-26 |
-| Hindi (IRV) | ebible.org (`hin2017`) | ⚠️ not yet |
+| Hindi (IRV) | ebible.org (`hin2017`) | ✅ 2026-08-27 — **CC BY-SA** |
 | Ukrainian (UKR) | BibleGateway (`UKR`) + htmlbible.com | ✅ 2026-08-27 |
 | Telugu (IRV) | ebible.org (`tel2017`) | ⚠️ not yet |
 | Farsi (OPV) | ebible.org (`pesOPV`, cross-checked vs `pesopcb`) | ✅ 2026-08-27 |
@@ -172,10 +172,10 @@ Summary, with verification status:
 | Tamil (IRV) | ebible.org (`tam2017`) | ⚠️ not yet |
 | Belarusian (BEL) | ebible.org (`bel`, cross-checked vs `beln`) | ✅ 2026-08-27 — **CC BY-ND** |
 
-**Five languages still need verification.** Seven of the nine that were checked had a
+**Four languages still need verification.** Seven of the nine that were checked had a
 real defect — a versification offset, an off-by-one source, a mixed dialect, truncated
 verses, a mislabelled translation, leaked section headings and footnotes. French and Arabic
-were already correct. Assume the remaining five are unchecked rather than clean; see
+were already correct. Assume the remaining four are unchecked rather than clean; see
 the Verification status section of `SOURCES.md` for the specific traps to look for.
 
 ### Adding a new language
