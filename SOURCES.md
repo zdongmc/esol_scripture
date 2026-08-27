@@ -8,7 +8,8 @@ correct version and script. Companion to the Languages section of
 `CLAUDE.md` (which defines *what* each language is) — this file defines *where the
 text comes from*.
 
-> **Rule inherited from `_archive/SKILL.md`: never self-translate.** Every verse must
+> **Never self-translate.** (The one rule worth keeping from the archived
+> `_archive/SKILL.md`, whose sources are otherwise superseded.) Every verse must
 > come from a published translation retrieved from one of these sources. A verse that
 > cannot be retrieved stays empty; the app already renders empty as
 > "Translation not yet available" (`index.html`).

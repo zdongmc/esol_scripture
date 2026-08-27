@@ -1,5 +1,14 @@
 # LANGUAGES
 
+> ## ⚠️ ARCHIVED — superseded
+>
+> Superseded by the **Languages** section of [`CLAUDE.md`](../CLAUDE.md) (17 languages,
+> with RTL flags) and [`SOURCES.md`](../SOURCES.md) (verified sources).
+>
+> The "Lookup Sources by Language" table below is **wrong** — wordproject.org returns
+> 403 to the `ClaudeBot` user agent, and bibleserver.com does not serve NR to automated
+> requests. Both are listed below as if they work.
+
 Ground truth for languages supported in the ESOL handout generator.
 Each entry defines the language code, display name, Bible version, and text direction.
 

@@ -1,5 +1,9 @@
 # SCRIPTURES
 
+> ## ⚠️ ARCHIVED — superseded
+>
+> Superseded by the **Scriptures** section of [`CLAUDE.md`](../CLAUDE.md).
+
 Ground truth for Scripture Alphabet verses used in the ESOL handout generator.
 Each entry maps a letter to a specific verse reference, short key text, and source Bible version.
 

@@ -5,6 +5,26 @@ description: Produces a multilingual Scripture Alphabet translation page for a g
 
 # Scripture Alphabet Translation Skill
 
+> ## ⚠️ ARCHIVED — DO NOT FOLLOW
+>
+> Kept for history only. It is **not** installed as a skill (`.claude/` holds only
+> `settings.json`), and following it would produce wrong output:
+>
+> - **The sources it recommends were tested and rejected.** BibleStudyTools serves an
+>   older NVI and runs words together at poetry line breaks; bibleserver.com does not
+>   serve NR to automated requests. See `SOURCES.md` for what actually works.
+> - **It covers 7 languages.** The app ships 17.
+> - **It writes to `/mnt/user-data/outputs/` and calls `present_files`.** Neither
+>   exists in this environment.
+> - **It has no reference assertion**, which is what catches a wrong verse — and a
+>   wrong verse still reads as real scripture.
+>
+> The one rule worth keeping is its first: **never self-translate.** Every verse must
+> come from a published translation retrieved from a verified source.
+>
+> **Current guidance lives in [`SOURCES.md`](../SOURCES.md) and
+> [`DESIGN.md`](../DESIGN.md).**
+
 Generates a verified, multilingual translation page for a single letter from the Scripture Alphabet guide used in church-based ESL ministries. Each page contains the verse for that letter translated into 7 languages, sourced from actual Bible translation databases.
 
 ---
