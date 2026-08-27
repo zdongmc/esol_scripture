@@ -170,12 +170,12 @@ Summary, with verification status:
 | Vietnamese (VIE) | ebible.org (`vie1934`) | ⚠️ not yet |
 | Arabic (AVD/SVD) | ebible.org (`arb-vd`) + copticchurch.net | ✅ 2026-08-27 |
 | Tamil (IRV) | ebible.org (`tam2017`) | ⚠️ not yet |
-| Belarusian (BEL) | ebible.org (`bel`) | ⚠️ not yet |
+| Belarusian (BEL) | ebible.org (`bel`, cross-checked vs `beln`) | ✅ 2026-08-27 — **CC BY-ND** |
 
-**Eight languages still need verification.** Seven of the nine that were checked had a
+**Seven languages still need verification.** Seven of the nine that were checked had a
 real defect — a versification offset, an off-by-one source, a mixed dialect, truncated
 verses, a mislabelled translation, leaked section headings and footnotes. French and Arabic
-were already correct. Assume the remaining eight are unchecked rather than clean; see
+were already correct. Assume the remaining seven are unchecked rather than clean; see
 the Verification status section of `SOURCES.md` for the specific traps to look for.
 
 ### Adding a new language

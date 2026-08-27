@@ -18,13 +18,13 @@ text comes from*.
 
 ## Verification status
 
-The app ships **17 languages**. **9** have been through the verse-by-verse
+The app ships **17 languages**. **10** have been through the verse-by-verse
 verification this file documents.
 
 | | Languages | Status |
 |---|---|---|
-| ✅ Verified | en, es, zh-tw, pt, it, fr, am (2026-08-26); uk, ar (2026-08-27) | Each verse fetched individually, asserting the returned reference matched the one requested |
-| ⚠️ **Not yet verified** | hi, te, fa, zh-cn, ko, vi, ta, be | Added separately; sourced from ebible.org per `_meta.note`, but not checked verse-by-verse |
+| ✅ Verified | en, es, zh-tw, pt, it, fr, am (2026-08-26); uk, ar, be (2026-08-27) | Each verse fetched individually, asserting the returned reference matched the one requested |
+| ⚠️ **Not yet verified** | hi, te, fa, zh-cn, ko, vi, ta | Added separately; sourced from ebible.org per `_meta.note`, but not checked verse-by-verse |
 
 **The ten unverified languages still need a pass.** Every one of the seven that was
 checked turned out to have a defect except French — a versification offset, an
@@ -32,7 +32,7 @@ off-by-one source, a mixed dialect, truncated verses, a mislabelled translation.
 is no reason to assume the other ten are clean, and the failures are the kind that
 read plausibly rather than looking broken.
 
-Known already, without looking: **unmatched quote marks survive in be, fa, hi,
+Known already, without looking: **unmatched quote marks survive in fa, hi,
 te and zh-cn** — verses carry an opening `«` or `“` they never close, the same
 extraction artefact cleaned up in the verified languages. They were left alone rather
 than cosmetically patched, since the text under them is still unvalidated; fix them
@@ -64,6 +64,7 @@ When verifying the rest, the traps found this time are worth checking for first:
 | fr | LSG *(alt)* | BibleGateway | `biblegateway.com/passage/?search={Livre}+{ch}:{v}&version=LSG` | ⚠️ | has a text error — see below |
 | uk | **UKR "Ukrainian Bible"** *(all 25)* | BibleGateway `UKR` | `biblegateway.com/passage/?search={ref}&version=UKR` | ✅ | Public domain |
 | uk | UKR *(cross-check)* | htmlbible.com | `htmlbible.com/sacrednamebiblecom/ukrainian/B{bb}C{ccc}.htm` — **windows-1251**, not UTF-8 | ✅ | Public domain |
+| be | **Біблія, пер. А. Бокуна** | ebible.org `bel` | `ebible.org/Scriptures/bel_html.zip` | ✅ | © 2016–2023, **CC BY-ND 4.0** |
 | ar | **Van Dyke (SVD)** | ebible.org `arb-vd` | `ebible.org/Scriptures/arb-vd_html.zip` | ✅ | Public domain |
 | ar | SVD *(cross-check)* | copticchurch.net | `copticchurch.net/bible/arabic/SVD/{Book}/{ch}?showVN=1` | ✅ | Public domain |
 | am | መጽሐፍ ቅዱስ 1962 | **wordproject.org** | `wordproject.org/bibles/am/{NN}/{ch}.htm` (NN zero-padded) | ✅ | © Bible Society of Ethiopia |
@@ -339,6 +340,40 @@ rather than treating it as a missing verse.
 case anyone returns to ONPU: *ONPU* numbers Psalms the Septuagint way, one behind the
 Hebrew — its Psalm 121 is Hebrew 122 ("Our feet are standing in your gates,
 Jerusalem"), a real psalm and the wrong verse.
+
+---
+
+### Belarusian — verified, and the only licence here with real constraints
+The existing data matched ebible's `bel` (Біблія, пераклад А. Бокуна) **exactly on all
+25 verses**. Structural checks all pass: the 176-verse psalm sits at 119 (Hebrew
+numbering, no offset), proper nouns appear where required, and no verse has zero
+content-word overlap with `beln`, a second Belarusian edition from the same publisher.
+
+Note the name spelling: Bokun uses **Самуэль**, not Самуіл. An assertion written
+against the more common form fails on a correct verse.
+
+The divine name is already uppercase in the source (`ГОСПАДЗЕ`), so no transformation
+is applied — the same conclusion as Ukrainian ONPU's bold `nd`, reached for a
+different reason.
+
+#### ⚠️ CC BY-ND — this text may not be modified, and must be attributed
+Unlike every other language here, Bokun is **not public domain and not permissive**.
+It is Creative Commons **Attribution-NoDerivatives 4.0**, © 2016–2023 John the
+Forerunner Church of Christians of Evangelical Faith of Minsk City.
+
+Two consequences:
+
+1. **Do not clean the text.** Luke 11:4 and Mark 12:31 carry quote marks left
+   unmatched by extraction, the same artefact stripped from every other language.
+   They are **deliberately left in place** — under NoDerivatives, altering the
+   distributed text is exactly what the licence withholds. Consistency with the other
+   columns is not worth a licence breach on someone else's translation.
+2. **Attribution is currently insufficient.** The handout shows only `BEL`. CC BY-ND
+   requires crediting the translation. This is an open compliance gap — the app has
+   no field for a fuller credit line, and adding one is a design decision, not a
+   parsing fix.
+
+Both points are for the repo owner to decide. Neither blocks use of the app.
 
 ---
 
