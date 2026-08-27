@@ -18,13 +18,13 @@ text comes from*.
 
 ## Verification status
 
-The app ships **17 languages**. Only the original **7** have been through the
-verse-by-verse verification this file documents.
+The app ships **17 languages**. **8** have been through the verse-by-verse
+verification this file documents.
 
 | | Languages | Status |
 |---|---|---|
-| ✅ Verified | en, es, zh-tw, pt, it, fr, am | Each verse fetched individually on 2026-08-26, asserting the returned reference matched the one requested |
-| ⚠️ **Not yet verified** | hi, uk, te, fa, zh-cn, ko, vi, ar, ta, be | Added separately; sourced from ebible.org per `_meta.note`, but not checked verse-by-verse |
+| ✅ Verified | en, es, zh-tw, pt, it, fr, am (2026-08-26); uk (2026-08-27) | Each verse fetched individually, asserting the returned reference matched the one requested |
+| ⚠️ **Not yet verified** | hi, te, fa, zh-cn, ko, vi, ar, ta, be | Added separately; sourced from ebible.org per `_meta.note`, but not checked verse-by-verse |
 
 **The ten unverified languages still need a pass.** Every one of the seven that was
 checked turned out to have a defect except French — a versification offset, an
@@ -32,9 +32,11 @@ off-by-one source, a mixed dialect, truncated verses, a mislabelled translation.
 is no reason to assume the other ten are clean, and the failures are the kind that
 read plausibly rather than looking broken.
 
-Known already, without looking: **Ukrainian (`uk`) is missing 5 of 25** — Q, R, S, T,
-and W are empty, because the ONPU translation covers only the New Testament and
-Psalms. A different Ukrainian source is needed for those five.
+Known already, without looking: **unmatched quote marks survive in ar, be, fa, hi,
+te and zh-cn** — 27 verses carry an opening `«` or `“` they never close, the same
+extraction artefact cleaned up in the verified languages. They were left alone rather
+than cosmetically patched, since the text under them is still unvalidated; fix them
+during each language's verification pass.
 
 When verifying the rest, the traps found this time are worth checking for first:
 1. **Versification offsets** — Ecclesiastes 12:1 and Luke 11:4 are the usual suspects.
@@ -60,6 +62,8 @@ When verifying the rest, the traps found this time are worth checking for first:
 | it | Riveduta 1927 *(alt)* | BibleStudyTools | `biblestudytools.com/riv/{libro}/{ch}-{v}.html` | ✅ | Public domain (Luzzi, d. 1948) |
 | fr | **Louis Segond 1910** | **SainteBible** | `saintebible.com/{book}/{ch}-{v}.htm` | ✅ | Public domain |
 | fr | LSG *(alt)* | BibleGateway | `biblegateway.com/passage/?search={Livre}+{ch}:{v}&version=LSG` | ⚠️ | has a text error — see below |
+| uk | **ONPU** *(20 verses: NT + Psalms)* | ebible.org `ukronpu` | `ebible.org/Scriptures/ukronpu_html.zip` | ✅ | © 2022 Biblica, CC BY-SA 4.0 |
+| uk | **Куліш 1905** *(5 OT verses)* | ebible.org `ukr1871` | `ebible.org/Scriptures/ukr1871_html.zip` | ✅ | Public domain |
 | am | መጽሐፍ ቅዱስ 1962 | **wordproject.org** | `wordproject.org/bibles/am/{NN}/{ch}.htm` (NN zero-padded) | ✅ | © Bible Society of Ethiopia |
 | am | *(rejected)* | `magna25/amharic-bible-json` | — | ❌ | corrupt — see below |
 
@@ -293,6 +297,56 @@ BibleGateway's LSG prefixes Ecclesiastes 12:1 with a `(12:3)` marker, suggesting
 same offset Italian NR has. **SainteBible's LSG numbers it 12:1**, matching English.
 Printed LSG editions differ here, so no `ref` override was added — unlike Italian,
 where the offset was unambiguous. The text itself is correct either way.
+
+---
+
+### Ukrainian — two translations in one column, by necessity
+**ONPU covers only the New Testament and Psalms.** Five letters are Old Testament —
+Q (Isaiah), R (Ecclesiastes), S (1 Samuel), T (Proverbs), W (Exodus) — so no ONPU
+text exists for them at all. Those five come from **Kulish 1905** (`ukr1871`, public
+domain, complete Bible), labelled per verse via the `version` field, the same
+mechanism that lets K and U be NIV in an otherwise-GNT English column.
+
+Be aware of the register mismatch: ONPU is modern Ukrainian; **Kulish 1905 is
+archaic** — pre-reform orthography (`днї`, `Сьвятий`, `инших`), roughly KJV-era in
+feel. It is the only public-domain complete Ukrainian Bible on ebible.org; the only
+modern complete alternative there, `ukr1996`, is © Bob Jones University. If the
+archaic register is a problem in class, the choice is a licensed modern translation
+or leaving those five blank.
+
+#### Psalms use Septuagint numbering — offset by one
+ONPU numbers Psalms the Orthodox/Septuagint way, **one behind the Hebrew**:
+
+| English | ONPU |
+|---------|------|
+| Psalm 121:2 (letter M) | **Псалом 120:2** |
+| Psalm 26:2 (letter X) | **Псалом 25:2** |
+
+Requesting `PSA121` returns Hebrew 122 ("Our feet are standing in your gates,
+Jerusalem") — a real psalm, wrong verse. Both letters carry a `ref` override.
+Kulish does *not* share this offset for Ecclesiastes, so no override is needed there.
+
+#### Parsing ebible.org HTML
+Verses are explicitly numbered, which removes the guesswork:
+
+```html
+<span class="verse" id="V3">3&#160;</span>Ісус відповів: ―Істинно кажу тобі: …
+```
+
+- Chapter files are zero-padded to 2 digits, **3 for Psalms** (`JHN03.htm`, `PSA121.htm`).
+- **Strip `<div class='s'>`** — section headings sit *between* verses and otherwise
+  attach to the preceding one.
+- **Strip `<a class="notemark">…<span class="popup">…</span></a>`** — footnotes sit
+  *inside* the verse, mid-sentence.
+- The divine name uses `<span class='nd'>`, which ONPU's stylesheet renders **bold,
+  not small caps** (`.sc` exists separately and is unused). Do **not** uppercase it —
+  unlike BibleGateway's CSS small caps, the visible form really is `Господи`.
+
+#### What the previous data got wrong
+17 of 20 matched. The three that did not were all extraction contamination:
+- **Revelation 1:3** had the next section's heading appended — `Привітання та славослів'я`.
+- **Mark 12:31** had `19:18.` embedded, pulled out of a footnote reading `Див. Лев. 19:18.`
+- **John 3:3** lost a space (`знову,не`) where that footnote sat between clauses.
 
 ---
 

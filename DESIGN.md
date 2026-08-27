@@ -108,7 +108,7 @@ Every translation in `translations.json` is sourced from an official, published 
    | French     | fr    | Louis Segond                     | LSG          |
    | Amharic    | am    | መጽሐፍ ቅዱስ (Bible Society of Ethiopia) | 1962      |
    | Hindi      | hi    | Indian Revised Version (IRV)     | IRV          |
-   | Ukrainian  | uk    | Open New Translation Ukrainian   | ONPU         |
+   | Ukrainian  | uk    | ONPU (NT+Ps) + Куліш 1905 (OT)   | ONPU / Куліш |
    | Telugu     | te    | Indian Revised Version (IRV)     | IRV          |
    | Farsi      | fa    | Old Persian Version              | OPV          |
    | Chinese (Simp.) | zh-cn | Contemporary Bible Simplified | CCB        |
@@ -162,7 +162,7 @@ Summary, with verification status:
 | French (LSG) | SainteBible | ✅ 2026-08-26 |
 | Amharic (1962) | wordproject.org | ✅ 2026-08-26 |
 | Hindi (IRV) | ebible.org (`hin2017`) | ⚠️ not yet |
-| Ukrainian (ONPU) | ebible.org (`ukronpu`) | ⚠️ not yet — NT+Psalms only, 5 verses missing |
+| Ukrainian (ONPU + Куліш 1905) | ebible.org (`ukronpu`, `ukr1871`) | ✅ 2026-08-27 |
 | Telugu (IRV) | ebible.org (`tel2017`) | ⚠️ not yet |
 | Farsi (OPV) | ebible.org (`pesOPV`) | ⚠️ not yet |
 | Chinese Simp. (CCB) | ebible.org (`cmncbs`) | ⚠️ not yet |
@@ -172,11 +172,11 @@ Summary, with verification status:
 | Tamil (IRV) | ebible.org (`tam2017`) | ⚠️ not yet |
 | Belarusian (BEL) | ebible.org (`bel`) | ⚠️ not yet |
 
-**Ten languages still need verification.** Six of the seven that were checked had a
+**Nine languages still need verification.** Seven of the eight that were checked had a
 real defect — a versification offset, an off-by-one source, a mixed dialect, truncated
-verses, a mislabelled translation. Only French was already correct. Assume the
-remaining ten are unchecked rather than clean; see the Verification status section of
-`SOURCES.md` for the specific traps to look for.
+verses, a mislabelled translation, leaked section headings and footnotes. Only French
+was already correct. Assume the remaining nine are unchecked rather than clean; see
+the Verification status section of `SOURCES.md` for the specific traps to look for.
 
 ### Adding a new language
 
