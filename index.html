@@ -99,11 +99,21 @@
         font-size: 0.85rem;
         color: #444;
         display: flex;
-        align-items: center;
-        gap: 0.4rem;
+        align-items: baseline;
+        gap: 0.3rem;
         cursor: pointer;
         user-select: none;
       }
+
+      .lang-label input[type="checkbox"] { align-self: center; }
+
+      .lang-en {
+        color: #999;
+        font-size: 0.78rem;
+      }
+
+      .lang-en::before { content: "("; }
+      .lang-en::after  { content: ")"; }
 
       .lang-label input[type="checkbox"] {
         width: 1rem;
@@ -337,23 +347,23 @@
 
 <script>
 const LANGUAGES = [
-  { code: "en",    name: "English",     version: "GNT" },
-  { code: "es",    name: "Español",     version: "NVI" },
-  { code: "zh-tw", name: "繁體中文",    version: "CUV" },
-  { code: "pt",    name: "Português",   version: "NVI" },
-  { code: "it",    name: "Italiano",    version: "NR"  },
-  { code: "fr",    name: "Français",    version: "LSG" },
-  { code: "am",    name: "አማርኛ",       version: "1962" },
-  { code: "hi",    name: "हिन्दी",       version: "IRV" },
-  { code: "uk",    name: "Українська",  version: "ONPU" },
-  { code: "te",    name: "తెలుగు",      version: "IRV" },
-  { code: "fa",    name: "فارسی",       version: "OPV", dir: "rtl" },
-  { code: "zh-cn", name: "简体中文",    version: "CCB" },
-  { code: "ko",    name: "한국어",       version: "KOR" },
-  { code: "vi",    name: "Tiếng Việt",  version: "VIE" },
-  { code: "ar",    name: "العربية",     version: "AVD", dir: "rtl" },
-  { code: "ta",    name: "தமிழ்",       version: "IRV" },
-  { code: "be",    name: "Беларуская",  version: "BEL" },
+  { code: "en",    name: "English",     version: "GNT", enName: "English" },
+  { code: "es",    name: "Español",     version: "NVI", enName: "Spanish" },
+  { code: "zh-tw", name: "繁體中文",    version: "CUV", enName: "Traditional Chinese" },
+  { code: "pt",    name: "Português",   version: "NVI", enName: "Portuguese" },
+  { code: "it",    name: "Italiano",    version: "NR", enName: "Italian" },
+  { code: "fr",    name: "Français",    version: "LSG", enName: "French" },
+  { code: "am",    name: "አማርኛ",       version: "1962", enName: "Amharic" },
+  { code: "hi",    name: "हिन्दी",       version: "IRV", enName: "Hindi" },
+  { code: "uk",    name: "Українська",  version: "ONPU", enName: "Ukrainian" },
+  { code: "te",    name: "తెలుగు",      version: "IRV", enName: "Telugu" },
+  { code: "fa",    name: "فارسی",       version: "OPV", dir: "rtl", enName: "Farsi" },
+  { code: "zh-cn", name: "简体中文",    version: "CCB", enName: "Simplified Chinese" },
+  { code: "ko",    name: "한국어",       version: "KOR", enName: "Korean" },
+  { code: "vi",    name: "Tiếng Việt",  version: "VIE", enName: "Vietnamese" },
+  { code: "ar",    name: "العربية",     version: "AVD", dir: "rtl", enName: "Arabic" },
+  { code: "ta",    name: "தமிழ்",       version: "IRV", enName: "Tamil" },
+  { code: "be",    name: "Беларуская",  version: "BEL", enName: "Belarusian" },
 ];
 
 let DATA = {};
@@ -394,7 +404,17 @@ function buildUI() {
       render();
     };
     label.appendChild(cb);
-    label.appendChild(document.createTextNode(lang.name));
+    // <bdi> isolates the native name so an RTL script (ar, fa) doesn't drag the
+    // English parenthetical around with it.
+    const native = document.createElement("bdi");
+    native.textContent = lang.name;
+    label.appendChild(native);
+    if (lang.enName && lang.enName !== lang.name) {
+      const en = document.createElement("span");
+      en.className = "lang-en";
+      en.textContent = lang.enName;
+      label.appendChild(en);
+    }
     langGrid.appendChild(label);
   });
 }
