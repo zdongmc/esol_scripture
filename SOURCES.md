@@ -18,13 +18,13 @@ text comes from*.
 
 ## Verification status
 
-The app ships **17 languages**. **14** have been through the verse-by-verse
+The app ships **17 languages**. **15** have been through the verse-by-verse
 verification this file documents.
 
 | | Languages | Status |
 |---|---|---|
-| ✅ Verified | en, es, zh-tw, pt, it, fr, am (2026-08-26); uk, ar, be, zh-cn, fa, hi, ko (2026-08-27) | Each verse fetched individually, asserting the returned reference matched the one requested |
-| ⚠️ **Not yet verified** | te, vi, ta | Added separately; sourced from ebible.org per `_meta.note`, but not checked verse-by-verse |
+| ✅ Verified | en, es, zh-tw, pt, it, fr, am (2026-08-26); uk, ar, be, zh-cn, fa, hi, ko, ta (2026-08-27) | Each verse fetched individually, asserting the returned reference matched the one requested |
+| ⚠️ **Not yet verified** | te, vi | Added separately; sourced from ebible.org per `_meta.note`, but not checked verse-by-verse |
 
 **The ten unverified languages still need a pass.** Every one of the seven that was
 checked turned out to have a defect except French — a versification offset, an
@@ -63,6 +63,7 @@ When verifying the rest, the traps found this time are worth checking for first:
 | fr | LSG *(alt)* | BibleGateway | `biblegateway.com/passage/?search={Livre}+{ch}:{v}&version=LSG` | ⚠️ | has a text error — see below |
 | uk | **UKR "Ukrainian Bible"** *(all 25)* | BibleGateway `UKR` | `biblegateway.com/passage/?search={ref}&version=UKR` | ✅ | Public domain |
 | uk | UKR *(cross-check)* | htmlbible.com | `htmlbible.com/sacrednamebiblecom/ukrainian/B{bb}C{ccc}.htm` — **windows-1251**, not UTF-8 | ✅ | Public domain |
+| ta | **IRV தமிழ்** | ebible.org `tam2017` | `ebible.org/Scriptures/tam2017_html.zip` | ✅ | © Bridge Connectivity Solutions, **CC BY-SA 4.0** |
 | ko | **한국어 성경 (KOR)** | ebible.org `kor` | `ebible.org/Scriptures/kor_html.zip` | ✅ | Public domain |
 | hi | **IRV हिंदी 2019** | ebible.org `hin2017` | `ebible.org/Scriptures/hin2017_html.zip` | ✅ | © Bridge Connectivity Solutions, **CC BY-SA 4.0** |
 | fa | **ترجمه قدیم (OPV)** | ebible.org `pesOPV` | `ebible.org/Scriptures/pesOPV_html.zip` | ✅ | Public domain |
@@ -343,6 +344,30 @@ rather than treating it as a missing verse.
 case anyone returns to ONPU: *ONPU* numbers Psalms the Septuagint way, one behind the
 Hebrew — its Psalm 121 is Hebrew 122 ("Our feet are standing in your gates,
 Jerusalem"), a real psalm and the wrong verse.
+
+---
+
+### Tamil — same three verses truncated as elsewhere
+22 of 25 matched `tam2017`. The three that did not — **F (Luke 11:4), T (Proverbs
+22:6) and X (Psalm 26:2)** — were truncated, F severely (40 characters where the verse
+runs to 201). All 25 replaced; a dangling quote mark in F was also stripped.
+
+**These are the same letters truncated in Hindi and Simplified Chinese.** F and T were
+cut in all three languages, X in two. They are the multi-line poetry verses, and
+whatever produced the original data cut them at the first line break. If a further
+language is ever added, check F, T and X first.
+
+#### Whole-word matching fails on agglutinative languages
+Three flags were raised here and all three were false alarms:
+
+- **Israel absent from Isaiah 30:15** — the text has `இஸ்ரவேலின்`, the inflected form.
+  The assertion looked for the bare nominative, which never appears.
+- **T and W zero-overlap** against `tam2008` — they share no whole words, but 11 and 7
+  four-character *substrings* respectively. Tamil inflects word endings, so set
+  intersection over whole words is close to meaningless.
+
+For agglutinative languages, compare **shared substrings**, not shared words, and
+write proper-noun assertions against a stem rather than a full form.
 
 ---
 

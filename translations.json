@@ -19,7 +19,7 @@
       "uk",
       "vi"
     ],
-    "note": "Fourteen languages (en, es, zh-tw, pt, it, fr, am, uk, ar, be, zh-cn, fa, hi, ko) were verified verse-by-verse against the sources recorded in SOURCES.md, asserting each fetched reference matched the one requested. The remaining three (te, vi, ta) have NOT been through that process yet — see the 'Verification status' section of SOURCES.md."
+    "note": "Fifteen languages (en, es, zh-tw, pt, it, fr, am, uk, ar, be, zh-cn, fa, hi, ko, ta) were verified verse-by-verse against the sources recorded in SOURCES.md, asserting each fetched reference matched the one requested. The remaining two (te, vi) have NOT been through that process yet — see the 'Verification status' section of SOURCES.md."
   },
   "A": {
     "reference": "Matthew 7:7",
@@ -438,7 +438,7 @@
     },
     "ta": {
       "version": "IRV",
-      "text": "எங்களுடைய பாவங்களை எங்களுக்கு மன்னியும்;"
+      "text": "எங்களுடைய பாவங்களை எங்களுக்கு மன்னியும்; நாங்களும் எங்களிடம் கடன்பட்ட எவனுக்கும் மன்னிக்கிறோமே; எங்களைச் சோதனைக்குட்படப்பண்ணாமல், தீமையிலிருந்து எங்களை இரட்சித்துக்கொள்ளும், என்று சொல்லுங்கள் என்றார்."
     },
     "te": {
       "version": "IRV",
@@ -1447,7 +1447,7 @@
     },
     "ta": {
       "version": "IRV",
-      "text": "பிள்ளையை நடக்கவேண்டிய வழியிலே அவனை நடத்து;"
+      "text": "பிள்ளையை நடக்கவேண்டிய வழியிலே அவனை நடத்து; அவனுடைய முதிர்வயதிலும் அதை விடாமல் இருப்பான்."
     },
     "te": {
       "version": "IRV",
@@ -1663,7 +1663,7 @@
     },
     "ta": {
       "version": "IRV",
-      "text": "யெகோவாவே, என்னைப் பரீட்சித்து, என்னைச் சோதித்துப்பாரும்;"
+      "text": "யெகோவாவே, என்னைப் பரீட்சித்து, என்னைச் சோதித்துப்பாரும்; என்னுடைய சிந்தைகளையும் என்னுடைய இருதயத்தையும் புடமிட்டுப்பாரும்."
     },
     "te": {
       "version": "IRV",
