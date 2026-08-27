@@ -167,16 +167,17 @@ Summary, with verification status:
 | Farsi (OPV) | ebible.org (`pesOPV`, cross-checked vs `pesopcb`) | ✅ 2026-08-27 |
 | Chinese Simp. (CCB) | ebible.org (`cmncbs`) | ✅ 2026-08-27 — **CC BY-SA** |
 | Korean (KOR) | ebible.org (`kor`) | ✅ 2026-08-27 — single-sourced |
-| Vietnamese (VIE) | ebible.org (`vie1934`) | ⚠️ not yet |
+| Vietnamese (VIE) | ebible.org (`vie1934`) | ✅ 2026-08-27 |
 | Arabic (AVD/SVD) | ebible.org (`arb-vd`) + copticchurch.net | ✅ 2026-08-27 |
 | Tamil (IRV) | ebible.org (`tam2017`) | ✅ 2026-08-27 — **CC BY-SA** |
 | Belarusian (BEL) | ebible.org (`bel`, cross-checked vs `beln`) | ✅ 2026-08-27 — **CC BY-ND** |
 
-**One language still needs verification.** Seven of the nine that were checked had a
-real defect — a versification offset, an off-by-one source, a mixed dialect, truncated
-verses, a mislabelled translation, leaked section headings and footnotes. French and Arabic
-were already correct. Assume the remaining one is unchecked rather than clean; see
-the Verification status section of `SOURCES.md` for the specific traps to look for.
+**All 17 languages are verified.** Twelve of the seventeen had a real defect —
+truncated verses, a mixed or mislabelled translation, a versification offset, an
+off-by-one source, or a wrong version label. Truncation was the most common and the
+most dangerous, since a cut verse still reads as a complete sentence. The damaged
+letters were always the multi-line poetry verses: F, R, T and X. See the Verification
+status section of `SOURCES.md`.
 
 ### Adding a new language
 

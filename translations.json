@@ -19,7 +19,7 @@
       "uk",
       "vi"
     ],
-    "note": "Sixteen languages (all but Vietnamese) were verified verse-by-verse against the sources recorded in SOURCES.md, asserting each fetched reference matched the one requested. Vietnamese (vi) has NOT been through that process yet — see the 'Verification status' section of SOURCES.md."
+    "note": "All 17 languages were verified verse-by-verse against the sources recorded in SOURCES.md, asserting each fetched reference matched the one requested. See the 'Verification status' section of SOURCES.md for what was found and the remaining caveats."
   },
   "A": {
     "reference": "Matthew 7:7",

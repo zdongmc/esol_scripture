@@ -18,11 +18,48 @@ text comes from*.
 
 ## Verification status
 
-The app ships **17 languages**. **16** have been through the verse-by-verse
-verification this file documents.
+**All 17 languages are verified.** Every verse was fetched individually and the
+returned reference asserted against the one requested.
 
-| | Languages | Status |
+| | Languages | Date |
 |---|---|---|
+| ✅ | en, es, zh-tw, pt, it, fr, am | 2026-08-26 |
+| ✅ | uk, ar, be, zh-cn, fa, hi, ko, ta, te, vi | 2026-08-27 |
+
+Only **French, Arabic, Belarusian, Korean and Vietnamese** were already correct.
+Every other language had a real defect.
+
+### What was actually wrong
+
+| Defect | Languages |
+|---|---|
+| Truncated verses | hi (7), ta (3), zh-cn (2), zh-tw (2), te (1) |
+| Wrong or mixed translation | pt (22 of 25), es (mixed dialect and edition) |
+| Versification offset | it (Ecclesiastes), uk (Septuagint Psalms, since replaced) |
+| Off-by-one source | am (5 verses, from a bad mirror) |
+| Attribution error | en (K and U labelled GNT while carrying NIV) |
+| Unmatched quote marks | most languages |
+
+**Truncation was the most common failure, and the most dangerous** — a cut verse still
+reads as a complete sentence, so it looks fine on a handout. The damaged letters were
+always the multi-line poetry verses: **F, R, T and X**. Check those first in any
+language added later.
+
+### Caveats on the verified set
+- **Korean is single-sourced.** ebible carries only one Korean Bible, so there is no
+  independent same-translation confirmation. Every other language had either a second
+  source or an independent structural check.
+- **Belarusian keeps its quote artefacts** (Luke 11:4, Mark 12:31). Its licence
+  forbids modification — see the Belarusian section.
+- **Korean's Psalm 118** is incomplete in the source (9 verses, not 29). Unused here,
+  but `kor` is not uniformly complete.
+
+### Attribution is the one open item
+Five languages are CC-licensed and need fuller credit than their version label gives:
+**be** (CC BY-ND), and **zh-cn, hi, ta, te** (all CC BY-SA). The app has no field for
+a credit line; adding one is a design decision, not a parsing fix.
+
+---|---|---|
 | ✅ Verified | en, es, zh-tw, pt, it, fr, am (2026-08-26); uk, ar, be, zh-cn, fa, hi, ko, ta, te (2026-08-27) | Each verse fetched individually, asserting the returned reference matched the one requested |
 | ⚠️ **Not yet verified** | vi | Added separately; sourced from ebible.org per `_meta.note`, but not checked verse-by-verse |
 
@@ -62,6 +99,7 @@ When verifying the rest, the traps found this time are worth checking for first:
 | uk | **UKR "Ukrainian Bible"** *(all 25)* | BibleGateway `UKR` | `biblegateway.com/passage/?search={ref}&version=UKR` | ✅ | Public domain |
 | uk | UKR *(cross-check)* | htmlbible.com | `htmlbible.com/sacrednamebiblecom/ukrainian/B{bb}C{ccc}.htm` — **windows-1251**, not UTF-8 | ✅ | Public domain |
 | te | **IRV తెలుగు 2019** | ebible.org `tel2017` | `ebible.org/Scriptures/tel2017_html.zip` | ✅ | © Bridge Connectivity Solutions, **CC BY-SA 4.0** |
+| vi | **Kinh Thánh 1934 (VIE)** | ebible.org `vie1934` | `ebible.org/Scriptures/vie1934_html.zip` | ✅ | Public domain |
 | ta | **IRV தமிழ்** | ebible.org `tam2017` | `ebible.org/Scriptures/tam2017_html.zip` | ✅ | © Bridge Connectivity Solutions, **CC BY-SA 4.0** |
 | ko | **한국어 성경 (KOR)** | ebible.org `kor` | `ebible.org/Scriptures/kor_html.zip` | ✅ | Public domain |
 | hi | **IRV हिंदी 2019** | ebible.org `hin2017` | `ebible.org/Scriptures/hin2017_html.zip` | ✅ | © Bridge Connectivity Solutions, **CC BY-SA 4.0** |
@@ -343,6 +381,16 @@ rather than treating it as a missing verse.
 case anyone returns to ONPU: *ONPU* numbers Psalms the Septuagint way, one behind the
 Hebrew — its Psalm 121 is Hebrew 122 ("Our feet are standing in your gates,
 Jerusalem"), a real psalm and the wrong verse.
+
+---
+
+### Vietnamese — clean throughout
+The existing data matched ebible's `vie1934` (Kinh Thánh, William Cadman, public
+domain) **exactly on all 25 verses**. No truncations, no quote artefacts, all psalm
+chapters complete, and no zero-overlap against `vie2011`. Nothing needed changing.
+
+Proper-noun assertions must use VIE's hyphenated transliterations — `Sa-mu-ên`,
+`Y-sơ-ra-ên`, `Xa-chê` — matched as substrings.
 
 ---
 
