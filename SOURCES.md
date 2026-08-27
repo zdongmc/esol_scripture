@@ -18,13 +18,13 @@ text comes from*.
 
 ## Verification status
 
-The app ships **17 languages**. **15** have been through the verse-by-verse
+The app ships **17 languages**. **16** have been through the verse-by-verse
 verification this file documents.
 
 | | Languages | Status |
 |---|---|---|
-| ✅ Verified | en, es, zh-tw, pt, it, fr, am (2026-08-26); uk, ar, be, zh-cn, fa, hi, ko, ta (2026-08-27) | Each verse fetched individually, asserting the returned reference matched the one requested |
-| ⚠️ **Not yet verified** | te, vi | Added separately; sourced from ebible.org per `_meta.note`, but not checked verse-by-verse |
+| ✅ Verified | en, es, zh-tw, pt, it, fr, am (2026-08-26); uk, ar, be, zh-cn, fa, hi, ko, ta, te (2026-08-27) | Each verse fetched individually, asserting the returned reference matched the one requested |
+| ⚠️ **Not yet verified** | vi | Added separately; sourced from ebible.org per `_meta.note`, but not checked verse-by-verse |
 
 **The ten unverified languages still need a pass.** Every one of the seven that was
 checked turned out to have a defect except French — a versification offset, an
@@ -32,10 +32,8 @@ off-by-one source, a mixed dialect, truncated verses, a mislabelled translation.
 is no reason to assume the other ten are clean, and the failures are the kind that
 read plausibly rather than looking broken.
 
-Known already, without looking: **unmatched quote marks survive in te** — verses carry an opening `«` or `“` they never close, the same
-extraction artefact cleaned up in the verified languages. They were left alone rather
-than cosmetically patched, since the text under them is still unvalidated; fix them
-during each language's verification pass.
+Every verified language is now clear of unmatched quote marks, except Belarusian,
+whose licence forbids altering the text (see below).
 
 When verifying the rest, the traps found this time are worth checking for first:
 1. **Versification offsets** — Ecclesiastes 12:1 and Luke 11:4 are the usual suspects.
@@ -63,6 +61,7 @@ When verifying the rest, the traps found this time are worth checking for first:
 | fr | LSG *(alt)* | BibleGateway | `biblegateway.com/passage/?search={Livre}+{ch}:{v}&version=LSG` | ⚠️ | has a text error — see below |
 | uk | **UKR "Ukrainian Bible"** *(all 25)* | BibleGateway `UKR` | `biblegateway.com/passage/?search={ref}&version=UKR` | ✅ | Public domain |
 | uk | UKR *(cross-check)* | htmlbible.com | `htmlbible.com/sacrednamebiblecom/ukrainian/B{bb}C{ccc}.htm` — **windows-1251**, not UTF-8 | ✅ | Public domain |
+| te | **IRV తెలుగు 2019** | ebible.org `tel2017` | `ebible.org/Scriptures/tel2017_html.zip` | ✅ | © Bridge Connectivity Solutions, **CC BY-SA 4.0** |
 | ta | **IRV தமிழ்** | ebible.org `tam2017` | `ebible.org/Scriptures/tam2017_html.zip` | ✅ | © Bridge Connectivity Solutions, **CC BY-SA 4.0** |
 | ko | **한국어 성경 (KOR)** | ebible.org `kor` | `ebible.org/Scriptures/kor_html.zip` | ✅ | Public domain |
 | hi | **IRV हिंदी 2019** | ebible.org `hin2017` | `ebible.org/Scriptures/hin2017_html.zip` | ✅ | © Bridge Connectivity Solutions, **CC BY-SA 4.0** |
@@ -344,6 +343,22 @@ rather than treating it as a missing verse.
 case anyone returns to ONPU: *ONPU* numbers Psalms the Septuagint way, one behind the
 Hebrew — its Psalm 121 is Hebrew 122 ("Our feet are standing in your gates,
 Jerusalem"), a real psalm and the wrong verse.
+
+---
+
+### Telugu — one truncation, and the first language with no false alarms
+24 of 25 matched `tel2017`. **R (Ecclesiastes 12:1) was truncated** — 18 characters
+where the verse runs to 79. All 25 replaced, and dangling quote marks stripped from
+A, C, D, F, L and Y.
+
+R is a new addition to the truncation set (F, T, X elsewhere), but the same kind of
+verse: multi-line poetry cut at the first line break. The full set of letters damaged
+this way across languages is now **F, R, T and X**.
+
+Notably, **every structural check passed first time here** — no false alarms at all,
+after four languages in a row produced them. The difference was applying the Tamil
+lesson up front: stem-based proper-noun assertions and substring-based overlap, both
+appropriate to a Dravidian language. The checks work when matched to the language.
 
 ---
 

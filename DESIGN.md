@@ -163,7 +163,7 @@ Summary, with verification status:
 | Amharic (1962) | wordproject.org | ✅ 2026-08-26 |
 | Hindi (IRV) | ebible.org (`hin2017`) | ✅ 2026-08-27 — **CC BY-SA** |
 | Ukrainian (UKR) | BibleGateway (`UKR`) + htmlbible.com | ✅ 2026-08-27 |
-| Telugu (IRV) | ebible.org (`tel2017`) | ⚠️ not yet |
+| Telugu (IRV) | ebible.org (`tel2017`) | ✅ 2026-08-27 — **CC BY-SA** |
 | Farsi (OPV) | ebible.org (`pesOPV`, cross-checked vs `pesopcb`) | ✅ 2026-08-27 |
 | Chinese Simp. (CCB) | ebible.org (`cmncbs`) | ✅ 2026-08-27 — **CC BY-SA** |
 | Korean (KOR) | ebible.org (`kor`) | ✅ 2026-08-27 — single-sourced |
@@ -172,10 +172,10 @@ Summary, with verification status:
 | Tamil (IRV) | ebible.org (`tam2017`) | ✅ 2026-08-27 — **CC BY-SA** |
 | Belarusian (BEL) | ebible.org (`bel`, cross-checked vs `beln`) | ✅ 2026-08-27 — **CC BY-ND** |
 
-**Two languages still need verification.** Seven of the nine that were checked had a
+**One language still needs verification.** Seven of the nine that were checked had a
 real defect — a versification offset, an off-by-one source, a mixed dialect, truncated
 verses, a mislabelled translation, leaked section headings and footnotes. French and Arabic
-were already correct. Assume the remaining two are unchecked rather than clean; see
+were already correct. Assume the remaining one is unchecked rather than clean; see
 the Verification status section of `SOURCES.md` for the specific traps to look for.
 
 ### Adding a new language
