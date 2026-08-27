@@ -92,6 +92,6 @@ Each entry defines the language code, display name, Bible version, and text dire
 
 All translations in `translations.json` are copied verbatim from official published Bible versions — never AI-generated or machine-translated.
 
-**See [`SOURCES.md`](SOURCES.md)** for the verified per-language URL pattern, parsing rules, access terms, and the sources tested and rejected. It also records which languages have been verified verse-by-verse and which still need a pass.
+**See [`SOURCES.md`](SOURCES.md)** for the verified per-language URL pattern, parsing rules, access terms, and the sources tested and rejected. It also records what verification found in each language, the traps to check for first if another is added, and the caveats that remain.
 
 `DESIGN.md` describes the overall verification process.

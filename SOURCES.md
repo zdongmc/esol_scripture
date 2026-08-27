@@ -26,8 +26,10 @@ returned reference asserted against the one requested.
 | ✅ | en, es, zh-tw, pt, it, fr, am | 2026-08-26 |
 | ✅ | uk, ar, be, zh-cn, fa, hi, ko, ta, te, vi | 2026-08-27 |
 
-Only **French, Arabic, Belarusian, Korean and Vietnamese** were already correct.
-Every other language had a real defect.
+**French, Belarusian, Korean and Vietnamese needed no change at all.** Arabic, Farsi
+and Amharic needed no verse text replaced — only dangling quote marks stripped, or a
+version label corrected. Every other language had verse text that was wrong,
+incomplete, or from the wrong translation.
 
 ### What was actually wrong
 
@@ -67,25 +69,21 @@ The handout now prints a credit footer. Three things about how it works:
 Credited: GNT, NIV, NVI, NR, 1962 Amharic, BEL (CC BY-ND), CCB and IRV (CC BY-SA).
 `CREDITS` in `index.html` is the single place to edit a line or add one.
 
----|---|---|
-| ✅ Verified | en, es, zh-tw, pt, it, fr, am (2026-08-26); uk, ar, be, zh-cn, fa, hi, ko, ta, te (2026-08-27) | Each verse fetched individually, asserting the returned reference matched the one requested |
-| ⚠️ **Not yet verified** | vi | Added separately; sourced from ebible.org per `_meta.note`, but not checked verse-by-verse |
+### Traps worth checking first in any language added later
 
-**The ten unverified languages still need a pass.** Every one of the seven that was
-checked turned out to have a defect except French — a versification offset, an
-off-by-one source, a mixed dialect, truncated verses, a mislabelled translation. There
-is no reason to assume the other ten are clean, and the failures are the kind that
-read plausibly rather than looking broken.
+Every one of these was found the hard way:
 
-Every verified language is now clear of unmatched quote marks, except Belarusian,
-whose licence forbids altering the text (see below).
-
-When verifying the rest, the traps found this time are worth checking for first:
 1. **Versification offsets** — Ecclesiastes 12:1 and Luke 11:4 are the usual suspects.
 2. **Divine-name conventions** — small caps, reverential spacing, or a distinct word.
 3. **Verse truncation** — a verse missing its opening clause still reads fine.
 4. **Dangling quote marks** from discourse spanning verse boundaries.
-5. **Right-to-left text** — `ar` and `fa` add a layer the others did not have.
+5. **Right-to-left text** — `ar` and `fa` need `dir="rtl"`; quote counting still works
+   on logical order.
+6. **Typography that looks like a defect but is not** — the reverential space before
+   `神` in Chinese CUV, Korean's space before `!`, a `’` inside a word. Confirm against
+   raw source text (tags replaced by a sentinel, not a space) before normalising.
+7. **Checks that are wrong rather than data that is wrong.** The cross-translation
+   overlap check produced five false alarms and no findings.
 
 ---
 
