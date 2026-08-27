@@ -19,7 +19,7 @@
       "uk",
       "vi"
     ],
-    "note": "Eleven languages (en, es, zh-tw, pt, it, fr, am, uk, ar, be, zh-cn) were verified verse-by-verse against the sources recorded in SOURCES.md, asserting each fetched reference matched the one requested. The remaining six (hi, te, fa, ko, vi, ta) have NOT been through that process yet — see the 'Verification status' section of SOURCES.md."
+    "note": "Twelve languages (en, es, zh-tw, pt, it, fr, am, uk, ar, be, zh-cn, fa) were verified verse-by-verse against the sources recorded in SOURCES.md, asserting each fetched reference matched the one requested. The remaining five (hi, te, ko, vi, ta) have NOT been through that process yet — see the 'Verification status' section of SOURCES.md."
   },
   "A": {
     "reference": "Matthew 7:7",
@@ -50,7 +50,7 @@
     },
     "fa": {
       "version": "OPV",
-      "text": "«سوال کنید که به شما داده خواهد شد؛ بطلبید که خواهید یافت؛ بکوبید که برای شما بازکرده خواهد شد."
+      "text": "سوال کنید که به شما داده خواهد شد؛ بطلبید که خواهید یافت؛ بکوبید که برای شما بازکرده خواهد شد."
     },
     "fr": {
       "version": "LSG",
@@ -410,7 +410,7 @@
     },
     "fa": {
       "version": "OPV",
-      "text": "و گناهان ما را ببخش زیرا که ما نیز هر قرضدار خود را می‌بخشیم. و ما را در آزمایش میاور، بلکه ما را از شریر رهایی ده.»"
+      "text": "و گناهان ما را ببخش زیرا که ما نیز هر قرضدار خود را می‌بخشیم. و ما را در آزمایش میاور، بلکه ما را از شریر رهایی ده."
     },
     "fr": {
       "version": "LSG",
@@ -842,7 +842,7 @@
     },
     "fa": {
       "version": "OPV",
-      "text": "و دوم مثل اول است که همسایه خود را چون نفس خود محبت نما. بزرگتر از این دو، حکمی نیست.»"
+      "text": "و دوم مثل اول است که همسایه خود را چون نفس خود محبت نما. بزرگتر از این دو، حکمی نیست."
     },
     "fr": {
       "version": "LSG",
@@ -1202,7 +1202,7 @@
     },
     "fa": {
       "version": "OPV",
-      "text": "زیرا خداوند یهوه قدوس اسرائیل چنین می‌گوید: «به انابت و آرامی نجات می‌یافتید وقوت شما از راحت و اعتماد می‌بود، امانخواستید."
+      "text": "زیرا خداوند یهوه قدوس اسرائیل چنین می‌گوید: به انابت و آرامی نجات می‌یافتید وقوت شما از راحت و اعتماد می‌بود، امانخواستید."
     },
     "fr": {
       "version": "LSG",
@@ -1707,7 +1707,7 @@
     },
     "fa": {
       "version": "OPV",
-      "text": "«شما نمک جهانید! لیکن اگر نمک فاسدگردد، به کدام چیز باز نمکین شود؟ دیگر مصرفی ندارد جز آنکه بیرون افکنده، پایمال مردم شود."
+      "text": "شما نمک جهانید! لیکن اگر نمک فاسدگردد، به کدام چیز باز نمکین شود؟ دیگر مصرفی ندارد جز آنکه بیرون افکنده، پایمال مردم شود."
     },
     "fr": {
       "version": "LSG",

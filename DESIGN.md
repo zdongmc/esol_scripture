@@ -164,7 +164,7 @@ Summary, with verification status:
 | Hindi (IRV) | ebible.org (`hin2017`) | ⚠️ not yet |
 | Ukrainian (UKR) | BibleGateway (`UKR`) + htmlbible.com | ✅ 2026-08-27 |
 | Telugu (IRV) | ebible.org (`tel2017`) | ⚠️ not yet |
-| Farsi (OPV) | ebible.org (`pesOPV`) | ⚠️ not yet |
+| Farsi (OPV) | ebible.org (`pesOPV`, cross-checked vs `pesopcb`) | ✅ 2026-08-27 |
 | Chinese Simp. (CCB) | ebible.org (`cmncbs`) | ✅ 2026-08-27 — **CC BY-SA** |
 | Korean (KOR) | ebible.org (`kor`) | ⚠️ not yet |
 | Vietnamese (VIE) | ebible.org (`vie1934`) | ⚠️ not yet |
@@ -172,10 +172,10 @@ Summary, with verification status:
 | Tamil (IRV) | ebible.org (`tam2017`) | ⚠️ not yet |
 | Belarusian (BEL) | ebible.org (`bel`, cross-checked vs `beln`) | ✅ 2026-08-27 — **CC BY-ND** |
 
-**Six languages still need verification.** Seven of the nine that were checked had a
+**Five languages still need verification.** Seven of the nine that were checked had a
 real defect — a versification offset, an off-by-one source, a mixed dialect, truncated
 verses, a mislabelled translation, leaked section headings and footnotes. French and Arabic
-were already correct. Assume the remaining six are unchecked rather than clean; see
+were already correct. Assume the remaining five are unchecked rather than clean; see
 the Verification status section of `SOURCES.md` for the specific traps to look for.
 
 ### Adding a new language

@@ -18,13 +18,13 @@ text comes from*.
 
 ## Verification status
 
-The app ships **17 languages**. **11** have been through the verse-by-verse
+The app ships **17 languages**. **12** have been through the verse-by-verse
 verification this file documents.
 
 | | Languages | Status |
 |---|---|---|
-| ✅ Verified | en, es, zh-tw, pt, it, fr, am (2026-08-26); uk, ar, be, zh-cn (2026-08-27) | Each verse fetched individually, asserting the returned reference matched the one requested |
-| ⚠️ **Not yet verified** | hi, te, fa, ko, vi, ta | Added separately; sourced from ebible.org per `_meta.note`, but not checked verse-by-verse |
+| ✅ Verified | en, es, zh-tw, pt, it, fr, am (2026-08-26); uk, ar, be, zh-cn, fa (2026-08-27) | Each verse fetched individually, asserting the returned reference matched the one requested |
+| ⚠️ **Not yet verified** | hi, te, ko, vi, ta | Added separately; sourced from ebible.org per `_meta.note`, but not checked verse-by-verse |
 
 **The ten unverified languages still need a pass.** Every one of the seven that was
 checked turned out to have a defect except French — a versification offset, an
@@ -32,8 +32,7 @@ off-by-one source, a mixed dialect, truncated verses, a mislabelled translation.
 is no reason to assume the other ten are clean, and the failures are the kind that
 read plausibly rather than looking broken.
 
-Known already, without looking: **unmatched quote marks survive in fa, hi
-and te** — verses carry an opening `«` or `“` they never close, the same
+Known already, without looking: **unmatched quote marks survive in hi and te** — verses carry an opening `«` or `“` they never close, the same
 extraction artefact cleaned up in the verified languages. They were left alone rather
 than cosmetically patched, since the text under them is still unvalidated; fix them
 during each language's verification pass.
@@ -64,6 +63,7 @@ When verifying the rest, the traps found this time are worth checking for first:
 | fr | LSG *(alt)* | BibleGateway | `biblegateway.com/passage/?search={Livre}+{ch}:{v}&version=LSG` | ⚠️ | has a text error — see below |
 | uk | **UKR "Ukrainian Bible"** *(all 25)* | BibleGateway `UKR` | `biblegateway.com/passage/?search={ref}&version=UKR` | ✅ | Public domain |
 | uk | UKR *(cross-check)* | htmlbible.com | `htmlbible.com/sacrednamebiblecom/ukrainian/B{bb}C{ccc}.htm` — **windows-1251**, not UTF-8 | ✅ | Public domain |
+| fa | **ترجمه قدیم (OPV)** | ebible.org `pesOPV` | `ebible.org/Scriptures/pesOPV_html.zip` | ✅ | Public domain |
 | zh-cn | **圣经当代译本 (CCB)** | ebible.org `cmncbs` | `ebible.org/Scriptures/cmncbs_html.zip` | ✅ | © Biblica, **CC BY-SA 4.0** |
 | be | **Біблія, пер. А. Бокуна** | ebible.org `bel` | `ebible.org/Scriptures/bel_html.zip` | ✅ | © 2016–2023, **CC BY-ND 4.0** |
 | ar | **Van Dyke (SVD)** | ebible.org `arb-vd` | `ebible.org/Scriptures/arb-vd_html.zip` | ✅ | Public domain |
@@ -341,6 +341,32 @@ rather than treating it as a missing verse.
 case anyone returns to ONPU: *ONPU* numbers Psalms the Septuagint way, one behind the
 Hebrew — its Psalm 121 is Hebrew 122 ("Our feet are standing in your gates,
 Jerusalem"), a real psalm and the wrong verse.
+
+---
+
+### Farsi — clean, but it broke the cross-translation check
+The existing data matched ebible's `pesOPV` (ترجمه قدیم, public domain) **exactly on
+all 25 verses**. Psalm numbering is Hebrew (176-verse psalm at 119), proper nouns
+appear where required, and dangling quote marks were stripped from A, F, L, Q and Y.
+
+#### Tune the cross-translation check per language
+The overlap check — "does this verse share content words with the same verse in a
+second translation?" — reported **zero overlap on Luke 22:42**, which is the wrong-verse
+signal. It was a false alarm.
+
+Both Persian editions have the right verse. They simply share no *long* words: each
+renders "cup" differently (پیاله vs جام), and everything they do share (ای, پدر, اگر)
+falls under the 4-character minimum the check inherited from Arabic. Dropping the
+minimum to 3 cleared it, and to 2 as well.
+
+The lesson generalises: **the word-length threshold is language-specific.** Persian
+and other languages with short content words need a lower bound than Arabic. Treat a
+zero-overlap result as "inspect this verse", never as proof of an error — and check
+the threshold before trusting it.
+
+Two other checks in this file have now produced false alarms rather than findings:
+the Belarusian proper-noun assertion (wrong name spelling) and the Simplified Chinese
+self-consistency near-ties. All three were the check being wrong, not the data.
 
 ---
 
