@@ -168,14 +168,14 @@ Summary, with verification status:
 | Chinese Simp. (CCB) | ebible.org (`cmncbs`) | ⚠️ not yet |
 | Korean (KOR) | ebible.org (`kor`) | ⚠️ not yet |
 | Vietnamese (VIE) | ebible.org (`vie1934`) | ⚠️ not yet |
-| Arabic (AVD) | ebible.org (`arb-vd`) | ⚠️ not yet |
+| Arabic (AVD/SVD) | ebible.org (`arb-vd`) + copticchurch.net | ✅ 2026-08-27 |
 | Tamil (IRV) | ebible.org (`tam2017`) | ⚠️ not yet |
 | Belarusian (BEL) | ebible.org (`bel`) | ⚠️ not yet |
 
-**Nine languages still need verification.** Seven of the eight that were checked had a
+**Eight languages still need verification.** Seven of the nine that were checked had a
 real defect — a versification offset, an off-by-one source, a mixed dialect, truncated
-verses, a mislabelled translation, leaked section headings and footnotes. Only French
-was already correct. Assume the remaining nine are unchecked rather than clean; see
+verses, a mislabelled translation, leaked section headings and footnotes. French and Arabic
+were already correct. Assume the remaining eight are unchecked rather than clean; see
 the Verification status section of `SOURCES.md` for the specific traps to look for.
 
 ### Adding a new language

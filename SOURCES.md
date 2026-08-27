@@ -18,13 +18,13 @@ text comes from*.
 
 ## Verification status
 
-The app ships **17 languages**. **8** have been through the verse-by-verse
+The app ships **17 languages**. **9** have been through the verse-by-verse
 verification this file documents.
 
 | | Languages | Status |
 |---|---|---|
-| ✅ Verified | en, es, zh-tw, pt, it, fr, am (2026-08-26); uk (2026-08-27) | Each verse fetched individually, asserting the returned reference matched the one requested |
-| ⚠️ **Not yet verified** | hi, te, fa, zh-cn, ko, vi, ar, ta, be | Added separately; sourced from ebible.org per `_meta.note`, but not checked verse-by-verse |
+| ✅ Verified | en, es, zh-tw, pt, it, fr, am (2026-08-26); uk, ar (2026-08-27) | Each verse fetched individually, asserting the returned reference matched the one requested |
+| ⚠️ **Not yet verified** | hi, te, fa, zh-cn, ko, vi, ta, be | Added separately; sourced from ebible.org per `_meta.note`, but not checked verse-by-verse |
 
 **The ten unverified languages still need a pass.** Every one of the seven that was
 checked turned out to have a defect except French — a versification offset, an
@@ -32,8 +32,8 @@ off-by-one source, a mixed dialect, truncated verses, a mislabelled translation.
 is no reason to assume the other ten are clean, and the failures are the kind that
 read plausibly rather than looking broken.
 
-Known already, without looking: **unmatched quote marks survive in ar, be, fa, hi,
-te and zh-cn** — 27 verses carry an opening `«` or `“` they never close, the same
+Known already, without looking: **unmatched quote marks survive in be, fa, hi,
+te and zh-cn** — verses carry an opening `«` or `“` they never close, the same
 extraction artefact cleaned up in the verified languages. They were left alone rather
 than cosmetically patched, since the text under them is still unvalidated; fix them
 during each language's verification pass.
@@ -64,6 +64,8 @@ When verifying the rest, the traps found this time are worth checking for first:
 | fr | LSG *(alt)* | BibleGateway | `biblegateway.com/passage/?search={Livre}+{ch}:{v}&version=LSG` | ⚠️ | has a text error — see below |
 | uk | **UKR "Ukrainian Bible"** *(all 25)* | BibleGateway `UKR` | `biblegateway.com/passage/?search={ref}&version=UKR` | ✅ | Public domain |
 | uk | UKR *(cross-check)* | htmlbible.com | `htmlbible.com/sacrednamebiblecom/ukrainian/B{bb}C{ccc}.htm` — **windows-1251**, not UTF-8 | ✅ | Public domain |
+| ar | **Van Dyke (SVD)** | ebible.org `arb-vd` | `ebible.org/Scriptures/arb-vd_html.zip` | ✅ | Public domain |
+| ar | SVD *(cross-check)* | copticchurch.net | `copticchurch.net/bible/arabic/SVD/{Book}/{ch}?showVN=1` | ✅ | Public domain |
 | am | መጽሐፍ ቅዱስ 1962 | **wordproject.org** | `wordproject.org/bibles/am/{NN}/{ch}.htm` (NN zero-padded) | ✅ | © Bible Society of Ethiopia |
 | am | *(rejected)* | `magna25/amharic-bible-json` | — | ❌ | corrupt — see below |
 
@@ -337,6 +339,39 @@ rather than treating it as a missing verse.
 case anyone returns to ONPU: *ONPU* numbers Psalms the Septuagint way, one behind the
 Hebrew — its Psalm 121 is Hebrew 122 ("Our feet are standing in your gates,
 Jerusalem"), a real psalm and the wrong verse.
+
+---
+
+### Arabic — verified without reading Arabic
+The existing data matched ebible's `arb-vd` (Van Dyke, public domain, Syrian Mission /
+American Bible Society) **exactly on all 25 verses**, so nothing was replaced. Only
+dangling quote marks were stripped (A, F, L, Y).
+
+Since no one here reads Arabic, correctness was established structurally, by four
+checks that need no reader of the script:
+
+1. **Chapter assertion** — every fetch reads back the page's own chapter heading.
+   Note the heading may *begin* with a numeral (`١ يوحنا ٤` = 1 John 4), so take the
+   **last** number in it; stripping all non-digits yields `14` and fails.
+2. **Psalm numbering** — the 176-verse psalm sits at 119, so this is Hebrew
+   numbering, not Septuagint. M and X need no `ref` override.
+3. **Proper nouns** — Samuel in 1 Sam 3:9, Jesus in Heb 13:8 and John 3:3, Israel in
+   Isa 30:15, all present. Compare with diacritics stripped.
+4. **Cross-translation overlap** — every verse shares content words with the *same*
+   verse in a different Arabic translation (`arbnav`). Zero overlap would signal a
+   wrong verse; there were none.
+
+#### SVD has multiple editions — expect variants
+copticchurch.net also serves SVD and agrees with `arb-vd` on 20 of 25 once diacritics
+and punctuation are normalised. The rest are edition differences, not errors:
+case (`السنون` / `السنين`), spacing (`يارب` / `يا رب`), alef forms (`آلهة` / `الهة`),
+and one genuine wording difference in John 3:3. Prefer `arb-vd`, which is the
+documented ABS edition and what the repo already matched.
+
+#### Arabic is RTL
+`index.html` renders `ar` and `fa` with `dir="rtl"`. Quote counting still works on
+logical order — `«` remains U+00AB regardless of how the bidi algorithm mirrors it
+visually — so the unmatched-quote cleanup applies unchanged.
 
 ---
 

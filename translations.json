@@ -19,7 +19,7 @@
       "uk",
       "vi"
     ],
-    "note": "Eight languages (en, es, zh-tw, pt, it, fr, am, uk) were verified verse-by-verse against the sources recorded in SOURCES.md, asserting each fetched reference matched the one requested. The remaining nine (hi, te, fa, zh-cn, ko, vi, ar, ta, be) have NOT been through that process yet — see the 'Verification status' section of SOURCES.md."
+    "note": "Nine languages (en, es, zh-tw, pt, it, fr, am, uk, ar) were verified verse-by-verse against the sources recorded in SOURCES.md, asserting each fetched reference matched the one requested. The remaining eight (hi, te, fa, zh-cn, ko, vi, ta, be) have NOT been through that process yet — see the 'Verification status' section of SOURCES.md."
   },
   "A": {
     "reference": "Matthew 7:7",
@@ -34,7 +34,7 @@
     },
     "ar": {
       "version": "AVD",
-      "text": "«اِسْأَلُوا تُعْطَوْا. اُطْلُبُوا تَجِدُوا. اِقْرَعُوا يُفْتَحْ لَكُمْ."
+      "text": "اِسْأَلُوا تُعْطَوْا. اُطْلُبُوا تَجِدُوا. اِقْرَعُوا يُفْتَحْ لَكُمْ."
     },
     "be": {
       "version": "BEL",
@@ -394,7 +394,7 @@
     },
     "ar": {
       "version": "AVD",
-      "text": "وَٱغْفِرْ لَنَا خَطَايَانَا لِأَنَّنَا نَحْنُ أَيْضًا نَغْفِرُ لِكُلِّ مَنْ يُذْنِبُ إِلَيْنَا، وَلَا تُدْخِلْنَا فِي تَجْرِبَةٍ لَكِنْ نَجِّنَا مِنَ ٱلشِّرِّيرِ»."
+      "text": "وَٱغْفِرْ لَنَا خَطَايَانَا لِأَنَّنَا نَحْنُ أَيْضًا نَغْفِرُ لِكُلِّ مَنْ يُذْنِبُ إِلَيْنَا، وَلَا تُدْخِلْنَا فِي تَجْرِبَةٍ لَكِنْ نَجِّنَا مِنَ ٱلشِّرِّيرِ."
     },
     "be": {
       "version": "BEL",
@@ -826,7 +826,7 @@
     },
     "ar": {
       "version": "AVD",
-      "text": "وَثَانِيَةٌ مِثْلُهَا هِيَ: تُحِبُّ قَرِيبَكَ كَنَفْسِكَ. لَيْسَ وَصِيَّةٌ أُخْرَى أَعْظَمَ مِنْ هَاتَيْنِ»."
+      "text": "وَثَانِيَةٌ مِثْلُهَا هِيَ: تُحِبُّ قَرِيبَكَ كَنَفْسِكَ. لَيْسَ وَصِيَّةٌ أُخْرَى أَعْظَمَ مِنْ هَاتَيْنِ."
     },
     "be": {
       "version": "BEL",
@@ -1691,7 +1691,7 @@
     },
     "ar": {
       "version": "AVD",
-      "text": "«أَنْتُمْ مِلْحُ ٱلْأَرْضِ، وَلَكِنْ إِنْ فَسَدَ ٱلْمِلْحُ فَبِمَاذَا يُمَلَّحُ؟ لَا يَصْلُحُ بَعْدُ لِشَيْءٍ، إِلَّا لِأَنْ يُطْرَحَ خَارِجًا وَيُدَاسَ مِنَ ٱلنَّاسِ."
+      "text": "أَنْتُمْ مِلْحُ ٱلْأَرْضِ، وَلَكِنْ إِنْ فَسَدَ ٱلْمِلْحُ فَبِمَاذَا يُمَلَّحُ؟ لَا يَصْلُحُ بَعْدُ لِشَيْءٍ، إِلَّا لِأَنْ يُطْرَحَ خَارِجًا وَيُدَاسَ مِنَ ٱلنَّاسِ."
     },
     "be": {
       "version": "BEL",
