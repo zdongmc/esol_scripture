@@ -19,7 +19,7 @@
       "uk",
       "vi"
     ],
-    "note": "Ten languages (en, es, zh-tw, pt, it, fr, am, uk, ar, be) were verified verse-by-verse against the sources recorded in SOURCES.md, asserting each fetched reference matched the one requested. The remaining seven (hi, te, fa, zh-cn, ko, vi, ta) have NOT been through that process yet — see the 'Verification status' section of SOURCES.md."
+    "note": "Eleven languages (en, es, zh-tw, pt, it, fr, am, uk, ar, be, zh-cn) were verified verse-by-verse against the sources recorded in SOURCES.md, asserting each fetched reference matched the one requested. The remaining six (hi, te, fa, ko, vi, ta) have NOT been through that process yet — see the 'Verification status' section of SOURCES.md."
   },
   "A": {
     "reference": "Matthew 7:7",
@@ -42,7 +42,7 @@
     },
     "zh-cn": {
       "version": "CCB",
-      "text": "“祈求，就会给你们；寻找，就会寻见；叩门，就会给你们开门。"
+      "text": "祈求，就会给你们；寻找，就会寻见；叩门，就会给你们开门。"
     },
     "zh-tw": {
       "version": "CUV",
@@ -186,7 +186,7 @@
     },
     "zh-cn": {
       "version": "CCB",
-      "text": "“所有劳苦困乏、背负重担的人啊，到我这里来吧！我要赐给你们安息。"
+      "text": "所有劳苦困乏、背负重担的人啊，到我这里来吧！我要赐给你们安息。"
     },
     "zh-tw": {
       "version": "CUV",
@@ -258,7 +258,7 @@
     },
     "zh-cn": {
       "version": "CCB",
-      "text": "“所以，无论何事，想要别人怎样对待你们，你们就要怎样对待别人，这是律法和先知的教导。"
+      "text": "所以，无论何事，想要别人怎样对待你们，你们就要怎样对待别人，这是律法和先知的教导。"
     },
     "zh-tw": {
       "version": "CUV",
@@ -402,7 +402,7 @@
     },
     "zh-cn": {
       "version": "CCB",
-      "text": "求你饶恕我们的罪，"
+      "text": "求你饶恕我们的罪，因为我们也饶恕所有得罪我们的人。不要让我们陷入诱惑，救我们脱离那恶者。"
     },
     "zh-tw": {
       "version": "CUV",
@@ -834,7 +834,7 @@
     },
     "zh-cn": {
       "version": "CCB",
-      "text": "其次就是‘要爱邻如己’。再也没有任何诫命比这两条更重要了。”"
+      "text": "其次就是‘要爱邻如己’。再也没有任何诫命比这两条更重要了。"
     },
     "zh-tw": {
       "version": "CUV",
@@ -1194,7 +1194,7 @@
     },
     "zh-cn": {
       "version": "CCB",
-      "text": "主耶和华——以色列的圣者说：“你们回转并安息，就必得拯救；你们安静并信靠，就必得力量。但你们却不肯。"
+      "text": "主耶和华——以色列的圣者说：你们回转并安息，就必得拯救；你们安静并信靠，就必得力量。但你们却不肯。"
     },
     "zh-tw": {
       "version": "CUV",
@@ -1339,7 +1339,7 @@
     },
     "zh-cn": {
       "version": "CCB",
-      "text": "他就吩咐撒母耳说：“你回去睡吧，要是再呼唤你，你就说，‘耶和华啊，请吩咐，仆人恭听。’ ”于是，撒母耳就回去睡下。"
+      "text": "他就吩咐撒母耳说：“你回去睡吧，要是再呼唤你，你就说，‘耶和华啊，请吩咐，仆人恭听。’”于是，撒母耳就回去睡下。"
     },
     "zh-tw": {
       "version": "CUV",
@@ -1411,7 +1411,7 @@
     },
     "zh-cn": {
       "version": "CCB",
-      "text": "教导孩童走正路，"
+      "text": "教导孩童走正路，他到老也不偏离。"
     },
     "zh-tw": {
       "version": "CUV",
@@ -1555,7 +1555,7 @@
     },
     "zh-cn": {
       "version": "CCB",
-      "text": "“除我以外，你不可有别的神明。"
+      "text": "除我以外，你不可有别的神明。"
     },
     "zh-tw": {
       "version": "CUV",
@@ -1699,7 +1699,7 @@
     },
     "zh-cn": {
       "version": "CCB",
-      "text": "“你们是世上的盐。盐如果失去咸味，怎能使它再变咸呢？它将毫无用处，只会被扔在外面任人践踏。"
+      "text": "你们是世上的盐。盐如果失去咸味，怎能使它再变咸呢？它将毫无用处，只会被扔在外面任人践踏。"
     },
     "zh-tw": {
       "version": "CUV",

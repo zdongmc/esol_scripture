@@ -18,13 +18,13 @@ text comes from*.
 
 ## Verification status
 
-The app ships **17 languages**. **10** have been through the verse-by-verse
+The app ships **17 languages**. **11** have been through the verse-by-verse
 verification this file documents.
 
 | | Languages | Status |
 |---|---|---|
-| ✅ Verified | en, es, zh-tw, pt, it, fr, am (2026-08-26); uk, ar, be (2026-08-27) | Each verse fetched individually, asserting the returned reference matched the one requested |
-| ⚠️ **Not yet verified** | hi, te, fa, zh-cn, ko, vi, ta | Added separately; sourced from ebible.org per `_meta.note`, but not checked verse-by-verse |
+| ✅ Verified | en, es, zh-tw, pt, it, fr, am (2026-08-26); uk, ar, be, zh-cn (2026-08-27) | Each verse fetched individually, asserting the returned reference matched the one requested |
+| ⚠️ **Not yet verified** | hi, te, fa, ko, vi, ta | Added separately; sourced from ebible.org per `_meta.note`, but not checked verse-by-verse |
 
 **The ten unverified languages still need a pass.** Every one of the seven that was
 checked turned out to have a defect except French — a versification offset, an
@@ -32,8 +32,8 @@ off-by-one source, a mixed dialect, truncated verses, a mislabelled translation.
 is no reason to assume the other ten are clean, and the failures are the kind that
 read plausibly rather than looking broken.
 
-Known already, without looking: **unmatched quote marks survive in fa, hi,
-te and zh-cn** — verses carry an opening `«` or `“` they never close, the same
+Known already, without looking: **unmatched quote marks survive in fa, hi
+and te** — verses carry an opening `«` or `“` they never close, the same
 extraction artefact cleaned up in the verified languages. They were left alone rather
 than cosmetically patched, since the text under them is still unvalidated; fix them
 during each language's verification pass.
@@ -64,6 +64,7 @@ When verifying the rest, the traps found this time are worth checking for first:
 | fr | LSG *(alt)* | BibleGateway | `biblegateway.com/passage/?search={Livre}+{ch}:{v}&version=LSG` | ⚠️ | has a text error — see below |
 | uk | **UKR "Ukrainian Bible"** *(all 25)* | BibleGateway `UKR` | `biblegateway.com/passage/?search={ref}&version=UKR` | ✅ | Public domain |
 | uk | UKR *(cross-check)* | htmlbible.com | `htmlbible.com/sacrednamebiblecom/ukrainian/B{bb}C{ccc}.htm` — **windows-1251**, not UTF-8 | ✅ | Public domain |
+| zh-cn | **圣经当代译本 (CCB)** | ebible.org `cmncbs` | `ebible.org/Scriptures/cmncbs_html.zip` | ✅ | © Biblica, **CC BY-SA 4.0** |
 | be | **Біблія, пер. А. Бокуна** | ebible.org `bel` | `ebible.org/Scriptures/bel_html.zip` | ✅ | © 2016–2023, **CC BY-ND 4.0** |
 | ar | **Van Dyke (SVD)** | ebible.org `arb-vd` | `ebible.org/Scriptures/arb-vd_html.zip` | ✅ | Public domain |
 | ar | SVD *(cross-check)* | copticchurch.net | `copticchurch.net/bible/arabic/SVD/{Book}/{ch}?showVN=1` | ✅ | Public domain |
@@ -340,6 +341,36 @@ rather than treating it as a missing verse.
 case anyone returns to ONPU: *ONPU* numbers Psalms the Septuagint way, one behind the
 Hebrew — its Psalm 121 is Hebrew 122 ("Our feet are standing in your gates,
 Jerusalem"), a real psalm and the wrong verse.
+
+---
+
+### Simplified Chinese — two verses were truncated
+Unlike Traditional Chinese, this one needed fixing. **Luke 11:4 and Proverbs 22:6
+were cut off at a poetry line break**, keeping only the first line:
+
+| | was | should be |
+|---|---|---|
+| F, Luke 11:4 | "Forgive us our sins," and nothing more | the full petition |
+| T, Proverbs 22:6 | "Teach a child the right way," | plus "and when he is old he will not depart from it" |
+
+Both read as complete sentences in Chinese, so neither looks broken on a handout —
+the same failure mode as the two truncated verses found in Traditional Chinese.
+The other 23 matched exactly. Dangling quote marks were stripped from eight verses
+(A, C, D, F, L, Q, W, Y); CCB is CC BY-SA, which permits adaptation, unlike Belarusian.
+
+#### Cross-checking against the verified Traditional column
+A useful trick where two related languages are both present: score each `zh-cn` verse
+by shared Han characters against **every** `zh-tw` verse, and check it matches its own
+letter best. 23 of 25 did outright. The two that did not — F and G — were near-ties on
+very short verses where common characters (的, 我, 不) dominate, and both were then
+confirmed correct by distinctive-word checks (饶恕/罪 for Luke 11:4, 爱/上帝 for
+1 John 4:8). Treat a near-tie as "inspect", not "wrong".
+
+Psalm numbering is Hebrew (176-verse psalm at 119), so no `ref` override.
+
+#### Attribution
+CC BY-SA 4.0 requires crediting Biblica. The handout shows only `CCB`. Same open gap
+as Belarusian, and the same design decision — noted, not guessed at.
 
 ---
 
