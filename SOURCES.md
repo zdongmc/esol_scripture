@@ -46,13 +46,12 @@ always the multi-line poetry verses: **F, R, T and X**. Check those first in any
 language added later.
 
 ### Caveats on the verified set
-- **Korean is single-sourced.** ebible carries only one Korean Bible, so there is no
-  independent same-translation confirmation. Every other language had either a second
-  source or an independent structural check.
+- ~~Korean is single-sourced.~~ **Resolved** — studybible.info carries the same
+  translation and agrees on all 25 verses.
 - **Belarusian keeps its quote artefacts** (Luke 11:4, Mark 12:31). Its licence
   forbids modification — see the Belarusian section.
-- **Korean's Psalm 118** is incomplete in the source (9 verses, not 29). Unused here,
-  but `kor` is not uniformly complete.
+- **ebible's `kor` has an incomplete Psalm 118** (9 verses, not 29). The defect is in
+  that copy, not the translation — studybible.info has all 29. Unused by this app.
 
 ### Attribution — resolved
 The handout now prints a credit footer. Three things about how it works:
@@ -110,7 +109,8 @@ When verifying the rest, the traps found this time are worth checking for first:
 | te | **IRV తెలుగు 2019** | ebible.org `tel2017` | `ebible.org/Scriptures/tel2017_html.zip` | ✅ | © Bridge Connectivity Solutions, **CC BY-SA 4.0** |
 | vi | **Kinh Thánh 1934 (VIE)** | ebible.org `vie1934` | `ebible.org/Scriptures/vie1934_html.zip` | ✅ | Public domain |
 | ta | **IRV தமிழ்** | ebible.org `tam2017` | `ebible.org/Scriptures/tam2017_html.zip` | ✅ | © Bridge Connectivity Solutions, **CC BY-SA 4.0** |
-| ko | **한국어 성경 (KOR)** | ebible.org `kor` | `ebible.org/Scriptures/kor_html.zip` | ✅ | Public domain |
+| ko | **한국어 성경, 1910 translation** | ebible.org `kor` | `ebible.org/Scriptures/kor_html.zip` | ✅ | Public domain |
+| ko | 1910 translation *(cross-check)* | studybible.info | `studybible.info/Korean/{Book}%20{ch}` | ✅ | Public domain |
 | hi | **IRV हिंदी 2019** | ebible.org `hin2017` | `ebible.org/Scriptures/hin2017_html.zip` | ✅ | © Bridge Connectivity Solutions, **CC BY-SA 4.0** |
 | fa | **ترجمه قدیم (OPV)** | ebible.org `pesOPV` | `ebible.org/Scriptures/pesOPV_html.zip` | ✅ | Public domain |
 | zh-cn | **圣经当代译本 (CCB)** | ebible.org `cmncbs` | `ebible.org/Scriptures/cmncbs_html.zip` | ✅ | © Biblica, **CC BY-SA 4.0** |
@@ -443,16 +443,30 @@ write proper-noun assertions against a stem rather than a full form.
 
 ---
 
-### Korean — clean, but verified less strongly than the rest
-The existing data matched ebible's `kor` **exactly on all 25 verses**. Psalm numbering
-is Hebrew, proper nouns are present, and no verse has unbalanced quote marks — nothing
-needed changing.
+### Korean — two sources, agreeing on all 25
+The data matched ebible's `kor` exactly, and **studybible.info independently agrees on
+all 25 verses**. The translation is identified by ebible's own `copr.htm` as
+*"The Holy Bible in Korean, 1910 translation"*, public domain, contributors
+레널즈 (Reynolds), 이승두, 김정삼.
 
-**It rests on one source, though.** ebible carries only one Korean Bible: `kor` is the
-ISO 639-3 code for Korean, and the neighbouring ids are unrelated languages. So unlike
-Arabic (cross-checked against copticchurch.net) or Ukrainian (two sources agreeing on
-all 25), there is no independent same-translation confirmation here. Treat Korean as
-verified-but-single-sourced; a second source would strengthen it.
+ebible carries only one Korean Bible — `kor` is the ISO 639-3 code and the neighbouring
+ids are unrelated languages — so the second source had to come from outside it.
+studybible.info is the same 1910 text and, in one respect, a **cleaner copy**: its
+Psalm 118 has all 29 verses where ebible's has 9.
+
+Parsing studybible.info: verses are delimited by
+`<sup><a class="verse_ref Korean" …>N</a></sup>`, and the **last verse of a chapter
+absorbs the page footer** — cut at "Online Parallel" / "Study Bible" or the final verse
+picks up boilerplate. That produced the one apparent mismatch in an otherwise
+byte-identical set.
+
+#### Korean Bible Society versions are not usable without permission
+개역한글 (KRV), 개역개정 and 새번역 are © 대한성서공회 (Korean Bible Society); bible.com
+serves KRV under a licence it holds, which does not extend to copying from the page.
+Unlike ABS and Biblica, who publish standing 500-verse allowances, KBS grants
+permission by application (저작권 사용 허가 신청, with a 사용료 schedule). KRV is also a
+*different* translation, so it could not verify the 1910 text in any case. If a switch
+to KRV is ever wanted, apply to KBS first.
 
 A cautionary note on picking cross-check editions: **`kog` is Cogui, a Colombian
 language, not Korean.** Filtering ebible ids by a `ko` prefix picks it up, and the

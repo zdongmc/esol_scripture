@@ -166,7 +166,7 @@ Summary, with verification status:
 | Telugu (IRV) | ebible.org (`tel2017`) | ✅ 2026-08-27 — **CC BY-SA** |
 | Farsi (OPV) | ebible.org (`pesOPV`, cross-checked vs `pesopcb`) | ✅ 2026-08-27 |
 | Chinese Simp. (CCB) | ebible.org (`cmncbs`) | ✅ 2026-08-27 — **CC BY-SA** |
-| Korean (KOR) | ebible.org (`kor`) | ✅ 2026-08-27 — single-sourced |
+| Korean (1910) | ebible.org (`kor`) + studybible.info | ✅ 2026-08-27 |
 | Vietnamese (VIE) | ebible.org (`vie1934`) | ✅ 2026-08-27 |
 | Arabic (AVD/SVD) | ebible.org (`arb-vd`) + copticchurch.net | ✅ 2026-08-27 |
 | Tamil (IRV) | ebible.org (`tam2017`) | ✅ 2026-08-27 — **CC BY-SA** |
