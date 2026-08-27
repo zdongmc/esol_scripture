@@ -19,7 +19,7 @@
       "uk",
       "vi"
     ],
-    "note": "Thirteen languages (en, es, zh-tw, pt, it, fr, am, uk, ar, be, zh-cn, fa, hi) were verified verse-by-verse against the sources recorded in SOURCES.md, asserting each fetched reference matched the one requested. The remaining four (te, ko, vi, ta) have NOT been through that process yet — see the 'Verification status' section of SOURCES.md."
+    "note": "Fourteen languages (en, es, zh-tw, pt, it, fr, am, uk, ar, be, zh-cn, fa, hi, ko) were verified verse-by-verse against the sources recorded in SOURCES.md, asserting each fetched reference matched the one requested. The remaining three (te, vi, ta) have NOT been through that process yet — see the 'Verification status' section of SOURCES.md."
   },
   "A": {
     "reference": "Matthew 7:7",

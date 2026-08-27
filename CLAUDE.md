@@ -85,7 +85,7 @@ Each entry defines the language code, display name, Bible version, and text dire
 - **Ordering:** English first, then alphabetical by English name — except that variants of one language sort under a shared base name so they stay adjacent (both Chinese sort under "Chinese"). The `LANGUAGES` array in `index.html` drives both the picker and the handout row order; keep this table, `_meta.languages`, and that array in the same order.
 - Ukrainian (`uk`) uses UKR throughout. An earlier ONPU-based version covered only NT+Psalms and was mixed with a second translation for the 5 OT verses; UKR replaces both. Chosen because the Ukrainian learners are typically grandparents, for whom the older wording is the familiar one — see `SOURCES.md`.
 - To add a language: add a row here, add a verified source to `SOURCES.md`, then populate `translations.json`.
-- **Verification status:** en, es, zh-tw, pt, it, fr, am, uk, ar, be, zh-cn, fa, hi verified verse-by-verse. The other four (te, ko, vi, ta) have **not** been — see `SOURCES.md`.
+- **Verification status:** en, es, zh-tw, pt, it, fr, am, uk, ar, be, zh-cn, fa, hi, ko verified verse-by-verse. The other three (te, vi, ta) have **not** been — see `SOURCES.md`. Korean is single-sourced; every other verified language had a second source or an independent structural check.
 - **Licensing:** Belarusian (Bokun) is CC BY-ND 4.0 — it may not be modified. Simplified Chinese (CCB) and Hindi (IRV) are CC BY-SA 4.0. All three require fuller attribution than the `BEL` / `CCB` / `IRV` labels currently give. Every other verified language is public domain or permissive. See `SOURCES.md`.
 
 ### Lookup Sources by Language

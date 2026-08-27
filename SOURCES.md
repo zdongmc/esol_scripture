@@ -18,13 +18,13 @@ text comes from*.
 
 ## Verification status
 
-The app ships **17 languages**. **13** have been through the verse-by-verse
+The app ships **17 languages**. **14** have been through the verse-by-verse
 verification this file documents.
 
 | | Languages | Status |
 |---|---|---|
-| ✅ Verified | en, es, zh-tw, pt, it, fr, am (2026-08-26); uk, ar, be, zh-cn, fa, hi (2026-08-27) | Each verse fetched individually, asserting the returned reference matched the one requested |
-| ⚠️ **Not yet verified** | te, ko, vi, ta | Added separately; sourced from ebible.org per `_meta.note`, but not checked verse-by-verse |
+| ✅ Verified | en, es, zh-tw, pt, it, fr, am (2026-08-26); uk, ar, be, zh-cn, fa, hi, ko (2026-08-27) | Each verse fetched individually, asserting the returned reference matched the one requested |
+| ⚠️ **Not yet verified** | te, vi, ta | Added separately; sourced from ebible.org per `_meta.note`, but not checked verse-by-verse |
 
 **The ten unverified languages still need a pass.** Every one of the seven that was
 checked turned out to have a defect except French — a versification offset, an
@@ -63,6 +63,7 @@ When verifying the rest, the traps found this time are worth checking for first:
 | fr | LSG *(alt)* | BibleGateway | `biblegateway.com/passage/?search={Livre}+{ch}:{v}&version=LSG` | ⚠️ | has a text error — see below |
 | uk | **UKR "Ukrainian Bible"** *(all 25)* | BibleGateway `UKR` | `biblegateway.com/passage/?search={ref}&version=UKR` | ✅ | Public domain |
 | uk | UKR *(cross-check)* | htmlbible.com | `htmlbible.com/sacrednamebiblecom/ukrainian/B{bb}C{ccc}.htm` — **windows-1251**, not UTF-8 | ✅ | Public domain |
+| ko | **한국어 성경 (KOR)** | ebible.org `kor` | `ebible.org/Scriptures/kor_html.zip` | ✅ | Public domain |
 | hi | **IRV हिंदी 2019** | ebible.org `hin2017` | `ebible.org/Scriptures/hin2017_html.zip` | ✅ | © Bridge Connectivity Solutions, **CC BY-SA 4.0** |
 | fa | **ترجمه قدیم (OPV)** | ebible.org `pesOPV` | `ebible.org/Scriptures/pesOPV_html.zip` | ✅ | Public domain |
 | zh-cn | **圣经当代译本 (CCB)** | ebible.org `cmncbs` | `ebible.org/Scriptures/cmncbs_html.zip` | ✅ | © Biblica, **CC BY-SA 4.0** |
@@ -342,6 +343,32 @@ rather than treating it as a missing verse.
 case anyone returns to ONPU: *ONPU* numbers Psalms the Septuagint way, one behind the
 Hebrew — its Psalm 121 is Hebrew 122 ("Our feet are standing in your gates,
 Jerusalem"), a real psalm and the wrong verse.
+
+---
+
+### Korean — clean, but verified less strongly than the rest
+The existing data matched ebible's `kor` **exactly on all 25 verses**. Psalm numbering
+is Hebrew, proper nouns are present, and no verse has unbalanced quote marks — nothing
+needed changing.
+
+**It rests on one source, though.** ebible carries only one Korean Bible: `kor` is the
+ISO 639-3 code for Korean, and the neighbouring ids are unrelated languages. So unlike
+Arabic (cross-checked against copticchurch.net) or Ukrainian (two sources agreeing on
+all 25), there is no independent same-translation confirmation here. Treat Korean as
+verified-but-single-sourced; a second source would strengthen it.
+
+A cautionary note on picking cross-check editions: **`kog` is Cogui, a Colombian
+language, not Korean.** Filtering ebible ids by a `ko` prefix picks it up, and the
+resulting comparison reported zero overlap on every verse — which looks alarming until
+you read the text and find it is in Latin script. Match on the exact ISO code, and
+sanity-check the script before trusting a comparison.
+
+#### One incomplete chapter in the source
+`kor`'s **Psalm 118 contains only 9 verses** where it should have 29. It is the only
+short chapter in all 150 — every other psalm checked parses to its expected count, and
+both psalms this app uses (26 and 121) are complete. Recorded because it means `kor`
+is not uniformly complete, so verify chapter length if a future scripture is added
+from it.
 
 ---
 
