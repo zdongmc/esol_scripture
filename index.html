@@ -285,6 +285,18 @@
       unicode-bidi: isolate;
     }
 
+    .handout-credits {
+      margin-top: 1.4rem;
+      padding-top: 0.7rem;
+      border-top: 1px solid #eee;
+      font-family: system-ui, sans-serif;
+      font-size: 0.62rem;
+      line-height: 1.45;
+      color: #999;
+    }
+
+    .handout-credits div + div { margin-top: 0.15rem; }
+
     /* ── Print styles ─────────────────────────────────────── */
     @media print {
       #app > *:not(#preview-wrapper) { display: none !important; }
@@ -313,6 +325,12 @@
       }
 
       .verse-text { font-size: 0.88rem; line-height: 1.5; }
+
+      .handout-credits {
+        font-size: 6.5pt;
+        margin-top: 1rem;
+        break-inside: avoid;
+      }
 
       @page {
         margin: 1.8cm 2cm;
@@ -369,6 +387,21 @@ const LANGUAGES = [
   { code: "uk",     name: "Українська",    version: "ONPU", enName: "Ukrainian" },
   { code: "vi",     name: "Tiếng Việt",    version: "VIE", enName: "Vietnamese" },
 ];
+
+// Attribution required by the publisher or licence, keyed by the version string as it
+// appears on the verse — so letters K and U credit the NIV, not the GNT. Public-domain
+// versions (CUV, LSG, UKR, AVD, KOR, OPV, VIE) require no credit and are omitted, which
+// keeps the footer to only what is legally needed.
+const CREDITS = {
+  "GNT":  "Good News Translation © 1992 American Bible Society.",
+  "NIV":  "New International Version® NIV® © 1973, 1978, 1984, 2011 Biblica, Inc. Used by permission.",
+  "NVI":  "Nueva Versión Internacional / Nova Versão Internacional © Biblica, Inc. Used by permission.",
+  "NR":   "Nuova Riveduta © Società Biblica di Ginevra.",
+  "1962": "መጽሐፍ ቅዱስ (1962) — Bible Society of Ethiopia.",
+  "BEL":  "Біблія, пераклад А. Бокуна © 2016–2023 John the Forerunner Church of Christians of Evangelical Faith of Minsk City. CC BY-ND 4.0.",
+  "CCB":  "圣经当代译本 © Biblica, Inc. CC BY-SA 4.0.",
+  "IRV":  "Indian Revised Version © 2017–2019 Bridge Connectivity Solutions Pvt. Ltd. CC BY-SA 4.0.",
+};
 
 let DATA = {};
 let selectedLetter = null;
@@ -465,6 +498,7 @@ function render() {
       <div class="handout-key">${keyPhrase}</div>
     </div>`;
 
+  const shownVersions = new Set();
   langs.forEach(lang => {
     const t = entry[lang.code];
     const text = t?.text?.trim();
@@ -476,6 +510,7 @@ function render() {
     // version must come from the verse, not the language. Publishers' church-use
     // terms require the version to appear alongside each quotation.
     const version = t?.version || lang.version;
+    if (text) shownVersions.add(version);
     html += `
       <div class="translation-block">
         <div class="lang-meta">
@@ -488,6 +523,12 @@ function render() {
         </div>
       </div>`;
   });
+
+  // Credit only the versions actually on this handout.
+  const credits = [...shownVersions].map(v => CREDITS[v]).filter(Boolean).sort();
+  if (credits.length) {
+    html += `<div class="handout-credits">${credits.map(c => `<div>${c}</div>`).join("")}</div>`;
+  }
 
   preview.innerHTML = html;
   btn.disabled = false;

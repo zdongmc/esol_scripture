@@ -54,10 +54,19 @@ language added later.
 - **Korean's Psalm 118** is incomplete in the source (9 verses, not 29). Unused here,
   but `kor` is not uniformly complete.
 
-### Attribution is the one open item
-Five languages are CC-licensed and need fuller credit than their version label gives:
-**be** (CC BY-ND), and **zh-cn, hi, ta, te** (all CC BY-SA). The app has no field for
-a credit line; adding one is a design decision, not a parsing fix.
+### Attribution — resolved
+The handout now prints a credit footer. Three things about how it works:
+
+- **Credits are keyed by the version string on the verse**, not by the language, so
+  letters K and U credit the NIV while the rest of the English column credits the GNT.
+- **Only the versions actually on the page are credited.** Pick three languages and
+  you get at most three lines.
+- **Public-domain versions are omitted** (CUV, LSG, UKR, AVD, KOR, OPV, VIE). They
+  require no credit, and listing all seventeen would swamp the handout. If none of the
+  selected languages needs a credit, no footer is drawn at all.
+
+Credited: GNT, NIV, NVI, NR, 1962 Amharic, BEL (CC BY-ND), CCB and IRV (CC BY-SA).
+`CREDITS` in `index.html` is the single place to edit a line or add one.
 
 ---|---|---|
 | ✅ Verified | en, es, zh-tw, pt, it, fr, am (2026-08-26); uk, ar, be, zh-cn, fa, hi, ko, ta, te (2026-08-27) | Each verse fetched individually, asserting the returned reference matched the one requested |
