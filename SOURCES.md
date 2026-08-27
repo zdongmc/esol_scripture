@@ -216,8 +216,13 @@ convention as the reverential space before `神` in Chinese CUV — see that not
 Quoted discourse runs across verse boundaries, so an extracted verse often carries an
 unmatched `“`, `”`, `«` or `»` — and Spanish/Portuguese additionally use a leading `»`
 or `“` as a *paragraph-continuation* marker. Scan for quote marks that never pair and
-drop them; do not touch `‘ ’`, which double as apostrophes. Affected A, C, D, F, L, Q,
-W, Y across the three languages.
+drop them. Affected A, C, D, F, L, Q, W, Y across the three languages.
+
+`‘ ’` need care, because `’` doubles as the apostrophe. **A `’` between two letters is
+an apostrophe** (`God’s`, `don’t`); anywhere else it is a quotation mark and subject to
+the same pairing rule. Counting `‘` against `’` without that test reports `God’s` as
+unbalanced — a false positive that stood in this file for some time. Across all 17
+languages exactly one real case existed: a trailing `’` on English Luke 11:4.
 
 #### Dialect: the previous data was mixed
 The Spanish that predated this file was **not consistently NVI**. Seven verses
@@ -440,6 +445,18 @@ Three flags were raised here and all three were false alarms:
 
 For agglutinative languages, compare **shared substrings**, not shared words, and
 write proper-noun assertions against a stem rather than a full form.
+
+---
+
+### Korean — its spacing before `!` is real, not an artefact
+The 1910 edition genuinely prints a space before `!` — 113 occurrences in raw source
+text outside any tag, in a sample of 120 files. **Do not normalise it away.** It is
+the same class of decision as the reverential space before `神` in Chinese CUV.
+
+Contrast Hindi, where ` ,` and ` ;` appear **zero** times in raw source text: every
+instance there came from stripping a footnote element between the word and its comma,
+and was corrected. The test that separates the two cases is to replace tags with a
+sentinel rather than a space, then look for the pattern in what remains.
 
 ---
 
