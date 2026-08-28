@@ -13,6 +13,34 @@ See DESIGN.md
 ## Key files
 
 - `DESIGN.md` — full architecture and translation sourcing process
+- `userguide.html` — one-page printable guide for ESOL volunteers (see below)
+
+## User guide
+
+`userguide.html` is a standalone one-page guide handed to volunteers. It carries the app URL
+and a QR code, the four steps for using the app, the 25-letter verse index, the language
+roster, and the credit-retention note. It is self-contained — no build step, no shared CSS
+with `index.html` — and is served from Pages alongside the app.
+
+**Constraint: it must print on exactly one letter-portrait page**, and the type must stay
+readable — do not solve an overflow by shrinking the font. Reclaim space through layout
+(the QR sits in the masthead, the four steps run two across, the languages are one flowing
+line) or by cutting content.
+
+Verify a change with headless Chrome rather than by eye, and check the web-font fallback
+too — Source Serif 4 / IBM Plex Sans fall back to Georgia and system-ui, which set wider:
+
+```bash
+chrome --headless --no-pdf-header-footer --virtual-time-budget=8000 \
+  --print-to-pdf=out.pdf file://$PWD/userguide.html
+python3 -c "import pypdf; print(len(pypdf.PdfReader('out.pdf').pages))"   # must be 1
+```
+
+The QR code is inlined SVG (error-correction level H) generated with `segno` and decode-checked;
+regenerate and re-verify it if the URL ever changes.
+
+**Contact:** Jojo is credited on the guide as the app's creator and the person volunteers
+should reach for questions, suggestions, or requests for additional languages.
 
 ## Scriptures
 
