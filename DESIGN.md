@@ -8,18 +8,27 @@ A single-page web app that generates printable multilingual Bible scripture hand
 
 ```
 index.html          Single-file SPA (HTML + CSS + JS, no build step)
-translations.json   All verse data: 25 scriptures x 17 languages
-CLAUDE.md           Ground truth for scriptures and languages
+translations.json   All verse data: 25 scriptures x 17 languages, English x 3 versions
+userguide.html      Standalone one-page printable guide for volunteers
+CLAUDE.md           Ground truth for scriptures, languages and English versions
 SOURCES.md          Verified per-language sources, parsing rules, verification status
 ```
 
 There is no server. The app is static and deployable on GitHub Pages or any file host.
 
+**Deployment:** GitHub Pages serves `main`, at https://zdongmc.github.io/esol_scripture/.
+A feature branch publishes nothing — work only goes live when it reaches `main`.
+
+`userguide.html` shares no CSS with `index.html` and must print on exactly one
+letter-portrait page; see the User guide section of `CLAUDE.md` for that constraint and
+how to verify it.
+
 ### How it works
 
 1. `index.html` loads `translations.json` via `fetch()` on startup.
-2. JavaScript builds a grid of letter buttons (A–Z, minus V) and language checkboxes.
-3. User clicks a letter and toggles languages.
+2. JavaScript builds a grid of letter buttons (A–Z, minus V), a radio group for the English
+   version, and language checkboxes.
+3. User clicks a letter, picks an English version, and toggles languages.
 4. The preview renders immediately in the DOM — no framework, no templating library.
 5. "Print / Save as PDF" triggers `window.print()`. A `@media print` stylesheet hides the UI and formats the handout for paper (letter size).
 
@@ -67,7 +76,14 @@ V is intentionally absent from the original Scripture Alphabet source material.
   "A": {
     "reference": "Matthew 7:7",
     "key": "Ask and you will receive",
-    "en": { "version": "GNT", "text": "Ask, and you will receive; ..." },
+    "en": {
+      "version": "GNT",
+      "text": "Ask, and you will receive; ...",
+      "versions": {
+        "ERV": "Continue to ask, and God will give to you; ...",
+        "BSB": "Ask, and it will be given to you; ..."
+      }
+    },
     "es": { "version": "NVI", "text": "Pidan y se les dará; ..." },
     ...
   },
@@ -91,6 +107,17 @@ Each scripture entry contains:
   - `text` — the verse
   - `ref` *(optional)* — that language's own reference, where its versification
     differs. Italian NR places Ecclesiastes 12:1 at 12:3. Rendered under the version.
+  - `versions` *(English only)* — alternate wordings keyed by abbreviation, currently
+    `ERV` and `BSB`. `version`/`text` stay the default, so anything reading the file
+    without knowing about alternates still gets the right verse.
+
+`_meta.englishVersions` names the three choices the picker offers.
+
+**Only English is switchable.** The handout heading — letter, `reference` and `key` — is
+deliberately unaffected by the choice: `key` comes from the source PDF, which was written
+from the GNT, and no other version opens Revelation 1:3 with "Happy" or Exodus 20:3 with
+"Worship". Every alternate loses the letter's own word somewhere (ERV on 5 letters, BSB on
+3); the fixed heading is what keeps the alphabet legible on those handouts.
 
 ### How translations are obtained
 
@@ -155,6 +182,8 @@ Summary, with verification status:
 | Language | Primary source | Verified verse-by-verse |
 |----------|----------------|:--:|
 | English (GNT + NIV) | BibleGateway | ✅ 2026-08-26 |
+| English alt. (ERV) | ebible.org (`engerv`) + BibleGateway | ✅ 2026-08-29 — 1,000-verse allowance |
+| English alt. (BSB) | ebible.org (`engbsb`) + bereanbible.com | ✅ 2026-08-29 — **public domain** |
 | Spanish (NVI) | BibleGateway (`NVI`) | ✅ 2026-08-26 |
 | Chinese Trad. (CUV) | FHL 信望愛, Taiwan (JSON API) | ✅ 2026-08-26 |
 | Portuguese (NVI) | BibleGateway (`NVI-PT`) | ✅ 2026-08-26 |
@@ -186,6 +215,26 @@ status section of `SOURCES.md`.
 3. For each of the 25 scriptures, fetch the verse and **assert the returned reference matches the one requested** before storing it.
 4. Add the language to the `LANGUAGES` array in `index.html` (with `dir: "rtl"` if needed).
 5. Update the verification status table in `SOURCES.md`.
+
+### Adding an English version
+
+1. Check the licence *first* — it decides the question more often than readability does.
+   A version with no stated verse allowance (the GNT and CEV both carry the restrictive
+   American Bible Society notice) is a weaker position than an open one, whatever its
+   reading level.
+2. Fetch all 25 verses and **measure two things before committing to it**: words per
+   sentence, and how many of the 25 verses still contain the letter's own word. The
+   second is the one that matters here and the one that eliminates otherwise-appealing
+   candidates — the Bible in Basic English has the simplest vocabulary of any English
+   Bible and fails on 12 of 25.
+3. Cross-check every verse against a second independent source, as for any language.
+4. Add the text to `en.versions` in `translations.json`, keyed by abbreviation.
+5. Add an entry to `EN_VERSIONS` and `EN_VERSION_HINTS` in `index.html`, and to
+   `_meta.englishVersions`.
+6. Add a `CREDITS` line **only if the licence requires one** — public-domain versions are
+   omitted by design.
+7. Update the English versions table in `CLAUDE.md` and the source rows in `SOURCES.md`.
+8. The user guide names the versions in step 3; it must still print on one page.
 
 ### Adding a new scripture
 
