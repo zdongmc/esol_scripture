@@ -62,12 +62,54 @@ The handout now prints a credit footer. Three things about how it works:
   letters K and U credit the NIV while the rest of the English column credits the GNT.
 - **Only the versions actually on the page are credited.** Pick three languages and
   you get at most three lines.
-- **Public-domain versions are omitted** (CUV, LSG, UKR, AVD, KOR, OPV, VIE). They
+- **Public-domain versions are omitted** (CUV, LSG, UKR, AVD, KOR, OPV, VIE, **BSB**). They
   require no credit, and listing all seventeen would swamp the handout. If none of the
   selected languages needs a credit, no footer is drawn at all.
 
-Credited: GNT, NIV, NVI, NR, 1962 Amharic, BEL (CC BY-ND), CCB and IRV (CC BY-SA).
+Credited: GNT, NIV, NVI, NR, 1962 Amharic, BEL (CC BY-ND), CCB and IRV (CC BY-SA), ERV.
 `CREDITS` in `index.html` is the single place to edit a line or add one.
+
+---
+
+## The alternate English versions (ERV, BSB)
+
+The English row is switchable; see the "English versions" section of `CLAUDE.md` for why
+these two and not the others. What matters here is where the text came from.
+
+**Both were verified 25/25 against a second, independent source** — the project standard.
+
+| Version | Primary source | Independent cross-check | Result |
+|---------|----------------|-------------------------|:------:|
+| ERV | ebible.org `engerv` | BibleGateway `ERV` | 25/25 agree |
+| BSB | ebible.org `engbsb` | `bereanbible.com/bsb.txt` (publisher's own file, 31,105 verses) | 25/25 agree |
+
+### Licence terms, verified at the source
+
+- **ERV** — © 2006 Bible League International. *"This copyrighted material may be quoted up
+  to 1000 verses without written permission… must not comprise a complete book nor…more
+  than 50% of the work."* For non-saleable media (bulletins, handouts) a full notice is not
+  required — only `(ERV)` at the end of each quotation, which the handout's version column
+  already supplies. We use 25 verses. Text at `ebible.org/engerv/copyright.htm`.
+- **BSB** — Berean Standard Bible, *"dedicated to the public domain"* (stated on line 2 of
+  the publisher's own `bsb.txt`). No obligations, no credit line.
+- For contrast, the **GNT already in use carries no verse allowance at all** — the same
+  restrictive ABS notice as the CEV. Adding ERV and BSB improves the licensing position
+  rather than complicating it.
+
+### Traps hit while adding these two
+
+Both are new instances of defects this file already warned about, plus one new one:
+
+1. **Section headings inside the verse span.** eBible closes a verse at `<div class='s'>`
+   (heading) and `<div class='r'>` (parallel refs) but *continues* it through `<div class='q'>`
+   poetry lines — ERV Luke 11:4 picked up "Ask God for What You Need" until the parser
+   distinguished them. On BibleGateway the trap is worse: the heading is wrapped in a
+   `<span class="text Matt-7-7">` carrying **the same verse class as the verse itself**, so a
+   naive scrape silently prepends it. Strip `<h1>`–`<h6>` before scanning for verse spans.
+2. **Dangling quote marks** (already trap #4). ERV A, C, D, W, Y open with an unmatched `“`;
+   ERV and BSB both end F and L with an unmatched `”`. Stripped the same way the GNT column
+   was, only ever at the very start or end and only while that mark is unbalanced.
+3. **Psalms chapter files are 3-digit** in eBible zips (`PSA026.htm`, not `PSA26.htm`).
 
 ### Traps worth checking first in any language added later
 
@@ -93,6 +135,10 @@ Every one of these was found the hard way:
 |-------|---------|--------|-------------|:--------:|-----------|
 | en | GNT *(23 letters)* | BibleGateway | `biblegateway.com/passage/?search={REF}&version=GNT` | ✅ | © 1992 American Bible Society |
 | en | NIV *(letters K, U only)* | BibleGateway | `biblegateway.com/passage/?search={REF}&version=NIV` | ✅ | © 2011 Biblica |
+| en | **ERV** *(alternate, all 25)* | ebible.org `engerv` | `ebible.org/Scriptures/engerv_html.zip` | ✅ | © 2006 Bible League International — 1,000-verse allowance |
+| en | ERV *(cross-check)* | BibleGateway | `biblegateway.com/passage/?search={REF}&version=ERV` — **strip `<h1>`–`<h6>` first**, headings share the verse's span class | ✅ | as above |
+| en | **BSB** *(alternate, all 25)* | ebible.org `engbsb` | `ebible.org/Scriptures/engbsb_html.zip` | ✅ | Public domain |
+| en | BSB *(cross-check)* | bereanbible.com | `bereanbible.com/bsb.txt` — tab-separated, `Reference\tText`, uses "Psalms" not "Psalm" | ✅ | Public domain |
 | es | NVI (1999, 2015, 2022) | **BibleGateway** | `biblegateway.com/passage/?search={Libro}+{ch}:{v}&version=NVI` | ✅ | © Biblica |
 | es | NVI 1999 *(rejected)* | BibleStudyTools | `biblestudytools.com/nvi/{libro}/{ch}-{v}.html` | ⚠️ | older edition, broken poetry spacing |
 | zh-tw | 和合本 CUV | FHL 信望愛 (Taiwan) | `bible.fhl.net/json/qb.php?chineses={abbr}&chap={ch}&sec={v}&version=unv` | ✅ | Public domain (1919) |

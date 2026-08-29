@@ -18,14 +18,26 @@ See DESIGN.md
 ## User guide
 
 `userguide.html` is a standalone one-page guide handed to volunteers. It carries the app URL
-and a QR code, the four steps for using the app, the 25-letter verse index, the language
+and a QR code, the five steps for using the app, the 25-letter verse index, the language
 roster, and the credit-retention note. It is self-contained — no build step, no shared CSS
 with `index.html` — and is served from Pages alongside the app.
 
 **Constraint: it must print on exactly one letter-portrait page**, and the type must stay
 readable — do not solve an overflow by shrinking the font. Reclaim space through layout
-(the QR sits in the masthead, the four steps run two across, the languages are one flowing
+(the QR sits in the masthead, the five steps run three across, the languages are one flowing
 line) or by cutting content.
+
+Two things learned adding the fifth step, both counter-intuitive:
+
+- **More columns is not always shorter.** Moving the steps from 2 columns to 3 made the
+  block *taller* (3.25in → 4.38in) — narrower cells wrap more lines than the saved row
+  gives back. It only paid off once the copy was cut to suit the narrower measure.
+- **The step numeral was costing more than it was worth.** At 3 columns a 2rem numeral
+  took 19% of each cell's width; narrowing it to 1.4rem removed a wrapped line from most
+  cells, and a two-line `<h2>` cost more than a whole line of body text.
+
+There is ~0.3in (web fonts) / ~0.23in (fallback) of slack at present. **The fallback is
+the binding case** — check it, not just the published rendering.
 
 Verify a change with headless Chrome rather than by eye, and check the web-font fallback
 too — Source Serif 4 / IBM Plex Sans fall back to Georgia and system-ui, which set wider:
@@ -80,6 +92,37 @@ Each entry maps a letter to a specific verse reference, short key text, and sour
 - V is intentionally absent from the original Scripture Alphabet source document.
 - Key Text is the English prompt phrase, not necessarily the full verse. Full verse text lives in `translations.json`.
 - Version listed is the English source version. Each language uses its own canonical version (see Languages section below).
+- The Version column is the **default** English wording. The app also offers two alternates —
+  see English versions below.
+
+## English versions
+
+The English row alone is switchable; every other language has one version. The picker sits
+above the language checkboxes and offers:
+
+| Choice | Version | Licence | Keeps the letter's word |
+|--------|---------|---------|:---:|
+| Good News (default) | GNT, and NIV for K and U | © ABS / © Biblica, no stated verse allowance | 25/25 |
+| Easy-to-Read | ERV © 2006 Bible League International | up to **1,000 verses**, <50% of the work | 20/25 |
+| Berean Standard | BSB | **public domain** | 22/25 |
+
+- **The handout heading never changes with this choice.** The letter, the reference and the
+  Key Text stay as written; only the English verse below them follows the picker. This is
+  deliberate — the Key Text was written from the GNT, and no other version opens
+  Revelation 1:3 with "Happy" or Exodus 20:3 with "Worship".
+- **Every alternate loses the letter's word on H, and most also on K, T, W, X.** The fixed
+  heading carries the alphabet cue on those handouts; the body will visibly differ.
+- ERV and NIrV/CEV were considered together. ERV won on licence (1,000 verses, and church
+  bulletins need only `(ERV)` beside the quotation) and on keeping O and W where the
+  public-domain versions drop them. **CEV was rejected**: same American Bible Society notice
+  as the GNT, so no licence gain. **BBE was rejected**: smallest vocabulary of any English
+  Bible but the *longest* sentences (20.8 words vs ERV's 12.0) and only 13/25 on the cue —
+  it reads harder than ERV despite the simpler words. **OEB was rejected**: no Old
+  Testament, which would blank 5 of the 25 letters.
+- Alternates live in `translations.json` under `en.versions`; `en.text` remains the default.
+  `EN_VERSIONS` and `EN_VERSION_HINTS` in `index.html` drive the picker.
+- BSB is public domain, so it prints **no** credit line — consistent with the rule that
+  public-domain versions are omitted from the footer. ERV prints one.
 
 ## Languages
 

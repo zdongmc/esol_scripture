@@ -123,6 +123,50 @@
       }
 
       /* Action bar */
+      .version-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .version-grid.inactive { opacity: 0.4; }
+
+      .version-label {
+        font-family: system-ui, sans-serif;
+        font-size: 0.85rem;
+        color: #444;
+        display: flex;
+        align-items: baseline;
+        gap: 0.3rem;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .version-label input[type="radio"] {
+        width: 1rem;
+        height: 1rem;
+        align-self: center;
+        cursor: pointer;
+        accent-color: #5a3e2b;
+      }
+
+      .version-note {
+        color: #999;
+        font-size: 0.78rem;
+      }
+
+      .version-note::before { content: "("; }
+      .version-note::after  { content: ")"; }
+
+      .version-hint {
+        font-family: system-ui, sans-serif;
+        font-size: 0.75rem;
+        color: #aaa;
+        font-style: italic;
+        margin-bottom: 1.8rem;
+      }
+
       .action-bar {
         display: flex;
         align-items: center;
@@ -347,6 +391,10 @@
   <div class="section-label">Select a Scripture</div>
   <div class="scripture-grid" id="scripture-grid"></div>
 
+  <div class="section-label">English Version</div>
+  <div class="version-grid" id="version-grid"></div>
+  <div class="version-hint" id="version-hint"></div>
+
   <div class="section-label">Languages</div>
   <div class="language-grid" id="language-grid"></div>
 
@@ -384,7 +432,7 @@ const LANGUAGES = [
   { code: "es",     name: "Español",       version: "NVI", enName: "Spanish" },
   { code: "ta",     name: "தமிழ்",         version: "IRV", enName: "Tamil" },
   { code: "te",     name: "తెలుగు",        version: "IRV", enName: "Telugu" },
-  { code: "uk",     name: "Українська",    version: "ONPU", enName: "Ukrainian" },
+  { code: "uk",     name: "Українська",    version: "UKR", enName: "Ukrainian" },
   { code: "vi",     name: "Tiếng Việt",    version: "VIE", enName: "Vietnamese" },
 ];
 
@@ -392,6 +440,22 @@ const LANGUAGES = [
 // appears on the verse — so letters K and U credit the NIV, not the GNT. Public-domain
 // versions (CUV, LSG, UKR, AVD, KOR, OPV, VIE) require no credit and are omitted, which
 // keeps the footer to only what is legally needed.
+// Alternate English versions. "default" is the wording the letter headings were
+// written from (GNT, and NIV for K and U); the others are held per verse in
+// translations.json under en.versions. The handout heading never changes with this
+// choice — only the English verse text below it.
+const EN_VERSIONS = [
+  { code: "default", name: "Good News",       abbr: "GNT", note: "matches the headings" },
+  { code: "ERV",     name: "Easy-to-Read",    abbr: "ERV", note: "simplest wording" },
+  { code: "BSB",     name: "Berean Standard", abbr: "BSB", note: "public domain" },
+];
+
+const EN_VERSION_HINTS = {
+  "default": "Good News Translation — letters K and U come from the NIV.",
+  "ERV":     "Easy-to-Read Version — written for new and second-language readers.",
+  "BSB":     "Berean Standard Bible — public domain, no permission needed.",
+};
+
 const CREDITS = {
   "GNT":  "Good News Translation © 1992 American Bible Society.",
   "NIV":  "New International Version® NIV® © 1973, 1978, 1984, 2011 Biblica, Inc. Used by permission.",
@@ -401,10 +465,12 @@ const CREDITS = {
   "BEL":  "Біблія, пераклад А. Бокуна © 2016–2023 John the Forerunner Church of Christians of Evangelical Faith of Minsk City. CC BY-ND 4.0.",
   "CCB":  "圣经当代译本 © Biblica, Inc. CC BY-SA 4.0.",
   "IRV":  "Indian Revised Version © 2017–2019 Bridge Connectivity Solutions Pvt. Ltd. CC BY-SA 4.0.",
+  "ERV":  "Holy Bible: Easy-to-Read Version™ © 2006 Bible League International. Used by permission.",
 };
 
 let DATA = {};
 let selectedLetter = null;
+let enVersion = "default";
 let checkedLangs = new Set(LANGUAGES.map(l => l.code));
 
 async function loadData() {
@@ -426,6 +492,27 @@ function buildUI() {
     grid.appendChild(btn);
   });
 
+  // English version radios (one of, unlike the language checkboxes)
+  const verGrid = document.getElementById("version-grid");
+  EN_VERSIONS.forEach(v => {
+    const label = document.createElement("label");
+    label.className = "version-label";
+    const rb = document.createElement("input");
+    rb.type = "radio";
+    rb.name = "en-version";
+    rb.value = v.code;
+    rb.checked = v.code === enVersion;
+    rb.onchange = () => { enVersion = v.code; renderVersionHint(); render(); };
+    label.appendChild(rb);
+    label.appendChild(document.createTextNode(`${v.name} — ${v.abbr}`));
+    const note = document.createElement("span");
+    note.className = "version-note";
+    note.textContent = v.note;
+    label.appendChild(note);
+    verGrid.appendChild(label);
+  });
+  renderVersionHint();
+
   // Language checkboxes (all checked by default)
   const langGrid = document.getElementById("language-grid");
   LANGUAGES.forEach(lang => {
@@ -438,6 +525,7 @@ function buildUI() {
     cb.onchange = () => {
       if (cb.checked) checkedLangs.add(lang.code);
       else checkedLangs.delete(lang.code);
+      if (lang.code === "en") renderVersionHint();
       render();
     };
     label.appendChild(cb);
@@ -454,6 +542,16 @@ function buildUI() {
     }
     langGrid.appendChild(label);
   });
+}
+
+// The picker still shows when English is unchecked, so say plainly that it is idle
+// rather than letting a volunteer wonder why nothing on the handout moved.
+function renderVersionHint() {
+  const on = checkedLangs.has("en");
+  document.getElementById("version-hint").textContent =
+    on ? EN_VERSION_HINTS[enVersion]
+       : "English is not selected, so this choice has no effect.";
+  document.getElementById("version-grid").classList.toggle("inactive", !on);
 }
 
 function selectLetter(letter) {
@@ -501,15 +599,20 @@ function render() {
   const shownVersions = new Set();
   langs.forEach(lang => {
     const t = entry[lang.code];
-    const text = t?.text?.trim();
     const isRtl = lang.dir === "rtl";
     // Some translations versify differently (e.g. NR puts Ecclesiastes 12:1 at 12:3),
     // so a language may carry its own reference. Fall back to the shared one.
     const localRef = t?.ref;
+    // The handout heading is fixed; only the English verse below it follows the
+    // version picker. Other languages ignore it entirely.
+    const alt = lang.code === "en" && enVersion !== "default"
+      ? t?.versions?.[enVersion]
+      : null;
+    const text = (alt ?? t?.text)?.trim();
     // Letters K and U are NIV while the rest of the English column is GNT, so the
     // version must come from the verse, not the language. Publishers' church-use
     // terms require the version to appear alongside each quotation.
-    const version = t?.version || lang.version;
+    const version = alt ? enVersion : (t?.version || lang.version);
     if (text) shownVersions.add(version);
     html += `
       <div class="translation-block">

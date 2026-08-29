@@ -19,14 +19,23 @@
       "uk",
       "vi"
     ],
-    "note": "All 17 languages were verified verse-by-verse against the sources recorded in SOURCES.md, asserting each fetched reference matched the one requested. See the 'Verification status' section of SOURCES.md for what was found and the remaining caveats."
+    "note": "All 17 languages were verified verse-by-verse against the sources recorded in SOURCES.md, asserting each fetched reference matched the one requested. See the 'Verification status' section of SOURCES.md for what was found and the remaining caveats. English additionally carries ERV and BSB alternates under en.versions; both were extracted from ebible.org and cross-checked verse-by-verse against an independent source (BibleGateway for ERV, bereanbible.com for BSB).",
+    "englishVersions": {
+      "default": "GNT (NIV for K and U) — the wording the letter headings were written from",
+      "ERV": "Holy Bible: Easy-to-Read Version, Bible League International",
+      "BSB": "Berean Standard Bible, public domain"
+    }
   },
   "A": {
     "reference": "Matthew 7:7",
     "key": "Ask and you will receive",
     "en": {
       "version": "GNT",
-      "text": "Ask, and you will receive; seek, and you will find; knock, and the door will be opened to you."
+      "text": "Ask, and you will receive; seek, and you will find; knock, and the door will be opened to you.",
+      "versions": {
+        "ERV": "Continue to ask, and God will give to you. Continue to search, and you will find. Continue to knock, and the door will open for you.",
+        "BSB": "Ask, and it will be given to you; seek, and you will find; knock, and the door will be opened to you."
+      }
     },
     "am": {
       "version": "1962",
@@ -98,7 +107,11 @@
     "key": "Be kind and tenderhearted to one another",
     "en": {
       "version": "GNT",
-      "text": "Instead, be kind and tender-hearted to one another, and forgive one another, as God has forgiven you through Christ."
+      "text": "Instead, be kind and tender-hearted to one another, and forgive one another, as God has forgiven you through Christ.",
+      "versions": {
+        "ERV": "Be kind and loving to each other. Forgive each other the same as God forgave you through Christ.",
+        "BSB": "Be kind and tenderhearted to one another, forgiving each other just as in Christ God forgave you."
+      }
     },
     "am": {
       "version": "1962",
@@ -170,7 +183,11 @@
     "key": "Come to me … and I will give you rest",
     "en": {
       "version": "GNT",
-      "text": "Come to me, all of you who are tired from carrying heavy loads, and I will give you rest."
+      "text": "Come to me, all of you who are tired from carrying heavy loads, and I will give you rest.",
+      "versions": {
+        "ERV": "Come to me all of you who are tired from the heavy burden you have been forced to carry. I will give you rest.",
+        "BSB": "Come to Me, all you who are weary and burdened, and I will give you rest."
+      }
     },
     "am": {
       "version": "1962",
@@ -242,7 +259,11 @@
     "key": "Do for others what you want them to do for you",
     "en": {
       "version": "GNT",
-      "text": "Do for others what you want them to do for you: this is the meaning of the Law of Moses and of the teachings of the prophets."
+      "text": "Do for others what you want them to do for you: this is the meaning of the Law of Moses and of the teachings of the prophets.",
+      "versions": {
+        "ERV": "Do for others what you would want them to do for you. This is the meaning of the Law of Moses and the teaching of the prophets.",
+        "BSB": "In everything, then, do to others as you would have them do to you. For this is the essence of the Law and the Prophets."
+      }
     },
     "am": {
       "version": "1962",
@@ -314,7 +335,11 @@
     "key": "Every good gift … comes from heaven",
     "en": {
       "version": "GNT",
-      "text": "Every good gift and every perfect present comes from heaven; it comes down from God, the Creator of the heavenly lights, who does not change or cause darkness by turning."
+      "text": "Every good gift and every perfect present comes from heaven; it comes down from God, the Creator of the heavenly lights, who does not change or cause darkness by turning.",
+      "versions": {
+        "ERV": "Everything good comes from God. Every perfect gift is from him. These good gifts come down from the Father who made all the lights in the sky. But God never changes like the shadows from those lights. He is always the same.",
+        "BSB": "Every good and perfect gift is from above, coming down from the Father of the heavenly lights, with whom there is no change or shifting shadow."
+      }
     },
     "am": {
       "version": "1962",
@@ -386,7 +411,11 @@
     "key": "Forgive us our sins, for we forgive everyone who does us wrong",
     "en": {
       "version": "GNT",
-      "text": "Forgive us our sins, for we forgive everyone who does us wrong. And do not bring us to hard testing."
+      "text": "Forgive us our sins, for we forgive everyone who does us wrong. And do not bring us to hard testing.",
+      "versions": {
+        "ERV": "Forgive our sins, just as we forgive everyone who has done wrong to us. And don’t let us be tempted.",
+        "BSB": "And forgive us our sins, for we also forgive everyone who sins against us. And lead us not into temptation."
+      }
     },
     "am": {
       "version": "1962",
@@ -458,7 +487,11 @@
     "key": "God is love",
     "en": {
       "version": "GNT",
-      "text": "Whoever does not love does not know God, for God is love."
+      "text": "Whoever does not love does not know God, for God is love.",
+      "versions": {
+        "ERV": "Anyone who does not love does not know God, because God is love.",
+        "BSB": "Whoever does not love does not know God, because God is love."
+      }
     },
     "am": {
       "version": "1962",
@@ -530,7 +563,11 @@
     "key": "Happy is the one who reads this book",
     "en": {
       "version": "GNT",
-      "text": "Happy is the one who reads this book, and happy are those who listen to the words of this prophetic message and obey what is written in this book! For the time is near when all these things will happen."
+      "text": "Happy is the one who reads this book, and happy are those who listen to the words of this prophetic message and obey what is written in this book! For the time is near when all these things will happen.",
+      "versions": {
+        "ERV": "Great blessings belong to the person who reads the words of this message from God and to those who hear this message and do what is written in it. There is not much time left.",
+        "BSB": "Blessed is the one who reads aloud the words of this prophecy, and blessed are those who hear and obey what is written in it, because the time is near."
+      }
     },
     "am": {
       "version": "1962",
@@ -602,7 +639,11 @@
     "key": "If we confess our sins to God … he will forgive us our sins",
     "en": {
       "version": "GNT",
-      "text": "But if we confess our sins to God, he will keep his promise and do what is right: he will forgive us our sins and purify us from all our wrongdoing."
+      "text": "But if we confess our sins to God, he will keep his promise and do what is right: he will forgive us our sins and purify us from all our wrongdoing.",
+      "versions": {
+        "ERV": "But if we confess our sins, God will forgive us. We can trust God to do this. He always does what is right. He will make us clean from all the wrong things we have done.",
+        "BSB": "If we confess our sins, He is faithful and just to forgive us our sins and to cleanse us from all unrighteousness."
+      }
     },
     "am": {
       "version": "1962",
@@ -674,7 +715,11 @@
     "key": "Jesus Christ is the same yesterday, today, and forever",
     "en": {
       "version": "GNT",
-      "text": "Jesus Christ is the same yesterday, today, and forever."
+      "text": "Jesus Christ is the same yesterday, today, and forever.",
+      "versions": {
+        "ERV": "Jesus Christ is the same yesterday, today, and forever.",
+        "BSB": "Jesus Christ is the same yesterday and today and forever."
+      }
     },
     "am": {
       "version": "1962",
@@ -746,7 +791,11 @@
     "key": "Keeping God’s commands is what counts",
     "en": {
       "version": "NIV",
-      "text": "Circumcision is nothing and uncircumcision is nothing. Keeping God’s commands is what counts."
+      "text": "Circumcision is nothing and uncircumcision is nothing. Keeping God’s commands is what counts.",
+      "versions": {
+        "ERV": "It is not important if anyone is circumcised or not. What is important is obeying God’s commands.",
+        "BSB": "Circumcision is nothing and uncircumcision is nothing. Keeping God’s commandments is what counts."
+      }
     },
     "am": {
       "version": "1962",
@@ -818,7 +867,11 @@
     "key": "Love your neighbor as you love yourself",
     "en": {
       "version": "GNT",
-      "text": "The second most important commandment is this: ‘Love your neighbor as you love yourself.’ There is no other commandment more important than these two."
+      "text": "The second most important commandment is this: ‘Love your neighbor as you love yourself.’ There is no other commandment more important than these two.",
+      "versions": {
+        "ERV": "The second most important command is this: ‘Love your neighbor the same as you love yourself.’ These two commands are the most important.",
+        "BSB": "The second is this: ‘Love your neighbor as yourself.’ No other commandment is greater than these."
+      }
     },
     "am": {
       "version": "1962",
@@ -890,7 +943,11 @@
     "key": "My help will come from the Lord",
     "en": {
       "version": "GNT",
-      "text": "My help will come from the LORD, who made heaven and earth."
+      "text": "My help will come from the LORD, who made heaven and earth.",
+      "versions": {
+        "ERV": "My help will come from the LORD, the Creator of heaven and earth.",
+        "BSB": "My help comes from the LORD, the Maker of heaven and earth."
+      }
     },
     "am": {
       "version": "1962",
@@ -962,7 +1019,11 @@
     "key": "Not my will … but your will be done",
     "en": {
       "version": "GNT",
-      "text": "“Father,” he said, “if you will, take this cup of suffering away from me. Not my will, however, but your will be done.”"
+      "text": "“Father,” he said, “if you will, take this cup of suffering away from me. Not my will, however, but your will be done.”",
+      "versions": {
+        "ERV": "“Father, if you are willing, please don’t make me drink from this cup. But do what you want, not what I want.”",
+        "BSB": "“Father, if You are willing, take this cup from Me. Yet not My will, but Yours be done.”"
+      }
     },
     "am": {
       "version": "1962",
@@ -1034,7 +1095,11 @@
     "key": "Obey your leaders and follow their orders",
     "en": {
       "version": "GNT",
-      "text": "Obey your leaders and follow their orders. They watch over your souls without resting, since they must give to God an account of their service. If you obey them, they will do their work gladly; if not, they will do it with sadness, and that would be of no help to you."
+      "text": "Obey your leaders and follow their orders. They watch over your souls without resting, since they must give to God an account of their service. If you obey them, they will do their work gladly; if not, they will do it with sadness, and that would be of no help to you.",
+      "versions": {
+        "ERV": "Obey your leaders. Be willing to do what they say. They are responsible for your spiritual welfare, so they are always watching to protect you. Obey them so that their work will give them joy, not grief. It won’t help you to make it hard for them.",
+        "BSB": "Obey your leaders and submit to them, for they watch over your souls as those who must give an account. To this end, allow them to lead with joy and not with grief, for that would be of no advantage to you."
+      }
     },
     "am": {
       "version": "1962",
@@ -1106,7 +1171,11 @@
     "key": "Pray for one another",
     "en": {
       "version": "GNT",
-      "text": "So then, confess your sins to one another and pray for one another, so that you will be healed. The prayer of a good person has a powerful effect."
+      "text": "So then, confess your sins to one another and pray for one another, so that you will be healed. The prayer of a good person has a powerful effect.",
+      "versions": {
+        "ERV": "So always tell each other the wrong things you have done. Then pray for each other. Do this so that God can heal you. Anyone who lives the way God wants can pray, and great things will happen.",
+        "BSB": "Therefore confess your sins to each other and pray for each other so that you may be healed. The prayer of a righteous man has great power to prevail."
+      }
     },
     "am": {
       "version": "1962",
@@ -1178,7 +1247,11 @@
     "key": "Quietly trust in me",
     "en": {
       "version": "GNT",
-      "text": "The Sovereign LORD, the Holy One of Israel, says to the people, “Come back and quietly trust in me. Then you will be strong and secure.” But you refuse to do it."
+      "text": "The Sovereign LORD, the Holy One of Israel, says to the people, “Come back and quietly trust in me. Then you will be strong and secure.” But you refuse to do it.",
+      "versions": {
+        "ERV": "The Lord GOD, the Holy One of Israel, says, “If you come back to me you will be saved. Only by remaining calm and trusting in me can you be strong.” But you don’t want to do that.",
+        "BSB": "For the Lord GOD, the Holy One of Israel, has said: “By repentance and rest you would be saved; your strength would lie in quiet confidence— but you were not willing.”"
+      }
     },
     "am": {
       "version": "1962",
@@ -1250,7 +1323,11 @@
     "key": "Remember your Creator while you are still young",
     "en": {
       "version": "GNT",
-      "text": "So remember your Creator while you are still young, before those dismal days and years come when you will say, “I don't enjoy life.”"
+      "text": "So remember your Creator while you are still young, before those dismal days and years come when you will say, “I don't enjoy life.”",
+      "versions": {
+        "ERV": "Remember your Creator while you are young, before the bad times come—before the years come when you say, “I have wasted my life.”",
+        "BSB": "Remember your Creator in the days of your youth, before the days of adversity come and the years approach of which you will say, “I find no pleasure in them,”"
+      }
     },
     "am": {
       "version": "1962",
@@ -1323,7 +1400,11 @@
     "key": "Speak, Lord, your servant is listening",
     "en": {
       "version": "GNT",
-      "text": "so he said to him, “Go back to bed; and if he calls you again, say, ‘Speak, LORD, your servant is listening.’” So Samuel went back to bed."
+      "text": "so he said to him, “Go back to bed; and if he calls you again, say, ‘Speak, LORD, your servant is listening.’” So Samuel went back to bed.",
+      "versions": {
+        "ERV": "Eli told Samuel, “Go to bed. If he calls you again, say, ‘Speak, LORD. I am your servant, and I am listening.’” So Samuel went back to bed.",
+        "BSB": "“Go and lie down,” he said to Samuel, “and if He calls you, say, ‘Speak, LORD, for Your servant is listening.’” So Samuel went and lay down in his place."
+      }
     },
     "am": {
       "version": "1962",
@@ -1395,7 +1476,11 @@
     "key": "Teach children how they should live, and they will remember it all their life",
     "en": {
       "version": "GNT",
-      "text": "Teach children how they should live, and they will remember it all their life."
+      "text": "Teach children how they should live, and they will remember it all their life.",
+      "versions": {
+        "ERV": "Teach children in a way that fits their needs, and even when they are old, they will not leave the right path.",
+        "BSB": "Train up a child in the way he should go, and when he is old he will not depart from it."
+      }
     },
     "am": {
       "version": "1962",
@@ -1467,7 +1552,11 @@
     "key": "Unless he is born again no one can see the kingdom of God",
     "en": {
       "version": "NIV",
-      "text": "Jesus replied, “Very truly I tell you, no one can see the kingdom of God unless they are born again.”"
+      "text": "Jesus replied, “Very truly I tell you, no one can see the kingdom of God unless they are born again.”",
+      "versions": {
+        "ERV": "Jesus answered, “I assure you, everyone must be born again. Anyone who is not born again cannot be in God’s kingdom.”",
+        "BSB": "Jesus replied, “Truly, truly, I tell you, no one can see the kingdom of God unless he is born again.”"
+      }
     },
     "am": {
       "version": "1962",
@@ -1539,7 +1628,11 @@
     "key": "Worship no god but me",
     "en": {
       "version": "GNT",
-      "text": "Worship no god but me."
+      "text": "Worship no god but me.",
+      "versions": {
+        "ERV": "You must not worship any other gods except me.",
+        "BSB": "You shall have no other gods before Me."
+      }
     },
     "am": {
       "version": "1962",
@@ -1611,7 +1704,11 @@
     "key": "Examine me and test me, Lord",
     "en": {
       "version": "GNT",
-      "text": "Examine me and test me, LORD; judge my desires and thoughts."
+      "text": "Examine me and test me, LORD; judge my desires and thoughts.",
+      "versions": {
+        "ERV": "Look closely at me, LORD, and test me. Judge my deepest thoughts and emotions.",
+        "BSB": "Test me, O LORD, and try me; examine my heart and mind."
+      }
     },
     "am": {
       "version": "1962",
@@ -1683,7 +1780,11 @@
     "key": "You are like salt for the whole human race",
     "en": {
       "version": "GNT",
-      "text": "You are like salt for the whole human race. But if salt loses its saltiness, there is no way to make it salty again. It has become worthless, so it is thrown out and people trample on it."
+      "text": "You are like salt for the whole human race. But if salt loses its saltiness, there is no way to make it salty again. It has become worthless, so it is thrown out and people trample on it.",
+      "versions": {
+        "ERV": "You are the salt of the earth. But if the salt loses its taste, it cannot be made salty again. Salt is useless if it loses its salty taste. It will be thrown out where people will just walk on it.",
+        "BSB": "You are the salt of the earth. But if the salt loses its savor, how can it be made salty again? It is no longer good for anything, except to be thrown out and trampled by men."
+      }
     },
     "am": {
       "version": "1962",
@@ -1755,7 +1856,11 @@
     "key": "Zacchaeus … welcomed him with great joy",
     "en": {
       "version": "GNT",
-      "text": "Zacchaeus hurried down and welcomed him with great joy."
+      "text": "Zacchaeus hurried down and welcomed him with great joy.",
+      "versions": {
+        "ERV": "Zacchaeus hurried and came down. He was happy to have Jesus in his house.",
+        "BSB": "So Zacchaeus hurried down and welcomed Him joyfully."
+      }
     },
     "am": {
       "version": "1962",

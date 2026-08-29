@@ -111,24 +111,28 @@
     text-align: center;
   }
 
-  /* ── Steps, two across ────────────────────────── */
+  /* ── Steps, three across ──────────────────────── */
+  /* Five steps in three columns keeps the block to two rows, but narrower cells
+     wrap more: three columns is only shorter than two once the copy is cut to
+     suit the measure and the numeral column is kept small. Both matter — see the
+     user-guide notes in CLAUDE.md before rewording a step. */
   .steps {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.05rem 2.2rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.05rem 1.6rem;
   }
 
   .step {
     display: grid;
-    grid-template-columns: 2rem 1fr;
-    column-gap: 0.65rem;
+    grid-template-columns: 1.4rem 1fr;
+    column-gap: 0.5rem;
     align-items: start;
   }
 
   .step-num {
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-weight: 700;
-    line-height: 0.82;
+    line-height: 1.0;
     color: var(--walnut);
     text-align: right;
     font-variant-numeric: lining-nums tabular-nums;
@@ -253,10 +257,10 @@
     * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     @page { size: letter portrait; margin: 1.05cm 1.3cm; }
     body { background: #fff; font-size: 11pt; }
-    .sheet { max-width: none; padding: 0; gap: 0.6rem; }
+    .sheet { max-width: none; padding: 0; gap: 0.45rem; }
     .masthead { padding-bottom: 0.6rem; }
-    .band, .lower { padding-top: 0.6rem; }
-    .footer { padding-top: 0.55rem; }
+    .band, .lower { padding-top: 0.5rem; }
+    .footer { padding-top: 0.45rem; }
     .steps { gap: 0.8rem 2.2rem; }
     .step, .verse-index li, .contact, .qr-card, .masthead { break-inside: avoid; }
   }
@@ -284,7 +288,7 @@
       <div class="step-num">1</div>
       <div>
         <h2>Open the page</h2>
-        <p>Scan the code with a phone camera, or type the address into any browser. Works on a phone, tablet, or laptop &mdash; nothing to install, no sign-in.</p>
+        <p>Scan the code, or type the address into any browser. Nothing to install, no sign-in.</p>
       </div>
     </section>
 
@@ -292,23 +296,31 @@
       <div class="step-num">2</div>
       <div>
         <h2>Pick a letter</h2>
-        <p>Twenty-five letters, A through Z &mdash; there is no V, matching the original Scripture Alphabet. Every letter and its verse is listed below.</p>
+        <p>Twenty-five letters, A to Z &mdash; there is no V. All are listed below.</p>
       </div>
     </section>
 
     <section class="step">
       <div class="step-num">3</div>
       <div>
-        <h2>Choose the languages</h2>
-        <p>All 17 start ticked. Untick the ones your class does not need &mdash; the preview updates as you go, and a shorter list prints in larger type.</p>
+        <h2>English version</h2>
+        <p><b>Good News</b> (default), <b>Easy-to-Read</b> for newer readers, or <b>Berean Standard</b>. Headings never change.</p>
       </div>
     </section>
 
     <section class="step">
       <div class="step-num">4</div>
       <div>
+        <h2>Choose the languages</h2>
+        <p>All 17 start ticked. Untick what your class does not need &mdash; a shorter list prints in larger type.</p>
+      </div>
+    </section>
+
+    <section class="step">
+      <div class="step-num">5</div>
+      <div>
         <h2>Print or save a PDF</h2>
-        <p>Press <span class="ui">Print / Save as PDF</span>. Choose a printer for paper copies, or set the destination to <b>Save as PDF</b> to email the sheet ahead of class. Only the handout prints.</p>
+        <p>Press <span class="ui">Print / Save as PDF</span>, or save a PDF to email ahead. Only the handout prints.</p>
       </div>
     </section>
   </div>
@@ -357,7 +369,7 @@
   </div>
 
   <footer class="footer">
-    <p><b>About the translations.</b> Every verse is copied word for word from a published Bible version &mdash; none of it is machine translated. Where a publisher requires a credit it prints automatically at the foot of the sheet; please leave it there.</p>
+    <p><b>About the translations.</b> Every verse is copied word for word from a published Bible version, never machine translated. Publisher credits print automatically &mdash; please leave them on the sheet.</p>
   </footer>
 
 </div>
