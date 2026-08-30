@@ -53,7 +53,8 @@ D is Matthew 7:12 (not 11:28), M is Psalm 121:2 (not 12:12), Y is Matthew 5:13 (
 
 ## Scripture Alphabet
 
-Each letter A–Z (except V) maps to a Bible verse whose English key phrase starts with that letter. The mapping is defined in the Scriptures section of `CLAUDE.md`. Example:
+Each letter A–Z maps to a Bible verse whose English key phrase starts with that letter, and
+fifteen letters offer a second verse the volunteer can pick instead. The mapping is defined in the Scriptures section of `CLAUDE.md`. Example:
 
 | Letter | Reference     | Key Phrase               |
 |--------|---------------|--------------------------|
@@ -61,7 +62,9 @@ Each letter A–Z (except V) maps to a Bible verse whose English key phrase star
 | B      | Ephesians 4:32| Be kind and tenderhearted|
 | ...    | ...           | ...                      |
 
-V is intentionally absent from the original Scripture Alphabet source material.
+V was absent from the original Scripture Alphabet source material and was added later by the
+ESOL team (Proverbs 4:8), so the alphabet is now complete. The alternates are listed in the
+Alternate verses section of `CLAUDE.md`.
 
 ## translations.json
 
@@ -80,6 +83,7 @@ V is intentionally absent from the original Scripture Alphabet source material.
       "version": "GNT",
       "text": "Ask, and you will receive; ...",
       "versions": {
+        "CEV": "Ask, and you will receive; ...",
         "ERV": "Continue to ask, and God will give to you; ...",
         "BSB": "Ask, and it will be given to you; ..."
       }
@@ -92,6 +96,14 @@ V is intentionally absent from the original Scripture Alphabet source material.
     "key": "Remember your Creator while you are still young",
     "it": { "version": "NR", "ref": "Ecclesiaste 12:3", "text": "Ma ricòrdati ..." },
     ...
+    "alternates": [
+      {
+        "reference": "Psalm 37:31",
+        "key": "Remember God's teachings",
+        "en": { "version": "GNT", "text": "...", "versions": { "CEV": "...", "ERV": "...", "BSB": "..." } },
+        ...
+      }
+    ]
   }
 }
 ```
@@ -108,10 +120,19 @@ Each scripture entry contains:
   - `ref` *(optional)* — that language's own reference, where its versification
     differs. Italian NR places Ecclesiastes 12:1 at 12:3. Rendered under the version.
   - `versions` *(English only)* — alternate wordings keyed by abbreviation, currently
-    `ERV` and `BSB`. `version`/`text` stay the default, so anything reading the file
+    `CEV`, `ERV` and `BSB`. `version`/`text` stay the default, so anything reading the file
     without knowing about alternates still gets the right verse.
+- `alternates` *(optional)* — an array of **whole second verses** for that letter, each
+  shaped exactly like a letter entry: its own `reference`, its own `key`, and its own row
+  per language. The letter's own verse stays at the top level and is what the app shows
+  first, so the same rule holds — a reader that ignores `alternates` still gets the right
+  verse.
 
-`_meta.englishVersions` names the three choices the picker offers.
+**Two pickers, two different things.** The *English Version* picker swaps the wording of one
+row and leaves the heading alone. The *Verse* picker swaps the whole verse — reference, key
+and all 17 rows — and appears only for letters that have an alternate.
+
+`_meta.englishVersions` names the four choices the picker offers.
 
 **Only English is switchable.** The handout heading — letter, `reference` and `key` — is
 deliberately unaffected by the choice: `key` comes from the source PDF, which was written
@@ -212,7 +233,7 @@ status section of `SOURCES.md`.
 
 1. Add a row to the Languages table in `CLAUDE.md` with the language code, display name, Bible version, abbreviation, and direction.
 2. Probe a source and record the working URL pattern, parsing rules, and access terms in `SOURCES.md`. Check `robots.txt` and honour any crawl delay.
-3. For each of the 25 scriptures, fetch the verse and **assert the returned reference matches the one requested** before storing it.
+3. For each of the 26 letters **and each of the 15 alternates** (41 verses), fetch the verse and **assert the returned reference matches the one requested** before storing it.
 4. Add the language to the `LANGUAGES` array in `index.html` (with `dir: "rtl"` if needed).
 5. Update the verification status table in `SOURCES.md`.
 
@@ -222,12 +243,15 @@ status section of `SOURCES.md`.
    A version with no stated verse allowance (the GNT and CEV both carry the restrictive
    American Bible Society notice) is a weaker position than an open one, whatever its
    reading level.
-2. Fetch all 25 verses and **measure two things before committing to it**: words per
-   sentence, and how many of the 25 verses still contain the letter's own word. The
-   second is the one that matters here and the one that eliminates otherwise-appealing
-   candidates — the Bible in Basic English has the simplest vocabulary of any English
-   Bible and fails on 12 of 25.
+2. Fetch all 41 entries (26 letters + 15 alternates) and **measure two things before
+   committing to it**: words per sentence, and how many still contain the letter's own
+   word. The second is the one that matters here and the one that eliminates
+   otherwise-appealing candidates — the Bible in Basic English has the simplest
+   vocabulary of any English Bible and fails on 12 of 25.
 3. Cross-check every verse against a second independent source, as for any language.
+   **CEV is the standing exception**: only BibleGateway carries it (eBible returns 404),
+   so it rests on the per-fetch reference assertion alone. Record any such exception in
+   `SOURCES.md` rather than letting it pass silently.
 4. Add the text to `en.versions` in `translations.json`, keyed by abbreviation.
 5. Add an entry to `EN_VERSIONS` and `EN_VERSION_HINTS` in `index.html`, and to
    `_meta.englishVersions`.

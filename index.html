@@ -8,6 +8,8 @@
     /* ── Base ─────────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    [hidden] { display: none !important; }
+
     body {
       font-family: Georgia, 'Times New Roman', serif;
       background: #f5f4f0;
@@ -391,6 +393,9 @@
   <div class="section-label">Select a Scripture</div>
   <div class="scripture-grid" id="scripture-grid"></div>
 
+  <div class="section-label" id="verse-label" hidden>Verse</div>
+  <div class="version-grid" id="verse-grid" hidden></div>
+
   <div class="section-label">English Version</div>
   <div class="version-grid" id="version-grid"></div>
   <div class="version-hint" id="version-hint"></div>
@@ -445,13 +450,15 @@ const LANGUAGES = [
 // translations.json under en.versions. The handout heading never changes with this
 // choice — only the English verse text below it.
 const EN_VERSIONS = [
-  { code: "default", name: "Good News",       abbr: "GNT", note: "matches the headings" },
-  { code: "ERV",     name: "Easy-to-Read",    abbr: "ERV", note: "simplest wording" },
-  { code: "BSB",     name: "Berean Standard", abbr: "BSB", note: "public domain" },
+  { code: "default", name: "Good News",           abbr: "GNT", note: "matches the headings" },
+  { code: "CEV",     name: "Contemporary English", abbr: "CEV", note: "plain spoken English" },
+  { code: "ERV",     name: "Easy-to-Read",        abbr: "ERV", note: "simplest wording" },
+  { code: "BSB",     name: "Berean Standard",     abbr: "BSB", note: "public domain" },
 ];
 
 const EN_VERSION_HINTS = {
   "default": "Good News Translation — letters K and U come from the NIV.",
+  "CEV":     "Contemporary English Version — the wording the alternate verses' headings use.",
   "ERV":     "Easy-to-Read Version — written for new and second-language readers.",
   "BSB":     "Berean Standard Bible — public domain, no permission needed.",
 };
@@ -466,10 +473,12 @@ const CREDITS = {
   "CCB":  "圣经当代译本 © Biblica, Inc. CC BY-SA 4.0.",
   "IRV":  "Indian Revised Version © 2017–2019 Bridge Connectivity Solutions Pvt. Ltd. CC BY-SA 4.0.",
   "ERV":  "Holy Bible: Easy-to-Read Version™ © 2006 Bible League International. Used by permission.",
+  "CEV":  "Contemporary English Version © 1995 American Bible Society.",
 };
 
 let DATA = {};
 let selectedLetter = null;
+let selectedVerse = 0;
 let enVersion = "default";
 let checkedLangs = new Set(LANGUAGES.map(l => l.code));
 
@@ -487,7 +496,7 @@ function buildUI() {
     const btn = document.createElement("button");
     btn.className = "scripture-btn";
     btn.textContent = letter;
-    btn.title = DATA[letter].reference;
+    btn.title = versesFor(letter).map(v => v.reference).join(" · ");
     btn.onclick = () => selectLetter(letter);
     grid.appendChild(btn);
   });
@@ -546,6 +555,44 @@ function buildUI() {
 
 // The picker still shows when English is unchecked, so say plainly that it is idle
 // rather than letting a volunteer wonder why nothing on the handout moved.
+function versesFor(letter) {
+  const entry = DATA[letter];
+  return entry ? [entry, ...(entry.alternates || [])] : [];
+}
+
+function verseLabel(v) {
+  const key = v.key || "";
+  return key.length > 52 ? key.slice(0, 51).trimEnd() + "…" : key;
+}
+
+function renderVersePicker() {
+  const grid = document.getElementById("verse-grid");
+  const label = document.getElementById("verse-label");
+  const options = selectedLetter ? versesFor(selectedLetter) : [];
+  const many = options.length > 1;
+  grid.hidden = !many;
+  label.hidden = !many;
+  grid.innerHTML = "";
+  if (!many) return;
+  options.forEach((v, i) => {
+    const lbl = document.createElement("label");
+    lbl.className = "version-label";
+    const rb = document.createElement("input");
+    rb.type = "radio";
+    rb.name = "verse-choice";
+    rb.value = String(i);
+    rb.checked = i === selectedVerse;
+    rb.onchange = () => { selectedVerse = i; render(); };
+    lbl.appendChild(rb);
+    lbl.appendChild(document.createTextNode(verseLabel(v)));
+    const note = document.createElement("span");
+    note.className = "version-note";
+    note.textContent = v.reference;
+    lbl.appendChild(note);
+    grid.appendChild(lbl);
+  });
+}
+
 function renderVersionHint() {
   const on = checkedLangs.has("en");
   document.getElementById("version-hint").textContent =
@@ -556,9 +603,11 @@ function renderVersionHint() {
 
 function selectLetter(letter) {
   selectedLetter = letter;
+  selectedVerse = 0;
   document.querySelectorAll(".scripture-btn").forEach(btn => {
     btn.classList.toggle("active", btn.textContent === letter);
   });
+  renderVersePicker();
   render();
 }
 
@@ -574,7 +623,7 @@ function render() {
     return;
   }
 
-  const entry = DATA[selectedLetter];
+  const entry = versesFor(selectedLetter)[selectedVerse] || DATA[selectedLetter];
   const langs = LANGUAGES.filter(l => checkedLangs.has(l.code));
 
   if (langs.length === 0) {

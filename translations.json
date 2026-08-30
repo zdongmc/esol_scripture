@@ -23,8 +23,10 @@
     "englishVersions": {
       "default": "GNT (NIV for K and U) — the wording the letter headings were written from",
       "ERV": "Holy Bible: Easy-to-Read Version, Bible League International",
-      "BSB": "Berean Standard Bible, public domain"
-    }
+      "BSB": "Berean Standard Bible, public domain",
+      "CEV": "Contemporary English Version (c) 1995 American Bible Society"
+    },
+    "alternates": "Fifteen letters carry an `alternates` array: whole second verses, each with its own reference, key and one row per language. The letter's own verse stays at the top level, so a reader that ignores `alternates` still gets the right verse. V was added as a full letter (Proverbs 4:8); the alphabet is now A-Z. The alternates' key texts are the ESOL team's CEV phrasing - no CEV verse text is stored here. Sourced and cross-checked 2026-08-29; see SOURCES.md."
   },
   "A": {
     "reference": "Matthew 7:7",
@@ -33,6 +35,7 @@
       "version": "GNT",
       "text": "Ask, and you will receive; seek, and you will find; knock, and the door will be opened to you.",
       "versions": {
+        "CEV": "Ask, and you will receive. Search, and you will find. Knock, and the door will be opened for you.",
         "ERV": "Continue to ask, and God will give to you. Continue to search, and you will find. Continue to knock, and the door will open for you.",
         "BSB": "Ask, and it will be given to you; seek, and you will find; knock, and the door will be opened to you."
       }
@@ -109,6 +112,7 @@
       "version": "GNT",
       "text": "Instead, be kind and tender-hearted to one another, and forgive one another, as God has forgiven you through Christ.",
       "versions": {
+        "CEV": "Instead, be kind and merciful, and forgive others, just as God forgave you because of Christ.",
         "ERV": "Be kind and loving to each other. Forgive each other the same as God forgave you through Christ.",
         "BSB": "Be kind and tenderhearted to one another, forgiving each other just as in Christ God forgave you."
       }
@@ -185,6 +189,7 @@
       "version": "GNT",
       "text": "Come to me, all of you who are tired from carrying heavy loads, and I will give you rest.",
       "versions": {
+        "CEV": "If you are tired from carrying heavy burdens, come to me and I will give you rest.",
         "ERV": "Come to me all of you who are tired from the heavy burden you have been forced to carry. I will give you rest.",
         "BSB": "Come to Me, all you who are weary and burdened, and I will give you rest."
       }
@@ -261,6 +266,7 @@
       "version": "GNT",
       "text": "Do for others what you want them to do for you: this is the meaning of the Law of Moses and of the teachings of the prophets.",
       "versions": {
+        "CEV": "Treat others as you want them to treat you. This is what the Law and the Prophets are all about.",
         "ERV": "Do for others what you would want them to do for you. This is the meaning of the Law of Moses and the teaching of the prophets.",
         "BSB": "In everything, then, do to others as you would have them do to you. For this is the essence of the Law and the Prophets."
       }
@@ -328,7 +334,86 @@
     "vi": {
       "version": "VIE",
       "text": "Aáy vậy, hễ điều chi mà các ngươi muốn người ta làm cho mình, thì cũng hãy làm điều đó cho họ, vì ấy là luật pháp và lời tiên tri."
-    }
+    },
+    "alternates": [
+      {
+        "reference": "Matthew 7:1",
+        "key": "Don't condemn others, and God won't condemn you",
+        "en": {
+          "version": "GNT",
+          "text": "Do not judge others, so that God will not judge you,",
+          "versions": {
+            "CEV": "Don't condemn others, and God won't condemn you.",
+            "ERV": "Don’t judge others, and God will not judge you.",
+            "BSB": "Do not judge, or you will be judged."
+          }
+        },
+        "am": {
+          "version": "1962",
+          "text": "እንዳይፈረድባችሁ አትፍረዱ፤"
+        },
+        "ar": {
+          "version": "AVD",
+          "text": "لَا تَدِينُوا لِكَيْ لَا تُدَانُوا،"
+        },
+        "be": {
+          "version": "BEL",
+          "text": "Не судзіце, каб не былі суджаныя."
+        },
+        "zh-cn": {
+          "version": "CCB",
+          "text": "不要论断人，免得你们被论断。"
+        },
+        "zh-tw": {
+          "version": "CUV",
+          "text": "你們不要論斷人，免得你們被論斷。"
+        },
+        "fa": {
+          "version": "OPV",
+          "text": "حکم مکنید تا بر شما حکم نشود."
+        },
+        "fr": {
+          "version": "LSG",
+          "text": "Ne jugez point, afin que vous ne soyez point jugés."
+        },
+        "hi": {
+          "version": "IRV",
+          "text": "दोष मत लगाओ, कि तुम पर भी दोष न लगाया जाए।"
+        },
+        "it": {
+          "version": "NR",
+          "text": "Non giudicate, affinché non siate giudicati;"
+        },
+        "ko": {
+          "version": "KOR",
+          "text": "비판을 받지 아니하려거든 비판하지 말라"
+        },
+        "pt": {
+          "version": "NVI",
+          "text": "Não julguem, para que vocês não sejam julgados."
+        },
+        "es": {
+          "version": "NVI",
+          "text": "No juzguen para que nadie los juzgue a ustedes."
+        },
+        "ta": {
+          "version": "IRV",
+          "text": "நீங்கள் குற்றவாளிகளென்று தீர்க்கப்படாதபடிக்கு மற்றவர்களைக் குற்றவாளிகளென்று தீர்க்காமலிருங்கள்."
+        },
+        "te": {
+          "version": "IRV",
+          "text": "ఇతరులకు తీర్పు తీర్చవద్దు. అప్పుడు మిమ్మల్నీ తీర్పు తీర్చరు."
+        },
+        "uk": {
+          "version": "UKR",
+          "text": "Не судіть, щоб і вас не судили;"
+        },
+        "vi": {
+          "version": "VIE",
+          "text": "Các ngươi đừng đoán xét ai, để mình khỏi bị đoán xét."
+        }
+      }
+    ]
   },
   "E": {
     "reference": "James 1:17",
@@ -337,6 +422,7 @@
       "version": "GNT",
       "text": "Every good gift and every perfect present comes from heaven; it comes down from God, the Creator of the heavenly lights, who does not change or cause darkness by turning.",
       "versions": {
+        "CEV": "Every good and perfect gift comes down from the Father who created all the lights in the heavens. He is always the same and never makes dark shadows by changing.",
         "ERV": "Everything good comes from God. Every perfect gift is from him. These good gifts come down from the Father who made all the lights in the sky. But God never changes like the shadows from those lights. He is always the same.",
         "BSB": "Every good and perfect gift is from above, coming down from the Father of the heavenly lights, with whom there is no change or shifting shadow."
       }
@@ -413,6 +499,7 @@
       "version": "GNT",
       "text": "Forgive us our sins, for we forgive everyone who does us wrong. And do not bring us to hard testing.",
       "versions": {
+        "CEV": "Forgive our sins, as we forgive everyone who has done wrong to us. And keep us from being tempted.",
         "ERV": "Forgive our sins, just as we forgive everyone who has done wrong to us. And don’t let us be tempted.",
         "BSB": "And forgive us our sins, for we also forgive everyone who sins against us. And lead us not into temptation."
       }
@@ -489,6 +576,7 @@
       "version": "GNT",
       "text": "Whoever does not love does not know God, for God is love.",
       "versions": {
+        "CEV": "God is love, and anyone who doesn't love others has never known him.",
         "ERV": "Anyone who does not love does not know God, because God is love.",
         "BSB": "Whoever does not love does not know God, because God is love."
       }
@@ -565,6 +653,7 @@
       "version": "GNT",
       "text": "Happy is the one who reads this book, and happy are those who listen to the words of this prophetic message and obey what is written in this book! For the time is near when all these things will happen.",
       "versions": {
+        "CEV": "God will bless everyone who reads this prophecy to others, and he will bless everyone who hears and obeys it. The time is almost here.",
         "ERV": "Great blessings belong to the person who reads the words of this message from God and to those who hear this message and do what is written in it. There is not much time left.",
         "BSB": "Blessed is the one who reads aloud the words of this prophecy, and blessed are those who hear and obey what is written in it, because the time is near."
       }
@@ -632,7 +721,86 @@
     "vi": {
       "version": "VIE",
       "text": "Phước cho kẻ đọc cùng những kẻ nghe lời tiên tri nầy, và giữ theo điều đã viết ra đây. Vì thì giờ đã gần rồi."
-    }
+    },
+    "alternates": [
+      {
+        "reference": "Revelation 4:8",
+        "key": "Holy, holy, holy is the Lord, the all-powerful God",
+        "en": {
+          "version": "GNT",
+          "text": "Each one of the four living creatures had six wings, and they were covered with eyes, inside and out. Day and night they never stop singing: “Holy, holy, holy, is the Lord God Almighty, who was, who is, and who is to come.”",
+          "versions": {
+            "CEV": "Each of the four living creatures had six wings, and their bodies were covered with eyes. Day and night they never stopped singing, “Holy, holy, holy is the Lord, the all-powerful God, who was and is and is coming!”",
+            "ERV": "Each of these four living beings had six wings. They were covered all over with eyes, inside and out. Day and night they never stopped saying, “Holy, holy, holy is the Lord God All-Powerful. He always was, he is, and he is coming.”",
+            "BSB": "And each of the four living creatures had six wings and was covered with eyes all around and within. Day and night they never stop saying: “Holy, Holy, Holy, is the Lord God Almighty, who was and is and is to come!”"
+          }
+        },
+        "am": {
+          "version": "1962",
+          "text": "አራቱም እንስሶች እያንዳንዳቸው ስድስት ክንፎች አሉአቸው፥ በዙሪያቸውና በውስጣቸውም ዓይኖች ሞልተውባቸዋል፤ ቅዱስ፥ ቅዱስ፥ ቅዱስ፥ የነበረውና ያለ የሚመጣውም ሁሉንም የሚገዛ ጌታ አምላክ እያሉ ቀንና ሌሊት አያርፉም።"
+        },
+        "ar": {
+          "version": "AVD",
+          "text": "وَٱلْأَرْبَعَةُ ٱلْحَيَوَانَاتُ لِكُلِّ وَاحِدٍ مِنْهَا سِتَّةُ أَجْنِحَةٍ حَوْلَهَا، وَمِنْ دَاخِلٍ مَمْلُوَّةٌ عُيُونًا، وَلَا تَزَالُ نَهَارًا وَلَيْلًا قَائِلَةً: «قُدُّوسٌ، قُدُّوسٌ، قُدُّوسٌ، ٱلرَّبُّ ٱلْإِلَهُ ٱلْقَادِرُ عَلَى كُلِّ شَيْءٍ، ٱلَّذِي كَانَ وَٱلْكَائِنُ وَٱلَّذِي يَأْتِي»."
+        },
+        "be": {
+          "version": "BEL",
+          "text": "І чатыры жывёлы, кожная па сабе, мелі па шэсьць крылаў наўкола, і ўсярэдзіне поўныя вачэй; і ня маюць яны супачынку ўдзень і ўначы, кажучы: «Сьвяты, Сьвяты, Сьвяты Госпад Бог Усеўладны, Які быў, і Які ёсьць, і Які прыходзіць»."
+        },
+        "zh-cn": {
+          "version": "CCB",
+          "text": "这四个活物各有三对翅膀，翅膀内外都长满眼睛。他们昼夜不停地说： “圣哉！圣哉！圣哉！ 主上帝是昔在、今在、 以后永在的全能者。”"
+        },
+        "zh-tw": {
+          "version": "CUV",
+          "text": "四活物各有六個翅膀，遍體內外都滿了眼睛。他們晝夜不住地說：聖哉！聖哉！聖哉！主 神是昔在、今在、以後永在的全能者。"
+        },
+        "fa": {
+          "version": "OPV",
+          "text": "و آن چهار حیوان که هر یکی از آنها شش بال دارد، گرداگرد و درون به چشمان پر هستند وشبانه‌روز باز نمی ایستند از گفتن «قدوس قدوس قدوس، خداوند خدای قادر مطلق که بود وهست و می‌آید.»"
+        },
+        "fr": {
+          "version": "LSG",
+          "text": "Les quatre êtres vivants ont chacun six ailes, et ils sont remplis d'yeux tout autour et au dedans. Ils ne cessent de dire jour et nuit: Saint, saint, saint est le Seigneur Dieu, le Tout-Puissant, qui était, qui est, et qui vient!"
+        },
+        "hi": {
+          "version": "IRV",
+          "text": "और चारों प्राणियों के छः छः पंख हैं, और चारों ओर, और भीतर आँखें ही आँखें हैं; और वे रात-दिन बिना विश्राम लिए यह कहते रहते हैं, (यशा. 6:2,3) “पवित्र, पवित्र, पवित्र प्रभु परमेश्वर, सर्वशक्तिमान, जो था, और जो है, और जो आनेवाला है।”"
+        },
+        "it": {
+          "version": "NR",
+          "text": "E le quattro creature viventi avevano ognuna sei ali, ed erano coperte di occhi tutt'intorno e di dentro, e non cessavano mai di ripetere giorno e notte: «Santo, santo, santo è il Signore, il Dio onnipotente, che era, che è e che viene»."
+        },
+        "ko": {
+          "version": "KOR",
+          "text": "네 생물이 각각 여섯 날개가 있고 그 안과 주위에 눈이 가득하더라 그들이 밤낮 쉬지 않고 이르기를 `거룩하다, 거룩하다, 거룩하다, 주 하나님 곧 전능하신 이여 전에도 계셨고 이제도 계시고 장차 오실 자라' 하고"
+        },
+        "pt": {
+          "version": "NVI",
+          "text": "Cada um deles tinha seis asas e era cheio de olhos, tanto ao redor como por baixo das asas. Dia e noite repetem sem cessar: “Santo, santo, santo é o Senhor, o Deus todo-poderoso, que era, que é e que há de vir”."
+        },
+        "es": {
+          "version": "NVI",
+          "text": "Cada uno de ellos tenía seis alas y estaba cubierto de ojos, por encima y por debajo de las alas. De día y de noche repetían sin cesar: «Santo, santo, santo es el Señor Dios Todopoderoso, el que era y que es y que ha de venir»."
+        },
+        "ta": {
+          "version": "IRV",
+          "text": "அந்த நான்கு ஜீவன்களிலும் ஒவ்வொன்றும் ஆறுஆறு சிறகுகள் உள்ளவைகளும், சுற்றிலும், உள்ளேயும் கண்களால் நிறைந்தவைகளுமாக இருந்தன. அவைகள்: “இருந்தவரும் இருக்கிறவரும் வருகிறவருமாகிய சர்வவல்லமையுள்ள தேவனாகிய கர்த்தர் பரிசுத்தர் பரிசுத்தர் பரிசுத்தர்” என்று இரவும் பகலும் ஓய்வு இல்லாமல் சொல்லிக்கொண்டிருந்தன."
+        },
+        "te": {
+          "version": "IRV",
+          "text": "ఈ నాలుగు ప్రాణుల్లో ప్రతి ప్రాణికీ ఆరు రెక్కలున్నాయి. వాటి చుట్టూ, లోపలా, రెక్కల లోపల కూడా కళ్ళతో నిండి ఉన్నాయి. అవి పగలూ రాత్రీ మానకుండా ఈ విధంగా చెబుతున్నాయి, “పూర్వం ఉండి, ప్రస్తుతముంటూ, భవిష్యత్తులో వచ్చేవాడూ, అంతటినీ పరిపాలించే వాడూ, దేవుడూ అయిన ప్రభువు పరిశుద్ధుడు, పరిశుద్ధుడు, పరిశుద్ధుడు!”"
+        },
+        "uk": {
+          "version": "UKR",
+          "text": "І ті чотири тварині, кожна з них мала навколо по шість крил, а всередині повна очей. І спокою не мають вони день і ніч, промовляючи: Свят, свят, свят Господь, Бог Вседержитель, що Він був, і що є, і що має прийти!"
+        },
+        "vi": {
+          "version": "VIE",
+          "text": "Bốn con sanh vật ấy mỗi con có sáu cánh, chung quanh mình và trong mình đều có mắt; ngày đêm lúc nào cũng nói luôn không dứt: Thánh thay, thánh thay, thánh thay là Chúa, là Đức Chúa Trời, Đấng Toàn năng, Trước Đã Có, Nay Hiện Có, Sau Còn Đến!"
+        }
+      }
+    ]
   },
   "I": {
     "reference": "1 John 1:9",
@@ -641,6 +809,7 @@
       "version": "GNT",
       "text": "But if we confess our sins to God, he will keep his promise and do what is right: he will forgive us our sins and purify us from all our wrongdoing.",
       "versions": {
+        "CEV": "But if we confess our sins to God, he can always be trusted to forgive us and take our sins away.",
         "ERV": "But if we confess our sins, God will forgive us. We can trust God to do this. He always does what is right. He will make us clean from all the wrong things we have done.",
         "BSB": "If we confess our sins, He is faithful and just to forgive us our sins and to cleanse us from all unrighteousness."
       }
@@ -717,6 +886,7 @@
       "version": "GNT",
       "text": "Jesus Christ is the same yesterday, today, and forever.",
       "versions": {
+        "CEV": "Jesus Christ never changes! He is the same yesterday, today, and forever.",
         "ERV": "Jesus Christ is the same yesterday, today, and forever.",
         "BSB": "Jesus Christ is the same yesterday and today and forever."
       }
@@ -784,7 +954,86 @@
     "vi": {
       "version": "VIE",
       "text": "Đức Chúa Jêsus Christ hôm qua, ngày nay, và cho đến đời đời không hề thay đổi."
-    }
+    },
+    "alternates": [
+      {
+        "reference": "1 Timothy 1:15",
+        "key": "Jesus came into the world to save sinners",
+        "en": {
+          "version": "GNT",
+          "text": "This is a true saying, to be completely accepted and believed: Christ Jesus came into the world to save sinners. I am the worst of them,",
+          "versions": {
+            "CEV": "“Christ Jesus came into the world to save sinners.” This saying is true, and it can be trusted. I was the worst sinner of all!",
+            "ERV": "Here is a true statement that should be accepted without question: Christ Jesus came into the world to save sinners, and I am the worst of them.",
+            "BSB": "This is a trustworthy saying, worthy of full acceptance: Christ Jesus came into the world to save sinners, of whom I am the worst."
+          }
+        },
+        "am": {
+          "version": "1962",
+          "text": "ኃጢአተኞችን ሊያድን ክርስቶስ ኢየሱስ ወደ ዓለም መጣ የሚለው ቃል የታመነና ሁሉ እንዲቀበሉት የተገባ ነው፤ ከኃጢአተኞችም ዋና እኔ ነኝ፤"
+        },
+        "ar": {
+          "version": "AVD",
+          "text": "صَادِقَةٌ هِيَ ٱلْكَلِمَةُ وَمُسْتَحِقَّةٌ كُلَّ قُبُولٍ: أَنَّ ٱلْمَسِيحَ يَسُوعَ جَاءَ إِلَى ٱلْعَالَمِ لِيُخَلِّصَ ٱلْخُطَاةَ ٱلَّذِينَ أَوَّلُهُمْ أَنَا."
+        },
+        "be": {
+          "version": "BEL",
+          "text": "Вернае слова і ўсякага прыняцьця вартае, што Хрыстос Ісус прыйшоў у сьвет збавіць грэшнікаў, з якіх я — першы."
+        },
+        "zh-cn": {
+          "version": "CCB",
+          "text": "这句话千真万确、完全可信：“基督耶稣降世，为要拯救罪人。”在罪人中我是个罪魁，"
+        },
+        "zh-tw": {
+          "version": "CUV",
+          "text": "「基督耶穌降世，為要拯救罪人。」這話是可信的，是十分可佩服的。在罪人中我是個罪魁。"
+        },
+        "fa": {
+          "version": "OPV",
+          "text": "این سخن امین است و لایق قبول تام که مسیح عیسی به‌دنیا آمد تا گناهکاران را نجات‌بخشد که من بزرگترین آنها هستم."
+        },
+        "fr": {
+          "version": "LSG",
+          "text": "C'est une parole certaine et entièrement digne d'être reçue, que Jésus-Christ est venu dans le monde pour sauver les pécheurs, dont je suis le premier."
+        },
+        "hi": {
+          "version": "IRV",
+          "text": "यह बात सच और हर प्रकार से मानने के योग्य है कि मसीह यीशु पापियों का उद्धार करने के लिये जगत में आया, जिनमें सबसे बड़ा मैं हूँ।"
+        },
+        "it": {
+          "version": "NR",
+          "text": "Certa è quest'affermazione e degna di essere pienamente accettata: che Cristo Gesù è venuto nel mondo per salvare i peccatori, dei quali io sono il primo."
+        },
+        "ko": {
+          "version": "KOR",
+          "text": "미쁘다 모든 사람이 받을 만한 이 말이여 그리스도 예수께서 죄인을 구원하시려고 세상에 임하셨다 하였도다 죄인 중에 내가 괴수니라!"
+        },
+        "pt": {
+          "version": "NVI",
+          "text": "Esta afirmação é fiel e digna de toda aceitação: Cristo Jesus veio ao mundo para salvar os pecadores, dos quais eu sou o pior."
+        },
+        "es": {
+          "version": "NVI",
+          "text": "Este mensaje es digno de crédito y merece ser aceptado por todos: que Cristo Jesús vino al mundo a salvar a los pecadores, de los cuales yo soy el primero."
+        },
+        "ta": {
+          "version": "IRV",
+          "text": "பாவிகளை இரட்சிக்க கிறிஸ்து இயேசு உலகத்திற்கு வந்தார் என்கிற வார்த்தை உண்மையும் எல்லா அங்கீகரிப்புக்கும் தகுதியுள்ளதாக இருக்கிறது; அவர்களில் மோசமான பாவி நான்."
+        },
+        "te": {
+          "version": "IRV",
+          "text": "పాపులను రక్షించడానికి క్రీస్తు యేసు లోకానికి వచ్చాడనే సందేశం నమ్మదగినదీ, సంపూర్ణంగా అంగీకరించదగినదీ. అలాంటి పాపుల్లో నేను మొదటి వాణ్ణి."
+        },
+        "uk": {
+          "version": "UKR",
+          "text": "Вірне це слово, і гідне всякого прийняття, що Христос Ісус прийшов у світ спасти грішних, із яких перший то я."
+        },
+        "vi": {
+          "version": "VIE",
+          "text": "Đức Chúa Jêsus Christ đã đến trong thế gian để cứu vớt kẻ có tội, ấy là lời chắc chắn, đáng đem lòng tin trọn vẹn mà nhận lấy; trong những kẻ có tội đó ta là đầu."
+        }
+      }
+    ]
   },
   "K": {
     "reference": "1 Corinthians 7:19",
@@ -793,6 +1042,7 @@
       "version": "NIV",
       "text": "Circumcision is nothing and uncircumcision is nothing. Keeping God’s commands is what counts.",
       "versions": {
+        "CEV": "Being circumcised or uncircumcised isn't really what matters. The important thing is to obey God's commands.",
         "ERV": "It is not important if anyone is circumcised or not. What is important is obeying God’s commands.",
         "BSB": "Circumcision is nothing and uncircumcision is nothing. Keeping God’s commandments is what counts."
       }
@@ -860,7 +1110,86 @@
     "vi": {
       "version": "VIE",
       "text": "Chịu cắt bì chẳng hề gì, không chịu cắt bì cũng chẳng hề gì; sự quan hệ là giữ các điều răn của Đức Chúa Trời."
-    }
+    },
+    "alternates": [
+      {
+        "reference": "Matthew 6:13",
+        "key": "Keep us from being tempted and protect us from evil",
+        "en": {
+          "version": "GNT",
+          "text": "Do not bring us to hard testing, but keep us safe from the Evil One.",
+          "versions": {
+            "CEV": "Keep us from being tempted and protect us from evil.",
+            "ERV": "Don’t let us be tempted, but save us from the Evil One.",
+            "BSB": "And lead us not into temptation, but deliver us from the evil one."
+          }
+        },
+        "am": {
+          "version": "1962",
+          "text": "ከክፉም አድነን እንጂ ወደ ፈተና አታግባን፤ መንግሥት ያንተ ናትና ኃይልም ክብርም ለዘለዓለሙ፤ አሜን።"
+        },
+        "ar": {
+          "version": "AVD",
+          "text": "وَلَا تُدْخِلْنَا فِي تَجْرِبَةٍ، لَكِنْ نَجِّنَا مِنَ ٱلشِّرِّيرِ. لِأَنَّ لَكَ ٱلْمُلْكَ، وَٱلْقُوَّةَ، وَٱلْمَجْدَ، إِلَى ٱلْأَبَدِ. آمِينَ."
+        },
+        "be": {
+          "version": "BEL",
+          "text": "і ня ўводзь нас у спакусу, але збаў нас ад злога. Бо Тваё Валадарства, і моц, і слава навекі. Амэн”."
+        },
+        "zh-cn": {
+          "version": "CCB",
+          "text": "不要让我们陷入诱惑， 救我们脱离那恶者。 因为国度、权柄、荣耀都是你的，直到永远。阿们！"
+        },
+        "zh-tw": {
+          "version": "CUV",
+          "text": "不叫我們遇見試探；救我們脫離兇惡。因為國度、權柄、榮耀，全是你的，直到永遠。阿們！"
+        },
+        "fa": {
+          "version": "OPV",
+          "text": "و ما را در آزمایش میاور، بلکه از شریر ما رارهایی ده."
+        },
+        "fr": {
+          "version": "LSG",
+          "text": "ne nous induis pas en tentation, mais délivre-nous du malin. Car c'est à toi qu'appartiennent, dans tous les siècles, le règne, la puissance et la gloire. Amen!"
+        },
+        "hi": {
+          "version": "IRV",
+          "text": "‘और हमें परीक्षा में न ला, परन्तु बुराई से बचा; [क्योंकि राज्य और पराक्रम और महिमा सदा तेरे ही हैं।’ आमीन।]"
+        },
+        "it": {
+          "version": "NR",
+          "text": "e non ci esporre alla tentazione, ma liberaci dal maligno\"."
+        },
+        "ko": {
+          "version": "KOR",
+          "text": "우리를 시험에 들게 하지 마옵시고 다만 악에서 구하옵소서 (나라와 권세와 영광이 아버지께 영원히 있사옵나이다 아멘)"
+        },
+        "pt": {
+          "version": "NVI",
+          "text": "E não nos deixes cair em tentação, mas livra-nos do mal, porque teu é o Reino, o poder e a glória para sempre. Amém."
+        },
+        "es": {
+          "version": "NVI",
+          "text": "Y no nos dejes caer en tentación, sino líbranos del maligno."
+        },
+        "ta": {
+          "version": "IRV",
+          "text": "எங்களைச் சோதனைக்குட்படச் செய்யாமல், தீமையிலிருந்து எங்களை இரட்சித்துக்கொள்ளும், ராஜ்யமும், வல்லமையும், மகிமையும் என்றென்றைக்கும் உம்முடையவைகளே, ஆமென் என்பதே."
+        },
+        "te": {
+          "version": "IRV",
+          "text": "మేము పరీక్షల పాలు కాకుండా దుష్టుని నుండి తప్పించు."
+        },
+        "uk": {
+          "version": "UKR",
+          "text": "І не введи нас у випробовування, але визволи нас від лукавого. Бо Твоє є царство, і сила, і слава навіки. Амінь."
+        },
+        "vi": {
+          "version": "VIE",
+          "text": "Xin chớ để chúng tôi bị cám dỗ, mà cứu chúng tôi khỏi điều ác! Vì nước, quyền, vinh hiển đều thuộc về Cha đời đời. A-men."
+        }
+      }
+    ]
   },
   "L": {
     "reference": "Mark 12:31",
@@ -869,6 +1198,7 @@
       "version": "GNT",
       "text": "The second most important commandment is this: ‘Love your neighbor as you love yourself.’ There is no other commandment more important than these two.",
       "versions": {
+        "CEV": "The second most important commandment says: ‘Love others as much as you love yourself.’ No other commandment is more important than these.",
         "ERV": "The second most important command is this: ‘Love your neighbor the same as you love yourself.’ These two commands are the most important.",
         "BSB": "The second is this: ‘Love your neighbor as yourself.’ No other commandment is greater than these."
       }
@@ -936,7 +1266,86 @@
     "vi": {
       "version": "VIE",
       "text": "Nầy là điều thứ hai: Ngươi phải yêu kẻ lân cận như mình. Chẳng có điều răn nào lớn hơn hai điều đó."
-    }
+    },
+    "alternates": [
+      {
+        "reference": "Luke 10:27",
+        "key": "Love your neighbor as much as you love yourself",
+        "en": {
+          "version": "GNT",
+          "text": "The man answered, “‘Love the Lord your God with all your heart, with all your soul, with all your strength, and with all your mind’; and ‘Love your neighbor as you love yourself.’”",
+          "versions": {
+            "CEV": "The man replied, “The Scriptures say, ‘Love the Lord your God with all your heart, soul, strength, and mind.’ They also say, ‘Love your neighbors as much as you love yourself.’”",
+            "ERV": "The man answered, “‘Love the Lord your God with all your heart, all your soul, all your strength, and all your mind.’ Also, ‘Love your neighbor the same as you love yourself.’”",
+            "BSB": "He answered, “‘Love the Lord your God with all your heart and with all your soul and with all your strength and with all your mind’ and ‘Love your neighbor as yourself.’”"
+          }
+        },
+        "am": {
+          "version": "1962",
+          "text": "እርሱም መልሶ። ጌታ አምላክህን በፍጹም ልብህ በፍጹም ነፍስህም በፍጹም ኃይልህም በፍጹም አሳብህም ውደድ፥ ባልንጀራህንም እንደ ራስህ ውደድ አለው።"
+        },
+        "ar": {
+          "version": "AVD",
+          "text": "فَأَجَابَ وَقَالَ: «تُحِبُّ ٱلرَّبَّ إِلَهَكَ مِنْ كُلِّ قَلْبِكَ، وَمِنْ كُلِّ نَفْسِكَ، وَمِنْ كُلِّ قُدْرَتِكَ، وَمِنْ كُلِّ فِكْرِكَ، وَقَرِيبَكَ مِثْلَ نَفْسِكَ»."
+        },
+        "be": {
+          "version": "BEL",
+          "text": "Ён жа, адказваючы, сказаў: «Любі Госпада, Бога твайго, усім сэрцам тваім, і ўсёю душою тваёю, і ўсёю моцаю тваёю, і ўсім разуменьнем тваім, і бліжняга твайго, як самога сябе»."
+        },
+        "zh-cn": {
+          "version": "CCB",
+          "text": "律法教师答道：“‘你要全心、全情、全力、全意爱主你的上帝’，又要‘爱邻如己。’”"
+        },
+        "zh-tw": {
+          "version": "CUV",
+          "text": "他回答說：「你要盡心、盡性、盡力、盡意愛主─你的 神；又要愛鄰舍如同自己。」"
+        },
+        "fa": {
+          "version": "OPV",
+          "text": "جواب داده، گفت: «اینکه خداوند خدای خود را به تمام دل و تمام نفس و تمام توانایی و تمام فکر خودمحبت نما و همسایه خود را مثل نفس خود.»"
+        },
+        "fr": {
+          "version": "LSG",
+          "text": "Il répondit: Tu aimeras le Seigneur, ton Dieu, de tout ton coeur, de toute ton âme, de toute ta force, et de toute ta pensée; et ton prochain comme toi-même."
+        },
+        "hi": {
+          "version": "IRV",
+          "text": "उसने उत्तर दिया, “तू प्रभु अपने परमेश्वर से अपने सारे मन और अपने सारे प्राण और अपनी सारी शक्ति और अपनी सारी बुद्धि के साथ प्रेम रख; और अपने पड़ोसी से अपने जैसा प्रेम रख।” (मत्ती 22:37-40, व्यव. 6:5, व्यव. 10:12, यहो. 22:5)"
+        },
+        "it": {
+          "version": "NR",
+          "text": "Egli rispose: «Ama il Signore Dio tuo con tutto il tuo cuore, con tutta l'anima tua, con tutta la forza tua, con tutta la mente tua, e il tuo prossimo come te stesso»."
+        },
+        "ko": {
+          "version": "KOR",
+          "text": "대답하여 가로되 `네 마음을 다하며 목숨을 다하며 힘을 다하며 뜻을 다하여 주 너의 하나님을 사랑하고 또한 네 이웃을 네 몸과 같이 사랑하라 하였나이다'"
+        },
+        "pt": {
+          "version": "NVI",
+          "text": "Ele respondeu: “‘Ame o Senhor, o seu Deus, de todo o seu coração, de toda a sua alma, de todas as suas forças e de todo o seu entendimento’ e ‘Ame o seu próximo como a si mesmo’”."
+        },
+        "es": {
+          "version": "NVI",
+          "text": "Como respuesta el hombre citó: —“Ama al Señor tu Dios con todo tu corazón, con todo tu ser, con todas tus fuerzas y con toda tu mente”, y “Ama a tu prójimo como a ti mismo”."
+        },
+        "ta": {
+          "version": "IRV",
+          "text": "அவன் மறுமொழியாக: உன் தேவனாகிய கர்த்தரிடத்தில் உன் முழு இருதயத்தோடும் உன் முழு ஆத்துமாவோடும் உன் முழு பலத்தோடும் உன் முழு சிந்தையோடும் அன்புகூர்ந்து, உன்னிடத்தில் அன்புசெலுத்துவதுபோல அயலகத்தானிடத்திலும் அன்புசெலுத்துவாயாக என்று எழுதியிருக்கிறது என்றான்."
+        },
+        "te": {
+          "version": "IRV",
+          "text": "అతడు, “నీ దేవుడైన ప్రభువును నీ పూర్ణ హృదయంతోనూ, నీ పూర్ణ ఆత్మతోనూ, నీ పూర్ణ శక్తితోనూ, నీ పూర్ణ మనసుతోనూ ప్రేమించాలి. నిన్ను నీవు ప్రేమించుకున్నట్టే నీ పొరుగువాణ్ణీ ప్రేమించాలి” అన్నాడు."
+        },
+        "uk": {
+          "version": "UKR",
+          "text": "А той відповів і сказав: Люби Господа Бога свого всім серцем своїм, і всією душею своєю, і всією силою своєю, і всім своїм розумом, і свого ближнього, як самого себе."
+        },
+        "vi": {
+          "version": "VIE",
+          "text": "Thưa rằng: Ngươi phải hết lòng, hết linh hồn, hết sức, hết trí mà kính mến Chúa là Đức Chúa Trời ngươi; và yêu người lân cận như mình."
+        }
+      }
+    ]
   },
   "M": {
     "reference": "Psalm 121:2",
@@ -945,6 +1354,7 @@
       "version": "GNT",
       "text": "My help will come from the LORD, who made heaven and earth.",
       "versions": {
+        "CEV": "It will come from the Lord, who created heaven and earth.",
         "ERV": "My help will come from the LORD, the Creator of heaven and earth.",
         "BSB": "My help comes from the LORD, the Maker of heaven and earth."
       }
@@ -1012,7 +1422,86 @@
     "vi": {
       "version": "VIE",
       "text": "Sự tiếp trợ tôi đến từ Đức Giê-hô-va, Là Đấng đã dựng nên trời và đất."
-    }
+    },
+    "alternates": [
+      {
+        "reference": "Mark 11:17",
+        "key": "My house should be a place of worship for all nations",
+        "en": {
+          "version": "GNT",
+          "text": "He then taught the people: “It is written in the Scriptures that God said, ‘My Temple will be called a house of prayer for the people of all nations.’ But you have turned it into a hideout for thieves!”",
+          "versions": {
+            "CEV": "Then he taught the people and said, “The Scriptures say, ‘My house should be called a place of worship for all nations.’ But you have made it a place where robbers hide!”",
+            "ERV": "Then Jesus began teaching the people and said, “It is written in the Scriptures, ‘My Temple will be called a house of prayer for all nations.’ But you have changed it into a ‘hiding place for thieves.’”",
+            "BSB": "Then Jesus began to teach them, and He declared, “Is it not written: ‘My house will be called a house of prayer for all the nations’? But you have made it ‘a den of robbers.’”"
+          }
+        },
+        "am": {
+          "version": "1962",
+          "text": "አስተማራቸውም። ቤቴ ለአሕዛብ ሁሉ የጸሎት ቤት ትባላለች ተብሎ የተጻፈ አይደለምን? እናንተ ግን የወንበዶች ዋሻ አደረጋችኋት አላቸው።"
+        },
+        "ar": {
+          "version": "AVD",
+          "text": "وَكَانَ يُعَلِّمُ قَائِلًا لَهُمْ: «أَلَيْسَ مَكْتُوبًا: بَيْتِي بَيْتَ صَلَاةٍ يُدْعَى لِجَمِيعِ ٱلْأُمَمِ؟ وَأَنْتُمْ جَعَلْتُمُوهُ مَغَارَةَ لُصُوصٍ»."
+        },
+        "be": {
+          "version": "BEL",
+          "text": "І навучаў, кажучы ім: «Ці ж не напісана: “Дом Мой домам малітвы будзе названы для ўсіх народаў”? А вы зрабілі яго пячорай разбойнікаў»."
+        },
+        "zh-cn": {
+          "version": "CCB",
+          "text": "祂教导他们说：“圣经上不是记载‘我的殿必称为万民祷告的殿’吗？你们竟把它变成了贼窝。”"
+        },
+        "zh-tw": {
+          "version": "CUV",
+          "text": "便教訓他們說：「經上不是記著說：我的殿必稱為萬國禱告的殿嗎？你們倒使它成為賊窩了。」"
+        },
+        "fa": {
+          "version": "OPV",
+          "text": "و تعلیم داده، گفت: «آیامکتوب نیست که خانه من خانه عبادت تمامی امتها نامیده خواهد شد؟ اما شما آن را مغاره دزدان ساخته‌اید.»"
+        },
+        "fr": {
+          "version": "LSG",
+          "text": "Et il enseignait et disait: N'est-il pas écrit: Ma maison sera appelée une maison de prière pour toutes les nations? Mais vous, vous en avez fait une caverne de voleurs."
+        },
+        "hi": {
+          "version": "IRV",
+          "text": "और उपदेश करके उनसे कहा, “क्या यह नहीं लिखा है, कि मेरा घर सब जातियों के लिये प्रार्थना का घर कहलाएगा? पर तुम ने इसे डाकुओं की खोह बना दी है।” (लूका 19:46, यिर्म. 7:11)"
+        },
+        "it": {
+          "version": "NR",
+          "text": "E insegnava, dicendo loro: «Non è scritto: \" La mia casa sarà chiamata casa di preghiera per tutte le genti \"? Ma voi ne avete fatto un covo di ladri»."
+        },
+        "ko": {
+          "version": "KOR",
+          "text": "이에 가르쳐 이르시되 `기록된 바 내 집은 만민의 기도하는 집이라 칭함을 받으리라고 하지 아니하였느냐? 너희는 강도의 굴혈을 만들었도다' 하시매"
+        },
+        "pt": {
+          "version": "NVI",
+          "text": "E os ensinava, dizendo: “Não está escrito: ‘A minha casa será chamada casa de oração para todos os povos’? Mas vocês fizeram dela um ‘covil de ladrões’”."
+        },
+        "es": {
+          "version": "NVI",
+          "text": "También les enseñaba con estas palabras: «¿No está escrito: “Mi casa será llamada casa de oración para todos los pueblos”? Pero ustedes la han convertido en “cueva de ladrones”»."
+        },
+        "ta": {
+          "version": "IRV",
+          "text": "என்னுடைய வீடு எல்லா மக்களுக்கும் ஜெபவீடு எனப்படும் என்று எழுதியிருக்கவில்லையா? நீங்களோ அதைக் கள்ளர்களின் குகையாக்கினீர்கள் என்று அவர்களுக்குச் சொல்லி உபதேசித்தார்."
+        },
+        "te": {
+          "version": "IRV",
+          "text": "ఆయన వారికి బోధిస్తూ, “‘నా ఆలయం అన్ని జాతులకూ ప్రార్థనా ఆలయం అంటారు’ అని రాసి లేదా? కానీ మీరు దాన్ని దోపిడి దొంగల గుహగా చేశారు” అన్నాడు."
+        },
+        "uk": {
+          "version": "UKR",
+          "text": "І Він їх навчав і казав їм: Хіба не написано: Дім Мій буде домом молитви в народів усіх, ви ж із нього зробили печеру розбійників!"
+        },
+        "vi": {
+          "version": "VIE",
+          "text": "Rồi Ngài dạy dỗ chúng mà rằng: há chẳng có lời chép: Nhà ta sẽ gọi là nhà cầu nguyện của muôn dân hay sao? Nhưng các ngươi đã làm thành cái hang trộm cướp."
+        }
+      }
+    ]
   },
   "N": {
     "reference": "Luke 22:42",
@@ -1021,6 +1510,7 @@
       "version": "GNT",
       "text": "“Father,” he said, “if you will, take this cup of suffering away from me. Not my will, however, but your will be done.”",
       "versions": {
+        "CEV": "“Father, if you will, please don't make me suffer by drinking from this cup. But do what you want, and not what I want.”",
         "ERV": "“Father, if you are willing, please don’t make me drink from this cup. But do what you want, not what I want.”",
         "BSB": "“Father, if You are willing, take this cup from Me. Yet not My will, but Yours be done.”"
       }
@@ -1088,7 +1578,87 @@
     "vi": {
       "version": "VIE",
       "text": "rằng: Lạy Cha, nếu Cha muốn, xin cất chén nầy khỏi tôi! Dầu vậy, xin ý Cha được nên, chớ không theo ý tôi!"
-    }
+    },
+    "alternates": [
+      {
+        "reference": "Romans 8:38",
+        "key": "Nothing can separate us from God's love",
+        "en": {
+          "version": "GNT",
+          "text": "For I am certain that nothing can separate us from his love: neither death nor life, neither angels nor other heavenly rulers or powers, neither the present nor the future,",
+          "versions": {
+            "CEV": "I am sure that nothing can separate us from God's love—not life or death, not angels or spirits, not the present or the future,",
+            "ERV": "Yes, I am sure that nothing can separate us from God’s love—not death, life, angels, or ruling spirits. I am sure that nothing now, nothing in the future, no powers, nothing above us or nothing below us—nothing in the whole created world—will ever be able to separate us from the love God has shown us in Christ Jesus our Lord.",
+            "BSB": "For I am convinced that neither death nor life, neither angels nor principalities, neither the present nor the future, nor any powers,"
+          }
+        },
+        "am": {
+          "version": "1962",
+          "text": "ሞት ቢሆን፥ ሕይወትም ቢሆን፥ መላእክትም ቢሆኑ፥ ግዛትም ቢሆን፥ ያለውም ቢሆን፥ የሚመጣውም ቢሆን፥ ኃይላትም ቢሆኑ፥"
+        },
+        "ar": {
+          "version": "AVD",
+          "text": "فَإِنِّي مُتَيَقِّنٌ أَنَّهُ لَا مَوْتَ وَلَا حَيَاةَ، وَلَا مَلَائِكَةَ وَلَا رُؤَسَاءَ وَلَا قُوَّاتِ، وَلَا أُمُورَ حَاضِرَةً وَلَا مُسْتَقْبَلَةً،"
+        },
+        "be": {
+          "version": "BEL",
+          "text": "Бо я ўпэўнены, што ані сьмерць, ані жыцьцё, ані анёлы, ані начальствы, ані сілы, ані цяперашняе, ані будучае,"
+        },
+        "zh-cn": {
+          "version": "CCB",
+          "text": "因为我深信无论是死、是生，是天使、是鬼魔，是现在的事、是将来的事，"
+        },
+        "zh-tw": {
+          "version": "CUV",
+          "text": "因為我深信無論是死，是生，是天使，是掌權的，是有能的，是現在的事，是將來的事，"
+        },
+        "fa": {
+          "version": "OPV",
+          "text": "زیرایقین می‌دانم که نه موت و نه حیات و نه فرشتگان و نه روسا و نه قدرتها و نه چیزهای حال و نه چیزهای آینده"
+        },
+        "fr": {
+          "version": "LSG",
+          "text": "Car j'ai l'assurance que ni la mort ni la vie, ni les anges ni les dominations, ni les choses présentes ni les choses à venir, ni les puissances,"
+        },
+        "hi": {
+          "version": "IRV",
+          "text": "क्योंकि मैं निश्चय जानता हूँ, कि न मृत्यु, न जीवन, न स्वर्गदूत, न प्रधानताएँ, न वर्तमान, न भविष्य, न सामर्थ्य, न ऊँचाई,"
+        },
+        "it": {
+          "version": "NR",
+          "text": "Infatti sono persuaso che né morte, né vita, né angeli, né principati, né cose presenti, né cose future,"
+        },
+        "ko": {
+          "version": "KOR",
+          "text": "내가 확신하노니 사망이나 생명이나 천사들이나 권세자들이나 현재 일이나 장래 일이나 능력이나"
+        },
+        "pt": {
+          "version": "NVI",
+          "text": "Pois estou convencido de que nem morte nem vida, nem anjos nem demônios, nem o presente nem o futuro, nem quaisquer poderes,"
+        },
+        "es": {
+          "version": "NVI",
+          "text": "Pues estoy convencido de que ni la muerte ni la vida, ni los ángeles ni los demonios, ni lo presente ni lo por venir, ni los poderes,"
+        },
+        "ta": {
+          "version": "IRV",
+          "text": "மரணமானாலும், ஜீவனானாலும், தேவதூதர்களானாலும், அதிகாரங்களானாலும், வல்லமைகளானாலும் நிகழ்காரியங்களானாலும், வரும்காரியங்களானாலும்,"
+        },
+        "te": {
+          "version": "IRV",
+          "text": "నేను నిశ్చయంగా నమ్మేదేమంటే, చావైనా, బతుకైనా, దేవదూతలైనా, ప్రభుత్వాలైనా, ఇప్పుడున్నవైనా, రాబోయేవైనా, శక్తులైనా, ఎత్తయినా, లోతైనా, సృష్టిలోని మరేదైనా సరే, మన ప్రభు క్రీస్తు యేసులోని దేవుని ప్రేమ నుండి మనలను వేరు చేయలేవు.",
+          "ref": "Romans 8:38-39"
+        },
+        "uk": {
+          "version": "UKR",
+          "text": "Бо я пересвідчився, що ні смерть, ні життя, ні Анголи, ні влади, ні теперішнє, ні майбутнє, ні сили,"
+        },
+        "vi": {
+          "version": "VIE",
+          "text": "Vì tôi chắc rằng bất kỳ sự chết, sự sống, các thiên sứ, các kẻ cầm quyền, việc bây giờ, việc hầu đến, quyền phép,"
+        }
+      }
+    ]
   },
   "O": {
     "reference": "Hebrews 13:17",
@@ -1097,6 +1667,7 @@
       "version": "GNT",
       "text": "Obey your leaders and follow their orders. They watch over your souls without resting, since they must give to God an account of their service. If you obey them, they will do their work gladly; if not, they will do it with sadness, and that would be of no help to you.",
       "versions": {
+        "CEV": "Obey your leaders and do what they say. They are watching over you, and they must answer to God. So don't make them sad as they do their work. Make them happy. Otherwise, they won't be able to help you at all.",
         "ERV": "Obey your leaders. Be willing to do what they say. They are responsible for your spiritual welfare, so they are always watching to protect you. Obey them so that their work will give them joy, not grief. It won’t help you to make it hard for them.",
         "BSB": "Obey your leaders and submit to them, for they watch over your souls as those who must give an account. To this end, allow them to lead with joy and not with grief, for that would be of no advantage to you."
       }
@@ -1164,7 +1735,86 @@
     "vi": {
       "version": "VIE",
       "text": "Hãy vâng lời kẻ dắt dẫn anh em và chịu phục các người ấy, bởi các người ấy tỉnh thức về linh hồn anh em, dường như phải khai trình, hầu cho các người ấy lấy lòng vui mừng mà làm xong chức vụ mình, không phàn nàn chi, vì ấy chẳng ích lợi gì cho anh em."
-    }
+    },
+    "alternates": [
+      {
+        "reference": "Matthew 19:17",
+        "key": "Only God is good",
+        "en": {
+          "version": "GNT",
+          "text": "“Why do you ask me concerning what is good?” answered Jesus. “There is only One who is good. Keep the commandments if you want to enter life.”",
+          "versions": {
+            "CEV": "Jesus said to him, “Why do you ask me about what is good? Only God is good. If you want to have eternal life, you must obey his commandments.”",
+            "ERV": "Jesus answered, “Why do you ask me about what is good? Only God is good. But if you want to have eternal life, obey the law’s commands.”",
+            "BSB": "“Why do you ask Me about what is good?” Jesus replied. “There is only One who is good. If you want to enter life, keep the commandments.”"
+          }
+        },
+        "am": {
+          "version": "1962",
+          "text": "እርሱም። ስለ መልካም ነገር ለምን ትጠይቀኛለህ? መልካም የሆነ አንድ ነው፤ ወደ ሕይወት መግባት ብትወድ ግን ትእዛዛትን ጠብቅ አለው።"
+        },
+        "ar": {
+          "version": "AVD",
+          "text": "فَقَالَ لَهُ: «لِمَاذَا تَدْعُونِي صَالِحًا؟ لَيْسَ أَحَدٌ صَالِحًا إِلَّا وَاحِدٌ وَهُوَ ٱللهُ. وَلَكِنْ إِنْ أَرَدْتَ أَنْ تَدْخُلَ ٱلْحَيَاةَ فَٱحْفَظِ ٱلْوَصَايَا»."
+        },
+        "be": {
+          "version": "BEL",
+          "text": "Ён жа сказаў яму: «Чаму ты называеш Мяне добрым? Ніхто ня добры, акрамя аднаго Бога. Калі ж хочаш увайсьці ў жыцьцё, захоўвай прыказаньні»."
+        },
+        "zh-cn": {
+          "version": "CCB",
+          "text": "耶稣说：“你为什么问我何为善事？善者只有一位，你如果想进入永生，就必须遵守诫命。”"
+        },
+        "zh-tw": {
+          "version": "CUV",
+          "text": "耶穌對他說：「你為甚麼以善事問我呢？只有一位是善的。你若要進入永生，就當遵守誡命。」"
+        },
+        "fa": {
+          "version": "OPV",
+          "text": "وی را گفت: «از چه سبب مرا نیکو گفتی و حال آنکه کسی نیکو نیست، جز خدا فقط. لیکن اگربخواهی داخل حیات شوی، احکام را نگاه دار.»"
+        },
+        "fr": {
+          "version": "LSG",
+          "text": "Il lui répondit: Pourquoi m'interroges-tu sur ce qui est bon? Un seul est le bon. Si tu veux entrer dans la vie, observe les commandements."
+        },
+        "hi": {
+          "version": "IRV",
+          "text": "उसने उससे कहा, “तू मुझसे भलाई के विषय में क्यों पूछता है? भला तो एक ही है; पर यदि तू जीवन में प्रवेश करना चाहता है, तो आज्ञाओं को माना कर।”"
+        },
+        "it": {
+          "version": "NR",
+          "text": "Gesù gli rispose: «Perché mi interroghi intorno a ciò che è buono? Uno solo è il buono. Ma se vuoi entrare nella vita, osserva i comandamenti»."
+        },
+        "ko": {
+          "version": "KOR",
+          "text": "예수께서 가라사대 어찌하여 선한 일을 내게 묻느냐? 선한 이는 오직 한 분이시니라! 네가 생명에 들어 가려면 계명들을 지키라"
+        },
+        "pt": {
+          "version": "NVI",
+          "text": "Respondeu-lhe Jesus: “Por que você me pergunta sobre o que é bom? Há somente um que é bom. Se você quer entrar na vida, obedeça aos mandamentos”."
+        },
+        "es": {
+          "version": "NVI",
+          "text": "—¿Por qué me preguntas sobre lo que es bueno? —respondió Jesús—. Solamente hay uno que es bueno. Si quieres entrar en la vida, obedece los mandamientos."
+        },
+        "ta": {
+          "version": "IRV",
+          "text": "அதற்கு அவர்: நீ என்னை நல்லவன் என்று சொல்வானேன்? தேவன் ஒருவர்தவிர நல்லவன் ஒருவனும் இல்லையே; நீ ஜீவனில் பிரவேசிக்க விரும்பினால் கட்டளைகளைக் கைக்கொள் என்றார்."
+        },
+        "te": {
+          "version": "IRV",
+          "text": "అందుకు యేసు, “మంచి పని ఏమిటో చెప్పమని నన్నెందుకు అడుగుతున్నావు? మంచి వాడు ఒక్కడే ఉన్నాడు. అయితే నీవు శాశ్వత జీవాన్ని కోరుకుంటే ఆజ్ఞలను పాటించు” అన్నాడు."
+        },
+        "uk": {
+          "version": "UKR",
+          "text": "Він же йому відказав: Чого звеш Мене Добрим? Ніхто не є Добрий, крім Бога Самого. Коли ж хочеш ввійти до життя, то виконай заповіді."
+        },
+        "vi": {
+          "version": "VIE",
+          "text": "Đức Chúa Jêsus đáp rằng: Sao ngươi hỏi ta về việc lành? Chỉ có một Đấng lành mà thôi. Nếu ngươi muốn vào sự sống, thì phải giữ các điều răn."
+        }
+      }
+    ]
   },
   "P": {
     "reference": "James 5:16",
@@ -1173,6 +1823,7 @@
       "version": "GNT",
       "text": "So then, confess your sins to one another and pray for one another, so that you will be healed. The prayer of a good person has a powerful effect.",
       "versions": {
+        "CEV": "If you have sinned, you should tell each other what you have done. Then you can pray for one another and be healed. The prayer of an innocent person is powerful, and it can help a lot.",
         "ERV": "So always tell each other the wrong things you have done. Then pray for each other. Do this so that God can heal you. Anyone who lives the way God wants can pray, and great things will happen.",
         "BSB": "Therefore confess your sins to each other and pray for each other so that you may be healed. The prayer of a righteous man has great power to prevail."
       }
@@ -1240,7 +1891,88 @@
     "vi": {
       "version": "VIE",
       "text": "Vậy, hãy xưng tội cùng nhau, và cầu nguyện cho nhau, hầu cho anh em được lành bịnh: người công bình lấy lòng sốt sắng cầu nguyện, thật có linh nghiệm nhiều."
-    }
+    },
+    "alternates": [
+      {
+        "reference": "1 Timothy 2:1",
+        "key": "Pray for everyone",
+        "en": {
+          "version": "GNT",
+          "text": "First of all, then, I urge that petitions, prayers, requests, and thanksgivings be offered to God for all people;",
+          "versions": {
+            "CEV": "First of all, I ask you to pray for everyone. Ask God to help and bless them all, and tell God how thankful you are for each of them.",
+            "ERV": "First of all, I ask that you pray for all people. Ask God to bless them and give them what they need. And give thanks.",
+            "BSB": "First of all, then, I urge that petitions, prayers, intercessions, and thanksgiving be offered for everyone—"
+          }
+        },
+        "am": {
+          "version": "1962",
+          "text": "እንግዲህ እግዚአብሔርን በመምሰልና በጭምትነት ሁሉ ጸጥና ዝግ ብለን እንድንኖር፥ ልመናና ጸሎት ምልጃም ምስጋናም ስለ ሰዎች ሁሉ ስለ ነገሥታትና ስለ መኳንንትም ሁሉ እንዲደረጉ ከሁሉ በፊት እመክራለሁ።",
+          "ref": "1 Timothy 2:1-2"
+        },
+        "ar": {
+          "version": "AVD",
+          "text": "فَأَطْلُبُ أَوَّلَ كُلِّ شَيْءٍ، أَنْ تُقَامَ طَلِبَاتٌ وَصَلَوَاتٌ وَٱبْتِهَالَاتٌ وَتَشَكُّرَاتٌ لِأَجْلِ جَمِيعِ ٱلنَّاسِ،"
+        },
+        "be": {
+          "version": "BEL",
+          "text": "Дык перш за ўсё прашу ўзносіць просьбы, малітвы, умольваньні і падзякі за ўсіх людзей,"
+        },
+        "zh-cn": {
+          "version": "CCB",
+          "text": "我劝你首先要为所有的人恳求、祷告、代求和感谢上帝。"
+        },
+        "zh-tw": {
+          "version": "CUV",
+          "text": "我勸你，第一要為萬人懇求、禱告、代求、祝謝；"
+        },
+        "fa": {
+          "version": "OPV",
+          "text": "پس از همه‌چیز اول، سفارش می‌کنم که صلوات و دعاها و مناجات و شکرها رابرای جمیع مردم به‌جا آورند؛"
+        },
+        "fr": {
+          "version": "LSG",
+          "text": "J'exhorte donc, avant toutes choses, à faire des prières, des supplications, des requêtes, des actions de grâces, pour tous les hommes,"
+        },
+        "hi": {
+          "version": "IRV",
+          "text": "अब मैं सबसे पहले यह आग्रह करता हूँ, कि विनती, प्रार्थना, निवेदन, धन्यवाद, सब मनुष्यों के लिये किए जाएँ।"
+        },
+        "it": {
+          "version": "NR",
+          "text": "Esorto dunque, prima di ogni altra cosa, che si facciano suppliche, preghiere, intercessioni, ringraziamenti per tutti gli uomini,"
+        },
+        "ko": {
+          "version": "KOR",
+          "text": "그러므로 내가 첫째로 권하노니 모든 사람을 위하여 간구와 기도와 도고와 감사를 하되"
+        },
+        "pt": {
+          "version": "NVI",
+          "text": "Antes de tudo, recomendo que se façam súplicas, orações, intercessões e ações de graças por todos os homens;"
+        },
+        "es": {
+          "version": "NVI",
+          "text": "Así que recomiendo, ante todo, que se hagan plegarias, oraciones, súplicas y acciones de gracias por todos,"
+        },
+        "ta": {
+          "version": "IRV",
+          "text": "நான் முதலாவது சொல்லுகிற புத்தி என்னவென்றால், எல்லா மனிதருக்காகவும் விண்ணப்பங்களையும் ஜெபங்களையும் வேண்டுதல்களையும் நன்றிசெலுத்துதலையும் செய்யவேண்டும்;"
+        },
+        "te": {
+          "version": "IRV",
+          "text": "మనం సంపూర్ణ భక్తి, గౌరవాలతో, ప్రశాంతంగా, సుఖంగా బతకడానికై, మనుషులందరి కోసం, రాజుల కోసం, అధికారంలో ఉన్న వారందరి కోసం, విన్నపాలూ ప్రార్థనలు, ఇతరుల కోసం విన్నపాలు చేస్తూ కృతజ్ఞతలు చెల్లించాలని అన్నిటికంటే ముఖ్యంగా కోరుతున్నాను.",
+          "ref": "1 Timothy 2:1-2"
+        },
+        "uk": {
+          "version": "UKR",
+          "text": "Отже, перш над усе я благаю чинити молитви, благання, прохання, подяки за всіх людей,"
+        },
+        "vi": {
+          "version": "VIE",
+          "text": "Vậy, trước hết mọi sự ta dặn rằng, phải khẩn nguyện, cầu xin, kêu van, tạ ơn cho mọi người,"
+        }
+      }
+    ]
   },
   "Q": {
     "reference": "Isaiah 30:15",
@@ -1249,6 +1981,7 @@
       "version": "GNT",
       "text": "The Sovereign LORD, the Holy One of Israel, says to the people, “Come back and quietly trust in me. Then you will be strong and secure.” But you refuse to do it.",
       "versions": {
+        "CEV": "The holy Lord God of Israel had told all of you, “I will keep you safe if you turn back to me and calm down. I will make you strong if you quietly trust me.” Then you stubbornly",
         "ERV": "The Lord GOD, the Holy One of Israel, says, “If you come back to me you will be saved. Only by remaining calm and trusting in me can you be strong.” But you don’t want to do that.",
         "BSB": "For the Lord GOD, the Holy One of Israel, has said: “By repentance and rest you would be saved; your strength would lie in quiet confidence— but you were not willing.”"
       }
@@ -1325,6 +2058,7 @@
       "version": "GNT",
       "text": "So remember your Creator while you are still young, before those dismal days and years come when you will say, “I don't enjoy life.”",
       "versions": {
+        "CEV": "Keep your Creator in mind while you are young! In years to come, you will be burdened down with troubles and say, “I don't enjoy life anymore.”",
         "ERV": "Remember your Creator while you are young, before the bad times come—before the years come when you say, “I have wasted my life.”",
         "BSB": "Remember your Creator in the days of your youth, before the days of adversity come and the years approach of which you will say, “I find no pleasure in them,”"
       }
@@ -1393,7 +2127,86 @@
     "vi": {
       "version": "VIE",
       "text": "Trong buổi còn thơ ấu hãy tưởng nhớ Đấng Tạo hóa ngươi, trước khi những ngày gian nan chưa đến, trước khi những năm tới mà ngươi nói rằng: Ta không lấy làm vui lòng;"
-    }
+    },
+    "alternates": [
+      {
+        "reference": "Psalm 37:31",
+        "key": "Remember God's teachings",
+        "en": {
+          "version": "GNT",
+          "text": "They keep the law of their God in their hearts and never depart from it.",
+          "versions": {
+            "CEV": "They remember God's teachings, and they never take a wrong step.",
+            "ERV": "They have learned God’s teachings, and they will never stop living right.",
+            "BSB": "The law of his God is in his heart; his steps do not falter."
+          }
+        },
+        "am": {
+          "version": "1962",
+          "text": "የአምላኩ ሕግ በልቡ ውስጥ ነው፥ በእርምጃውም አይሰናከልም።"
+        },
+        "ar": {
+          "version": "AVD",
+          "text": "شَرِيعَةُ إِلَهِهِ فِي قَلْبِهِ. لَا تَتَقَلْقَلُ خَطَوَاتُهُ."
+        },
+        "be": {
+          "version": "BEL",
+          "text": "Закон Бога ягонага ў сэрцы ягоным; ня будуць хістацца крокі ягоныя."
+        },
+        "zh-cn": {
+          "version": "CCB",
+          "text": "铭记上帝的律法， 从不失脚。"
+        },
+        "zh-tw": {
+          "version": "CUV",
+          "text": "神的律法在他心裡；他的腳總不滑跌。"
+        },
+        "fa": {
+          "version": "OPV",
+          "text": "شریعت خدای وی در دل اوست. پس قدمهایش نخواهد لغزید."
+        },
+        "fr": {
+          "version": "LSG",
+          "text": "La loi de son Dieu est dans son coeur; Ses pas ne chancellent point."
+        },
+        "hi": {
+          "version": "IRV",
+          "text": "उसके परमेश्वर की व्यवस्था उसके हृदय में बनी रहती है, उसके पैर नहीं फिसलते।"
+        },
+        "it": {
+          "version": "NR",
+          "text": "La legge di Dio è nel suo cuore; i suoi passi non vacilleranno."
+        },
+        "ko": {
+          "version": "KOR",
+          "text": "그 마음에는 하나님의 법이 있으니 그 걸음에 실족함이 없으리로다"
+        },
+        "pt": {
+          "version": "NVI",
+          "text": "Ele traz no coração a lei do seu Deus; nunca pisará em falso."
+        },
+        "es": {
+          "version": "NVI",
+          "text": "La Ley de Dios está en su corazón y sus pies jamás resbalan."
+        },
+        "ta": {
+          "version": "IRV",
+          "text": "அவனுடைய தேவன் அருளிய வேதம் அவன் இருதயத்தில் இருக்கிறது; அவன் நடைகளில் ஒன்றும் பிசகுவதில்லை."
+        },
+        "te": {
+          "version": "IRV",
+          "text": "అతని హృదయంలో అతని దేవుని ధర్మశాస్త్రం ఉంది. అతని అడుగులు జారవు."
+        },
+        "uk": {
+          "version": "UKR",
+          "text": "Закон Бога його в його серці, кроки його не спіткнуться."
+        },
+        "vi": {
+          "version": "VIE",
+          "text": "Luật pháp Đức Chúa Trời người ở trong lòng người; Bước người không hề xiêu tó."
+        }
+      }
+    ]
   },
   "S": {
     "reference": "1 Samuel 3:9",
@@ -1402,6 +2215,7 @@
       "version": "GNT",
       "text": "so he said to him, “Go back to bed; and if he calls you again, say, ‘Speak, LORD, your servant is listening.’” So Samuel went back to bed.",
       "versions": {
+        "CEV": "So he said, “Go back and lie down! If someone speaks to you again, answer, ‘I'm listening, Lord. What do you want me to do?’” Once again Samuel went back and lay down.",
         "ERV": "Eli told Samuel, “Go to bed. If he calls you again, say, ‘Speak, LORD. I am your servant, and I am listening.’” So Samuel went back to bed.",
         "BSB": "“Go and lie down,” he said to Samuel, “and if He calls you, say, ‘Speak, LORD, for Your servant is listening.’” So Samuel went and lay down in his place."
       }
@@ -1469,7 +2283,86 @@
     "vi": {
       "version": "VIE",
       "text": "Người nói cùng Sa-mu-ên rằng: Hãy đi ngủ đi, và nếu có ai gọi con, con hãy nói: Hỡi Đức Giê-hô-va, xin hãy phán, kẻ tôi tớ Ngài đang nghe! Vậy, Sa-mu-ên đi nằm tại chỗ mình."
-    }
+    },
+    "alternates": [
+      {
+        "reference": "Proverbs 2:4",
+        "key": "Search for wisdom",
+        "en": {
+          "version": "GNT",
+          "text": "Look for it as hard as you would for silver or some hidden treasure.",
+          "versions": {
+            "CEV": "Search for wisdom as you would search for silver or hidden treasure.",
+            "ERV": "Look for wisdom like silver. Search for it like hidden treasure.",
+            "BSB": "if you seek it like silver and search it out like hidden treasure,"
+          }
+        },
+        "am": {
+          "version": "1962",
+          "text": "እርስዋንም እንደ ብር ብትፈላልጋት፥ እርስዋንም እንደ ተቀበረ ገንዘብ ብትሻት፤"
+        },
+        "ar": {
+          "version": "AVD",
+          "text": "إِنْ طَلَبْتَهَا كَٱلْفِضَّةِ، وَبَحَثْتَ عَنْهَا كَٱلْكُنُوزِ،"
+        },
+        "be": {
+          "version": "BEL",
+          "text": "калі шукаць яе будзеш як срэбра, і прагнуць яе будзеш як багацьця,"
+        },
+        "zh-cn": {
+          "version": "CCB",
+          "text": "寻它如寻银子， 找它如找宝藏，"
+        },
+        "zh-tw": {
+          "version": "CUV",
+          "text": "尋找它，如尋找銀子，搜求它，如搜求隱藏的珍寶，"
+        },
+        "fa": {
+          "version": "OPV",
+          "text": "اگر آن را مثل نقره می‌طلبیدی ومانند خزانه های مخفی جستجو می‌کردی،"
+        },
+        "fr": {
+          "version": "LSG",
+          "text": "Si tu la cherches comme l'argent, Si tu la poursuis comme un trésor,"
+        },
+        "hi": {
+          "version": "IRV",
+          "text": "और उसको चाँदी के समान ढूँढ़े, और गुप्त धन के समान उसकी खोज में लगा रहे; (मत्ती 13:44)"
+        },
+        "it": {
+          "version": "NR",
+          "text": "se la cerchi come l'argento e ti dai a scavarla come un tesoro,"
+        },
+        "ko": {
+          "version": "KOR",
+          "text": "은을 구하는 것 같이 그것을 구하며 감추인 보배를 찾는 것 같이 그것을 찾으면"
+        },
+        "pt": {
+          "version": "NVI",
+          "text": "se procurar a sabedoria como se procura a prata e buscá-la como quem busca um tesouro escondido,"
+        },
+        "es": {
+          "version": "NVI",
+          "text": "si la buscas como a la plata, como a un tesoro escondido,"
+        },
+        "ta": {
+          "version": "IRV",
+          "text": "அதை வெள்ளியைப்போல் நாடி, புதையல்களைத் தேடுகிறதுபோல் தேடினால்,"
+        },
+        "te": {
+          "version": "IRV",
+          "text": "పోగొట్టుకున్న వెండిని వెతికినట్టు దాన్ని వెదికినప్పుడు, దాచుకున్న ధనం కోసం వెతికినట్టు జ్ఞానాన్ని వెతికినప్పుడు,"
+        },
+        "uk": {
+          "version": "UKR",
+          "text": "якщо будеш шукати його, немов срібла, і будеш його ти пошукувати, як тих схованих скарбів,"
+        },
+        "vi": {
+          "version": "VIE",
+          "text": "Nếu con tìm nó như tiền bạc, Và kiếm nó như bửu vật ẩn bí,"
+        }
+      }
+    ]
   },
   "T": {
     "reference": "Proverbs 22:6",
@@ -1478,6 +2371,7 @@
       "version": "GNT",
       "text": "Teach children how they should live, and they will remember it all their life.",
       "versions": {
+        "CEV": "Teach your children right from wrong, and when they are grown they will still do right.",
         "ERV": "Teach children in a way that fits their needs, and even when they are old, they will not leave the right path.",
         "BSB": "Train up a child in the way he should go, and when he is old he will not depart from it."
       }
@@ -1554,6 +2448,7 @@
       "version": "NIV",
       "text": "Jesus replied, “Very truly I tell you, no one can see the kingdom of God unless they are born again.”",
       "versions": {
+        "CEV": "Jesus replied, “I tell you for certain that you must be born from above before you can see God's kingdom!”",
         "ERV": "Jesus answered, “I assure you, everyone must be born again. Anyone who is not born again cannot be in God’s kingdom.”",
         "BSB": "Jesus replied, “Truly, truly, I tell you, no one can see the kingdom of God unless he is born again.”"
       }
@@ -1621,6 +2516,162 @@
     "vi": {
       "version": "VIE",
       "text": "Đức Chúa Jêsus cất tiếng đáp rằng: Quả thật, quả thật, ta nói cùng ngươi, nếu một người chẳng sanh lại, thì không thể thấy được nước Đức Chúa Trời."
+    },
+    "alternates": [
+      {
+        "reference": "Psalm 90:12",
+        "key": "Use wisely all the time we have",
+        "en": {
+          "version": "GNT",
+          "text": "Teach us how short our life is, so that we may become wise.",
+          "versions": {
+            "CEV": "Teach us to use wisely all the time we have.",
+            "ERV": "Teach us how short our lives are so that we can become wise.",
+            "BSB": "So teach us to number our days, that we may present a heart of wisdom."
+          }
+        },
+        "am": {
+          "version": "1962",
+          "text": "በልብ ጥበብን እንድንማር፥ ቀኝህን እንዲህ አስታውቀን።"
+        },
+        "ar": {
+          "version": "AVD",
+          "text": "إِحْصَاءَ أَيَّامِنَا هَكَذَا عَلِّمْنَا فَنُؤْتَى قَلْبَ حِكْمَةٍ."
+        },
+        "be": {
+          "version": "BEL",
+          "text": "Лічыць дні нашыя навучы Ты нас, каб прыдбаць нам мудрае сэрца."
+        },
+        "zh-cn": {
+          "version": "CCB",
+          "text": "求你教导我们明白人生有限， 使我们做有智慧的人。"
+        },
+        "zh-tw": {
+          "version": "CUV",
+          "text": "求你指教我們怎樣數算自己的日子，好叫我們得著智慧的心。"
+        },
+        "fa": {
+          "version": "OPV",
+          "text": "ما را تعلیم ده تا ایام خود را بشماریم تا دل خردمندی را حاصل نماییم."
+        },
+        "fr": {
+          "version": "LSG",
+          "text": "Enseigne-nous à bien compter nos jours, Afin que nous appliquions notre coeur à la sagesse."
+        },
+        "hi": {
+          "version": "IRV",
+          "text": "हमको अपने दिन गिनने की समझ दे कि हम बुद्धिमान हो जाएँ।"
+        },
+        "it": {
+          "version": "NR",
+          "text": "Insegnaci dunque a contare bene i nostri giorni, per acquistare un cuore saggio."
+        },
+        "ko": {
+          "version": "KOR",
+          "text": "우리에게 우리 날 계수함을 가르치사 지혜의 마음을 얻게 하소서"
+        },
+        "pt": {
+          "version": "NVI",
+          "text": "Ensina-nos a contar os nossos dias para que o nosso coração alcance sabedoria."
+        },
+        "es": {
+          "version": "NVI",
+          "text": "Enséñanos a contar bien nuestros días, para que nuestro corazón adquiera sabiduría."
+        },
+        "ta": {
+          "version": "IRV",
+          "text": "நாங்கள் ஞான இருதயமுள்ளவர்களாகும்படி, எங்களுடைய நாட்களை எண்ணும் அறிவை எங்களுக்குப் போதித்தருளும்."
+        },
+        "te": {
+          "version": "IRV",
+          "text": "కాబట్టి మేము జ్ఞానంగా బ్రతికేలా మా బ్రతుకును గురించి ఆలోచించడం మాకు నేర్పు."
+        },
+        "uk": {
+          "version": "UKR",
+          "text": "Навчи нас лічити отак наші дні, щоб ми набули серце мудре!"
+        },
+        "vi": {
+          "version": "VIE",
+          "text": "Cầu xin Chúa dạy chúng tôi biết đếm các ngày chúng tôi, Hầu cho chúng tôi được lòng khôn ngoan."
+        }
+      }
+    ]
+  },
+  "V": {
+    "reference": "Proverbs 4:8",
+    "key": "Value Wisdom and hold tightly to her",
+    "en": {
+      "version": "GNT",
+      "text": "Love wisdom, and she will make you great. Embrace her, and she will bring you honor.",
+      "versions": {
+        "CEV": "If you value Wisdom and hold tightly to her, great honors will be yours.",
+        "ERV": "Love wisdom, and she will make you great. Hold on to wisdom, and she will bring you honor.",
+        "BSB": "Prize her, and she will exalt you; if you embrace her, she will honor you."
+      }
+    },
+    "am": {
+      "version": "1962",
+      "text": "ከፍ ከፍ አድርጋት፥ እርስዋም ከፍ ከፍ ታደርግሃለች፤ ብታቅፋትም ታከብርሃለች።"
+    },
+    "ar": {
+      "version": "AVD",
+      "text": "ٱرْفَعْهَا فَتُعَلِّيَكَ. تُمَجِّدُكَ إِذَا ٱعْتَنَقْتَهَا."
+    },
+    "be": {
+      "version": "BEL",
+      "text": "Узьвяліч яе, і яна падыме цябе, яна праславіць цябе, калі ты ўхопішся за яе,"
+    },
+    "zh-cn": {
+      "version": "CCB",
+      "text": "高举智慧，她必使你受尊崇； 拥抱智慧，她必使你得尊荣。"
+    },
+    "zh-tw": {
+      "version": "CUV",
+      "text": "高舉智慧，她就使你高升；懷抱智慧，她就使你尊榮。"
+    },
+    "fa": {
+      "version": "OPV",
+      "text": "آن را محترم دار، و تو را بلند خواهد ساخت. واگر او را در آغوش بکشی تو را معظم خواهدگردانید."
+    },
+    "fr": {
+      "version": "LSG",
+      "text": "Exalte-la, et elle t'élèvera; Elle fera ta gloire, si tu l'embrasses;"
+    },
+    "hi": {
+      "version": "IRV",
+      "text": "उसकी बड़ाई कर, वह तुझको बढ़ाएगी; जब तू उससे लिपट जाए, तब वह तेरी महिमा करेगी।"
+    },
+    "it": {
+      "version": "NR",
+      "text": "Esaltala, ed essa t'innalzerà; essa ti coprirà di gloria quando l'avrai abbracciata."
+    },
+    "ko": {
+      "version": "KOR",
+      "text": "그를 높이라 그리하면 그가 너를 높이 들리라 만일 그를 품으면 그가 너를 영화롭게 하리라"
+    },
+    "pt": {
+      "version": "NVI",
+      "text": "Dedique alta estima à sabedoria, e ela o exaltará; abrace-a, e ela o honrará."
+    },
+    "es": {
+      "version": "NVI",
+      "text": "Estima a la sabiduría y ella te exaltará; abrázala y ella te honrará;"
+    },
+    "ta": {
+      "version": "IRV",
+      "text": "நீ அதை மேன்மைப்படுத்து, அது உன்னை மேன்மைப்படுத்தும்; நீ அதைத் தழுவிக்கொண்டால், அது உனக்கு மரியாதை செலுத்தும்."
+    },
+    "te": {
+      "version": "IRV",
+      "text": "నువ్వు జ్ఞానాన్ని గౌరవిస్తే అది నిన్ను గొప్ప చేస్తుంది. దాన్ని హత్తుకుని ఉంటే అది నీకు పేరు ప్రతిష్టలు తెస్తుంది."
+    },
+    "uk": {
+      "version": "UKR",
+      "text": "Тримай її високо і підійме тебе, ушанує тебе, як її ти пригорнеш:"
+    },
+    "vi": {
+      "version": "VIE",
+      "text": "Hãy tôn tặng sự khôn ngoan, thì sự khôn ngoan sẽ thăng con lên, Làm cho con được vinh hiển, khi con hoài niệm đến."
     }
   },
   "W": {
@@ -1630,6 +2681,7 @@
       "version": "GNT",
       "text": "Worship no god but me.",
       "versions": {
+        "CEV": "Do not worship any god except me.",
         "ERV": "You must not worship any other gods except me.",
         "BSB": "You shall have no other gods before Me."
       }
@@ -1697,7 +2749,86 @@
     "vi": {
       "version": "VIE",
       "text": "Trước mặt ta, ngươi chớ có các thần khác."
-    }
+    },
+    "alternates": [
+      {
+        "reference": "Psalm 32:6",
+        "key": "We worship you, Lord",
+        "en": {
+          "version": "GNT",
+          "text": "So all your loyal people should pray to you in times of need; when a great flood of trouble comes rushing in, it will not reach them.",
+          "versions": {
+            "CEV": "We worship you, Lord, and we should always pray whenever we find out that we have sinned. Then we won't be swept away by a raging flood.",
+            "ERV": "That is why your loyal followers pray to you while there is still time. Then when trouble rises like a flood, it will not reach them.",
+            "BSB": "Therefore let all the godly pray to You while You may be found. Surely when great waters rise, they will not come near."
+          }
+        },
+        "am": {
+          "version": "1962",
+          "text": "ስለዚህ ቅዱስ ሁሉ በምቹ ጊዜ ወደ አንተ ይለምናል፤ ብዙ የጥፋት ውኃም ወደ እርሱ አይቀርብም።"
+        },
+        "ar": {
+          "version": "AVD",
+          "text": "لِهَذَا يُصَلِّي لَكَ كُلُّ تَقِيٍّ فِي وَقْتٍ يَجِدُكَ فِيهِ. عِنْدَ غَمَارَةِ ٱلْمِيَاهِ ٱلْكَثِيرَةِ إِيَّاهُ لَا تُصِيبُ."
+        },
+        "be": {
+          "version": "BEL",
+          "text": "Таму кожны багабойны бу­дзе маліцца да Цябе ў часе, калі можна знайсьці Цябе; нават калі разальюцца воды вялікія, яны не дакрануцца яго."
+        },
+        "zh-cn": {
+          "version": "CCB",
+          "text": "因此，趁着还能寻求你的时候， 愿所有敬虔的人都当向你祷告； 洪水泛滥时，必不殃及他们。"
+        },
+        "zh-tw": {
+          "version": "CUV",
+          "text": "為此，凡虔誠人都當趁你可尋找的時候禱告你；大水泛溢的時候，必不能到他那裡。"
+        },
+        "fa": {
+          "version": "OPV",
+          "text": "از این‌رو هر مقدسی در وقت اجابت نزد تودعا خواهد کرد. وقتی که آبهای بسیار به سیلان آید، هرگز بدو نخواهد رسید."
+        },
+        "fr": {
+          "version": "LSG",
+          "text": "Qu'ainsi tout homme pieux te prie au temps convenable! Si de grandes eaux débordent, elles ne l'atteindront nullement."
+        },
+        "hi": {
+          "version": "IRV",
+          "text": "इस कारण हर एक भक्त तुझ से ऐसे समय में प्रार्थना करे जबकि तू मिल सकता है । निश्चय जब जल की बड़ी बाढ़ आए तो भी उस भक्त के पास न पहुँचेगी।"
+        },
+        "it": {
+          "version": "NR",
+          "text": "Perciò ogni uomo pio t'invochi mentre puoi essere trovato; e qualora straripino le grandi acque, esse, per certo, non giungeranno fino a lui."
+        },
+        "ko": {
+          "version": "KOR",
+          "text": "이로 인하여 무릇 경건한 자는 주를 만날 기회를 타서 주께 기도할지라 진실로 홍수가 범람할지라도 저에게 미치지 못하리이다"
+        },
+        "pt": {
+          "version": "NVI",
+          "text": "Portanto, que todos os que são fiéis orem a ti enquanto podes ser encontrado; quando as muitas águas se levantarem, elas não os atingirão."
+        },
+        "es": {
+          "version": "NVI",
+          "text": "Que te invoquen todos los fieles en momentos que puedas ser hallado; caudalosas aguas podrán desbordarse, pero no los alcanzarán."
+        },
+        "ta": {
+          "version": "IRV",
+          "text": "இதற்காக உம்மைக் காணும் காலத்தில் பக்தியுள்ளவனெவனும் உம்மை நோக்கி விண்ணப்பம் செய்வான்; அப்பொழுது மிகுந்த வெள்ளம் வந்தாலும் அது அவனை அணுகாது."
+        },
+        "te": {
+          "version": "IRV",
+          "text": "దీని కారణంగా భయభక్తులు కలిగిన వాడు నువ్వు దొరికే సమయంలో నీకు ప్రార్ధించాలి. అప్పుడు జల ప్రవాహాలు ఉప్పొంగినా అవి అతని దగ్గరకు రావు."
+        },
+        "uk": {
+          "version": "UKR",
+          "text": "Тому кожен побожний відповідного часу молитися буде до Тебе, і навіть велика навала води не досягне до нього!"
+        },
+        "vi": {
+          "version": "VIE",
+          "text": "Bởi cớ ấy phàm người nhân đức đều cầu nguyện cùng Chúa trong khi có thể gặp Ngài; Quả thật, trong lúc có nước lụt lan ra, thì sẽ chẳng lan đến người."
+        }
+      }
+    ]
   },
   "X": {
     "reference": "Psalm 26:2",
@@ -1706,6 +2837,7 @@
       "version": "GNT",
       "text": "Examine me and test me, LORD; judge my desires and thoughts.",
       "versions": {
+        "CEV": "Test my thoughts and find out what I am like.",
         "ERV": "Look closely at me, LORD, and test me. Judge my deepest thoughts and emotions.",
         "BSB": "Test me, O LORD, and try me; examine my heart and mind."
       }
@@ -1773,7 +2905,86 @@
     "vi": {
       "version": "VIE",
       "text": "Đức Giê-hô-va ôi! xin hãy dò xét và thử thách tôi, Rèn luyện lòng dạ tôi,"
-    }
+    },
+    "alternates": [
+      {
+        "reference": "Colossians 4:3",
+        "key": "Explain the mystery about Christ",
+        "en": {
+          "version": "GNT",
+          "text": "At the same time pray also for us, so that God will give us a good opportunity to preach his message about the secret of Christ. For that is why I am now in prison.",
+          "versions": {
+            "CEV": "Be sure to pray that God will make a way for us to spread his message and explain the mystery about Christ, even though I am in jail for doing this.",
+            "ERV": "Also pray for us. Pray that God will give us an opportunity to tell people his message. I am in prison for doing this. But pray that we can continue to tell people the secret truth that God has made known about Christ.",
+            "BSB": "as you pray also for us, that God may open to us a door for the word, so that we may proclaim the mystery of Christ, for which I am in chains."
+          }
+        },
+        "am": {
+          "version": "1962",
+          "text": "በዚያን ጊዜም ስለ እርሱ ደግሞ የታሰርሁበትን የክርስቶስን ምሥጢር እንድንነግር እግዚአብሔር የቃሉን ደጅ ይከፍትልን ዘንድ ስለ እኛ ደግሞ ጸልዩ።"
+        },
+        "ar": {
+          "version": "AVD",
+          "text": "مُصَلِّينَ فِي ذَلِكَ لِأَجْلِنَا نَحْنُ أَيْضًا، لِيَفْتَحَ ٱلرَّبُّ لَنَا بَابًا لِلْكَلَامِ، لِنَتَكَلَّمَ بِسِرِّ ٱلْمَسِيحِ، ٱلَّذِي مِنْ أَجْلِهِ أَنَا مُوثَقٌ أَيْضًا،"
+        },
+        "be": {
+          "version": "BEL",
+          "text": "молячыся таксама і за нас, каб Бог адчыніў нам дзьверы слова абвяшчаць тайну Хрыстовую, дзеля якой я зьвязаны,"
+        },
+        "zh-cn": {
+          "version": "CCB",
+          "text": "要为我们祷告，求上帝为我们打开传道的门，好传扬基督的奥秘——我就是为此而被囚禁的。"
+        },
+        "zh-tw": {
+          "version": "CUV",
+          "text": "也要為我們禱告，求 神給我們開傳道的門，能以講基督的奧祕（我為此被捆鎖），"
+        },
+        "fa": {
+          "version": "OPV",
+          "text": "و درباره ما نیز دعا کنید که خدا در کلام را به روی ما بگشاید تا سر مسیح را که بجهت آن در قید هم افتاده‌ام بگویم،"
+        },
+        "fr": {
+          "version": "LSG",
+          "text": "Priez en même temps pour nous, afin que Dieu nous ouvre une porte pour la parole, en sorte que je puisse annoncer le mystère de Christ, pour lequel je suis dans les chaînes,"
+        },
+        "hi": {
+          "version": "IRV",
+          "text": "और इसके साथ ही साथ हमारे लिये भी प्रार्थना करते रहो, कि परमेश्वर हमारे लिये वचन सुनाने का ऐसा द्वार खोल दे, कि हम मसीह के उस भेद का वर्णन कर सकें जिसके कारण मैं कैद में हूँ।"
+        },
+        "it": {
+          "version": "NR",
+          "text": "Pregate nello stesso tempo anche per noi, affinché Dio ci apra una porta per la parola, perché possiamo annunciare il mistero di Cristo, a motivo del quale mi trovo prigioniero,"
+        },
+        "ko": {
+          "version": "KOR",
+          "text": "또한 우리를 위하여 기도하되 하나님이 전도할 문을 우리에게 열어주사 그리스도의 비밀을 말하게 하시기를 구하라 내가 이것을 인하여 매임을 당하였노라"
+        },
+        "pt": {
+          "version": "NVI",
+          "text": "Ao mesmo tempo, orem também por nós, para que Deus abra uma porta para a nossa mensagem, a fim de que possamos proclamar o mistério de Cristo, pelo qual estou preso."
+        },
+        "es": {
+          "version": "NVI",
+          "text": "y, al mismo tiempo, intercedan por nosotros a fin de que Dios nos abra la puerta para proclamar la palabra, el misterio de Cristo por el cual estoy preso."
+        },
+        "ta": {
+          "version": "IRV",
+          "text": "கிறிஸ்துவினுடைய இரகசியத்தினிமித்தம் கட்டப்பட்டிருக்கிற நான் அந்த இரகசியத்தைக்குறித்துப் பேசவேண்டிய பிரகாரமாகப் பேசி, அதை வெளிப்படுத்துவதற்கு,"
+        },
+        "te": {
+          "version": "IRV",
+          "text": "దేవుని వాక్కు అయిన క్రీస్తు మర్మాన్ని బోధించడానికి దేవుడు నాకు పరిస్థితులను అనుకూలపరచాలని ప్రార్ధించండి. ఈ వాక్కు కారణంగానే నేను సంకెళ్ళ పాలయ్యాను."
+        },
+        "uk": {
+          "version": "UKR",
+          "text": "Моліться разом і за нас, щоб Бог нам відчинив двері слова, звіщати таємницю Христову, що за неї я й зв'язаний,"
+        },
+        "vi": {
+          "version": "VIE",
+          "text": "Cũng hãy cầu nguyện cho chúng tôi, xin Đức Chúa Trời mở cửa cho sự giảng đạo, hầu cho tôi được rao truyền lẽ mầu nhiệm của Đấng Christ, vì lẽ đó mà tôi bị xiềng xích,"
+        }
+      }
+    ]
   },
   "Y": {
     "reference": "Matthew 5:13",
@@ -1782,6 +2993,7 @@
       "version": "GNT",
       "text": "You are like salt for the whole human race. But if salt loses its saltiness, there is no way to make it salty again. It has become worthless, so it is thrown out and people trample on it.",
       "versions": {
+        "CEV": "You are the salt for everyone on earth. But if salt no longer tastes like salt, how can it make food salty? All it is good for is to be thrown out and walked on.",
         "ERV": "You are the salt of the earth. But if the salt loses its taste, it cannot be made salty again. Salt is useless if it loses its salty taste. It will be thrown out where people will just walk on it.",
         "BSB": "You are the salt of the earth. But if the salt loses its savor, how can it be made salty again? It is no longer good for anything, except to be thrown out and trampled by men."
       }
@@ -1849,7 +3061,86 @@
     "vi": {
       "version": "VIE",
       "text": "Các ngươi là muối của đất; song nếu mất mặn đi, thì sẽ lấy giống chi mà làm cho mặn lại? Muối ấy không dùng chi được nữa, chỉ phải quăng ra ngoài và bị người ta đạp dưới chân."
-    }
+    },
+    "alternates": [
+      {
+        "reference": "Galatians 3:26",
+        "key": "You are God's children because of your faith in Christ Jesus",
+        "en": {
+          "version": "GNT",
+          "text": "It is through faith that all of you are God's children in union with Christ Jesus.",
+          "versions": {
+            "CEV": "All of you are God's children because of your faith in Christ Jesus.",
+            "ERV": "You were all baptized into Christ, and so you were all clothed with Christ. This shows that you are all children of God through faith in Christ Jesus.",
+            "BSB": "You are all sons of God through faith in Christ Jesus."
+          }
+        },
+        "am": {
+          "version": "1962",
+          "text": "በእምነት በኩል ሁላችሁ በክርስቶስ ኢየሱስ የእግዚአብሔር ልጆች ናችሁና፤"
+        },
+        "ar": {
+          "version": "AVD",
+          "text": "لِأَنَّكُمْ جَمِيعًا أَبْنَاءُ ٱللهِ بِٱلْإِيمَانِ بِٱلْمَسِيحِ يَسُوعَ."
+        },
+        "be": {
+          "version": "BEL",
+          "text": "бо ўсе вы — сыны Божыя праз веру ў Хрыста Ісуса."
+        },
+        "zh-cn": {
+          "version": "CCB",
+          "text": "你们都借着信基督耶稣而成为上帝的儿女，"
+        },
+        "zh-tw": {
+          "version": "CUV",
+          "text": "所以，你們因信基督耶穌都是 神的兒子。"
+        },
+        "fa": {
+          "version": "OPV",
+          "text": "زیرا همگی شما بوسیله ایمان در مسیح عیسی، پسران خدا می‌باشید."
+        },
+        "fr": {
+          "version": "LSG",
+          "text": "Car vous êtes tous fils de Dieu par la foi en Jésus-Christ;"
+        },
+        "hi": {
+          "version": "IRV",
+          "text": "क्योंकि तुम सब उस विश्वास करने के द्वारा जो मसीह यीशु पर है, परमेश्वर की सन्तान हो।"
+        },
+        "it": {
+          "version": "NR",
+          "text": "perché siete tutti figli di Dio per la fede in Cristo Gesù."
+        },
+        "ko": {
+          "version": "KOR",
+          "text": "너희가 다 믿음으로 말미암아 그리스도 예수 안에서 하나님의 아들이 되었으니"
+        },
+        "pt": {
+          "version": "NVI",
+          "text": "Todos vocês são filhos de Deus mediante a fé em Cristo Jesus,"
+        },
+        "es": {
+          "version": "NVI",
+          "text": "Todos ustedes son hijos de Dios mediante la fe en Cristo Jesús,"
+        },
+        "ta": {
+          "version": "IRV",
+          "text": "நீங்கள் எல்லோரும் கிறிஸ்து இயேசுவை விசுவாசிக்கும் விசுவாசத்தினால் தேவனுடைய பிள்ளைகளாக இருக்கிறீர்களே."
+        },
+        "te": {
+          "version": "IRV",
+          "text": "యేసు క్రీస్తులో మీరంతా విశ్వాసం ద్వారా దేవుని కుమారులు."
+        },
+        "uk": {
+          "version": "UKR",
+          "text": "Бо ви всі сини Божі через віру в Христа Ісуса!"
+        },
+        "vi": {
+          "version": "VIE",
+          "text": "Vì chưng anh em bởi tin Đức Chúa Jêsus Christ, nên hết thảy đều là con trai của Đức Chúa Trời."
+        }
+      }
+    ]
   },
   "Z": {
     "reference": "Luke 19:6",
@@ -1858,6 +3149,7 @@
       "version": "GNT",
       "text": "Zacchaeus hurried down and welcomed him with great joy.",
       "versions": {
+        "CEV": "Zacchaeus hurried down and gladly welcomed Jesus.",
         "ERV": "Zacchaeus hurried and came down. He was happy to have Jesus in his house.",
         "BSB": "So Zacchaeus hurried down and welcomed Him joyfully."
       }

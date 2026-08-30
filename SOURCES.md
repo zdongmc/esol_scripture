@@ -111,6 +111,25 @@ Both are new instances of defects this file already warned about, plus one new o
    was, only ever at the very start or end and only while that mark is unbalanced.
 3. **Psalms chapter files are 3-digit** in eBible zips (`PSA026.htm`, not `PSA26.htm`).
 
+### CEV, added as the fourth English version
+
+**Availability was the question, and the answer is yes** — but only from BibleGateway.
+eBible does not carry it (`engcev_html.zip` → **404**), which is expected for an ABS
+copyright text, so there is no second source and no byte-for-byte cross-check available.
+Each verse is reference-asserted against the page title, the same check the GNT column rests
+on, and the parser is the one already hardened for BibleGateway.
+
+**It is licence-neutral, not a licence gain.** The publisher is the American Bible Society —
+the same publisher as the GNT already in use — so adding it neither improves nor worsens the
+position. That is precisely why it was rejected the first time round, and that reasoning was
+correct on its own terms. What changed is not the licence but the *content*: the Key Texts for
+all 16 verses added on 2026-08-29 are verbatim CEV. BibleGateway's CEV returns
+"Don't condemn others, and God won't condemn you." for Matthew 7:1 — word for word the phrase
+on the handout heading. Carrying CEV means a volunteer can put the English verse into the same
+words as the heading above it, which no other version can do for those letters.
+
+It prints a credit line (`CREDITS.CEV` in `index.html`), as every ABS and Biblica text here does.
+
 ### Traps worth checking first in any language added later
 
 Every one of these was found the hard way:
@@ -137,6 +156,7 @@ Every one of these was found the hard way:
 | en | NIV *(letters K, U only)* | BibleGateway | `biblegateway.com/passage/?search={REF}&version=NIV` | ✅ | © 2011 Biblica |
 | en | **ERV** *(alternate, all 25)* | ebible.org `engerv` | `ebible.org/Scriptures/engerv_html.zip` | ✅ | © 2006 Bible League International — 1,000-verse allowance |
 | en | ERV *(cross-check)* | BibleGateway | `biblegateway.com/passage/?search={REF}&version=ERV` — **strip `<h1>`–`<h6>` first**, headings share the verse's span class | ✅ | as above |
+| en | **CEV** *(alternate, all 41 entries)* | BibleGateway | `biblegateway.com/passage/?search={REF}&version=CEV` | ✅ | © 1995 American Bible Society |
 | en | **BSB** *(alternate, all 25)* | ebible.org `engbsb` | `ebible.org/Scriptures/engbsb_html.zip` | ✅ | Public domain |
 | en | BSB *(cross-check)* | bereanbible.com | `bereanbible.com/bsb.txt` — tab-separated, `Reference\tText`, uses "Psalms" not "Psalm" | ✅ | Public domain |
 | es | NVI (1999, 2015, 2022) | **BibleGateway** | `biblegateway.com/passage/?search={Libro}+{ch}:{v}&version=NVI` | ✅ | © Biblica |
@@ -359,6 +379,75 @@ NR divides Ecclesiastes differently from the English versions. NR chapter 11 end
 Requesting `Ec12:1` returns "Rallègrati pure, o giovane…" — the wrong verse, and
 plausible enough to pass unnoticed. Letter R must be fetched as **`Ec12:3`**.
 This is the only offset found across the 25.
+
+---
+
+## The alternate verses, and the new letter V (2026-08-29)
+
+Fifteen letters gained a **second whole verse** and **V gained its first**, so the alphabet is
+now A–Z. Sixteen references × 17 languages = 272 verses, fetched from the same sources as the
+originals, each reference-asserted at fetch time.
+
+The Key Texts are the ESOL team's, and they are **verbatim CEV** — checked against
+BibleGateway's CEV for Matthew 7:1, which returns exactly "Don't condemn others, and God won't
+condemn you." No CEV text is stored in `translations.json`; only the heading phrasing derives
+from it, the same way the earlier headings derive from the GNT wording in the source PDF.
+
+### Verification
+
+| Language | Second source | Result |
+|---|---|---|
+| en / BSB | `bereanbible.com/bsb.txt` (publisher's own file) | **16/16 agree** |
+| en / ERV | BibleGateway `ERV` vs ebible `engerv` | 16/16 agree |
+| ko | studybible.info vs ebible `kor` | **16/16 agree** |
+| vi | wordproject `vt` vs ebible `vie1934` | 15/16 — the one difference is a printing variant (`nhân`/`nhơn`, Psalm 32:6) |
+| ar | copticchurch.net vs ebible `arb-vd` | 15/16 — the one difference is a documented SVD edition variant (Luke 10:27 `فَأَجَابَ وَقَالَ` / `فَأَجَابَ`) |
+| uk | htmlbible.com vs BibleGateway `UKR` | 16/16 agree |
+| all ebible languages | Psalm 119 parses to 176 verses | Hebrew numbering confirmed in every one — no `ref` overrides needed for the psalms |
+
+Everything else rests on the reference assertion each source performs at fetch: eBible by
+filename and verse id, FHL by the `engs`/`chap`/`sec` it echoes back, LaParola and wordproject
+by reading their own heading back, BibleGateway by its page title.
+
+### New traps, none of which the earlier work had hit
+
+1. **ebible's `vie1934` renders `ỳ` as `”` — 179 times.** It is a defect in that copy, not the
+   translation: `bất kỳ` in Romans 8:38 arrives as `bất k”`. wordproject's independent copy has
+   `kỳ`, and the repaired text then matches it exactly. **The existing 25 Vietnamese verses are
+   unaffected** — none of them happens to contain a `ỳ` — but any verse added from `vie1934`
+   must be checked for `”` inside a word.
+2. **BibleGateway appends a cross-version link to the passage** — "Psalm 90:12 in all English
+   translations" — and it is *outside* `passage-content`'s first closing `</div>`, so a
+   fall-through match swallows it. It reached 55 of 80 fetched verses before being caught.
+   Cut the HTML at `passage-other-trans` / `footnotes` / `crossrefs` / `publisher-info` /
+   `full-chap-link` **before** extracting text. Do not try to strip it from the flattened
+   string afterwards: the reference it repeats is hard to tell from the verse's own last words,
+   and a regex written to do so ate "become wise." off the end of Psalm 90:12.
+3. **wordproject writes `-` where an edition merges verses.** Amharic 1 Timothy 2:3 is a bare
+   dash, its content having been folded into v4. A merged verse therefore arrives as a
+   *plausible-looking short string*, not as a missing one. Assert a minimum length.
+4. **wordproject's Vietnamese uses `Ð` (U+00D0 eth) where the text needs `Đ` (U+0110).**
+   Normalise the codepoint before comparing, or 8 of 16 verses report false mismatches.
+5. **Merged verse spans in the editions themselves**: Telugu IRV and ERV both print
+   Romans 8:38 as `38-39`, and ERV prints Galatians 3:26 as `26-27`. The verse-number stripper
+   must handle a range, or a stray `-39` is left at the head of the verse.
+6. **Clause order can strand a verse mid-sentence.** 1 Timothy 2:1 in both the 1962 Amharic and
+   IRV Telugu is a *dependent clause* — the petition ("supplications, prayers … for all people")
+   falls in v2 — so v1 alone would print under the heading "Pray for everyone" with no prayer in
+   it. Both rows carry 2:1-2 with a `ref` override. This is the same remedy as Italian's
+   Ecclesiastes offset, for a different cause: versification is right, the syntax simply spans
+   the boundary.
+7. **FHL carries `或譯` apparatus as well as `古卷`.** Matthew 6:13 comes with
+   `（或譯：脫離惡者）`, "alternatively rendered". Strip parentheticals containing either.
+8. **Nested quotes arrive spaced.** eBible prints `“ ‘` with a plain space and BibleGateway with
+   U+2006, at the head of Luke 10:27 in several languages. Normalised to `“‘`; there was no
+   precedent in the existing data either way.
+
+### One correction to this file
+
+The BSB note said `bereanbible.com/bsb.txt` "uses 'Psalms' not 'Psalm'". **It uses `Psalm`** —
+2,461 lines of it. A lookup keyed on the plural now misses every psalm.
+
 
 ## Copyright posture
 

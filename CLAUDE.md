@@ -7,7 +7,7 @@ See DESIGN.md
 ## How it works
 
 - `index.html` — single-file SPA (HTML + CSS + JS, no build step, no dependencies)
-- `translations.json` — 25 scriptures (A–Z minus V) x 17 languages
+- `translations.json` — 26 scriptures (A–Z) x 17 languages, 15 of which offer a second verse
 - User picks a letter and languages, previews the handout, prints or saves as PDF via the browser
 
 ## Key files
@@ -36,8 +36,18 @@ Two things learned adding the fifth step, both counter-intuitive:
   took 19% of each cell's width; narrowing it to 1.4rem removed a wrapped line from most
   cells, and a two-line `<h2>` cost more than a whole line of body text.
 
-There is ~0.3in (web fonts) / ~0.23in (fallback) of slack at present. **The fallback is
-the binding case** — check it, not just the published rendering.
+There is now only **~0.1in of slack in the fallback case** (8px fits, 10px breaks to a
+second page); the web-font rendering has more. **The fallback is the binding case** — check
+it, not just the published rendering.
+
+Adding V as a 26th letter cost a whole index row and broke the fallback to two pages. Two
+more data points from fixing it, both consistent with the lessons above:
+
+- **Six columns was worse than five**, and broke even the web-font case: "Ephesians 4:32"
+  does not fit a sixth-width cell, so every wrapped item cost more than the saved row.
+- **The row gap paid for the row.** Tightening `.verse-index` row-gap from 0.3rem to 0.12rem
+  recovered ~0.17in across the six rows — more than the new row cost — with no change to
+  type size. Spacing, not size, is where the give is.
 
 Verify a change with headless Chrome rather than by eye, and check the web-font fallback
 too — Source Serif 4 / IBM Plex Sans fall back to Georgia and system-ui, which set wider:
@@ -84,45 +94,95 @@ Each entry maps a letter to a specific verse reference, short key text, and sour
 | S      | 1 Samuel 3:9     | GNT     | Speak, Lord, your servant is listening                                             |
 | T      | Proverbs 22:6    | GNT     | Teach children how they should live, and they will remember it all their life      |
 | U      | John 3:3         | NIV     | Unless he is born again no one can see the kingdom of God                          |
+| V      | Proverbs 4:8     | GNT     | Value Wisdom and hold tightly to her                                               |
 | W      | Exodus 20:3      | GNT     | Worship no god but me                                                              |
 | X      | Psalm 26:2       | GNT     | Examine me and test me, Lord                                                       |
 | Y      | Matthew 5:13     | GNT     | You are like salt for the whole human race                                         |
 | Z      | Luke 19:6        | GNT     | Zacchaeus … welcomed him with great joy                                            |
 
-- V is intentionally absent from the original Scripture Alphabet source document.
+- **V was absent from the original Scripture Alphabet source document** and was added later by
+  the ESOL team (Proverbs 4:8). It is a full letter, not an alternate — the alphabet is now A–Z.
 - Key Text is the English prompt phrase, not necessarily the full verse. Full verse text lives in `translations.json`.
 - Version listed is the English source version. Each language uses its own canonical version (see Languages section below).
 - The Version column is the **default** English wording. The app also offers two alternates —
   see English versions below.
+
+## Alternate verses
+
+Fifteen letters offer a **second verse**, chosen by the ESOL team. The app shows a *Verse*
+picker above the language list whenever the selected letter has one; letters with a single
+verse show no picker at all.
+
+| Letter | Alternate reference | Key Text (English) |
+|--------|---------------------|--------------------|
+| D | Matthew 7:1     | Don't condemn others, and God won't condemn you |
+| H | Revelation 4:8  | Holy, holy, holy is the Lord, the all-powerful God |
+| J | 1 Timothy 1:15  | Jesus came into the world to save sinners |
+| K | Matthew 6:13    | Keep us from being tempted and protect us from evil |
+| L | Luke 10:27      | Love your neighbor as much as you love yourself |
+| M | Mark 11:17      | My house should be a place of worship for all nations |
+| N | Romans 8:38     | Nothing can separate us from God's love |
+| O | Matthew 19:17   | Only God is good |
+| P | 1 Timothy 2:1   | Pray for everyone |
+| R | Psalm 37:31     | Remember God's teachings |
+| S | Proverbs 2:4    | Search for wisdom |
+| U | Psalm 90:12     | Use wisely all the time we have |
+| W | Psalm 32:6      | We worship you, Lord |
+| X | Colossians 4:3  | Explain the mystery about Christ |
+| Y | Galatians 3:26  | You are God's children because of your faith in Christ Jesus |
+
+- **An alternate is a whole verse, not a wording.** It carries its own reference, its own Key
+  Text and its own row for every one of the 17 languages, each in that language's canonical
+  version. This is the opposite of the English-version picker, which swaps the wording of one
+  row and leaves the heading alone.
+- **The Key Texts are the team's CEV phrasing**, and V's is too. Every earlier Key Text was
+  taken from the GNT wording in the source PDF, so this is a new provenance — recorded here
+  because the phrase on the handout will not always match the English verse beneath it
+  (GNT Proverbs 4:8 opens "Love wisdom", not "Value Wisdom"; GNT Revelation 4:8 opens with the
+  four living creatures, not "Holy"). The heading carries the alphabet cue; the body need not.
+- **The letter's own verse is always first** in the picker and is what the app shows until the
+  volunteer chooses otherwise. Changing letter resets the choice.
+- Alternates live in `translations.json` under `alternates` on the letter, an array of entries
+  shaped exactly like a letter. A reader that ignores `alternates` still gets the right verse.
 
 ## English versions
 
 The English row alone is switchable; every other language has one version. The picker sits
 above the language checkboxes and offers:
 
-| Choice | Version | Licence | Keeps the letter's word |
-|--------|---------|---------|:---:|
-| Good News (default) | GNT, and NIV for K and U | © ABS / © Biblica, no stated verse allowance | 25/25 |
-| Easy-to-Read | ERV © 2006 Bible League International | up to **1,000 verses**, <50% of the work | 20/25 |
-| Berean Standard | BSB | **public domain** | 22/25 |
+| Choice | Version | Licence | Keeps the cue: letters | alternates |
+|--------|---------|---------|:---:|:---:|
+| Good News (default) | GNT, and NIV for K and U | © ABS / © Biblica, no stated verse allowance | 25/26 | 9/15 |
+| Contemporary English | CEV © 1995 American Bible Society | same ABS notice as the GNT | 19/26 | **15/15** |
+| Easy-to-Read | ERV © 2006 Bible League International | up to **1,000 verses**, <50% of the work | 20/26 | 10/15 |
+| Berean Standard | BSB | **public domain** | 22/26 | 8/15 |
 
 - **The handout heading never changes with this choice.** The letter, the reference and the
   Key Text stay as written; only the English verse below them follows the picker. This is
   deliberate — the Key Text was written from the GNT, and no other version opens
   Revelation 1:3 with "Happy" or Exodus 20:3 with "Worship".
-- **Every alternate loses the letter's word on H, and most also on K, T, W, X.** The fixed
-  heading carries the alphabet cue on those handouts; the body will visibly differ.
-- ERV and NIrV/CEV were considered together. ERV won on licence (1,000 verses, and church
-  bulletins need only `(ERV)` beside the quotation) and on keeping O and W where the
-  public-domain versions drop them. **CEV was rejected**: same American Bible Society notice
-  as the GNT, so no licence gain. **BBE was rejected**: smallest vocabulary of any English
+- **Every non-default version loses the letter's word on H, and most also on K, U, X.** The
+  fixed heading carries the alphabet cue on those handouts; the body will visibly differ.
+- **The two columns pull in opposite directions, which is the point of having four choices.**
+  On the 26 letters the GNT is almost perfect (25/26 — it misses only V, whose Key Text is
+  CEV-worded). On the 15 alternates it manages just 9/15, while **CEV scores 15/15** — those
+  Key Texts were written from the CEV, so it is the one version that can put the English
+  verse into the same words as the heading above it. Pick GNT for the original letters, CEV
+  when showing an alternate.
+- **CEV was rejected once, then adopted.** The original reasoning still stands on its own
+  terms — same American Bible Society notice as the GNT, so no licence gain, and it was
+  rejected against ERV on that basis. What changed is not the licence but the content: the
+  alternates and V arrived with CEV-worded Key Texts, which no other version matches. Record
+  it as licence-neutral, adopted for coherence. **BBE was rejected**: smallest vocabulary of any English
   Bible but the *longest* sentences (20.8 words vs ERV's 12.0) and only 13/25 on the cue —
   it reads harder than ERV despite the simpler words. **OEB was rejected**: no Old
   Testament, which would blank 5 of the 25 letters.
 - Alternates live in `translations.json` under `en.versions`; `en.text` remains the default.
   `EN_VERSIONS` and `EN_VERSION_HINTS` in `index.html` drive the picker.
 - BSB is public domain, so it prints **no** credit line — consistent with the rule that
-  public-domain versions are omitted from the footer. ERV prints one.
+  public-domain versions are omitted from the footer. ERV and CEV both print one.
+- **CEV has no second source.** eBible does not carry it (404), so unlike every other version
+  here it rests on BibleGateway's per-fetch reference assertion alone. See `SOURCES.md`.
 
 ## Languages
 
