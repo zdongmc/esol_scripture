@@ -450,15 +450,27 @@ const LANGUAGES = [
 // translations.json under en.versions. The handout heading never changes with this
 // choice — only the English verse text below it.
 const EN_VERSIONS = [
-  { code: "default", name: "Good News",           abbr: "GNT", note: "matches the headings" },
-  { code: "CEV",     name: "Contemporary English", abbr: "CEV", note: "plain spoken English" },
-  { code: "ERV",     name: "Easy-to-Read",        abbr: "ERV", note: "simplest wording" },
-  { code: "BSB",     name: "Berean Standard",     abbr: "BSB", note: "public domain" },
+  { code: "default", name: "Good News",           abbr: "GNT" },
+  { code: "CEV",     name: "Contemporary English", abbr: "CEV" },
+  { code: "ERV",     name: "Easy-to-Read",        abbr: "ERV" },
+  { code: "BSB",     name: "Berean Standard",     abbr: "BSB" },
 ];
+
+// Which version the heading was written from depends on the verse, not the picker:
+// the letters' Key Texts come from the GNT, the alternates' from the CEV. So the
+// "matches the heading" note moves with the verse chosen rather than sitting on one row.
+const EN_VERSION_NOTES = {
+  "default": { own: "matches the heading", alt: "the default wording" },
+  "CEV":     { own: "plain spoken English", alt: "matches the heading" },
+  "ERV":     { own: "simplest wording",     alt: "simplest wording" },
+  "BSB":     { own: "public domain",        alt: "public domain" },
+};
 
 const EN_VERSION_HINTS = {
   "default": "Good News Translation — letters K and U come from the NIV.",
   "CEV":     "Contemporary English Version — the wording the alternate verses' headings use.",
+  "default@alt": "Good News Translation — this alternate's heading is CEV wording, so the verse below will differ.",
+  "CEV@alt":     "Contemporary English Version — the wording this alternate's heading was written from.",
   "ERV":     "Easy-to-Read Version — written for new and second-language readers.",
   "BSB":     "Berean Standard Bible — public domain, no permission needed.",
 };
@@ -516,10 +528,11 @@ function buildUI() {
     label.appendChild(document.createTextNode(`${v.name} — ${v.abbr}`));
     const note = document.createElement("span");
     note.className = "version-note";
-    note.textContent = v.note;
+    note.dataset.version = v.code;
     label.appendChild(note);
     verGrid.appendChild(label);
   });
+  renderVersionNotes();
   renderVersionHint();
 
   // Language checkboxes (all checked by default)
@@ -582,7 +595,7 @@ function renderVersePicker() {
     rb.name = "verse-choice";
     rb.value = String(i);
     rb.checked = i === selectedVerse;
-    rb.onchange = () => { selectedVerse = i; render(); };
+    rb.onchange = () => { selectedVerse = i; renderVersionNotes(); renderVersionHint(); render(); };
     lbl.appendChild(rb);
     lbl.appendChild(document.createTextNode(verseLabel(v)));
     const note = document.createElement("span");
@@ -593,10 +606,23 @@ function renderVersePicker() {
   });
 }
 
+function showingAlternate() {
+  return selectedVerse > 0 && versesFor(selectedLetter).length > 1;
+}
+
+function renderVersionNotes() {
+  const which = showingAlternate() ? "alt" : "own";
+  document.querySelectorAll("#version-grid .version-note").forEach(note => {
+    note.textContent = EN_VERSION_NOTES[note.dataset.version][which];
+  });
+}
+
 function renderVersionHint() {
   const on = checkedLangs.has("en");
+  const key = showingAlternate() && EN_VERSION_HINTS[enVersion + "@alt"]
+    ? enVersion + "@alt" : enVersion;
   document.getElementById("version-hint").textContent =
-    on ? EN_VERSION_HINTS[enVersion]
+    on ? EN_VERSION_HINTS[key]
        : "English is not selected, so this choice has no effect.";
   document.getElementById("version-grid").classList.toggle("inactive", !on);
 }
@@ -608,6 +634,8 @@ function selectLetter(letter) {
     btn.classList.toggle("active", btn.textContent === letter);
   });
   renderVersePicker();
+  renderVersionNotes();
+  renderVersionHint();
   render();
 }
 

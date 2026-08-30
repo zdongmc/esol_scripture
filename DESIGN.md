@@ -253,8 +253,10 @@ status section of `SOURCES.md`.
    so it rests on the per-fetch reference assertion alone. Record any such exception in
    `SOURCES.md` rather than letting it pass silently.
 4. Add the text to `en.versions` in `translations.json`, keyed by abbreviation.
-5. Add an entry to `EN_VERSIONS` and `EN_VERSION_HINTS` in `index.html`, and to
-   `_meta.englishVersions`.
+5. Add an entry to `EN_VERSIONS`, `EN_VERSION_NOTES` and `EN_VERSION_HINTS` in
+   `index.html`, and to `_meta.englishVersions`. `EN_VERSION_NOTES` needs both an `own`
+   and an `alt` label: the "matches the heading" marker follows the selected verse,
+   because the letters' Key Texts are GNT-worded and the alternates' are CEV-worded.
 6. Add a `CREDITS` line **only if the licence requires one** — public-domain versions are
    omitted by design.
 7. Update the English versions table in `CLAUDE.md` and the source rows in `SOURCES.md`.

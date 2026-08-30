@@ -157,6 +157,11 @@ above the language checkboxes and offers:
 | Easy-to-Read | ERV © 2006 Bible League International | up to **1,000 verses**, <50% of the work | 20/26 | 10/15 |
 | Berean Standard | BSB | **public domain** | 22/26 | 8/15 |
 
+- **The "matches the heading" note moves with the verse, not the picker.** Which version the
+  heading was written from is a property of the *verse*: the letters' Key Texts come from the
+  GNT, the alternates' from the CEV. So the note sits on Good News for a letter's own verse
+  and moves to Contemporary English when an alternate is showing (`EN_VERSION_NOTES` in
+  `index.html`). Pinning it permanently to the GNT would have been wrong on 15 handouts.
 - **The handout heading never changes with this choice.** The letter, the reference and the
   Key Text stay as written; only the English verse below them follows the picker. This is
   deliberate — the Key Text was written from the GNT, and no other version opens
