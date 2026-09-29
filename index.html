@@ -239,14 +239,14 @@
     .handout-header {
       margin-bottom: 1.4rem;
       padding-bottom: 0.8rem;
-      border-bottom: 2px solid #3a3530;
+      border-bottom: 2px solid #000;
     }
 
     .handout-letter {
       font-size: 3rem;
       font-weight: bold;
       line-height: 1;
-      color: #5a3e2b;
+      color: #3a2718;
       float: left;
       margin-right: 0.6rem;
       margin-top: 0.1rem;
@@ -255,7 +255,8 @@
     .handout-ref {
       font-size: 0.8rem;
       font-family: system-ui, sans-serif;
-      color: #888;
+      font-weight: 600;
+      color: #222;
       margin-bottom: 0.15rem;
       letter-spacing: 0.04em;
     }
@@ -263,7 +264,7 @@
     .handout-key {
       font-size: 1.05rem;
       font-style: italic;
-      color: #555;
+      color: #222;
       clear: none;
     }
 
@@ -276,7 +277,7 @@
       gap: 0.2rem 0.8rem;
       align-items: baseline;
       padding: 0.55rem 0;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid #999;
     }
 
     .translation-block:last-child { border-bottom: none; }
@@ -284,8 +285,8 @@
     .lang-name {
       font-family: system-ui, sans-serif;
       font-size: 0.72rem;
-      font-weight: 600;
-      color: #888;
+      font-weight: 700;
+      color: #222;
       letter-spacing: 0.04em;
       text-transform: uppercase;
       padding-top: 0.1rem;
@@ -294,14 +295,14 @@
     .lang-version {
       font-family: system-ui, sans-serif;
       font-size: 0.68rem;
-      color: #bbb;
+      color: #444;
       letter-spacing: 0.03em;
     }
 
     .lang-ref {
       font-family: system-ui, sans-serif;
       font-size: 0.68rem;
-      color: #bbb;
+      color: #333;
       letter-spacing: 0.03em;
       font-style: italic;
     }
@@ -313,14 +314,14 @@
     .verse-text {
       font-size: 0.92rem;
       line-height: 1.55;
-      color: #222;
+      color: #000;
       grid-column: 2;
       grid-row: 1 / span 2;
       align-self: center;
     }
 
     .verse-missing {
-      color: #ccc;
+      color: #666;
       font-style: italic;
       font-size: 0.82rem;
     }
@@ -334,11 +335,11 @@
     .handout-credits {
       margin-top: 1.4rem;
       padding-top: 0.7rem;
-      border-top: 1px solid #eee;
+      border-top: 1px solid #999;
       font-family: system-ui, sans-serif;
       font-size: 0.62rem;
       line-height: 1.45;
-      color: #999;
+      color: #444;
     }
 
     .handout-credits div + div { margin-top: 0.15rem; }
@@ -360,6 +361,8 @@
       body {
         background: #fff;
         font-size: 10pt;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
       }
 
       .handout-letter { font-size: 2.4rem; }
