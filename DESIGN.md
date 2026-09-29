@@ -273,3 +273,12 @@ status section of `SOURCES.md`.
 - **No dependencies**: Zero npm packages, no build step, no framework. One HTML file + one JSON file.
 - **Georgia serif** for verse text (readability across scripts), **system-ui sans-serif** for UI chrome.
 - **Print stylesheet** hides all UI elements and formats the handout for US Letter paper with appropriate margins.
+- **Designed for a black-and-white printer.** Volunteers mostly print on mono office
+  printers, where light greys wash out. Every handout colour is near-black (`#000`–`#444`)
+  and rules are no lighter than `#999`; the brown letter is dark enough to print as black.
+  An earlier palette used `#bbb`/`#888` for references, version tags and language names,
+  and volunteers reported the references as "hardly visible". Hierarchy comes from size,
+  weight and italics, not from grey. These colours live in the shared handout styles (not
+  the print block) so the on-screen preview shows what will print; `print-color-adjust:
+  exact` stops the browser lightening them. Check a change by printing to PDF and
+  rendering it in grayscale (`pdftoppm -gray`), not by eye on a colour screen.
